@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.30523.141
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QL_DocGia", "QL_DocGia\QL_DocGia.csproj", "{80923858-5C75-48BE-A371-488750059CD5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BM2", "..\..\..\OneDrive\Tài liệu\ptud\BM2\BM2\BM2.csproj", "{35A53E2F-5EF9-4FE5-852F-8755BF9C906B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BM2", "..\..\..\BM2\BM2\BM2.csproj", "{35A53E2F-5EF9-4FE5-852F-8755BF9C906B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trang Chu", "..\Trang Chu\Trang Chu\Trang Chu.csproj", "{98A06257-A80A-46E7-9C6C-E1BAEBFB8970}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{35A53E2F-5EF9-4FE5-852F-8755BF9C906B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{35A53E2F-5EF9-4FE5-852F-8755BF9C906B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{35A53E2F-5EF9-4FE5-852F-8755BF9C906B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98A06257-A80A-46E7-9C6C-E1BAEBFB8970}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98A06257-A80A-46E7-9C6C-E1BAEBFB8970}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98A06257-A80A-46E7-9C6C-E1BAEBFB8970}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98A06257-A80A-46E7-9C6C-E1BAEBFB8970}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

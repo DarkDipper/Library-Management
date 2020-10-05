@@ -33,6 +33,7 @@
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.label1 = new System.Windows.Forms.Label();
             this.menuStrip = new System.Windows.Forms.MenuStrip();
+            this.trangToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.chứcNăngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thêmToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.xóaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -61,9 +62,16 @@
             // menuStrip
             // 
             this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.trangToolStripMenuItem,
             this.chứcNăngToolStripMenuItem});
             resources.ApplyResources(this.menuStrip, "menuStrip");
             this.menuStrip.Name = "menuStrip";
+            // 
+            // trangToolStripMenuItem
+            // 
+            this.trangToolStripMenuItem.Name = "trangToolStripMenuItem";
+            resources.ApplyResources(this.trangToolStripMenuItem, "trangToolStripMenuItem");
+            this.trangToolStripMenuItem.Click += new System.EventHandler(this.trangToolStripMenuItem_Click);
             // 
             // chứcNăngToolStripMenuItem
             // 
@@ -126,6 +134,7 @@
         private System.Windows.Forms.ToolStripMenuItem xóaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sửaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tìmKiếmToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem trangToolStripMenuItem;
     }
 }
 

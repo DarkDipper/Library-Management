@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BM2;
-
+using Trang_Chu;
 
 namespace QL_DocGia
 {
@@ -26,6 +26,14 @@ namespace QL_DocGia
             TheDocGia x = new TheDocGia();
             this.Hide();
             x.ShowDialog();
+            this.Show();
+        }
+
+        private void trangToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Log_in dang_nhap = new Log_in();
+            this.Hide();
+            dang_nhap.ShowDialog();
             this.Show();
         }
     }

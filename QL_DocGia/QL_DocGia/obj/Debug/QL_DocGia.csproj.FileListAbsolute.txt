@@ -9,3 +9,15 @@ C:\Users\kun\source\repos\QL_DocGia\QL_DocGia\bin\Debug\QL_DocGia.pdb
 C:\Users\kun\source\repos\QL_DocGia\QL_DocGia\obj\Debug\QL_DocGia.exe
 C:\Users\kun\source\repos\QL_DocGia\QL_DocGia\obj\Debug\QL_DocGia.pdb
 C:\Users\kun\source\repos\QL_DocGia\QL_DocGia\obj\Debug\BM2.TheDocGia.resources
+C:\Users\kun\OneDrive\Tài liệu\ptud\BM3vaBM8vaTrangchu\Libary-Management\QL_DocGia\QL_DocGia\bin\Debug\QL_DocGia.exe.config
+C:\Users\kun\OneDrive\Tài liệu\ptud\BM3vaBM8vaTrangchu\Libary-Management\QL_DocGia\QL_DocGia\bin\Debug\QL_DocGia.exe
+C:\Users\kun\OneDrive\Tài liệu\ptud\BM3vaBM8vaTrangchu\Libary-Management\QL_DocGia\QL_DocGia\bin\Debug\QL_DocGia.pdb
+C:\Users\kun\OneDrive\Tài liệu\ptud\BM3vaBM8vaTrangchu\Libary-Management\QL_DocGia\QL_DocGia\obj\Debug\QL_DocGia.csprojAssemblyReference.cache
+C:\Users\kun\OneDrive\Tài liệu\ptud\BM3vaBM8vaTrangchu\Libary-Management\QL_DocGia\QL_DocGia\obj\Debug\Trang_Chu.Log_in.resources
+C:\Users\kun\OneDrive\Tài liệu\ptud\BM3vaBM8vaTrangchu\Libary-Management\QL_DocGia\QL_DocGia\obj\Debug\QL_DocGia.QuanLyDocGia.resources
+C:\Users\kun\OneDrive\Tài liệu\ptud\BM3vaBM8vaTrangchu\Libary-Management\QL_DocGia\QL_DocGia\obj\Debug\QL_DocGia.Properties.Resources.resources
+C:\Users\kun\OneDrive\Tài liệu\ptud\BM3vaBM8vaTrangchu\Libary-Management\QL_DocGia\QL_DocGia\obj\Debug\BM2.TheDocGia.resources
+C:\Users\kun\OneDrive\Tài liệu\ptud\BM3vaBM8vaTrangchu\Libary-Management\QL_DocGia\QL_DocGia\obj\Debug\QL_DocGia.csproj.GenerateResource.cache
+C:\Users\kun\OneDrive\Tài liệu\ptud\BM3vaBM8vaTrangchu\Libary-Management\QL_DocGia\QL_DocGia\obj\Debug\QL_DocGia.csproj.CoreCompileInputs.cache
+C:\Users\kun\OneDrive\Tài liệu\ptud\BM3vaBM8vaTrangchu\Libary-Management\QL_DocGia\QL_DocGia\obj\Debug\QL_DocGia.exe
+C:\Users\kun\OneDrive\Tài liệu\ptud\BM3vaBM8vaTrangchu\Libary-Management\QL_DocGia\QL_DocGia\obj\Debug\QL_DocGia.pdb

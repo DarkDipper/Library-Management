@@ -191,6 +191,18 @@
   <metadata name="menuStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <data name="trangToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>77, 20</value>
+  </data>
+  <data name="trangToolStripMenuItem.Text" xml:space="preserve">
+    <value>Đăng nhập</value>
+  </data>
+  <data name="chứcNăngToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>77, 20</value>
+  </data>
+  <data name="chứcNăngToolStripMenuItem.Text" xml:space="preserve">
+    <value>Chức năng</value>
+  </data>
   <data name="menuStrip.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
@@ -215,14 +227,8 @@
   <data name="&gt;&gt;menuStrip.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="chứcNăngToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>77, 20</value>
-  </data>
-  <data name="chứcNăngToolStripMenuItem.Text" xml:space="preserve">
-    <value>Chức năng</value>
-  </data>
   <data name="thêmToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
+    <value>123, 22</value>
   </data>
   <data name="thêmToolStripMenuItem.Text" xml:space="preserve">
     <value>Thêm</value>
@@ -256,6 +262,12 @@
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Quản lý đọc giả</value>
+  </data>
+  <data name="&gt;&gt;trangToolStripMenuItem.Name" xml:space="preserve">
+    <value>trangToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;trangToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;chứcNăngToolStripMenuItem.Name" xml:space="preserve">
     <value>chứcNăngToolStripMenuItem</value>
