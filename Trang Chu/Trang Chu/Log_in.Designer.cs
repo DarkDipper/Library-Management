@@ -95,6 +95,7 @@
             this.Dang_nhap_button.TabIndex = 6;
             this.Dang_nhap_button.Text = "Đăng nhập";
             this.Dang_nhap_button.UseVisualStyleBackColor = true;
+            this.Dang_nhap_button.Click += new System.EventHandler(this.Dang_nhap_button_Click);
             // 
             // Log_in
             // 
