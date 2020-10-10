@@ -21,8 +21,12 @@ namespace  Trang_Chu
         {
             if (true)
             {
-
+                Trang_chu_cho_doc_gia x=new Trang_chu_cho_doc_gia();
+                x.Show();
+                
             }
         }
+
+        
     }
 }
