@@ -71,6 +71,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Trang_chu_cho_doc_gia.resx">
       <DependentUpon>Trang_chu_cho_doc_gia.cs</DependentUpon>
@@ -87,6 +88,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b50d19ef-edc8-4703-8fdd-274e9a06f4a3_200x200.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pexels-jason-villanueva-851555.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pexels-element-digital-1370295.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\open-book.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4092564-about-mobile-ui-profile-ui-user-website_114033.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\book_search_icon_135876.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\log-out_icon-icons.com_50106.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

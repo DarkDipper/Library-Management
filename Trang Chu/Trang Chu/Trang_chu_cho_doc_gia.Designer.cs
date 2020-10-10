@@ -35,16 +35,14 @@
             this.button_xem_thong_tin = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panelMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMenu
             // 
-            this.panelMenu.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.panelMenu.BackColor = System.Drawing.Color.Peru;
             this.panelMenu.Controls.Add(this.button_dang_xuat);
             this.panelMenu.Controls.Add(this.buttonTra_cuu_sach);
             this.panelMenu.Controls.Add(this.button_xem_thong_tin);
@@ -60,11 +58,11 @@
             this.button_dang_xuat.AutoSize = true;
             this.button_dang_xuat.FlatAppearance.BorderSize = 0;
             this.button_dang_xuat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_dang_xuat.Image = ((System.Drawing.Image)(resources.GetObject("button_dang_xuat.Image")));
+            this.button_dang_xuat.Image = global::Trang_Chu.Properties.Resources.log_out_icon_icons_com_50106;
             this.button_dang_xuat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_dang_xuat.Location = new System.Drawing.Point(3, 507);
+            this.button_dang_xuat.Location = new System.Drawing.Point(0, 507);
             this.button_dang_xuat.Name = "button_dang_xuat";
-            this.button_dang_xuat.Size = new System.Drawing.Size(208, 38);
+            this.button_dang_xuat.Size = new System.Drawing.Size(211, 38);
             this.button_dang_xuat.TabIndex = 1;
             this.button_dang_xuat.Text = "Đăng xuất";
             this.button_dang_xuat.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -75,11 +73,11 @@
             // 
             this.buttonTra_cuu_sach.FlatAppearance.BorderSize = 0;
             this.buttonTra_cuu_sach.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonTra_cuu_sach.Image = ((System.Drawing.Image)(resources.GetObject("buttonTra_cuu_sach.Image")));
+            this.buttonTra_cuu_sach.Image = global::Trang_Chu.Properties.Resources.book_search_icon_135876;
             this.buttonTra_cuu_sach.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonTra_cuu_sach.Location = new System.Drawing.Point(-3, 233);
+            this.buttonTra_cuu_sach.Location = new System.Drawing.Point(0, 225);
             this.buttonTra_cuu_sach.Name = "buttonTra_cuu_sach";
-            this.buttonTra_cuu_sach.Size = new System.Drawing.Size(211, 43);
+            this.buttonTra_cuu_sach.Size = new System.Drawing.Size(208, 43);
             this.buttonTra_cuu_sach.TabIndex = 1;
             this.buttonTra_cuu_sach.Text = "Tra cứu sách";
             this.buttonTra_cuu_sach.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -89,16 +87,16 @@
             // button_xem_thong_tin
             // 
             this.button_xem_thong_tin.AutoSize = true;
-            this.button_xem_thong_tin.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.button_xem_thong_tin.BackColor = System.Drawing.Color.Transparent;
             this.button_xem_thong_tin.FlatAppearance.BorderColor = System.Drawing.Color.Aqua;
             this.button_xem_thong_tin.FlatAppearance.BorderSize = 0;
             this.button_xem_thong_tin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_xem_thong_tin.ForeColor = System.Drawing.Color.Black;
-            this.button_xem_thong_tin.Image = ((System.Drawing.Image)(resources.GetObject("button_xem_thong_tin.Image")));
+            this.button_xem_thong_tin.Image = global::Trang_Chu.Properties.Resources._4092564_about_mobile_ui_profile_ui_user_website_114033;
             this.button_xem_thong_tin.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_xem_thong_tin.Location = new System.Drawing.Point(0, 195);
+            this.button_xem_thong_tin.Location = new System.Drawing.Point(0, 187);
             this.button_xem_thong_tin.Name = "button_xem_thong_tin";
-            this.button_xem_thong_tin.Size = new System.Drawing.Size(211, 38);
+            this.button_xem_thong_tin.Size = new System.Drawing.Size(208, 38);
             this.button_xem_thong_tin.TabIndex = 1;
             this.button_xem_thong_tin.Text = "Thông tin cá nhân";
             this.button_xem_thong_tin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -117,7 +115,7 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Image = global::Trang_Chu.Properties.Resources.pexels_element_digital_1370295;
             this.pictureBox2.Location = new System.Drawing.Point(208, 0);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(717, 548);
@@ -125,23 +123,12 @@
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(208, 0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(717, 548);
-            this.dataGridView1.TabIndex = 2;
-            // 
             // Trang_chu_cho_doc_gia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(927, 548);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.panelMenu);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -153,7 +140,6 @@
             this.panelMenu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -166,6 +152,5 @@
         private System.Windows.Forms.Button buttonTra_cuu_sach;
         private System.Windows.Forms.Button button_dang_xuat;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

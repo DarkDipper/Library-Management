@@ -26,7 +26,7 @@ namespace Trang_Chu
                     Quay_ve_trang_thai_nut_ban_dau();
                     btn = (Button)btnSender;
                     btn.TextImageRelation = TextImageRelation.TextBeforeImage;
-                    btn.BackColor = Color.DeepSkyBlue;
+                    btn.BackColor = Color.White;
                 }
             }
         }
@@ -35,7 +35,7 @@ namespace Trang_Chu
             if (btn != null)
             {
                 btn.TextImageRelation = TextImageRelation.ImageBeforeText;
-                btn.BackColor = Color.LightSeaGreen;
+                btn.BackColor = Color.Peru;
             }
         }
         private void button_xem_thong_tin_Click(object sender, EventArgs e)
