@@ -40,6 +40,9 @@
             this.checkDN = new System.Windows.Forms.ErrorProvider(this.components);
             this.checkMK = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button_Eye = new System.Windows.Forms.Button();
+            this.textMS = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.buttonSua = new System.Windows.Forms.Button();
             this.buttonSign_up = new System.Windows.Forms.Button();
@@ -58,15 +61,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.dataTheDocGia = new System.Windows.Forms.DataGridView();
-            this.theDocGiaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.quanLyThuVienDataSet = new BM2.QuanLyThuVienDataSet();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.text_TimvaXoa = new System.Windows.Forms.TextBox();
-            this.buttonXoa = new System.Windows.Forms.Button();
-            this.buttonTìm = new System.Windows.Forms.Button();
-            this.error_TimvaXoa = new System.Windows.Forms.ErrorProvider(this.components);
-            this.theDocGiaTableAdapter = new BM2.QuanLyThuVienDataSetTableAdapters.TheDocGiaTableAdapter();
             this.mSDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.teDNDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.matKhauDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -79,9 +73,25 @@
             this.tongNoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.maNgLapDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.maNgThuTienDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label7 = new System.Windows.Forms.Label();
-            this.textMS = new System.Windows.Forms.TextBox();
-            this.button_Eye = new System.Windows.Forms.Button();
+            this.theDocGiaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.quanLyThuVienDataSet = new BM2.QuanLyThuVienDataSet();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.text_Xoa = new System.Windows.Forms.TextBox();
+            this.buttonXoa = new System.Windows.Forms.Button();
+            this.buttonTìm = new System.Windows.Forms.Button();
+            this.error_TimvaXoa = new System.Windows.Forms.ErrorProvider(this.components);
+            this.theDocGiaTableAdapter = new BM2.QuanLyThuVienDataSetTableAdapters.TheDocGiaTableAdapter();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.text_tìm = new System.Windows.Forms.TextBox();
+            this.info_tim = new System.Windows.Forms.Label();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.label_thongke = new System.Windows.Forms.Label();
+            this.progressBar_thongke = new System.Windows.Forms.ProgressBar();
+            this.button_Excel = new System.Windows.Forms.Button();
+            this.button_help = new System.Windows.Forms.Button();
+            this.button_Load = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.checkTen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Tick)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkDiaChi)).BeginInit();
@@ -97,6 +107,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.quanLyThuVienDataSet)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.error_TimvaXoa)).BeginInit();
+            this.groupBox3.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // checkTen
@@ -180,6 +192,25 @@
             this.groupBox1.ForeColor = System.Drawing.SystemColors.InfoText;
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.TabStop = false;
+            // 
+            // button_Eye
+            // 
+            this.button_Eye.Image = global::BM2.Properties.Resources._1490793853_user_interface15_82360;
+            resources.ApplyResources(this.button_Eye, "button_Eye");
+            this.button_Eye.Name = "button_Eye";
+            this.button_Eye.UseVisualStyleBackColor = true;
+            this.button_Eye.Click += new System.EventHandler(this.button_Eye_Click);
+            // 
+            // textMS
+            // 
+            resources.ApplyResources(this.textMS, "textMS");
+            this.textMS.Name = "textMS";
+            this.textMS.ReadOnly = true;
+            // 
+            // label7
+            // 
+            resources.ApplyResources(this.label7, "label7");
+            this.label7.Name = "label7";
             // 
             // textBox3
             // 
@@ -311,58 +342,6 @@
             this.dataTheDocGia.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataTheDocGia.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataTheDocGia_CellClick);
             // 
-            // theDocGiaBindingSource
-            // 
-            this.theDocGiaBindingSource.DataMember = "TheDocGia";
-            this.theDocGiaBindingSource.DataSource = this.quanLyThuVienDataSet;
-            // 
-            // quanLyThuVienDataSet
-            // 
-            this.quanLyThuVienDataSet.DataSetName = "QuanLyThuVienDataSet";
-            this.quanLyThuVienDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.text_TimvaXoa);
-            this.groupBox2.Controls.Add(this.buttonXoa);
-            this.groupBox2.Controls.Add(this.buttonTìm);
-            resources.ApplyResources(this.groupBox2, "groupBox2");
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.TabStop = false;
-            // 
-            // label3
-            // 
-            resources.ApplyResources(this.label3, "label3");
-            this.label3.Name = "label3";
-            // 
-            // text_TimvaXoa
-            // 
-            resources.ApplyResources(this.text_TimvaXoa, "text_TimvaXoa");
-            this.text_TimvaXoa.Name = "text_TimvaXoa";
-            // 
-            // buttonXoa
-            // 
-            resources.ApplyResources(this.buttonXoa, "buttonXoa");
-            this.buttonXoa.Name = "buttonXoa";
-            this.buttonXoa.UseVisualStyleBackColor = true;
-            this.buttonXoa.Click += new System.EventHandler(this.buttonXoa_Click);
-            // 
-            // buttonTìm
-            // 
-            resources.ApplyResources(this.buttonTìm, "buttonTìm");
-            this.buttonTìm.Name = "buttonTìm";
-            this.buttonTìm.UseVisualStyleBackColor = true;
-            this.buttonTìm.Click += new System.EventHandler(this.buttonTìm_Click);
-            // 
-            // error_TimvaXoa
-            // 
-            this.error_TimvaXoa.ContainerControl = this;
-            // 
-            // theDocGiaTableAdapter
-            // 
-            this.theDocGiaTableAdapter.ClearBeforeFill = true;
-            // 
             // mSDataGridViewTextBoxColumn
             // 
             this.mSDataGridViewTextBoxColumn.DataPropertyName = "MS";
@@ -447,39 +426,144 @@
             this.maNgThuTienDataGridViewTextBoxColumn.Name = "maNgThuTienDataGridViewTextBoxColumn";
             this.maNgThuTienDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // label7
+            // theDocGiaBindingSource
             // 
-            resources.ApplyResources(this.label7, "label7");
-            this.label7.Name = "label7";
+            this.theDocGiaBindingSource.DataMember = "TheDocGia";
+            this.theDocGiaBindingSource.DataSource = this.quanLyThuVienDataSet;
             // 
-            // textMS
+            // quanLyThuVienDataSet
             // 
-            resources.ApplyResources(this.textMS, "textMS");
-            this.textMS.Name = "textMS";
-            this.textMS.ReadOnly = true;
+            this.quanLyThuVienDataSet.DataSetName = "QuanLyThuVienDataSet";
+            this.quanLyThuVienDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // button_Eye
+            // groupBox2
             // 
-            this.button_Eye.Image = global::BM2.Properties.Resources._1490793853_user_interface15_82360;
-            resources.ApplyResources(this.button_Eye, "button_Eye");
-            this.button_Eye.Name = "button_Eye";
-            this.button_Eye.UseVisualStyleBackColor = true;
-            this.button_Eye.Click += new System.EventHandler(this.button_Eye_Click);
+            this.groupBox2.Controls.Add(this.label3);
+            this.groupBox2.Controls.Add(this.text_Xoa);
+            this.groupBox2.Controls.Add(this.buttonXoa);
+            resources.ApplyResources(this.groupBox2, "groupBox2");
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.TabStop = false;
+            // 
+            // label3
+            // 
+            resources.ApplyResources(this.label3, "label3");
+            this.label3.Name = "label3";
+            // 
+            // text_Xoa
+            // 
+            resources.ApplyResources(this.text_Xoa, "text_Xoa");
+            this.text_Xoa.Name = "text_Xoa";
+            // 
+            // buttonXoa
+            // 
+            resources.ApplyResources(this.buttonXoa, "buttonXoa");
+            this.buttonXoa.Name = "buttonXoa";
+            this.buttonXoa.UseVisualStyleBackColor = true;
+            this.buttonXoa.Click += new System.EventHandler(this.buttonXoa_Click);
+            // 
+            // buttonTìm
+            // 
+            resources.ApplyResources(this.buttonTìm, "buttonTìm");
+            this.buttonTìm.Name = "buttonTìm";
+            this.buttonTìm.UseVisualStyleBackColor = true;
+            this.buttonTìm.Click += new System.EventHandler(this.buttonTìm_Click);
+            // 
+            // error_TimvaXoa
+            // 
+            this.error_TimvaXoa.ContainerControl = this;
+            // 
+            // theDocGiaTableAdapter
+            // 
+            this.theDocGiaTableAdapter.ClearBeforeFill = true;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.comboBox1);
+            this.groupBox3.Controls.Add(this.buttonTìm);
+            this.groupBox3.Controls.Add(this.text_tìm);
+            resources.ApplyResources(this.groupBox3, "groupBox3");
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.TabStop = false;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            resources.ApplyResources(this.comboBox1, "comboBox1");
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            resources.GetString("comboBox1.Items"),
+            resources.GetString("comboBox1.Items1")});
+            this.comboBox1.Name = "comboBox1";
+            // 
+            // text_tìm
+            // 
+            resources.ApplyResources(this.text_tìm, "text_tìm");
+            this.text_tìm.Name = "text_tìm";
+            // 
+            // info_tim
+            // 
+            resources.ApplyResources(this.info_tim, "info_tim");
+            this.info_tim.ForeColor = System.Drawing.Color.Red;
+            this.info_tim.Name = "info_tim";
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.label_thongke);
+            this.groupBox4.Controls.Add(this.progressBar_thongke);
+            this.groupBox4.Controls.Add(this.button_Excel);
+            this.groupBox4.Controls.Add(this.button_help);
+            this.groupBox4.Controls.Add(this.button_Load);
+            resources.ApplyResources(this.groupBox4, "groupBox4");
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.TabStop = false;
+            // 
+            // label_thongke
+            // 
+            resources.ApplyResources(this.label_thongke, "label_thongke");
+            this.label_thongke.Name = "label_thongke";
+            // 
+            // progressBar_thongke
+            // 
+            resources.ApplyResources(this.progressBar_thongke, "progressBar_thongke");
+            this.progressBar_thongke.Name = "progressBar_thongke";
+            // 
+            // button_Excel
+            // 
+            resources.ApplyResources(this.button_Excel, "button_Excel");
+            this.button_Excel.Name = "button_Excel";
+            this.button_Excel.UseVisualStyleBackColor = true;
+            this.button_Excel.Click += new System.EventHandler(this.button_Excel_Click);
+            // 
+            // button_help
+            // 
+            resources.ApplyResources(this.button_help, "button_help");
+            this.button_help.Name = "button_help";
+            this.button_help.UseVisualStyleBackColor = true;
+            this.button_help.Click += new System.EventHandler(this.button_help_Click);
+            // 
+            // button_Load
+            // 
+            resources.ApplyResources(this.button_Load, "button_Load");
+            this.button_Load.Name = "button_Load";
+            this.button_Load.UseVisualStyleBackColor = true;
+            this.button_Load.Click += new System.EventHandler(this.button_Load_Click);
             // 
             // TheDocGia
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.groupBox4);
+            this.Controls.Add(this.info_tim);
+            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.dataTheDocGia);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
-            this.MinimizeBox = false;
             this.Name = "TheDocGia";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.TheDocGia_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
-            this.Click += new System.EventHandler(this.TheDocGia_Click);
             ((System.ComponentModel.ISupportInitialize)(this.checkTen)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Tick)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkDiaChi)).EndInit();
@@ -497,7 +581,12 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.error_TimvaXoa)).EndInit();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -533,7 +622,7 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button buttonXoa;
         private System.Windows.Forms.Button buttonTìm;
-        private System.Windows.Forms.TextBox text_TimvaXoa;
+        private System.Windows.Forms.TextBox text_Xoa;
         private System.Windows.Forms.ErrorProvider error_TimvaXoa;
         private System.Windows.Forms.Label label3;
         private QuanLyThuVienDataSet quanLyThuVienDataSet;
@@ -554,6 +643,16 @@
         private System.Windows.Forms.TextBox textMS;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button button_Eye;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.TextBox text_tìm;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label info_tim;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.Button button_Load;
+        private System.Windows.Forms.ProgressBar progressBar_thongke;
+        private System.Windows.Forms.Button button_Excel;
+        private System.Windows.Forms.Button button_help;
+        private System.Windows.Forms.Label label_thongke;
     }
 }
 

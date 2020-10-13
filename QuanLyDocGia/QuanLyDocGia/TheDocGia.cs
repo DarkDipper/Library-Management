@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using data = System.Data.DataTable;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,7 +13,9 @@ using System.Data.SqlClient;
 using System.Configuration;
 using System.Net.Mail;
 using System.Windows.Forms.VisualStyles;
-
+using System.Globalization;
+using Microsoft.Office.Interop.Excel;
+using app = Microsoft.Office.Interop.Excel.Application;
 namespace BM2
 {
     public partial class TheDocGia : Form
@@ -35,7 +38,7 @@ namespace BM2
         bool pdate = false;
         bool dn = false;
         bool mk = false;
-        bool ok = false;
+       
         private void f2Creater_Leave(object sender, EventArgs e)
         {
            // pcreater = true;
@@ -125,7 +128,7 @@ namespace BM2
             else
             {
                 checkTen.Clear();
-                Tick.SetError(f2Name, " xong");
+                Tick.SetError(f2Name, "xong");
                 pname = true;
                 
             }
@@ -178,17 +181,17 @@ namespace BM2
                 checkMK.SetError(this.textBox1, "Bạn chưa nhập mật khẩu! ");
                 mk = false;
             }
+            else if(textBox1.Text.Length < 9)
+            {
+                Tick.Clear();
+                checkMK.SetError(textBox1, "Mật khẩu quá ngắn");
+                mk = false;
+            }
             else if (Regex.IsMatch(textBox1.Text, "^[!-~]*$"))
             {
                 checkMK.Clear();
                 Tick.SetError(textBox1, "xong");
                 mk = true;
-            }
-            else if(textBox1.Text.Length<9)
-            {
-                Tick.Clear();
-                checkMK.SetError(textBox1, "Mật khẩu quá ngắn");
-                mk = false;
             }
             else
             {
@@ -209,9 +212,9 @@ namespace BM2
                 
             }
             else*/
-            if(Regex.IsMatch(f2Email.Text,@"^([a-zA-Z0-9]+)@([a-zA-Z0-9]+)(\.([a-zA-Z0-9])+)$"))
+            if(Regex.IsMatch(f2Email.Text,@"^([a-zA-Z0-9]+)@([a-zA-Z0-9]+)\.(([a-zA-Z0-9])+)$"))
             {
-                checkTen.Clear();
+                checkEmail.Clear();
                 Tick.SetError(f2Email, "xong");
                 pmail = true;
             }
@@ -219,7 +222,7 @@ namespace BM2
             {
                 pmail = false;
                 Tick.Clear();
-                checkTen.SetError(this.f2Email, "Bạn nhập sai định dạng  email! "); //Phản hồi ngay sau khi nhập sai email và leave 
+                checkEmail.SetError(this.f2Email, "Bạn nhập sai định dạng  email! "); //Phản hồi ngay sau khi nhập sai email và leave 
                 //pmail = true;
             }
         }
@@ -263,27 +266,90 @@ namespace BM2
             }
         }
         int i =1;
-        int j =1;
         public string TaoMa()
-        {
-           int tmp;
-              if (f2Type.Text == "X") tmp = i;
-              else tmp = j;
-              if (tmp < 10) return $"{f2Type.Text}.00{tmp.ToString()}";
-              else if (tmp < 100) return $"{f2Type.Text}.0{tmp.ToString()}";
-              else return $"{f2Type.Text}.{tmp.ToString()}";
+        { 
+              if (i < 10) return $"L.00{i.ToString()}";
+              else if (i < 100) return $"L.0{i.ToString()}";
+              else return $"L.{i.ToString()}";
         }
         public void Hienthi()
         {
-            string sql_select = "SELECT *FROM TheDocGia";
+            string sql_select = "select MS,TeDN,MatKhau,HoTen,CONVERT (varchar(10), NgaySinh, 103) AS [NgaySinh],DiaChi,Loai,Email,CONVERT (varchar(10), NgayLapThe, 103) AS [NgayLapThe],TongNo,MaNgLap,MaNgThuTien from TheDocGia";
             SqlCommand cmd = new SqlCommand(sql_select, con);
             SqlDataReader rd = cmd.ExecuteReader();
-            DataTable d = new DataTable();
+            data d = new data();
             d.Load(rd);
             dataTheDocGia.DataSource = d;
 
         }
-        // Xử lý.................................................................................................
+        public void Set_true()
+        {
+            pname = true;
+            paddress = true;
+            pcreater = true;
+            ptype = true;
+            pmail = true;
+            pdate = true;
+            dn = true;
+            mk = true;
+            checkTen.SetError(f2Name, null);
+        }
+        public void Set_false()
+        {
+            Tick.Clear();
+            pname = false;
+            paddress = false;
+            pcreater = false;
+            ptype = false;
+            pmail = false;
+            pdate = false;
+            dn = false;
+            mk = false;
+            checkTen.SetError(f2Name, null);
+            buttonSua.Enabled = false;
+        }
+        void Reset_ThuocTinh()
+        {
+            f2Name.Text = "";
+            f2Address.Text = "";
+            textBox2.Text = "";
+            textBox1.Text = "";
+            f2Email.Text = "";
+            f2Type.SelectedIndex = -1;
+            textMS.Text = "";
+            text_Xoa.Text = "";
+        }
+        public void ThongKe()
+        {
+            double thongke = (double)((dataTheDocGia.Rows.Count-1) * 0.2);
+            progressBar_thongke.Value = (int)Math.Round(thongke, 0);
+            // MessageBox.Show($"{progressBar_thongke.Value.ToString()}");
+            label_thongke.Text = $"{(dataTheDocGia.Rows.Count-1).ToString()}/500";
+        }
+        private void Export_Excel(DataGridView g, string duongDan, string Tentep)
+        {
+            app obj = new app();
+            obj.Application.Workbooks.Add(Type.Missing);
+            obj.Columns.ColumnWidth = 25;
+            for(int i = 1; i < g.Columns.Count + 1; i++)
+            {
+                obj.Cells[1, i] = g.Columns[i - 1].HeaderText;
+            }
+            for(int i = 0; i < g.Rows.Count; i++)
+            {
+                for(int j = 0; j < g.Columns.Count; j++)
+                {
+                    if (g.Rows[i].Cells[j].Value != null)
+                    {
+                        obj.Cells[i + 2, j + 1] = g.Rows[i].Cells[j].Value.ToString();
+                    }
+                }
+            }
+            obj.ActiveWorkbook.SaveCopyAs(duongDan + Tentep + ".xlsx");
+            obj.ActiveWorkbook.Saved = true;
+            MessageBox.Show("Cập nhập thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+        // ........................................................................................Xử lý.................................................................................................
         private void Form1_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'quanLyThuVienDataSet.TheDocGia' table.  can move, or remove it, as needed.
@@ -297,22 +363,17 @@ namespace BM2
             for(int k = 0; k < dataTheDocGia.Rows.Count-1; k++)
             {
                 string chuoi=dataTheDocGia.Rows[k].Cells[0].Value.ToString();
-                //MessageBox.Show(chuoi.ToString());
-                if (chuoi[0] == 'X')
-                {
-                    int so = int.Parse($"{chuoi[2]+chuoi[3]+chuoi[4]}");
-                    //MessageBox.Show($"{so.ToString()}\n");
-                    if (so -144!= i) break;
-                    else i++;
-                }
-                else if (chuoi[0] == 'Y')
-                {
-                    int so = int.Parse($"{chuoi[2] + chuoi[3] + chuoi[4]}");
-                    //MessageBox.Show($"{so.ToString()}\n");
-                    if (so - 144 != j) break;
-                    else j++;
-                }
+                string chuoi_so = chuoi.Substring(2);
+               // MessageBox.Show($"{chuoi_so}");
+                int so = int.Parse($"{chuoi_so}");
+                //MessageBox.Show($"{(so).ToString()}");
+                if (so != i) break;
+                else i++;
             }
+           //MessageBox.Show($"{i.ToString()}");
+            checkTen.SetError(f2Name, null);
+            buttonSua.Enabled = false;
+            ThongKe();
         }
         
         private void TheDocGia_FormClosing(object sender, FormClosingEventArgs e)
@@ -320,8 +381,9 @@ namespace BM2
             if (MessageBox.Show("Trở về \"Đăng nhập\" ", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) != System.Windows.Forms.DialogResult.OK)
             {
                 e.Cancel = true;
+                con.Close();
             }
-            con.Close();
+            
 
         }
         private void buttonSign_up_Click_1(object sender, EventArgs e)
@@ -333,94 +395,109 @@ namespace BM2
 
                 string sql_in = $@"Insert into TheDocGia values('{TaoMa()}','{textBox2.Text}','{textBox1.Text}',N'{f2Name.Text}','{f2NgaySinh.Value.ToString("yyyyMMdd")}',N'{f2Address.Text}','{f2Type.Text}','{f2Email.Text}','{DateTime.Today.ToString("yyyyMMdd")}',0,null,null)";
                 SqlCommand cmd = new SqlCommand(sql_in, con);
-                try
+               try
                 {
                     cmd.ExecuteNonQuery();
-                    MessageBox.Show("Đăng kí thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Đăng kí thành công. Bạn có muốn xuất thẻ đọc giả không ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    Reset_ThuocTinh();
+                    Set_false();
+                    ThongKe();
                     Hienthi();
-                    if (f2Type.Text == "X") i++;
-                    else j++;
+                    i++;
                     
-               }
+              }
                 catch
               {
                    MessageBox.Show("Đăng kí thất bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+              }
             }
             else MessageBox.Show("Đăng kí thất bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
         private void buttonXoa_Click(object sender, EventArgs e)
         {
             string sqlXoa;
-            if (text_TimvaXoa.Text=="") MessageBox.Show("Vui lòng nhập thông tin", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            sqlXoa = $"DELETE FROM TheDocGia WHERE MS='{text_TimvaXoa.Text}'";
-            if (MessageBox.Show($"Có thật sự muốn xóa \"{text_TimvaXoa.Text}\"", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.OK)
+            if (text_Xoa.Text == "")
             {
+                MessageBox.Show("Vui lòng nhập thông tin", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else { 
+                sqlXoa = $"DELETE FROM TheDocGia WHERE MS='{text_Xoa.Text}'";
+                if (MessageBox.Show($"Có thật sự muốn xóa \"{text_Xoa.Text}\"", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.OK)
+                {
                     SqlCommand cmd = new SqlCommand(sqlXoa, con);
                     cmd.ExecuteNonQuery();
                     Hienthi();
-                
+                    Reset_ThuocTinh();
+                    Set_false();
+                    ThongKe();
+                }
             }
         }
 
         private void buttonTìm_Click(object sender, EventArgs e)
         {
-            string sqlFind = $"select *from TheDocGia where MS ='{text_TimvaXoa.Text}'";
-            SqlCommand cmd = new SqlCommand(sqlFind, con);
-            cmd.ExecuteNonQuery();
-            SqlDataReader rd = cmd.ExecuteReader();
-            DataTable d = new DataTable();
-            d.Load(rd);
-            dataTheDocGia.DataSource = d;
+
+            if (comboBox1.SelectedIndex == -1) MessageBox.Show("Vui lòng chọn phương thức tìm !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            else
+            {
+                string sqlFind = "";
+                info_tim.Text = "   ";
+                if (comboBox1.SelectedIndex == 0) sqlFind = $"select *from TheDocGia where HoTen =N'{text_tìm.Text}'";
+                else if (comboBox1.SelectedIndex == 1) sqlFind = $"select *from TheDocGia where MS ='{text_tìm.Text}'";
+                SqlCommand cmd = new SqlCommand(sqlFind, con);
+                cmd.ExecuteNonQuery();
+                SqlDataReader rd = cmd.ExecuteReader();
+                data d = new data();
+                d.Load(rd);
+                dataTheDocGia.DataSource = d;
+            }
         }
 
         private void dataTheDocGia_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             try
             {
+                buttonSua.Enabled = true;
                 f2Name.Text = dataTheDocGia.SelectedCells[3].Value.ToString();
                 f2Address.Text = dataTheDocGia.SelectedCells[5].Value.ToString();
                 textBox2.Text = dataTheDocGia.SelectedCells[1].Value.ToString();
                 textBox1.Text = dataTheDocGia.SelectedCells[2].Value.ToString();
                 f2Email.Text = dataTheDocGia.SelectedCells[7].Value.ToString();
                 f2Type.Text = dataTheDocGia.SelectedCells[6].Value.ToString();
-                f2NgaySinh.Value = DateTime.Parse(dataTheDocGia.SelectedCells[4].Value.ToString());
-                textMS.Text = dataTheDocGia.SelectedCells[0].Value.ToString(); 
+                f2NgaySinh.Value = DateTime.ParseExact(dataTheDocGia.SelectedCells[4].Value.ToString(), "dd/MM/yyyy", CultureInfo.InvariantCulture);
+                textMS.Text = dataTheDocGia.SelectedCells[0].Value.ToString();
+                text_Xoa.Text = dataTheDocGia.SelectedCells[0].Value.ToString();
                 buttonSign_up.Enabled = false;
-                f2Type.Enabled = false;
+                //f2Type.Enabled = false;
+                Set_true();
             }
-            catch { MessageBox.Show("Vùng không thể cập nhật", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning); }
+            catch {
+             
+                 Hienthi();
+            }
         }
 
-        private void TheDocGia_Click(object sender, EventArgs e)
-        {
-            buttonSign_up.Enabled = true;
-            f2Type.Enabled = true;
-            f2Name.Text = "";
-            f2Address.Text = "";
-            textBox2.Text = "";
-            textBox1.Text = "";
-            f2Email.Text = "";
-            f2Type.SelectedIndex = -1;
-            textMS.Text = "";
-            f2NgaySinh.Value = DateTime.Now;
-        }
 
         private void buttonSua_Click(object sender, EventArgs e)
         {
-            string sql_ed = $"update TheDocGia set TeDN='{textBox2.Text}',MatKhau='{textBox1.Text}',HoTen=N'{f2Name.Text}',NgaySinh='{f2NgaySinh.Value.ToString("yyyyMMdd")}',DiaChi=N'{f2Address.Text}',Loai='{f2Type.Text}',Email='{f2Email.Text}',NgayLapThe='{DateTime.Today.ToString("yyyyMMdd")}',TongNo=0,MaNgLap=null,MaNgThuTien=null where MS='{textMS.Text}'";
-            SqlCommand cmd = new SqlCommand(sql_ed, con);
-           // try
-          //  {
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Sửa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                Hienthi();
+            if (paddress == true && pdate == true && pmail == true && pname == true && dn == true && mk == true && ptype == true)
+            {
+                checkTen.SetError(f2Name, null);
+                string sql_ed = $"update TheDocGia set TeDN='{textBox2.Text}',MatKhau='{textBox1.Text}',HoTen=N'{f2Name.Text}',NgaySinh='{f2NgaySinh.Value.ToString("yyyyMMdd")}',DiaChi=N'{f2Address.Text}',Loai='{f2Type.Text}',Email='{f2Email.Text}',TongNo=0,MaNgLap=null,MaNgThuTien=null where MS='{textMS.Text}'";
+                SqlCommand cmd = new SqlCommand(sql_ed, con);
+               try
+                {
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Sửa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Hienthi();
 
-           // }
-          //  catch
-          //  {
-                //MessageBox.Show("Sửa thất bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-          //  }
+                }
+                catch
+                {
+                    MessageBox.Show("Sửa thất bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else MessageBox.Show("Sửa thất bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
         int dem = 0;
         private void button_Eye_Click(object sender, EventArgs e)
@@ -428,6 +505,31 @@ namespace BM2
             dem++;
             if (dem % 2 == 1) { textBox1.UseSystemPasswordChar = false; }
             else textBox1.UseSystemPasswordChar = true;
+        }
+
+        private void button_Load_Click(object sender, EventArgs e)
+        {
+            buttonSua.Enabled = false;
+            buttonSign_up.Enabled = true;
+            Reset_ThuocTinh();
+            Set_false();
+            Hienthi();
+            f2NgaySinh.Value = DateTime.Now;
+        }
+
+        private void button_Excel_Click(object sender, EventArgs e)
+        {
+            Export_Excel(dataTheDocGia, @"C:\Users\kun\source\repos\DarkDipper\Libary-Management\LOC\documents\", "QLDG");
+        }
+
+        private void button_help_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(
+                "1. File Excel được lưu tại địa chỉ " +
+                "C:\\Users\\kun\\source\\repos\\DarkDipper\\Libary-Management\\LOC\\documents\\ với tên là QLDG.xlsx",
+                "Thông tin hướng dẫn",
+                MessageBoxButtons.OK
+                );
         }
     }
 }

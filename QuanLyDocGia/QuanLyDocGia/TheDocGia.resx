@@ -128,30 +128,327 @@
     <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1072, 405</value>
+    <value>1095, 405</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="label_thongke.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label_thongke.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft YaHei UI Light, 9.75pt, style=Italic</value>
+  </data>
+  <data name="label_thongke.Location" type="System.Drawing.Point, System.Drawing">
+    <value>319, 57</value>
+  </data>
+  <data name="label_thongke.Size" type="System.Drawing.Size, System.Drawing">
+    <value>49, 19</value>
+  </data>
+  <data name="label_thongke.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="label_thongke.Text" xml:space="preserve">
+    <value>label10</value>
+  </data>
+  <data name="&gt;&gt;label_thongke.Name" xml:space="preserve">
+    <value>label_thongke</value>
+  </data>
+  <data name="&gt;&gt;label_thongke.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label_thongke.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="&gt;&gt;label_thongke.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="progressBar_thongke.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 57</value>
+  </data>
+  <data name="progressBar_thongke.Size" type="System.Drawing.Size, System.Drawing">
+    <value>304, 23</value>
+  </data>
+  <data name="progressBar_thongke.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;progressBar_thongke.Name" xml:space="preserve">
+    <value>progressBar_thongke</value>
+  </data>
+  <data name="&gt;&gt;progressBar_thongke.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ProgressBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;progressBar_thongke.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="&gt;&gt;progressBar_thongke.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="button_Excel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button_Excel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>185, 17</value>
+  </data>
+  <data name="button_Excel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 31</value>
+  </data>
+  <data name="button_Excel.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="button_Excel.Text" xml:space="preserve">
+    <value>Xuất Excel</value>
+  </data>
+  <data name="&gt;&gt;button_Excel.Name" xml:space="preserve">
+    <value>button_Excel</value>
+  </data>
+  <data name="&gt;&gt;button_Excel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button_Excel.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="&gt;&gt;button_Excel.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="button_help.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button_help.Location" type="System.Drawing.Point, System.Drawing">
+    <value>291, 17</value>
+  </data>
+  <data name="button_help.Size" type="System.Drawing.Size, System.Drawing">
+    <value>77, 31</value>
+  </data>
+  <data name="button_help.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="button_help.Text" xml:space="preserve">
+    <value>Trợ giúp</value>
+  </data>
+  <data name="&gt;&gt;button_help.Name" xml:space="preserve">
+    <value>button_help</value>
+  </data>
+  <data name="&gt;&gt;button_help.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button_help.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="&gt;&gt;button_help.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="button_Load.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button_Load.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 17</value>
+  </data>
+  <data name="button_Load.Size" type="System.Drawing.Size, System.Drawing">
+    <value>173, 31</value>
+  </data>
+  <data name="button_Load.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="button_Load.Text" xml:space="preserve">
+    <value>Tải lại</value>
+  </data>
+  <data name="&gt;&gt;button_Load.Name" xml:space="preserve">
+    <value>button_Load</value>
+  </data>
+  <data name="&gt;&gt;button_Load.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button_Load.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="&gt;&gt;button_Load.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="groupBox4.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt, style=Bold</value>
+  </data>
+  <data name="groupBox4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>699, 109</value>
+  </data>
+  <data name="groupBox4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>384, 93</value>
+  </data>
+  <data name="groupBox4.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="groupBox4.Text" xml:space="preserve">
+    <value>Khác</value>
+  </data>
+  <data name="&gt;&gt;groupBox4.Name" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="&gt;&gt;groupBox4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox4.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;groupBox4.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="info_tim.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="info_tim.Location" type="System.Drawing.Point, System.Drawing">
+    <value>894, 110</value>
+  </data>
+  <data name="info_tim.Size" type="System.Drawing.Size, System.Drawing">
+    <value>31, 13</value>
+  </data>
+  <data name="info_tim.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="info_tim.Text" xml:space="preserve">
+    <value>        </value>
+  </data>
+  <data name="&gt;&gt;info_tim.Name" xml:space="preserve">
+    <value>info_tim</value>
+  </data>
+  <data name="&gt;&gt;info_tim.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;info_tim.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;info_tim.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="comboBox1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="comboBox1.Items" xml:space="preserve">
+    <value>Họ tên</value>
+  </data>
+  <data name="comboBox1.Items1" xml:space="preserve">
+    <value>Mã đọc giả</value>
+  </data>
+  <data name="comboBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 17</value>
+  </data>
+  <data name="comboBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>69, 21</value>
+  </data>
+  <data name="comboBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;comboBox1.Name" xml:space="preserve">
+    <value>comboBox1</value>
+  </data>
+  <data name="&gt;&gt;comboBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;comboBox1.Parent" xml:space="preserve">
+    <value>groupBox3</value>
+  </data>
+  <data name="&gt;&gt;comboBox1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="buttonTìm.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="buttonTìm.Location" type="System.Drawing.Point, System.Drawing">
+    <value>90, 13</value>
+  </data>
+  <data name="buttonTìm.Size" type="System.Drawing.Size, System.Drawing">
+    <value>83, 27</value>
+  </data>
+  <data name="buttonTìm.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="buttonTìm.Text" xml:space="preserve">
+    <value>Tìm kiếm</value>
+  </data>
+  <data name="&gt;&gt;buttonTìm.Name" xml:space="preserve">
+    <value>buttonTìm</value>
+  </data>
+  <data name="&gt;&gt;buttonTìm.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonTìm.Parent" xml:space="preserve">
+    <value>groupBox3</value>
+  </data>
+  <data name="&gt;&gt;buttonTìm.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="text_tìm.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt</value>
+  </data>
+  <data name="text_tìm.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 48</value>
+  </data>
+  <data name="text_tìm.Multiline" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="text_tìm.Size" type="System.Drawing.Size, System.Drawing">
+    <value>158, 24</value>
+  </data>
+  <data name="text_tìm.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;text_tìm.Name" xml:space="preserve">
+    <value>text_tìm</value>
+  </data>
+  <data name="&gt;&gt;text_tìm.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;text_tìm.Parent" xml:space="preserve">
+    <value>groupBox3</value>
+  </data>
+  <data name="&gt;&gt;text_tìm.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="groupBox3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt, style=Bold</value>
+  </data>
+  <data name="groupBox3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>894, 14</value>
+  </data>
+  <data name="groupBox3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>189, 89</value>
+  </data>
+  <data name="groupBox3.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="groupBox3.Text" xml:space="preserve">
+    <value>Tìm kiếm</value>
+  </data>
+  <data name="&gt;&gt;groupBox3.Name" xml:space="preserve">
+    <value>groupBox3</value>
+  </data>
+  <data name="&gt;&gt;groupBox3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox3.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;groupBox3.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
   <data name="label3.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="label3.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9.75pt</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="label3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>19, 22</value>
+    <value>6, 21</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>117, 16</value>
+    <value>81, 16</value>
   </data>
   <data name="label3.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
   <data name="label3.Text" xml:space="preserve">
-    <value>Nhập mã đọc giả :</value>
+    <value>Mã đọc giả :</value>
   </data>
   <data name="&gt;&gt;label3.Name" xml:space="preserve">
     <value>label3</value>
@@ -165,38 +462,38 @@
   <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="text_TimvaXoa.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="text_Xoa.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9.75pt</value>
   </data>
-  <data name="text_TimvaXoa.Location" type="System.Drawing.Point, System.Drawing">
-    <value>19, 47</value>
+  <data name="text_Xoa.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 47</value>
   </data>
-  <data name="text_TimvaXoa.Multiline" type="System.Boolean, mscorlib">
+  <data name="text_Xoa.Multiline" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="text_TimvaXoa.Size" type="System.Drawing.Size, System.Drawing">
-    <value>213, 24</value>
+  <data name="text_Xoa.Size" type="System.Drawing.Size, System.Drawing">
+    <value>170, 24</value>
   </data>
-  <data name="text_TimvaXoa.TabIndex" type="System.Int32, mscorlib">
+  <data name="text_Xoa.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="&gt;&gt;text_TimvaXoa.Name" xml:space="preserve">
-    <value>text_TimvaXoa</value>
+  <data name="&gt;&gt;text_Xoa.Name" xml:space="preserve">
+    <value>text_Xoa</value>
   </data>
-  <data name="&gt;&gt;text_TimvaXoa.Type" xml:space="preserve">
+  <data name="&gt;&gt;text_Xoa.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;text_TimvaXoa.Parent" xml:space="preserve">
+  <data name="&gt;&gt;text_Xoa.Parent" xml:space="preserve">
     <value>groupBox2</value>
   </data>
-  <data name="&gt;&gt;text_TimvaXoa.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;text_Xoa.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
   <data name="buttonXoa.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="buttonXoa.Location" type="System.Drawing.Point, System.Drawing">
-    <value>266, 52</value>
+    <value>93, 13</value>
   </data>
   <data name="buttonXoa.Size" type="System.Drawing.Size, System.Drawing">
     <value>83, 31</value>
@@ -219,33 +516,6 @@
   <data name="&gt;&gt;buttonXoa.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="buttonTìm.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="buttonTìm.Location" type="System.Drawing.Point, System.Drawing">
-    <value>266, 15</value>
-  </data>
-  <data name="buttonTìm.Size" type="System.Drawing.Size, System.Drawing">
-    <value>83, 31</value>
-  </data>
-  <data name="buttonTìm.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="buttonTìm.Text" xml:space="preserve">
-    <value>Tìm kiếm</value>
-  </data>
-  <data name="&gt;&gt;buttonTìm.Name" xml:space="preserve">
-    <value>buttonTìm</value>
-  </data>
-  <data name="&gt;&gt;buttonTìm.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;buttonTìm.Parent" xml:space="preserve">
-    <value>groupBox2</value>
-  </data>
-  <data name="&gt;&gt;buttonTìm.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
   <data name="groupBox2.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9.75pt, style=Bold</value>
   </data>
@@ -253,13 +523,13 @@
     <value>699, 14</value>
   </data>
   <data name="groupBox2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>355, 89</value>
+    <value>189, 89</value>
   </data>
   <data name="groupBox2.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
   <data name="groupBox2.Text" xml:space="preserve">
-    <value>Tìm và xóa</value>
+    <value>Xóa</value>
   </data>
   <data name="&gt;&gt;groupBox2.Name" xml:space="preserve">
     <value>groupBox2</value>
@@ -271,7 +541,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;groupBox2.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>3</value>
   </data>
   <data name="mSDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
     <value>Mã số</value>
@@ -319,7 +589,7 @@
     <value>19, 218</value>
   </data>
   <data name="dataTheDocGia.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1041, 150</value>
+    <value>1054, 150</value>
   </data>
   <data name="dataTheDocGia.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -334,7 +604,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;dataTheDocGia.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>4</value>
   </data>
   <data name="button_Eye.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -967,7 +1237,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;groupBox1.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>5</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1105,30 +1375,6 @@
   <data name="&gt;&gt;checkMK.Type" xml:space="preserve">
     <value>System.Windows.Forms.ErrorProvider, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;theDocGiaBindingSource.Name" xml:space="preserve">
-    <value>theDocGiaBindingSource</value>
-  </data>
-  <data name="&gt;&gt;theDocGiaBindingSource.Type" xml:space="preserve">
-    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;quanLyThuVienDataSet.Name" xml:space="preserve">
-    <value>quanLyThuVienDataSet</value>
-  </data>
-  <data name="&gt;&gt;quanLyThuVienDataSet.Type" xml:space="preserve">
-    <value>BM2.QuanLyThuVienDataSet, QuanLyThuVienDataSet.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;error_TimvaXoa.Name" xml:space="preserve">
-    <value>error_TimvaXoa</value>
-  </data>
-  <data name="&gt;&gt;error_TimvaXoa.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ErrorProvider, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;theDocGiaTableAdapter.Name" xml:space="preserve">
-    <value>theDocGiaTableAdapter</value>
-  </data>
-  <data name="&gt;&gt;theDocGiaTableAdapter.Type" xml:space="preserve">
-    <value>BM2.QuanLyThuVienDataSetTableAdapters.TheDocGiaTableAdapter, QuanLyThuVienDataSet.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
   <data name="&gt;&gt;mSDataGridViewTextBoxColumn.Name" xml:space="preserve">
     <value>mSDataGridViewTextBoxColumn</value>
   </data>
@@ -1200,6 +1446,30 @@
   </data>
   <data name="&gt;&gt;maNgThuTienDataGridViewTextBoxColumn.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;theDocGiaBindingSource.Name" xml:space="preserve">
+    <value>theDocGiaBindingSource</value>
+  </data>
+  <data name="&gt;&gt;theDocGiaBindingSource.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;quanLyThuVienDataSet.Name" xml:space="preserve">
+    <value>quanLyThuVienDataSet</value>
+  </data>
+  <data name="&gt;&gt;quanLyThuVienDataSet.Type" xml:space="preserve">
+    <value>BM2.QuanLyThuVienDataSet, QuanLyThuVienDataSet.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;error_TimvaXoa.Name" xml:space="preserve">
+    <value>error_TimvaXoa</value>
+  </data>
+  <data name="&gt;&gt;error_TimvaXoa.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ErrorProvider, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;theDocGiaTableAdapter.Name" xml:space="preserve">
+    <value>theDocGiaTableAdapter</value>
+  </data>
+  <data name="&gt;&gt;theDocGiaTableAdapter.Type" xml:space="preserve">
+    <value>BM2.QuanLyThuVienDataSetTableAdapters.TheDocGiaTableAdapter, QuanLyThuVienDataSet.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>TheDocGia</value>

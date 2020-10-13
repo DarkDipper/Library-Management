@@ -1,0 +1,12 @@
+C:\Users\kun\source\repos\DarkDipper\Libary-Management\QuanLyDocGia\QuanLyDocGia\bin\Debug\BM2.exe.config
+C:\Users\kun\source\repos\DarkDipper\Libary-Management\QuanLyDocGia\QuanLyDocGia\bin\Debug\BM2.exe
+C:\Users\kun\source\repos\DarkDipper\Libary-Management\QuanLyDocGia\QuanLyDocGia\bin\Debug\BM2.pdb
+C:\Users\kun\source\repos\DarkDipper\Libary-Management\QuanLyDocGia\QuanLyDocGia\obj\Debug\QL_DocGia.csprojAssemblyReference.cache
+C:\Users\kun\source\repos\DarkDipper\Libary-Management\QuanLyDocGia\QuanLyDocGia\obj\Debug\BM2.TheDocGia.resources
+C:\Users\kun\source\repos\DarkDipper\Libary-Management\QuanLyDocGia\QuanLyDocGia\obj\Debug\BM2.Properties.Resources.resources
+C:\Users\kun\source\repos\DarkDipper\Libary-Management\QuanLyDocGia\QuanLyDocGia\obj\Debug\QL_DocGia.csproj.GenerateResource.cache
+C:\Users\kun\source\repos\DarkDipper\Libary-Management\QuanLyDocGia\QuanLyDocGia\obj\Debug\QL_DocGia.csproj.CoreCompileInputs.cache
+C:\Users\kun\source\repos\DarkDipper\Libary-Management\QuanLyDocGia\QuanLyDocGia\obj\Debug\BM2.exe
+C:\Users\kun\source\repos\DarkDipper\Libary-Management\QuanLyDocGia\QuanLyDocGia\obj\Debug\BM2.pdb
+C:\Users\kun\source\repos\DarkDipper\Libary-Management\QuanLyDocGia\QuanLyDocGia\obj\Debug\Interop.ACTIVEXLib.dll
+C:\Users\kun\source\repos\DarkDipper\Libary-Management\QuanLyDocGia\QuanLyDocGia\obj\Debug\QL_DocGia.csproj.ResolveComReference.cache
