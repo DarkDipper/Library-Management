@@ -1,0 +1,90 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace WindowsFormsApp11
+{
+    public partial class Form1 : Form
+    {
+        private readonly Model1 _qlbh = new Model1();
+        List<HangChonMua> dsmua = new List<HangChonMua>();
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            var hangHoas = _qlbh.HANGHOAs.ToList();
+            cbbHangHoa.DataSource = hangHoas;
+            cbbHangHoa.DisplayMember = "TenHH";
+            cbbHangHoa.ValueMember = "MaHH";
+        }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            int soluong;
+            if (!int.TryParse(nudSoLuong.Value.ToString(), out soluong))
+            {
+                MessageBox.Show("So Luong Khong Hop Le!");
+                return;
+            }
+            int mahh = int.Parse(cbbHangHoa.SelectedValue.ToString());
+            HangChonMua hcm = dsmua.SingleOrDefault (p => p.MaHH == mahh);
+            if (hcm == null)
+            {
+                HANGHOA hh = _qlbh.HANGHOAs.SingleOrDefault(p => p.MaHH == mahh);
+                dsmua.Add(new HangChonMua
+                {
+                    MaHH = hh.MaHH,
+                    TenHH = hh.TenHH,
+                    DonGia = hh.DonGia,
+                    SoLuong = soluong
+                });
+            }
+            else
+            {
+                hcm.SoLuong = soluong;
+                MessageBox.Show("Da Cap Nhat!");
+            }
+            dgvHangHoa.DataSource = null;
+            dgvHangHoa.DataSource = dsmua;
+        }
+
+        private void btnLapHD_Click(object sender, EventArgs e)
+        {
+            HOADON hd = new HOADON
+            {
+                NgayLapHD = DateTime.Now,
+                KhachHang = txtKhachHang.Text.Trim(),
+                TongTien = dsmua.Sum(P => P.ThanhTien)
+            };
+            _qlbh.HOADONs.Add(hd);
+            _qlbh.SaveChanges();
+            CTHOADON cthd = null;
+            foreach(HangChonMua hcm in dsmua)
+            {
+                cthd = new CTHOADON
+                {
+                    MaHD = hd.MaHD,
+                    MaHH = hcm.MaHH,
+                    SoLuong = hcm.SoLuong
+                };
+                _qlbh.CTHOADONs.Add(cthd);
+            }
+            _qlbh.SaveChanges();
+            MessageBox.Show("Da Them Thanh Cong!");
+            txtKhachHang.Text = "";
+            nudSoLuong.Value = 0;
+            dsmua.Clear();
+            dgvHangHoa.DataSource = null;
+            dgvHangHoa.DataSource = dsmua;
+        }
+    }
+}
