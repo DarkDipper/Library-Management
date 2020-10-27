@@ -8,3 +8,13 @@ D:\Project\BM3\BM8\obj\Debug\BM8.csproj.GenerateResource.cache
 D:\Project\BM3\BM8\obj\Debug\BM8.csproj.CoreCompileInputs.cache
 D:\Project\BM3\BM8\obj\Debug\BM8.exe
 D:\Project\BM3\BM8\obj\Debug\BM8.pdb
+D:\Project\Libary-Management\BM3 va BM8\BM8\bin\Debug\BM8.exe.config
+D:\Project\Libary-Management\BM3 va BM8\BM8\bin\Debug\BM8.exe
+D:\Project\Libary-Management\BM3 va BM8\BM8\bin\Debug\BM8.pdb
+D:\Project\Libary-Management\BM3 va BM8\BM8\obj\Debug\BM8.csprojAssemblyReference.cache
+D:\Project\Libary-Management\BM3 va BM8\BM8\obj\Debug\BM8.BM8.resources
+D:\Project\Libary-Management\BM3 va BM8\BM8\obj\Debug\BM8.Properties.Resources.resources
+D:\Project\Libary-Management\BM3 va BM8\BM8\obj\Debug\BM8.csproj.GenerateResource.cache
+D:\Project\Libary-Management\BM3 va BM8\BM8\obj\Debug\BM8.csproj.CoreCompileInputs.cache
+D:\Project\Libary-Management\BM3 va BM8\BM8\obj\Debug\BM8.exe
+D:\Project\Libary-Management\BM3 va BM8\BM8\obj\Debug\BM8.pdb

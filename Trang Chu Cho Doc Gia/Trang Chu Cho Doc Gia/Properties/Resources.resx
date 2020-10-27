@@ -124,6 +124,9 @@
   <data name="book_search_icon_135876" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\book_search_icon_135876.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="log-out_icon-icons.com_50106" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\log-out_icon-icons.com_50106.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="pexels-element-digital-1370295" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pexels-element-digital-1370295.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -133,10 +136,25 @@
   <data name="b50d19ef-edc8-4703-8fdd-274e9a06f4a3_200x200" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\b50d19ef-edc8-4703-8fdd-274e9a06f4a3_200x200.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="pexels-messala-ciulla-942872" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pexels-messala-ciulla-942872.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Book and coffe" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Book and coffe.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pexels-element-digital-1370296" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pexels-element-digital-1370296.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="open-book" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\open-book.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="log-out_icon-icons.com_50106" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\log-out_icon-icons.com_50106.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="pexels-karolina-grabowska-4226805" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pexels-karolina-grabowska-4226805.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pexels-pixabay-235985" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pexels-pixabay-235985.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pexels-element-digital-1470162" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pexels-element-digital-1470162.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

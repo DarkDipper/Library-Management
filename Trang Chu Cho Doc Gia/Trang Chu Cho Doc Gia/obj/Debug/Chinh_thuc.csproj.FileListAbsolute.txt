@@ -9,3 +9,19 @@ D:\Project\Libary-Management\Trang Chu\Trang Chu\obj\Debug\Chinh_thuc.csproj.Gen
 D:\Project\Libary-Management\Trang Chu\Trang Chu\obj\Debug\Chinh_thuc.csproj.CoreCompileInputs.cache
 D:\Project\Libary-Management\Trang Chu\Trang Chu\obj\Debug\Trang Chu.exe
 D:\Project\Libary-Management\Trang Chu\Trang Chu\obj\Debug\Trang Chu.pdb
+D:\Project\Libary-Management\Trang Chu Cho Doc Gia\Trang Chu Cho Doc Gia\bin\Debug\Trang Chu.exe.config
+D:\Project\Libary-Management\Trang Chu Cho Doc Gia\Trang Chu Cho Doc Gia\bin\Debug\Trang Chu.exe
+D:\Project\Libary-Management\Trang Chu Cho Doc Gia\Trang Chu Cho Doc Gia\bin\Debug\Trang Chu.pdb
+D:\Project\Libary-Management\Trang Chu Cho Doc Gia\Trang Chu Cho Doc Gia\bin\Debug\EntityFramework.dll
+D:\Project\Libary-Management\Trang Chu Cho Doc Gia\Trang Chu Cho Doc Gia\bin\Debug\EntityFramework.SqlServer.dll
+D:\Project\Libary-Management\Trang Chu Cho Doc Gia\Trang Chu Cho Doc Gia\bin\Debug\EntityFramework.xml
+D:\Project\Libary-Management\Trang Chu Cho Doc Gia\Trang Chu Cho Doc Gia\bin\Debug\EntityFramework.SqlServer.xml
+D:\Project\Libary-Management\Trang Chu Cho Doc Gia\Trang Chu Cho Doc Gia\obj\Debug\Chinh_thuc.csprojAssemblyReference.cache
+D:\Project\Libary-Management\Trang Chu Cho Doc Gia\Trang Chu Cho Doc Gia\obj\Debug\Trang_Chu.Log_in.resources
+D:\Project\Libary-Management\Trang Chu Cho Doc Gia\Trang Chu Cho Doc Gia\obj\Debug\Trang_Chu.Properties.Resources.resources
+D:\Project\Libary-Management\Trang Chu Cho Doc Gia\Trang Chu Cho Doc Gia\obj\Debug\Trang_Chu.Trang_chu_cho_doc_gia.resources
+D:\Project\Libary-Management\Trang Chu Cho Doc Gia\Trang Chu Cho Doc Gia\obj\Debug\Chinh_thuc.csproj.GenerateResource.cache
+D:\Project\Libary-Management\Trang Chu Cho Doc Gia\Trang Chu Cho Doc Gia\obj\Debug\Chinh_thuc.csproj.CoreCompileInputs.cache
+D:\Project\Libary-Management\Trang Chu Cho Doc Gia\Trang Chu Cho Doc Gia\obj\Debug\Chinh_thuc.csproj.CopyComplete
+D:\Project\Libary-Management\Trang Chu Cho Doc Gia\Trang Chu Cho Doc Gia\obj\Debug\Trang Chu.exe
+D:\Project\Libary-Management\Trang Chu Cho Doc Gia\Trang Chu Cho Doc Gia\obj\Debug\Trang Chu.pdb

@@ -12,11 +12,18 @@ namespace Trang_Chu
 {
     public partial class Trang_chu_cho_doc_gia : Form
     {
+        TheDocGia DocGia = new TheDocGia();
         private Button btn;
-        public Trang_chu_cho_doc_gia()
+        public Trang_chu_cho_doc_gia(TheDocGia BanDoc)
         {
             InitializeComponent();
+            DocGia = BanDoc;
+            
         }
+        /// 
+        /// Xử lý Giao diện
+        /// 
+        /// 
         private void Thay_doi_trang_thai_nut(object btnSender)
         {
             if (btnSender != null)
@@ -39,9 +46,16 @@ namespace Trang_Chu
                 btn.BackColor = Color.Peru;
             }
         }
+        /// 
+        /// 
+        /// Tạo và chỉnh sửa event
+        /// 
+        /// 
         private void button_xem_thong_tin_Click(object sender, EventArgs e)
         {
-            Thay_doi_trang_thai_nut(button_xem_thong_tin);    
+            Thay_doi_trang_thai_nut(button_xem_thong_tin);
+            Wallpaper.Visible = false;
+            Panel_UserInformation.Visible = true;
         }
 
         private void buttonTra_cuu_sach_Click(object sender, EventArgs e)
@@ -54,6 +68,24 @@ namespace Trang_Chu
             Thay_doi_trang_thai_nut(button_dang_xuat);
         }
 
-        
+        private void Panel_UserInformation_VisibleChanged(object sender, EventArgs e)
+        {
+            MaSo.Parent = pictureBox2;
+            Ten_Dang_Nhap.Parent = pictureBox2;
+            HoVaTen.Parent = pictureBox2;
+            NgaySinh.Parent = pictureBox2;
+            DiaChi.Parent = pictureBox2;
+            Email.Parent = pictureBox2;
+            Loai.Parent = pictureBox2;
+            MaSo.Text = "Mã Số: " + DocGia.MS;
+            Ten_Dang_Nhap.Text = "Tên Đăng Nhập: " + DocGia.TenDN;
+            HoVaTen.Text = "Họ và Tên: " + DocGia.HoTen;
+            NgaySinh.Text = "Ngày Sinh: " + ((DateTime)DocGia.NgaySinh).ToString("dd/MM/yyyy");
+            DiaChi.Text = "Địa Chỉ: " + DocGia.DiaChi;
+            Email.Text = "Email: " + DocGia.Email;
+            Loai.Text = "Loại: " + DocGia.Loai;
+            
+        }
+
     }
 }

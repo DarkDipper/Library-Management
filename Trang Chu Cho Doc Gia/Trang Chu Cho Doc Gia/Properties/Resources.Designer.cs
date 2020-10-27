@@ -83,6 +83,16 @@ namespace Trang_Chu.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Book_and_coffe {
+            get {
+                object obj = ResourceManager.GetObject("Book and coffe", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap book_search_icon_135876 {
             get {
                 object obj = ResourceManager.GetObject("book_search_icon_135876", resourceCulture);
@@ -123,9 +133,59 @@ namespace Trang_Chu.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap pexels_element_digital_1370296 {
+            get {
+                object obj = ResourceManager.GetObject("pexels-element-digital-1370296", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pexels_element_digital_1470162 {
+            get {
+                object obj = ResourceManager.GetObject("pexels-element-digital-1470162", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap pexels_jason_villanueva_851555 {
             get {
                 object obj = ResourceManager.GetObject("pexels-jason-villanueva-851555", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pexels_karolina_grabowska_4226805 {
+            get {
+                object obj = ResourceManager.GetObject("pexels-karolina-grabowska-4226805", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pexels_messala_ciulla_942872 {
+            get {
+                object obj = ResourceManager.GetObject("pexels-messala-ciulla-942872", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pexels_pixabay_235985 {
+            get {
+                object obj = ResourceManager.GetObject("pexels-pixabay-235985", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

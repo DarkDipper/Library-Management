@@ -22,14 +22,6 @@ namespace BM8
         string MS_tendocgia,MS_nguoighinhan,MS_tensach;
         decimal MS_tienphat;
 
-        private void BM8_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            if (this.DialogResult == DialogResult.Cancel)
-            {
-                AutoValidate = AutoValidate.Disable;
-                this.Close();
-            }
-        }
 
         private void MS_ngay_ghi_nhan_Validating(object sender, CancelEventArgs e)
         {
@@ -67,7 +59,15 @@ namespace BM8
             }
             return base.ProcessCmdKey(ref msg, keyData);
         }
-
+        private void BM8_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (this.DialogResult == DialogResult.Cancel)
+            {
+                e.Cancel = false;
+                AutoValidate = AutoValidate.Disable;
+                this.Close();
+            }
+        }
 
     }
 }

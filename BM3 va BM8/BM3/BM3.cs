@@ -181,6 +181,7 @@ namespace BM3
         {
             if (this.DialogResult == DialogResult.Cancel)
             {
+                e.Cancel = true;
                 AutoValidate = AutoValidate.Disable;
                 this.Close();
             }
