@@ -21,7 +21,7 @@ alter table DanhSachSach add constraint DSS_MaNgNhan_FK foreign key(MaNgNhan) re
 create table TheDocGia
 (
 	MS varchar(5) constraint TDG_MS_Pk primary key,
-	TeDN varchar(50),
+	TenDN varchar(50),
 	MatKhau varchar(100) ,
 	HoTen nvarchar(100),
 	NgaySinh datetime,
@@ -45,6 +45,8 @@ create table HoSo
 	DiaChi nvarchar(100),
 	DienThoai varchar(12),
 	BoPhan nvarchar(10)
+	TenDN varchar(50),
+	MatKhau varchar(100) ,
 )
 
 --drop table MuonSach
