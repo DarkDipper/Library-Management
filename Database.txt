@@ -31,12 +31,10 @@ create table TheDocGia
 	NgayLapThe datetime,
 	TongNo int constraint TDG_TongNo_DF default(0),
 	MaNgLap varchar(5),
-	MaNgThuTien varchar(5),
 )
 
 alter table TheDocGia add
 	constraint TDG_MaNgLap_Fk foreign key(MaNgLap) references HoSo(MaNV),
-	constraint TDG_MaNgThuTien_Fk foreign key(MaNgThuTien) references HoSo(MaNV)
 --drop table HoSo
 create table HoSo
 (
