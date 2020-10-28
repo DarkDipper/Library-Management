@@ -23,6 +23,7 @@ namespace  Trang_Chu
         /// Xử lý thông tin và mật khẩu
         /// 
         /// 
+        string x = "chào";
         private void Dang_nhap_button_Click(object sender, EventArgs e)
         {
             bool check = false;
