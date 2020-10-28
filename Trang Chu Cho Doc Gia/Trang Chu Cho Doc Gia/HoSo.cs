@@ -23,26 +23,20 @@ namespace Trang_Chu
         [StringLength(5)]
         public string MaNV { get; set; }
 
-        [Required]
         [StringLength(100)]
         public string HoTen { get; set; }
 
         public DateTime? NgaySinh { get; set; }
 
-        [Required]
         [StringLength(50)]
         public string BangCap { get; set; }
-
-        [Required]
-        [StringLength(50)]
-        public string ChucVu { get; set; }
 
         [StringLength(100)]
         public string DiaChi { get; set; }
 
-        public int? DienThoai { get; set; }
+        [StringLength(12)]
+        public string DienThoai { get; set; }
 
-        [Required]
         [StringLength(10)]
         public string BoPhan { get; set; }
 
