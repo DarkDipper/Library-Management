@@ -83,6 +83,16 @@ namespace BM2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _2x3 {
+            get {
+                object obj = ResourceManager.GetObject("2x3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap eye_visible_outlined_interface_symbol_icon_icons_com_57844 {
             get {
                 object obj = ResourceManager.GetObject("eye-visible-outlined-interface-symbol_icon-icons.com_57844", resourceCulture);
@@ -97,6 +107,26 @@ namespace BM2.Properties {
             get {
                 object obj = ResourceManager.GetObject("ios7-eye-outline_icon-icons.com_50277", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap rsz_npl {
+            get {
+                object obj = ResourceManager.GetObject("rsz_npl", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] vuTimesBold {
+            get {
+                object obj = ResourceManager.GetObject("vuTimesBold", resourceCulture);
+                return ((byte[])(obj));
             }
         }
     }

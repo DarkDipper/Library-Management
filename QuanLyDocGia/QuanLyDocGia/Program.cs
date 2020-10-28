@@ -16,7 +16,7 @@ namespace BM2
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new TheDocGia());
+            Application.Run(new Form1());
         }
     }
 }

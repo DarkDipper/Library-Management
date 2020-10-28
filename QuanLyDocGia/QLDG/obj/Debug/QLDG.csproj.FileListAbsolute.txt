@@ -1,0 +1,16 @@
+C:\Users\kun\source\repos\DarkDipper\Libary-Management\QuanLyDocGia\QLDG\obj\Debug\QLDG.csprojAssemblyReference.cache
+C:\Users\kun\source\repos\DarkDipper\Libary-Management\QuanLyDocGia\QLDG\obj\Debug\QLDG.QLDG.resources
+C:\Users\kun\source\repos\DarkDipper\Libary-Management\QuanLyDocGia\QLDG\obj\Debug\QLDG.Properties.Resources.resources
+C:\Users\kun\source\repos\DarkDipper\Libary-Management\QuanLyDocGia\QLDG\obj\Debug\QLDG.csproj.GenerateResource.cache
+C:\Users\kun\source\repos\DarkDipper\Libary-Management\QuanLyDocGia\QLDG\obj\Debug\QLDG.csproj.CoreCompileInputs.cache
+C:\Users\kun\source\repos\DarkDipper\Libary-Management\QuanLyDocGia\QLDG\bin\Debug\QLDG.exe.config
+C:\Users\kun\source\repos\DarkDipper\Libary-Management\QuanLyDocGia\QLDG\bin\Debug\QLDG.exe
+C:\Users\kun\source\repos\DarkDipper\Libary-Management\QuanLyDocGia\QLDG\bin\Debug\QLDG.pdb
+C:\Users\kun\source\repos\DarkDipper\Libary-Management\QuanLyDocGia\QLDG\obj\Debug\QLDG.exe
+C:\Users\kun\source\repos\DarkDipper\Libary-Management\QuanLyDocGia\QLDG\obj\Debug\QLDG.pdb
+C:\Users\kun\source\repos\DarkDipper\Libary-Management\QuanLyDocGia\QLDG\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\kun\source\repos\DarkDipper\Libary-Management\QuanLyDocGia\QLDG\bin\Debug\itextsharp.dll
+C:\Users\kun\source\repos\DarkDipper\Libary-Management\QuanLyDocGia\QLDG\bin\Debug\itextsharp.xml
+C:\Users\kun\source\repos\DarkDipper\Libary-Management\QuanLyDocGia\QLDG\obj\Debug\QLDG.XuatThe.resources
+C:\Users\kun\source\repos\DarkDipper\Libary-Management\QuanLyDocGia\QLDG\obj\Debug\QLDG.csproj.CopyComplete
+C:\Users\kun\source\repos\DarkDipper\Libary-Management\QuanLyDocGia\QLDG\obj\Debug\QLDG.XuatTable.resources

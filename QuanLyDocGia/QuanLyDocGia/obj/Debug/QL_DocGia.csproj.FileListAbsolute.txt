@@ -10,3 +10,17 @@ C:\Users\kun\source\repos\DarkDipper\Libary-Management\QuanLyDocGia\QuanLyDocGia
 C:\Users\kun\source\repos\DarkDipper\Libary-Management\QuanLyDocGia\QuanLyDocGia\obj\Debug\BM2.pdb
 C:\Users\kun\source\repos\DarkDipper\Libary-Management\QuanLyDocGia\QuanLyDocGia\obj\Debug\Interop.ACTIVEXLib.dll
 C:\Users\kun\source\repos\DarkDipper\Libary-Management\QuanLyDocGia\QuanLyDocGia\obj\Debug\QL_DocGia.csproj.ResolveComReference.cache
+C:\Users\kun\source\repos\DarkDipper\Libary-Management\QuanLyDocGia\QuanLyDocGia\bin\Debug\itextsharp.xml
+C:\Users\kun\source\repos\DarkDipper\Libary-Management\QuanLyDocGia\QuanLyDocGia\obj\Debug\QL_DocGia.csproj.CopyComplete
+C:\Users\kun\source\repos\DarkDipper\Libary-Management\QuanLyDocGia\QuanLyDocGia\obj\Debug\BM2.XuatThe.resources
+C:\Users\kun\source\repos\DarkDipper\Libary-Management\QuanLyDocGia\QuanLyDocGia\obj\Debug\BM2.XuatBang.resources
+C:\Users\kun\source\repos\DarkDipper\Libary-Management\QuanLyDocGia\QuanLyDocGia\bin\Debug\PdfSharp.Charting.dll
+C:\Users\kun\source\repos\DarkDipper\Libary-Management\QuanLyDocGia\QuanLyDocGia\bin\Debug\PdfSharp.dll
+C:\Users\kun\source\repos\DarkDipper\Libary-Management\QuanLyDocGia\QuanLyDocGia\bin\Debug\PdfSharp.xml
+C:\Users\kun\source\repos\DarkDipper\Libary-Management\QuanLyDocGia\QuanLyDocGia\bin\Debug\PdfSharp.Charting.xml
+C:\Users\kun\source\repos\DarkDipper\Libary-Management\QuanLyDocGia\QuanLyDocGia\bin\Debug\de\PdfSharp.resources.dll
+C:\Users\kun\source\repos\DarkDipper\Libary-Management\QuanLyDocGia\QuanLyDocGia\bin\Debug\de\PdfSharp.Charting.resources.dll
+C:\Users\kun\source\repos\DarkDipper\Libary-Management\QuanLyDocGia\QuanLyDocGia\bin\Debug\QuanLyKho.exe
+C:\Users\kun\source\repos\DarkDipper\Libary-Management\QuanLyDocGia\QuanLyDocGia\bin\Debug\QuanLyKho.pdb
+C:\Users\kun\source\repos\DarkDipper\Libary-Management\QuanLyDocGia\QuanLyDocGia\bin\Debug\QuanLyKho.exe.config
+C:\Users\kun\source\repos\DarkDipper\Libary-Management\QuanLyDocGia\QuanLyDocGia\obj\Debug\BM2.Form1.resources

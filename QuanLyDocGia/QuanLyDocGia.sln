@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30413.136
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BM2", "BM2\BM2.csproj", "{35A53E2F-5EF9-4FE5-852F-8755BF9C906B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuanLyKho", "QuanLyKho\QuanLyKho.csproj", "{24FF2127-DB60-4551-AA51-02444A7F4CE4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QLDG", "QLDG\QLDG.csproj", "{A511976B-C0B3-42D6-AB8D-86F792AEE843}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{35A53E2F-5EF9-4FE5-852F-8755BF9C906B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{35A53E2F-5EF9-4FE5-852F-8755BF9C906B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{35A53E2F-5EF9-4FE5-852F-8755BF9C906B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{35A53E2F-5EF9-4FE5-852F-8755BF9C906B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{24FF2127-DB60-4551-AA51-02444A7F4CE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24FF2127-DB60-4551-AA51-02444A7F4CE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24FF2127-DB60-4551-AA51-02444A7F4CE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24FF2127-DB60-4551-AA51-02444A7F4CE4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A511976B-C0B3-42D6-AB8D-86F792AEE843}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A511976B-C0B3-42D6-AB8D-86F792AEE843}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A511976B-C0B3-42D6-AB8D-86F792AEE843}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A511976B-C0B3-42D6-AB8D-86F792AEE843}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
