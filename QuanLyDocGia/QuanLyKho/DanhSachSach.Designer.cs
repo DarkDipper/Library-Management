@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DanhSachSach));
             this.xuatDanhSachSach_Thoat = new System.Windows.Forms.Button();
             this.xuatDanhSachSach_xuat = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -121,6 +122,7 @@
             this.Controls.Add(this.xuatDanhSachSach_duongdan);
             this.Controls.Add(this.buttonxuatDanhSachSach_duongDan);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "DanhSachSach";
             this.Text = "Xuất danh sách sách - PDF";
             this.Load += new System.EventHandler(this.DanhSachSach_Load);

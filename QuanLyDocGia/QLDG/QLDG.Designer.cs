@@ -68,11 +68,19 @@
             this.t3 = new System.Windows.Forms.Label();
             this.t1 = new System.Windows.Forms.Label();
             this.muon = new System.Windows.Forms.TabPage();
+            this.groupBox10 = new System.Windows.Forms.GroupBox();
+            this.button_muonXoa = new System.Windows.Forms.Button();
+            this.button_muonXuatphieu = new System.Windows.Forms.Button();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
-            this.label8 = new System.Windows.Forms.Label();
+            this.button_muonTim = new System.Windows.Forms.Button();
+            this.comboBox_muontimPhieu = new System.Windows.Forms.ComboBox();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.dataPhieuMuon = new System.Windows.Forms.DataGridView();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.button_themmuon = new System.Windows.Forms.Button();
+            this.button_muonlammoi = new System.Windows.Forms.Button();
+            this.txt_muonSach = new System.Windows.Forms.TextBox();
+            this.txt_muonDG = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
@@ -80,23 +88,17 @@
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.dataDGMuon = new System.Windows.Forms.DataGridView();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.button_muonTimSach = new System.Windows.Forms.Button();
+            this.txt_muontimSach = new System.Windows.Forms.TextBox();
+            this.comboBox_muonTimSach = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.tra = new System.Windows.Forms.TabPage();
+            this.label9 = new System.Windows.Forms.Label();
             this.mat = new System.Windows.Forms.TabPage();
+            this.label10 = new System.Windows.Forms.Label();
             this.er = new System.Windows.Forms.ErrorProvider(this.components);
             this.Tick = new System.Windows.Forms.ErrorProvider(this.components);
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.Thongtin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataTheDocGia)).BeginInit();
@@ -104,6 +106,7 @@
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.muon.SuspendLayout();
+            this.groupBox10.SuspendLayout();
             this.groupBox9.SuspendLayout();
             this.groupBox8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataPhieuMuon)).BeginInit();
@@ -113,6 +116,8 @@
             this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataDGMuon)).BeginInit();
             this.groupBox4.SuspendLayout();
+            this.tra.SuspendLayout();
+            this.mat.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.er)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Tick)).BeginInit();
             this.SuspendLayout();
@@ -273,9 +278,9 @@
             // 
             // buttonTìm
             // 
-            this.buttonTìm.Location = new System.Drawing.Point(172, 12);
+            this.buttonTìm.Location = new System.Drawing.Point(172, 17);
             this.buttonTìm.Name = "buttonTìm";
-            this.buttonTìm.Size = new System.Drawing.Size(117, 33);
+            this.buttonTìm.Size = new System.Drawing.Size(117, 24);
             this.buttonTìm.TabIndex = 1;
             this.buttonTìm.Text = "Tìm kiếm";
             this.buttonTìm.UseVisualStyleBackColor = true;
@@ -517,6 +522,7 @@
             // 
             // muon
             // 
+            this.muon.Controls.Add(this.groupBox10);
             this.muon.Controls.Add(this.groupBox9);
             this.muon.Controls.Add(this.groupBox8);
             this.muon.Controls.Add(this.groupBox7);
@@ -531,30 +537,73 @@
             this.muon.Text = "Mượn sách";
             this.muon.UseVisualStyleBackColor = true;
             // 
+            // groupBox10
+            // 
+            this.groupBox10.Controls.Add(this.button_muonXoa);
+            this.groupBox10.Controls.Add(this.button_muonXuatphieu);
+            this.groupBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox10.Location = new System.Drawing.Point(773, 304);
+            this.groupBox10.Name = "groupBox10";
+            this.groupBox10.Size = new System.Drawing.Size(151, 99);
+            this.groupBox10.TabIndex = 12;
+            this.groupBox10.TabStop = false;
+            this.groupBox10.Text = "Chức năng khác";
+            // 
+            // button_muonXoa
+            // 
+            this.button_muonXoa.Location = new System.Drawing.Point(27, 23);
+            this.button_muonXoa.Name = "button_muonXoa";
+            this.button_muonXoa.Size = new System.Drawing.Size(94, 23);
+            this.button_muonXoa.TabIndex = 9;
+            this.button_muonXoa.Text = "Xóa ";
+            this.button_muonXoa.UseVisualStyleBackColor = true;
+            this.button_muonXoa.Click += new System.EventHandler(this.button_muonXoa_Click);
+            // 
+            // button_muonXuatphieu
+            // 
+            this.button_muonXuatphieu.Location = new System.Drawing.Point(27, 56);
+            this.button_muonXuatphieu.Name = "button_muonXuatphieu";
+            this.button_muonXuatphieu.Size = new System.Drawing.Size(94, 23);
+            this.button_muonXuatphieu.TabIndex = 10;
+            this.button_muonXuatphieu.Text = "Xuất phiếu";
+            this.button_muonXuatphieu.UseVisualStyleBackColor = true;
+            this.button_muonXuatphieu.Click += new System.EventHandler(this.button_muonXuatphieu_Click);
+            // 
             // groupBox9
             // 
-            this.groupBox9.Controls.Add(this.button7);
-            this.groupBox9.Controls.Add(this.button6);
-            this.groupBox9.Controls.Add(this.button5);
-            this.groupBox9.Controls.Add(this.comboBox3);
-            this.groupBox9.Controls.Add(this.label8);
+            this.groupBox9.Controls.Add(this.button_muonTim);
+            this.groupBox9.Controls.Add(this.comboBox_muontimPhieu);
             this.groupBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox9.Location = new System.Drawing.Point(773, 219);
             this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Size = new System.Drawing.Size(151, 184);
+            this.groupBox9.Size = new System.Drawing.Size(151, 79);
             this.groupBox9.TabIndex = 1;
             this.groupBox9.TabStop = false;
-            this.groupBox9.Text = "Chức năng khác";
+            this.groupBox9.Text = "Tìm phiếu";
             // 
-            // label8
+            // button_muonTim
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(6, 97);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(106, 13);
-            this.label8.TabIndex = 4;
-            this.label8.Text = "Tìm phiếu mượn theo";
+            this.button_muonTim.Location = new System.Drawing.Point(27, 49);
+            this.button_muonTim.Name = "button_muonTim";
+            this.button_muonTim.Size = new System.Drawing.Size(94, 23);
+            this.button_muonTim.TabIndex = 11;
+            this.button_muonTim.Text = "Tìm";
+            this.button_muonTim.UseVisualStyleBackColor = true;
+            this.button_muonTim.Click += new System.EventHandler(this.button_muonTim_Click);
+            // 
+            // comboBox_muontimPhieu
+            // 
+            this.comboBox_muontimPhieu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_muontimPhieu.FormattingEnabled = true;
+            this.comboBox_muontimPhieu.Items.AddRange(new object[] {
+            "Mã độc giả",
+            "Mã sách",
+            "Tất cả"});
+            this.comboBox_muontimPhieu.Location = new System.Drawing.Point(6, 21);
+            this.comboBox_muontimPhieu.Name = "comboBox_muontimPhieu";
+            this.comboBox_muontimPhieu.Size = new System.Drawing.Size(139, 24);
+            this.comboBox_muontimPhieu.TabIndex = 3;
+            this.comboBox_muontimPhieu.SelectedIndexChanged += new System.EventHandler(this.comboBox_muontimPhieu_SelectedIndexChanged);
             // 
             // groupBox8
             // 
@@ -575,27 +624,63 @@
             this.dataPhieuMuon.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataPhieuMuon.Size = new System.Drawing.Size(280, 157);
             this.dataPhieuMuon.TabIndex = 1;
+            this.dataPhieuMuon.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataPhieuMuon_CellClick);
             // 
             // groupBox7
             // 
-            this.groupBox7.Controls.Add(this.button4);
-            this.groupBox7.Controls.Add(this.button2);
-            this.groupBox7.Controls.Add(this.textBox7);
-            this.groupBox7.Controls.Add(this.textBox6);
+            this.groupBox7.Controls.Add(this.button_themmuon);
+            this.groupBox7.Controls.Add(this.button_muonlammoi);
+            this.groupBox7.Controls.Add(this.txt_muonSach);
+            this.groupBox7.Controls.Add(this.txt_muonDG);
             this.groupBox7.Controls.Add(this.label7);
             this.groupBox7.Controls.Add(this.label6);
             this.groupBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox7.Location = new System.Drawing.Point(475, 113);
+            this.groupBox7.Location = new System.Drawing.Point(475, 123);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(449, 100);
+            this.groupBox7.Size = new System.Drawing.Size(449, 90);
             this.groupBox7.TabIndex = 1;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Chức năng chính";
             // 
+            // button_themmuon
+            // 
+            this.button_themmuon.Location = new System.Drawing.Point(311, 21);
+            this.button_themmuon.Name = "button_themmuon";
+            this.button_themmuon.Size = new System.Drawing.Size(108, 27);
+            this.button_themmuon.TabIndex = 8;
+            this.button_themmuon.Text = "Thêm";
+            this.button_themmuon.UseVisualStyleBackColor = true;
+            this.button_themmuon.Click += new System.EventHandler(this.button_themmuon_Click);
+            // 
+            // button_muonlammoi
+            // 
+            this.button_muonlammoi.Location = new System.Drawing.Point(311, 49);
+            this.button_muonlammoi.Name = "button_muonlammoi";
+            this.button_muonlammoi.Size = new System.Drawing.Size(108, 29);
+            this.button_muonlammoi.TabIndex = 7;
+            this.button_muonlammoi.Text = "Làm mới";
+            this.button_muonlammoi.UseVisualStyleBackColor = true;
+            this.button_muonlammoi.Click += new System.EventHandler(this.button_muonlammoi_Click);
+            // 
+            // txt_muonSach
+            // 
+            this.txt_muonSach.Location = new System.Drawing.Point(114, 54);
+            this.txt_muonSach.Name = "txt_muonSach";
+            this.txt_muonSach.Size = new System.Drawing.Size(172, 22);
+            this.txt_muonSach.TabIndex = 5;
+            // 
+            // txt_muonDG
+            // 
+            this.txt_muonDG.Location = new System.Drawing.Point(114, 26);
+            this.txt_muonDG.Name = "txt_muonDG";
+            this.txt_muonDG.Size = new System.Drawing.Size(172, 22);
+            this.txt_muonDG.TabIndex = 4;
+            this.txt_muonDG.Leave += new System.EventHandler(this.txt_muonDG_Leave);
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(23, 60);
+            this.label7.Location = new System.Drawing.Point(23, 58);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(66, 16);
             this.label7.TabIndex = 3;
@@ -636,7 +721,7 @@
             this.groupBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox5.Location = new System.Drawing.Point(475, 7);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(449, 100);
+            this.groupBox5.Size = new System.Drawing.Size(449, 110);
             this.groupBox5.TabIndex = 1;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Thông tin độc giả";
@@ -647,14 +732,14 @@
             this.dataDGMuon.Location = new System.Drawing.Point(6, 19);
             this.dataDGMuon.Name = "dataDGMuon";
             this.dataDGMuon.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataDGMuon.Size = new System.Drawing.Size(437, 73);
+            this.dataDGMuon.Size = new System.Drawing.Size(437, 81);
             this.dataDGMuon.TabIndex = 1;
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.button8);
-            this.groupBox4.Controls.Add(this.textBox3);
-            this.groupBox4.Controls.Add(this.comboBox2);
+            this.groupBox4.Controls.Add(this.button_muonTimSach);
+            this.groupBox4.Controls.Add(this.txt_muontimSach);
+            this.groupBox4.Controls.Add(this.comboBox_muonTimSach);
             this.groupBox4.Controls.Add(this.label5);
             this.groupBox4.Controls.Add(this.label4);
             this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -665,14 +750,39 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Tìm kiếm sách";
             // 
-            // comboBox2
+            // button_muonTimSach
             // 
-            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(148, 22);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(157, 24);
-            this.comboBox2.TabIndex = 2;
+            this.button_muonTimSach.Location = new System.Drawing.Point(331, 58);
+            this.button_muonTimSach.Name = "button_muonTimSach";
+            this.button_muonTimSach.Size = new System.Drawing.Size(111, 28);
+            this.button_muonTimSach.TabIndex = 12;
+            this.button_muonTimSach.Text = "Tìm";
+            this.button_muonTimSach.UseVisualStyleBackColor = true;
+            this.button_muonTimSach.Click += new System.EventHandler(this.button_muonTimSach_Click);
+            // 
+            // txt_muontimSach
+            // 
+            this.txt_muontimSach.Location = new System.Drawing.Point(148, 58);
+            this.txt_muontimSach.Name = "txt_muontimSach";
+            this.txt_muontimSach.Size = new System.Drawing.Size(157, 22);
+            this.txt_muontimSach.TabIndex = 3;
+            // 
+            // comboBox_muonTimSach
+            // 
+            this.comboBox_muonTimSach.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_muonTimSach.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox_muonTimSach.FormattingEnabled = true;
+            this.comboBox_muonTimSach.Items.AddRange(new object[] {
+            "Mã sách",
+            "Tên sách",
+            "Thể loại",
+            "Tên tác giả",
+            "Đã cũ",
+            "Tất cả"});
+            this.comboBox_muonTimSach.Location = new System.Drawing.Point(148, 22);
+            this.comboBox_muonTimSach.Name = "comboBox_muonTimSach";
+            this.comboBox_muonTimSach.Size = new System.Drawing.Size(157, 24);
+            this.comboBox_muonTimSach.TabIndex = 2;
             // 
             // label5
             // 
@@ -694,6 +804,7 @@
             // 
             // tra
             // 
+            this.tra.Controls.Add(this.label9);
             this.tra.Location = new System.Drawing.Point(4, 22);
             this.tra.Name = "tra";
             this.tra.Size = new System.Drawing.Size(930, 409);
@@ -701,14 +812,37 @@
             this.tra.Text = "Trả sách";
             this.tra.UseVisualStyleBackColor = true;
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.Blue;
+            this.label9.Location = new System.Drawing.Point(108, 136);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(709, 42);
+            this.label9.TabIndex = 0;
+            this.label9.Text = "CHỨC NĂNG NÀY ĐANG PHÁT TRIỂN";
+            // 
             // mat
             // 
+            this.mat.Controls.Add(this.label10);
             this.mat.Location = new System.Drawing.Point(4, 22);
             this.mat.Name = "mat";
             this.mat.Size = new System.Drawing.Size(930, 409);
             this.mat.TabIndex = 3;
             this.mat.Text = "Mất sách";
             this.mat.UseVisualStyleBackColor = true;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.Blue;
+            this.label10.Location = new System.Drawing.Point(185, 142);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(586, 42);
+            this.label10.TabIndex = 0;
+            this.label10.Text = "CHỨC NĂNG NÀY PHÁT TRIỂN";
             // 
             // er
             // 
@@ -723,90 +857,6 @@
             this.Tick.ContainerControl = this;
             this.Tick.Icon = ((System.Drawing.Icon)(resources.GetObject("Tick.Icon")));
             // 
-            // comboBox3
-            // 
-            this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(6, 113);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(139, 24);
-            this.comboBox3.TabIndex = 3;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(148, 58);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(157, 22);
-            this.textBox3.TabIndex = 3;
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(114, 26);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(172, 22);
-            this.textBox6.TabIndex = 4;
-            // 
-            // textBox7
-            // 
-            this.textBox7.Location = new System.Drawing.Point(114, 56);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(172, 22);
-            this.textBox7.TabIndex = 5;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(321, 15);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(108, 29);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "Thêm ";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(321, 60);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(108, 30);
-            this.button4.TabIndex = 8;
-            this.button4.Text = "Làm mới";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(27, 32);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(94, 23);
-            this.button5.TabIndex = 9;
-            this.button5.Text = "Xóa ";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(27, 66);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(94, 23);
-            this.button6.TabIndex = 10;
-            this.button6.Text = "Xuất phiếu";
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // button7
-            // 
-            this.button7.Location = new System.Drawing.Point(27, 143);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(94, 23);
-            this.button7.TabIndex = 11;
-            this.button7.Text = "Tìm";
-            this.button7.UseVisualStyleBackColor = true;
-            // 
-            // button8
-            // 
-            this.button8.Location = new System.Drawing.Point(331, 58);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(111, 28);
-            this.button8.TabIndex = 12;
-            this.button8.Text = "Tìm";
-            this.button8.UseVisualStyleBackColor = true;
-            // 
             // QLDG
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -814,6 +864,7 @@
             this.ClientSize = new System.Drawing.Size(956, 450);
             this.Controls.Add(this.tabControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "QLDG";
             this.Text = "Quản lý độc giả";
@@ -829,8 +880,8 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.muon.ResumeLayout(false);
+            this.groupBox10.ResumeLayout(false);
             this.groupBox9.ResumeLayout(false);
-            this.groupBox9.PerformLayout();
             this.groupBox8.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataPhieuMuon)).EndInit();
             this.groupBox7.ResumeLayout(false);
@@ -841,6 +892,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataDGMuon)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            this.tra.ResumeLayout(false);
+            this.tra.PerformLayout();
+            this.mat.ResumeLayout(false);
+            this.mat.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.er)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Tick)).EndInit();
             this.ResumeLayout(false);
@@ -904,18 +959,20 @@
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.ComboBox comboBox_muonTimSach;
+        private System.Windows.Forms.Button button_muonTim;
+        private System.Windows.Forms.Button button_muonXuatphieu;
+        private System.Windows.Forms.Button button_muonXoa;
+        private System.Windows.Forms.ComboBox comboBox_muontimPhieu;
+        private System.Windows.Forms.Button button_themmuon;
+        private System.Windows.Forms.Button button_muonlammoi;
+        private System.Windows.Forms.TextBox txt_muonSach;
+        private System.Windows.Forms.TextBox txt_muonDG;
+        private System.Windows.Forms.Button button_muonTimSach;
+        private System.Windows.Forms.TextBox txt_muontimSach;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.GroupBox groupBox10;
     }
 }
 

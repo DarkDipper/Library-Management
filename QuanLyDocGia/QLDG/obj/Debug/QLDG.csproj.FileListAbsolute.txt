@@ -14,3 +14,7 @@ C:\Users\kun\source\repos\DarkDipper\Libary-Management\QuanLyDocGia\QLDG\bin\Deb
 C:\Users\kun\source\repos\DarkDipper\Libary-Management\QuanLyDocGia\QLDG\obj\Debug\QLDG.XuatThe.resources
 C:\Users\kun\source\repos\DarkDipper\Libary-Management\QuanLyDocGia\QLDG\obj\Debug\QLDG.csproj.CopyComplete
 C:\Users\kun\source\repos\DarkDipper\Libary-Management\QuanLyDocGia\QLDG\obj\Debug\QLDG.XuatTable.resources
+C:\Users\kun\source\repos\DarkDipper\Libary-Management\QuanLyDocGia\QLDG\bin\Debug\EntityFramework.dll
+C:\Users\kun\source\repos\DarkDipper\Libary-Management\QuanLyDocGia\QLDG\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\kun\source\repos\DarkDipper\Libary-Management\QuanLyDocGia\QLDG\bin\Debug\EntityFramework.xml
+C:\Users\kun\source\repos\DarkDipper\Libary-Management\QuanLyDocGia\QLDG\bin\Debug\EntityFramework.SqlServer.xml

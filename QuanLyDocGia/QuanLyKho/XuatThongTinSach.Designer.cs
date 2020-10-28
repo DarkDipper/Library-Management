@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(XuatThongTinSach));
             this.xuatThongTinSach_Thoat = new System.Windows.Forms.Button();
             this.xuatThongTinSach_xuat = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -122,6 +123,7 @@
             this.Controls.Add(this.buttonxuatThongTinSach_duongDan);
             this.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "XuatThongTinSach";
             this.Text = "Xuất thông tin sách - PDF";
