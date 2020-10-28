@@ -22,20 +22,17 @@ namespace Trang_Chu
         [StringLength(5)]
         public string MaSach { get; set; }
 
-        [Required]
         [StringLength(100)]
         public string TenSach { get; set; }
 
-        [Required]
         [StringLength(100)]
         public string TacGia { get; set; }
 
         [StringLength(1)]
         public string TheLoai { get; set; }
 
-        public DateTime? NamXuatBan { get; set; }
+        public int? NamXuatBan { get; set; }
 
-        [Required]
         [StringLength(100)]
         public string NhaXuatBan { get; set; }
 
@@ -46,7 +43,6 @@ namespace Trang_Chu
         [StringLength(30)]
         public string TinhTrang { get; set; }
 
-        [Required]
         [StringLength(5)]
         public string MaNgNhan { get; set; }
 

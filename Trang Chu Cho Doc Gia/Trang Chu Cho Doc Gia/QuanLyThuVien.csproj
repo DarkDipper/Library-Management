@@ -156,6 +156,10 @@
       <Project>{a511976b-c0b3-42d6-ab8d-86f792aee843}</Project>
       <Name>QLDG</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\QuanLyDocGia\QuanLyKho\QuanLyKho.csproj">
+      <Project>{24ff2127-db60-4551-aa51-02444a7f4ce4}</Project>
+      <Name>QuanLyKho</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

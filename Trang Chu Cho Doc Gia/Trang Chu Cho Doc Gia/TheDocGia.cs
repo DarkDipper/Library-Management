@@ -24,11 +24,9 @@ namespace Trang_Chu
         [StringLength(50)]
         public string TenDN { get; set; }
 
-        [Required]
         [StringLength(100)]
         public string MatKhau { get; set; }
 
-        [Required]
         [StringLength(100)]
         public string HoTen { get; set; }
 

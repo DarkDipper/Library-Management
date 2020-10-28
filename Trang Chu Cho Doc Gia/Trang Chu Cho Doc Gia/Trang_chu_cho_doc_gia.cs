@@ -55,11 +55,16 @@ namespace Trang_Chu
         {
             Thay_doi_trang_thai_nut(button_xem_thong_tin);
             Panel_UserInformation.Visible = true;
+            panel_TraCuuSach.Visible = false;
+            Turn_off_Sach();
         }
 
         private void buttonTra_cuu_sach_Click(object sender, EventArgs e)
         {
+            //panel_TraCuuSach.Parent=
             Thay_doi_trang_thai_nut(buttonTra_cuu_sach);
+            Panel_UserInformation.Visible = false;
+            panel_TraCuuSach.Visible = true;
         }
 
         private void button_dang_xuat_Click(object sender, EventArgs e)
@@ -77,6 +82,73 @@ namespace Trang_Chu
             Email.Text = "Email: " + DocGia.Email;
             Loai.Text = "Loại: " + DocGia.Loai;
             
+        }
+        QuanLyThuVien qltv = new QuanLyThuVien();
+        private void button_TraCuu_Click(object sender, EventArgs e)
+        {
+            listSach.Items.Clear();
+            if (textTraCuuSach.Text.Length != 0)
+            {
+                var DS = from A in qltv.DanhSachSaches where A.TenSach.Contains(textTraCuuSach.Text) select A;
+                foreach (var B in DS)
+                {
+                    listSach.Items.Add(B.TenSach);
+                }
+            }else if (textTraCuuSach.Text.Length == 0)
+            {
+                Turn_off_Sach();
+            }
+        }
+        public void Turn_off_Sach()
+        {
+            textTraCuuSach.Text = "";
+            labelTenSach.Visible = false;
+            labelTacGia.Visible = false;
+            labelLoai.Visible = false;
+            labelNamXB.Visible = false;
+            labelNhaXB.Visible = false;
+            labelTinhTrang.Visible = false;
+            listSach.Items.Clear();
+
+        }
+        private void listSach_DoubleClick(object sender, EventArgs e)
+        {
+            var DS = from A in qltv.DanhSachSaches where A.TenSach == listSach.SelectedItem.ToString() select A;
+            try
+            {
+                foreach (var B in DS)
+                {
+                    labelTenSach.Text = "Tên Sách: " + B.TenSach.ToString();
+                    labelTacGia.Text = "Tác Giả: " + B.TacGia.ToString();
+                    labelLoai.Text = "Loại: " + B.TheLoai.ToString();
+                    labelNamXB.Text = "Năm xuất bản: " + B.NamXuatBan.ToString();
+                    labelNhaXB.Text = "Nhà xuất bản: " + B.NhaXuatBan.ToString();
+                    labelTinhTrang.Text = "Tình trạng: " + B.TinhTrang.ToString();
+
+                }
+                labelTenSach.Visible = true;
+                labelTacGia.Visible = true;
+                labelLoai.Visible = true;
+                labelNamXB.Visible = true;
+                labelNhaXB.Visible = true;
+                labelTinhTrang.Visible = true;
+            }
+            catch
+            {
+
+            }
+        }
+        protected override bool ProcessDialogKey(Keys keyData)
+        {
+            if (keyData == Keys.Enter)
+            {
+                if (panel_TraCuuSach.ContainsFocus)
+                {
+                    button_TraCuu.PerformClick();
+                    return true;
+                }
+            }
+            return base.ProcessDialogKey(keyData);
         }
 
     }

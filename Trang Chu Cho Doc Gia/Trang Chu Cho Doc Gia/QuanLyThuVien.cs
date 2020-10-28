@@ -17,9 +17,9 @@ namespace Trang_Chu
         public virtual DbSet<MatSach> MatSaches { get; set; }
         public virtual DbSet<MuonSach> MuonSaches { get; set; }
         public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
+        public virtual DbSet<ThanhLy> ThanhLies { get; set; }
         public virtual DbSet<TheDocGia> TheDocGias { get; set; }
         public virtual DbSet<TraSach> TraSaches { get; set; }
-        public virtual DbSet<ThanhLy> ThanhLies { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -42,6 +42,11 @@ namespace Trang_Chu
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<DanhSachSach>()
+                .HasMany(e => e.ThanhLies)
+                .WithRequired(e => e.DanhSachSach)
+                .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<DanhSachSach>()
                 .HasMany(e => e.TraSaches)
                 .WithRequired(e => e.DanhSachSach)
                 .WillCascadeOnDelete(false);
@@ -51,10 +56,13 @@ namespace Trang_Chu
                 .IsUnicode(false);
 
             modelBuilder.Entity<HoSo>()
+                .Property(e => e.DienThoai)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<HoSo>()
                 .HasMany(e => e.DanhSachSaches)
-                .WithRequired(e => e.HoSo)
-                .HasForeignKey(e => e.MaNgNhan)
-                .WillCascadeOnDelete(false);
+                .WithOptional(e => e.HoSo)
+                .HasForeignKey(e => e.MaNgNhan);
 
             modelBuilder.Entity<HoSo>()
                 .HasMany(e => e.MatSaches)
@@ -74,8 +82,9 @@ namespace Trang_Chu
 
             modelBuilder.Entity<HoSo>()
                 .HasMany(e => e.ThanhLies)
-                .WithOptional(e => e.HoSo)
-                .HasForeignKey(e => e.MaNgThanhLy);
+                .WithRequired(e => e.HoSo)
+                .HasForeignKey(e => e.MaNgThanhLy)
+                .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<MatSach>()
                 .Property(e => e.MaDocGia)
@@ -95,6 +104,14 @@ namespace Trang_Chu
 
             modelBuilder.Entity<MuonSach>()
                 .Property(e => e.MaSach)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<ThanhLy>()
+                .Property(e => e.MaSach)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<ThanhLy>()
+                .Property(e => e.MaNgThanhLy)
                 .IsUnicode(false);
 
             modelBuilder.Entity<TheDocGia>()
@@ -150,18 +167,6 @@ namespace Trang_Chu
             modelBuilder.Entity<TraSach>()
                 .Property(e => e.MaSach)
                 .IsUnicode(false);
-
-            modelBuilder.Entity<ThanhLy>()
-                .Property(e => e.MaSach)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<ThanhLy>()
-                .Property(e => e.MaNgThanhLy)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<ThanhLy>()
-                .Property(e => e.LyDo)
-                .IsFixedLength();
         }
     }
 }

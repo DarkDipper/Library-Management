@@ -41,7 +41,16 @@
             this.HoVaTen = new System.Windows.Forms.Label();
             this.Ten_Dang_Nhap = new System.Windows.Forms.Label();
             this.panel_TraCuuSach = new System.Windows.Forms.Panel();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.labelTinhTrang = new System.Windows.Forms.Label();
+            this.labelNhaXB = new System.Windows.Forms.Label();
+            this.labelLoai = new System.Windows.Forms.Label();
+            this.labelNamXB = new System.Windows.Forms.Label();
+            this.labelTacGia = new System.Windows.Forms.Label();
+            this.labelTenSach = new System.Windows.Forms.Label();
+            this.button_TraCuu = new System.Windows.Forms.Button();
+            this.labelTraCuuSach = new System.Windows.Forms.Label();
+            this.textTraCuuSach = new System.Windows.Forms.TextBox();
+            this.listSach = new System.Windows.Forms.ListBox();
             this.Panel_UserInformation.SuspendLayout();
             this.panel_TraCuuSach.SuspendLayout();
             this.SuspendLayout();
@@ -103,7 +112,6 @@
             this.Panel_UserInformation.BackColor = System.Drawing.Color.White;
             this.Panel_UserInformation.BackgroundImage = global::Trang_Chu.Properties.Resources.pexels_pixabay_235985;
             this.Panel_UserInformation.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Panel_UserInformation.Controls.Add(this.panel_TraCuuSach);
             this.Panel_UserInformation.Controls.Add(this.Loai);
             this.Panel_UserInformation.Controls.Add(this.MaSo);
             this.Panel_UserInformation.Controls.Add(this.Email);
@@ -193,24 +201,118 @@
             // 
             // panel_TraCuuSach
             // 
-            this.panel_TraCuuSach.Controls.Add(this.listBox1);
-            this.panel_TraCuuSach.Location = new System.Drawing.Point(0, -6);
+            this.panel_TraCuuSach.Controls.Add(this.labelTinhTrang);
+            this.panel_TraCuuSach.Controls.Add(this.labelNhaXB);
+            this.panel_TraCuuSach.Controls.Add(this.labelLoai);
+            this.panel_TraCuuSach.Controls.Add(this.labelNamXB);
+            this.panel_TraCuuSach.Controls.Add(this.labelTacGia);
+            this.panel_TraCuuSach.Controls.Add(this.labelTenSach);
+            this.panel_TraCuuSach.Controls.Add(this.button_TraCuu);
+            this.panel_TraCuuSach.Controls.Add(this.labelTraCuuSach);
+            this.panel_TraCuuSach.Controls.Add(this.textTraCuuSach);
+            this.panel_TraCuuSach.Controls.Add(this.listSach);
+            this.panel_TraCuuSach.Location = new System.Drawing.Point(202, -4);
             this.panel_TraCuuSach.Name = "panel_TraCuuSach";
             this.panel_TraCuuSach.Size = new System.Drawing.Size(726, 552);
             this.panel_TraCuuSach.TabIndex = 8;
+            this.panel_TraCuuSach.Visible = false;
             // 
-            // listBox1
+            // labelTinhTrang
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 22;
-            this.listBox1.Items.AddRange(new object[] {
-            "Hello",
-            "Hi",
-            "Chao"});
-            this.listBox1.Location = new System.Drawing.Point(54, 107);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(127, 136);
-            this.listBox1.TabIndex = 0;
+            this.labelTinhTrang.AutoSize = true;
+            this.labelTinhTrang.Location = new System.Drawing.Point(303, 312);
+            this.labelTinhTrang.Name = "labelTinhTrang";
+            this.labelTinhTrang.Size = new System.Drawing.Size(90, 22);
+            this.labelTinhTrang.TabIndex = 4;
+            this.labelTinhTrang.Text = "TinhTrang";
+            this.labelTinhTrang.Visible = false;
+            // 
+            // labelNhaXB
+            // 
+            this.labelNhaXB.AutoSize = true;
+            this.labelNhaXB.Location = new System.Drawing.Point(298, 262);
+            this.labelNhaXB.Name = "labelNhaXB";
+            this.labelNhaXB.Size = new System.Drawing.Size(69, 22);
+            this.labelNhaXB.TabIndex = 4;
+            this.labelNhaXB.Text = "NhaXB";
+            this.labelNhaXB.Visible = false;
+            // 
+            // labelLoai
+            // 
+            this.labelLoai.AutoSize = true;
+            this.labelLoai.Location = new System.Drawing.Point(298, 157);
+            this.labelLoai.Name = "labelLoai";
+            this.labelLoai.Size = new System.Drawing.Size(46, 22);
+            this.labelLoai.TabIndex = 4;
+            this.labelLoai.Text = "Loai";
+            this.labelLoai.Visible = false;
+            // 
+            // labelNamXB
+            // 
+            this.labelNamXB.AutoSize = true;
+            this.labelNamXB.Location = new System.Drawing.Point(298, 205);
+            this.labelNamXB.Name = "labelNamXB";
+            this.labelNamXB.Size = new System.Drawing.Size(74, 22);
+            this.labelNamXB.TabIndex = 4;
+            this.labelNamXB.Text = "NamXB";
+            this.labelNamXB.Visible = false;
+            // 
+            // labelTacGia
+            // 
+            this.labelTacGia.AutoSize = true;
+            this.labelTacGia.Location = new System.Drawing.Point(298, 115);
+            this.labelTacGia.Name = "labelTacGia";
+            this.labelTacGia.Size = new System.Drawing.Size(68, 22);
+            this.labelTacGia.TabIndex = 4;
+            this.labelTacGia.Text = "Tac gia";
+            this.labelTacGia.Visible = false;
+            // 
+            // labelTenSach
+            // 
+            this.labelTenSach.AutoSize = true;
+            this.labelTenSach.Location = new System.Drawing.Point(298, 65);
+            this.labelTenSach.Name = "labelTenSach";
+            this.labelTenSach.Size = new System.Drawing.Size(82, 22);
+            this.labelTenSach.TabIndex = 4;
+            this.labelTenSach.Text = "Ten Sach";
+            this.labelTenSach.Visible = false;
+            // 
+            // button_TraCuu
+            // 
+            this.button_TraCuu.AutoSize = true;
+            this.button_TraCuu.Location = new System.Drawing.Point(29, 107);
+            this.button_TraCuu.Name = "button_TraCuu";
+            this.button_TraCuu.Size = new System.Drawing.Size(85, 32);
+            this.button_TraCuu.TabIndex = 3;
+            this.button_TraCuu.Text = "Tra Cứu";
+            this.button_TraCuu.UseVisualStyleBackColor = true;
+            this.button_TraCuu.Click += new System.EventHandler(this.button_TraCuu_Click);
+            // 
+            // labelTraCuuSach
+            // 
+            this.labelTraCuuSach.AutoSize = true;
+            this.labelTraCuuSach.Location = new System.Drawing.Point(25, 21);
+            this.labelTraCuuSach.Name = "labelTraCuuSach";
+            this.labelTraCuuSach.Size = new System.Drawing.Size(83, 22);
+            this.labelTraCuuSach.TabIndex = 2;
+            this.labelTraCuuSach.Text = "Tên Sách";
+            // 
+            // textTraCuuSach
+            // 
+            this.textTraCuuSach.Location = new System.Drawing.Point(29, 62);
+            this.textTraCuuSach.Name = "textTraCuuSach";
+            this.textTraCuuSach.Size = new System.Drawing.Size(189, 30);
+            this.textTraCuuSach.TabIndex = 1;
+            // 
+            // listSach
+            // 
+            this.listSach.FormattingEnabled = true;
+            this.listSach.ItemHeight = 22;
+            this.listSach.Location = new System.Drawing.Point(29, 145);
+            this.listSach.Name = "listSach";
+            this.listSach.Size = new System.Drawing.Size(189, 378);
+            this.listSach.TabIndex = 0;
+            this.listSach.DoubleClick += new System.EventHandler(this.listSach_DoubleClick);
             // 
             // Trang_chu_cho_doc_gia
             // 
@@ -220,6 +322,7 @@
             this.BackgroundImage = global::Trang_Chu.Properties.Resources.Wallpaper;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(927, 548);
+            this.Controls.Add(this.panel_TraCuuSach);
             this.Controls.Add(this.Panel_UserInformation);
             this.Controls.Add(this.button_dang_xuat);
             this.Controls.Add(this.buttonTra_cuu_sach);
@@ -234,6 +337,7 @@
             this.Panel_UserInformation.ResumeLayout(false);
             this.Panel_UserInformation.PerformLayout();
             this.panel_TraCuuSach.ResumeLayout(false);
+            this.panel_TraCuuSach.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -252,6 +356,15 @@
         private System.Windows.Forms.Label NgaySinh;
         private System.Windows.Forms.Label HoVaTen;
         private System.Windows.Forms.Panel panel_TraCuuSach;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox listSach;
+        private System.Windows.Forms.Button button_TraCuu;
+        private System.Windows.Forms.Label labelTraCuuSach;
+        private System.Windows.Forms.TextBox textTraCuuSach;
+        private System.Windows.Forms.Label labelTacGia;
+        private System.Windows.Forms.Label labelTenSach;
+        private System.Windows.Forms.Label labelNhaXB;
+        private System.Windows.Forms.Label labelNamXB;
+        private System.Windows.Forms.Label labelLoai;
+        private System.Windows.Forms.Label labelTinhTrang;
     }
 }
