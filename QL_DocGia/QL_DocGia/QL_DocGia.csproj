@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{98A06257-A80A-46E7-9C6C-E1BAEBFB8970}</ProjectGuid>
+    <ProjectGuid>{80923858-5C75-48BE-A371-488750059CD5}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Trang_Chu</RootNamespace>
-    <AssemblyName>Trang Chu</AssemblyName>
+    <RootNamespace>QL_DocGia</RootNamespace>
+    <AssemblyName>QL_DocGia</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -33,18 +33,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\..\Chinh_thuc\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
-    </Reference>
-    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\..\Chinh_thuc\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
-    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
-    <Reference Include="System.DirectoryServices" />
-    <Reference Include="System.Runtime.Serialization" />
-    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -56,31 +46,31 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DanhSachSach.cs" />
-    <Compile Include="HoSo.cs" />
-    <Compile Include="Log_in.cs">
+    <Compile Include="Dang_nhap.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Log_in.Designer.cs">
-      <DependentUpon>Log_in.cs</DependentUpon>
+    <Compile Include="Dang_nhap.designer.cs">
+      <DependentUpon>Dang_nhap.cs</DependentUpon>
     </Compile>
-    <Compile Include="MatSach.cs" />
-    <Compile Include="MuonSach.cs" />
+    <Compile Include="QuanLyDocGia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyDocGia.Designer.cs">
+      <DependentUpon>QuanLyDocGia.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="QuanLyThuVien.cs" />
-    <Compile Include="sysdiagram.cs" />
-    <Compile Include="ThanhLy.cs" />
-    <Compile Include="TheDocGia.cs" />
-    <Compile Include="Trang_chu_cho_doc_gia.cs">
+    <Compile Include="TheDocGia.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Trang_chu_cho_doc_gia.Designer.cs">
-      <DependentUpon>Trang_chu_cho_doc_gia.cs</DependentUpon>
+    <Compile Include="TheDocGia.designer.cs">
+      <DependentUpon>TheDocGia.cs</DependentUpon>
     </Compile>
-    <Compile Include="TraSach.cs" />
-    <EmbeddedResource Include="Log_in.resx">
-      <DependentUpon>Log_in.cs</DependentUpon>
+    <EmbeddedResource Include="Dang_nhap.resx">
+      <DependentUpon>Dang_nhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyDocGia.resx">
+      <DependentUpon>QuanLyDocGia.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -90,12 +80,10 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Trang_chu_cho_doc_gia.resx">
-      <DependentUpon>Trang_chu_cho_doc_gia.cs</DependentUpon>
+    <EmbeddedResource Include="TheDocGia.resx">
+      <DependentUpon>TheDocGia.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -108,48 +96,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\b50d19ef-edc8-4703-8fdd-274e9a06f4a3_200x200.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\pexels-jason-villanueva-851555.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\pexels-element-digital-1370295.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\open-book.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\4092564-about-mobile-ui-profile-ui-user-website_114033.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\book_search_icon_135876.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\log-out_icon-icons.com_50106.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\pexels-pixabay-235985.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\pexels-karolina-grabowska-4226805.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\pexels-messala-ciulla-942872.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\pexels-element-digital-1370296.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Book and coffe.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\pexels-element-digital-1470162.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Wallpaper.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

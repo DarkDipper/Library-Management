@@ -1,0 +1,20 @@
+D:\Project\BM3\BM3\bin\Debug\BM3.exe.config
+D:\Project\BM3\BM3\bin\Debug\BM3.exe
+D:\Project\BM3\BM3\bin\Debug\BM3.pdb
+D:\Project\BM3\BM3\obj\Debug\BM3.csprojAssemblyReference.cache
+D:\Project\BM3\BM3\obj\Debug\BM3.Properties.Resources.resources
+D:\Project\BM3\BM3\obj\Debug\BM3.csproj.GenerateResource.cache
+D:\Project\BM3\BM3\obj\Debug\BM3.csproj.CoreCompileInputs.cache
+D:\Project\BM3\BM3\obj\Debug\BM3.exe
+D:\Project\BM3\BM3\obj\Debug\BM3.pdb
+D:\Project\BM3\BM3\obj\Debug\BM3.BM3.resources
+D:\Project\Libary-Management\BM3 va BM8\BM3\bin\Debug\BM3.exe.config
+D:\Project\Libary-Management\BM3 va BM8\BM3\bin\Debug\BM3.exe
+D:\Project\Libary-Management\BM3 va BM8\BM3\bin\Debug\BM3.pdb
+D:\Project\Libary-Management\BM3 va BM8\BM3\obj\Debug\BM3.csprojAssemblyReference.cache
+D:\Project\Libary-Management\BM3 va BM8\BM3\obj\Debug\BM3.BM3.resources
+D:\Project\Libary-Management\BM3 va BM8\BM3\obj\Debug\BM3.Properties.Resources.resources
+D:\Project\Libary-Management\BM3 va BM8\BM3\obj\Debug\BM3.csproj.GenerateResource.cache
+D:\Project\Libary-Management\BM3 va BM8\BM3\obj\Debug\BM3.csproj.CoreCompileInputs.cache
+D:\Project\Libary-Management\BM3 va BM8\BM3\obj\Debug\BM3.exe
+D:\Project\Libary-Management\BM3 va BM8\BM3\obj\Debug\BM3.pdb
