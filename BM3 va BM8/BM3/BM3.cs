@@ -17,6 +17,7 @@ namespace BM3
 {
     public partial class BM3 : Form
     {
+        int x=1;
         public BM3()
         {
             InitializeComponent();
