@@ -17,7 +17,6 @@ namespace QuanLyKho
 {
     public partial class QuanLyKho : Form
     {
-
         public QuanLyKho()
         {
             InitializeComponent();
@@ -27,6 +26,7 @@ namespace QuanLyKho
         SqlConnection con;
         public int SizeBang;
         public int i = 1;
+        public string Mathukho;
         public void HienThi()
         {
             SqlCommand cmd = new SqlCommand("select MaSach as N'Mã sách'," +
@@ -403,7 +403,7 @@ namespace QuanLyKho
                         '{DateTime.Today.ToString("yyyyMMdd")}',
                         {Kho_Gia.Value * 1000},
                         N'Còn',
-                        'E.002'
+                        '{Mathukho}'
                     )";
                 SqlCommand cmd = new SqlCommand(sql_in, con);
                 cmd.ExecuteNonQuery();
@@ -412,22 +412,20 @@ namespace QuanLyKho
                 i++;
                 Reset_ThuocTinh();
                 HienThi();
-                if (MessageBox.Show("Thêm thành công. Bạn có muốn xuất thông tin sách - PDF không ?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.OK)
-                {
-                    var x = new XuatThongTinSach();
-                    x.MaSach = TaoMa();
-                    x.TheLoai = Kho_TheLoai.Text;
-                    x.TenSach = Kho_TenSach.Text;
-                    x.TacGia = Kho_TacGia.Text;
-                    x.NamXuatBan = Kho_NamXuatBan.Text;
-                    x.NhaXuatBan = Kho_NhaXuatBan.Text;
-                    x.TriGia = Kho_Gia.Value.ToString()+".000 đồng";
-                    x.NgayNhap = DateTime.Today.ToString("dd/MM/yyyy");
-                    x.NguoiTiepNhan = "??";
-                    this.Hide();
-                    x.ShowDialog();
-                    this.Show();
-                }
+                MessageBox.Show("Thêm thành công ?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                var x = new XuatThongTinSach();
+                x.MaSach = TaoMa();
+                x.TheLoai = Kho_TheLoai.Text;
+                x.TenSach = Kho_TenSach.Text;
+                x.TacGia = Kho_TacGia.Text;
+                x.NamXuatBan = Kho_NamXuatBan.Text;
+                x.NhaXuatBan = Kho_NhaXuatBan.Text;
+                x.TriGia = Kho_Gia.Value.ToString()+".000 đồng";
+                x.NgayNhap = DateTime.Today.ToString("dd/MM/yyyy");
+                x.NguoiTiepNhan = "??";
+                this.Hide();
+                x.ShowDialog();
+                this.Show();
             }
             else MessageBox.Show("Đăng kí thất bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }

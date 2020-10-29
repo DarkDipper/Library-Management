@@ -14,7 +14,6 @@ C:\Users\kun\source\repos\DarkDipper\Libary-Management\QuanLyDocGia\QuanLyKho\bi
 C:\Users\kun\source\repos\DarkDipper\Libary-Management\QuanLyDocGia\QuanLyKho\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\kun\source\repos\DarkDipper\Libary-Management\QuanLyDocGia\QuanLyKho\obj\Debug\QuanLyKho.csproj.CopyComplete
 C:\Users\kun\source\repos\DarkDipper\Libary-Management\QuanLyDocGia\QuanLyKho\obj\Debug\QuanLyKho.XuatThongTinSach.resources
-C:\Users\kun\source\repos\DarkDipper\Libary-Management\QuanLyDocGia\QuanLyKho\bin\Debug\itextsharp.dll
 C:\Users\kun\source\repos\DarkDipper\Libary-Management\QuanLyDocGia\QuanLyKho\bin\Debug\BouncyCastle.Crypto.dll
 C:\Users\kun\source\repos\DarkDipper\Libary-Management\QuanLyDocGia\QuanLyKho\bin\Debug\itextsharp.xml
 C:\Users\kun\source\repos\DarkDipper\Libary-Management\QuanLyDocGia\QuanLyKho\obj\Debug\QuanLyKho.XuatKhoSach.resources

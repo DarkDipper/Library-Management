@@ -52,8 +52,8 @@ namespace QLDG
         {
             if (xuatThe_ten != null)
             {
-                try
-               {
+             //   try
+           //    {
                     Document The = new Document(iTextSharp.text.PageSize.HALFLETTER);
                     PdfWriter TheWriter = PdfWriter.GetInstance(The, new FileStream($@"{xuatThe_duongdan.Text + xuatThe_ten.Text}.pdf", FileMode.Create));
                     System.Drawing.Image img1 = global::QLDG.Properties.Resources.rsz_npl;
@@ -144,11 +144,11 @@ namespace QLDG
                     The.Close();
                     TheWriter.Close();
                    MessageBox.Show("Thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                catch
-                {
-                    MessageBox.Show("Thất bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+              //  }
+             //   catch
+              //  {
+              ///      MessageBox.Show("Thất bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+             //   }
             }
             else MessageBox.Show("Thất bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }

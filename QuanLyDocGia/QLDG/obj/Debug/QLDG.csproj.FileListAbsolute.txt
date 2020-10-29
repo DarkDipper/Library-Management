@@ -30,3 +30,7 @@ D:\Project\Libary-Management\QuanLyDocGia\QLDG\obj\Debug\QLDG.csproj.CoreCompile
 D:\Project\Libary-Management\QuanLyDocGia\QLDG\obj\Debug\QLDG.csproj.CopyComplete
 D:\Project\Libary-Management\QuanLyDocGia\QLDG\obj\Debug\QLDG.exe
 D:\Project\Libary-Management\QuanLyDocGia\QLDG\obj\Debug\QLDG.pdb
+C:\Users\kun\source\repos\DarkDipper\Libary-Management\QuanLyDocGia\QLDG\bin\Debug\EntityFramework.dll
+C:\Users\kun\source\repos\DarkDipper\Libary-Management\QuanLyDocGia\QLDG\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\kun\source\repos\DarkDipper\Libary-Management\QuanLyDocGia\QLDG\bin\Debug\EntityFramework.xml
+C:\Users\kun\source\repos\DarkDipper\Libary-Management\QuanLyDocGia\QLDG\bin\Debug\EntityFramework.SqlServer.xml

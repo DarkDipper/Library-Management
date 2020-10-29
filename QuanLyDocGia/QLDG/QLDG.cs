@@ -23,8 +23,8 @@ namespace QLDG
             InitializeComponent();
         }
         SqlConnection con;
-        Quanlythuvien qltv = new Quanlythuvien();
-
+        Model1 qltv = new Model1();
+        public HoSo NV;
         // tạo biến để kiểm tra đúng sau khi nhấn button 
         bool pname = false;
         bool paddress = false;
@@ -409,6 +409,7 @@ namespace QLDG
             
             this.ActiveControl = f2Name;  // Con trỏ đặt ngay tại Name 
             string conString = ConfigurationManager.ConnectionStrings["QuanLyDG"].ConnectionString.ToString();
+            
             con = new SqlConnection(conString);
             con.Open();
             Hienthi();
@@ -450,7 +451,7 @@ namespace QLDG
             {
 
 
-                string sql_in = $@"Insert into TheDocGia values('{TaoMa()}','{textBox2.Text}','{textBox1.Text}',N'{f2Name.Text}','{f2NgaySinh.Value.ToString("yyyyMMdd")}',N'{f2Address.Text}','{f2Type.Text}','{f2Email.Text}','{DateTime.Today.ToString("yyyyMMdd")}',0,'E.001')";
+                string sql_in = $@"Insert into TheDocGia values('{TaoMa()}','{textBox2.Text}','{textBox1.Text}',N'{f2Name.Text}','{f2NgaySinh.Value.ToString("yyyyMMdd")}',N'{f2Address.Text}','{f2Type.Text}','{f2Email.Text}','{DateTime.Today.ToString("yyyyMMdd")}',0,'{NV.MaNV}')";
                 SqlCommand cmd = new SqlCommand(sql_in, con);
                  try
                  {

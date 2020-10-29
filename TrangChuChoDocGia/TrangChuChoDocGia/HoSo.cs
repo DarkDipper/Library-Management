@@ -1,4 +1,4 @@
-namespace QLDG
+namespace Trang_Chu
 {
     using System;
     using System.Collections.Generic;
