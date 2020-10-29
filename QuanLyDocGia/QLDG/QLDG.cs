@@ -661,6 +661,8 @@ namespace QLDG
                             {
                                 if (KiemTraSoSachMuonTrong4ngay(txt_muonDG.Text))
                                 {
+                                    string sql_ed = $"update DanhSachSach set TinhTrang='Không có' "+$"where MaSach='{txt_muonSach.Text}'";
+                                    SqlCommand cmd1 = new SqlCommand(sql_ed, con);
                                     DanhSachSach sach = qltv.DanhSachSaches.SingleOrDefault(p => p.MaSach == txt_muonSach.Text);
                                     sach.TinhTrang = "Không có";
                                     qltv.DanhSachSaches.AddOrUpdate(sach);
@@ -668,10 +670,12 @@ namespace QLDG
                                     SqlCommand cmd = new SqlCommand(qin, con);
                                     try
                                     {
+                                        cmd1.ExecuteNonQuery();
                                         cmd.ExecuteNonQuery();
                                         MessageBox.Show("Thêm thành công", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
                                         txt_muonSach.Text = "";
                                         HienThiMuon();
+                                        HienThiKho();
                                     }
                                     catch
                                     {
@@ -796,12 +800,16 @@ namespace QLDG
                 sqlXoa = $"DELETE FROM MuonSach WHERE MaSach='{txt_muonSach.Text}'and MaDocGia = '{txt_muonDG.Text}'";
                 if (MessageBox.Show($"Có thật sự muốn xóa", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.OK)
                 {
+                    string sql_ed = $"update DanhSachSach set TinhTrang='Còn'" + $"where MaSach='{txt_muonSach.Text}'";
+                    SqlCommand cmd1 = new SqlCommand(sql_ed, con);
                     SqlCommand cmd = new SqlCommand(sqlXoa, con);
+                    cmd1.ExecuteNonQuery();
                     cmd.ExecuteNonQuery();
                     HienThiMuon();
                     DanhSachSach sach = qltv.DanhSachSaches.SingleOrDefault(p => p.MaSach == txt_muonSach.Text);
                     sach.TinhTrang = "Còn";
                     qltv.DanhSachSaches.AddOrUpdate(sach);
+                    HienThiKho();
                 }
             }
         }
