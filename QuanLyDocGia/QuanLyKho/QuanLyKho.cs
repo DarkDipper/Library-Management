@@ -555,5 +555,6 @@ namespace QuanLyKho
                 x.ShowDialog();
                 this.Show();
         }
+
     }
 }

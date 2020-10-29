@@ -120,10 +120,89 @@
   <metadata name="er.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>21, 9</value>
   </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>25</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAICAAAAEAIACoEAAAFgAAACgAAAAgAAAAQAAAAAEAIAAAAAAAABAAABx2AAAcdgAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAGRgAAFkYAABZGAAAWRgAAFkYAABZGAAAWRgAAFkYAABZGAAAWRgAAFkYAABZGAAAWRg
+        AAFkYAABZGAAAWRgAAFkYAABZGAAAWRgAAFkYAABZGAAAWRgAAFkYAABZGAAAWRgAAFkYAABZGAAAWRg
+        AAFkYAABZGAAAWRgAAFkYAABZGAAAGRgAABkYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAABkYAAAZGAAAGRgAABkYAANZWEBEm1pEBFgYxERX2IQEV9iEBFfYhARX2IQEV9i
+        EBFfYhARX2IQEV9iEBFfYhARX2IQEV9iEBFfYhARYGMQEW1qERFvaxERbmsREW5rERFuaxERbmsREW5r
+        ERFuaxERbmsREW5rERFuaxERb2sREW5qEBFlYQESZGAADWRgAOVkYADvYl0A7WVfAO5mXwDuZV8A7mVf
+        AO5lXwDuZV8A7mVfAO5lXwDuZV8A7mVfAO5lXwDuZV8A7mZfAO5lXwDuYV0A7mFdAO5hXQDuYV0A7mFd
+        AO5hXQDuYV0A7mFdAO5hXQDuYV0A7mFdAO5hXQDuYV0A7WRgAO9kYADlZGAA/2VhAf9taRD/YGMR/19i
+        EP9fYhD/X2IQ/19iEP9fYhD/X2IQ/19iEP9fYhD/X2IQ/19iEP9fYhD/X2IQ/2BjEP9tahH/b2sR/25q
+        EP9uahD/bmoQ/25qEP9uahH/bmsR/25rEf9uaxH/bmsR/29rEf9uahD/ZWEB/2RgAP9gXQD+cWwQ/t3j
+        3/4uh+r+F3nk/h195f4cfOX+HHzl/hx85f4cfOX+HHzl/hx85f4cfOX+HHzl/h195f4YeuX+LIXm/uft
+        7v75+PD+9Pfy/vX38v719/L+9fjy/vX28P719e/+9fXv/vX17/709O7++Pfz/uzr4P5uahD+YV0A/mBc
+        AP9ybRH/5ezu/yWI/v8Uffj/GID5/xd/+f8Xfvj/Fn74/xR/+/8Uf/v/Fn75/xd++P8Xf/n/GID5/xV+
+        +f8jhvn/7vb//////f/+9/b///j3///49///9/b///39//////////////////7+/v//////9fXv/25r
+        Ef9hXQD/YV0A/21qEf/7+O7/V6L7/wBv8v8VfPT/E3vz/xN++f8Vf/j/HH3u/xx97v8Vf/j/E375/xN7
+        8/8VffT/AXHz/0GU9P///////tTI//6Qcf/+mHz//ph8//6Qcf/+1Mj//v////79/P/+/v7//v79////
+        ///09O7/bmsR/2FdAP9hXQD/bWoR//n37//t9v//Z6r3/yqI9f8pi/v/Ln3c/1Bxpv9db5X/XW+V/1Fx
+        pf8vfNr/KYv7/yeG9f9ToPj/2+v9///////9/v//////////////////////////////////////////
+        ///+/v7///////X17/9uaxH/YV0A/2FdAP9uaxH/9fXv///////9/f3//v///8HM3f9ha4n/aG6H/2Vu
+        i/9kbov/aG6I/2Bph/++ydr/+/////39/v/+/v7////////k3P//uKX//72r//+9q///uKX//+Pb////
+        /////Pz///////7+/v//////9fXv/25rEf9hXQD/YV0A/25rEf/19e////////z9/v/8/Pv/e4Oc/1xo
+        if9jcJD/Y26N/2Nujf9jcI//XWmJ/3mBmv/7+/r//v////39/v///////+ji///Csf//xrf//8a3///C
+        sf//6eP////////+/v///////v7+///////19e//bmsR/2FdAP9hXQD/bmsR//X17////////////9DU
+        3f9ZZof/ZXCP/2Nujf9jbo3/Y26N/2Nujf9lcI//WWWH/8/S3P///////fz8////////6OH//8Cv///F
+        tf//xLT//8W1//+/rf//t6P//8Oz///8+//+/fz///////X17/9uaxH/YV0A/2FdAP9uaxH/9fTu////
+        ///7+vj/gYaV/15qi/9kb43/Y26N/2Nujf9jbo3/Y26N/2Rvjv9eaov/gIaV//z7+f/////////////o
+        4f//wK///8W1///EtP//xLT//8a2///EtP//z8L///7+//7//v//////9fXv/25rEf9hXQD/YV0A/25r
+        Ef/09O7//////+jn5P9aX2//Y2+Q/2Nujf9jbo7/Y26N/2NujP9jboz/Y26M/2NvkP9aX2//6Ojl////
+        ///+/////+jh///Ar///xbX//8S0///EtP//xbX//8a3///Ftv//uqf//sS0///////19e//bmoR/2Fd
+        AP9hXQD/bmsR//Tz7f//////397b/1lfb/9mcpb/Y26M/2Jsiv9jbo7/ZHCR/2Rwkf9kb4//ZXGU/1pf
+        cP/g39z///////3/////6OH//8Cv///Ftf//xLT//8W1//++rP//uab//7qo//+5pv/+xLT///////X1
+        7/9uahH/YV0A/2FdAP9uaxH/8/Pt///////S0s//UVZj/1xidP9SU1f/UVJV/1NUWv9WWmb/W2J1/19o
+        gf9ibIf/TlFZ/9TT0v///////f/////o4f//wK///8W1///Ftf//wLD//+ji/////////v7///////7+
+        /v//////9fXv/25rEf9hXQD/YV0A/25rEf/z8+3//////9fX1/9JSUn/UE9N/05OTf9PTk7/Tk5N/05N
+        S/9OTUv/T09O/1FRUf9JSUj/2NjY///////9/////+jh///Ar///xbX//8W1///AsP//6OL////////+
+        /v///////v79///////19e//bmsR/2FdAP9hXQD/bmsR//X07v//////+fn5/2JiYv9JSUr/U1NU/1BQ
+        UP9QUFD/UFBR/1BQUf9TU1P/SUlJ/2FiYv/6+vr///////7/////6eP//8Oy///Ht///xrb//8e3///A
+        r///u6j//7yq//+3pP/+49v///////X07f9uaxH/YV0A/2FdAP9uaxH/9fXv////////////xsbG/0dH
+        R/9FRUX/TExM/0xMTP9MTEz/TExM/0ZGRv9GR0b/xsbG///////8/Pv//v/////j2///taH//7qo//+5
+        p///uab//7uo//+8qf//vKr//7ek//7j2///////9fTt/25rEf9hXQD/YV0A/25rEf/09O7///////z8
+        +///////0NDQ/3d3d/9cXFv/Wlpa/1paWv9cXFv/d3d2/9HR0f//////+v37//z+/P/7/vv///////7/
+        ///+/////v////7////+/////v////7////+/////v79///////09O7/bmsR/2FdAP9hXQD/bmsR//X1
+        7////////v7+//////////////////j4+v/19ff/9fX3//j4+v/9/v3//////4XWl/+a3qn/mt6p/4bX
+        mP///////f79///////////////////////////////////////+/v7///////X17/9uaxH/YV0A/2Fd
+        AP5uahD+7Ovg/vj38/709O7+9fXv/vPz7f709O3++Pjx/vj48v74+PL+9ffv/v/3+P6V16D/ErI1/yW2
+        Q/8ltkP/EbI1/5fZov//+fr+8vTs/vX17/719e/+9fXv/vX17/719e/+9fXv/vT07v749/P+7Ovg/m5q
+        EP5hXQD+ZGAA/2VhAf9uahD/b2sR/25rEf9uaxH/bmsR/25qEf9uahD/bmoQ/25qEP9saxH/dGYP/zWb
+        LP8XuT//GbhA/xm4QP8XuUD/Npor/3RmD/9tbBL/bmsR/25rEf9uaxH/bmsR/25rEf9uaxH/bmsR/29r
+        Ef9uahD/ZWEB/2RgAP9kYADlZGAA72FdAO1hXQDuYV0A7mFdAO5hXQDuYV0A7mFdAO5hXQDuYV0A7mFd
+        AO5iWwDtK6My/Bi8Q/84lSf/OJUn/xi8Q/8sozH8Y1oA7WFdAO5hXQDuYV0A7mFdAO5hXQDuYV0A7mFd
+        AO5hXQDuYV0A7mFdAO1kYADvZGAA5WRgAA1lYQESbmoQEW9rERFuaxERbmsREW5rERFuaxERbmsREW5r
+        ERFqbxQSglgFDkuMJx0etD7qGrlA/11oCv5daAr+GrlA/x60PuhOiSUbf1sHD2puExJuaxERbmsREW5r
+        ERFuaxERbmsREW5rERFvaxERbmoQEWVhARJkYAANZGAAAGRgAABkYAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAABy2PwIctj8AHbU+Jhy2P/0fszz/WW0K/lltCv4fszz/HLY/+x21PiMctz8AHLY/AgAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABkYAAAZGAAAGRgAABkYAABZGAAAWRgAAFkYAABZGAAAWRg
+        AAFkYAABZGAAAWRgAAFkYAABMJ8uBBe8QwAetD1LHbU+/x20Pvgirzr7Iq86+x20PvgdtT7/HrM9RRa9
+        RAAwni0EZGAAAWRgAAFkYAABZGAAAWRgAAFkYAABZGAAAWRgAAFkYAABZGAAAQAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAdtT4DHbU+AB21PjwdtT7/HbU+/hy2P/8ctj//HbU+/x21
+        Pv8dtT42HbU+AB21PgMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB21PgAdtT4BHbU+AB21PlAdtT6FHrQ9fx60
+        PX8dtT6FHbU+TR21PgAdtT4BHbU+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHbU+AB21PgAdtT4BHbU+AB21
+        PgAdtT4AHbU+AB21PgAdtT4AHbU+AR21PgAdtT4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAdtT4AHbU+AB22
+        PQAdtT4DHbU+BR21PgQdtT4EHbU+BR21PgMdtT8AHrZCAB21PgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAA/////wAAAABf///6AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AABf0Av6ABAIAP/QC///yBP//9JL///QG/8=
+</value>
+  </data>
   <metadata name="Tick.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>86, 11</value>
   </metadata>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="Tick.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEAGSAAAAEAIAAoDQAAFgAAACgAAAAZAAAAQAAAAAEAIAAAAAAAAA0AAAAAAAAAAAAAAAAAAAAA

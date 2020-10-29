@@ -54,6 +54,7 @@
             this.button_Xoa = new System.Windows.Forms.Button();
             this.button_Them = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.button_Excel = new System.Windows.Forms.Button();
             this.button_PDF = new System.Windows.Forms.Button();
             this.progressBar_thongke = new System.Windows.Forms.ProgressBar();
@@ -64,7 +65,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Kho_Gia)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Kho_NamXuatBan)).BeginInit();
@@ -366,6 +367,20 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Xuất dữ liệu";
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Image = global::QuanLyKho.Properties.Resources.file_type_pdf_icon_130274;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(183, 21);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(167, 25);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "Danh sách sách PDF";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // button_Excel
             // 
             this.button_Excel.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -396,9 +411,9 @@
             // 
             // progressBar_thongke
             // 
-            this.progressBar_thongke.Location = new System.Drawing.Point(442, 260);
+            this.progressBar_thongke.Location = new System.Drawing.Point(585, 260);
             this.progressBar_thongke.Name = "progressBar_thongke";
-            this.progressBar_thongke.Size = new System.Drawing.Size(453, 23);
+            this.progressBar_thongke.Size = new System.Drawing.Size(310, 23);
             this.progressBar_thongke.TabIndex = 5;
             // 
             // label_thongke
@@ -459,25 +474,23 @@
             this.textBox2.Size = new System.Drawing.Size(203, 2);
             this.textBox2.TabIndex = 10;
             // 
-            // button1
+            // button2
             // 
-            this.button1.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Image = global::QuanLyKho.Properties.Resources.file_type_pdf_icon_130274;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(183, 21);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(167, 25);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Danh sách sách PDF";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button2.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(442, 260);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(137, 25);
+            this.button2.TabIndex = 7;
+            this.button2.Text = "Thanh lý sách";
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // QuanLyKho
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(958, 295);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label9);
@@ -488,6 +501,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "QuanLyKho";
             this.Text = "Quản lý kho sách";
@@ -545,6 +559,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.DataGridView dataKho;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }
 

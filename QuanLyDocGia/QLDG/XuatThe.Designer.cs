@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(XuatThe));
             this.xuatThe_Thoat = new System.Windows.Forms.Button();
             this.xuatThe_xuat = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -121,6 +122,7 @@
             this.Controls.Add(this.xuatThe_duongdan);
             this.Controls.Add(this.buttonxuatThe_duongDan);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "XuatThe";
             this.Text = "Xuất thẻ độc giả";
