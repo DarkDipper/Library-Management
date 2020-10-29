@@ -1,0 +1,20 @@
+C:\Users\vhnvo\source\repos\BM2\BM2\bin\Debug\BM2.exe.config
+C:\Users\vhnvo\source\repos\BM2\BM2\bin\Debug\BM2.exe
+C:\Users\vhnvo\source\repos\BM2\BM2\bin\Debug\BM2.pdb
+C:\Users\vhnvo\source\repos\BM2\BM2\obj\Debug\BM2.csprojAssemblyReference.cache
+C:\Users\vhnvo\source\repos\BM2\BM2\obj\Debug\BM2.Form1.resources
+C:\Users\vhnvo\source\repos\BM2\BM2\obj\Debug\BM2.Properties.Resources.resources
+C:\Users\vhnvo\source\repos\BM2\BM2\obj\Debug\BM2.csproj.GenerateResource.cache
+C:\Users\vhnvo\source\repos\BM2\BM2\obj\Debug\BM2.csproj.CoreCompileInputs.cache
+C:\Users\vhnvo\source\repos\BM2\BM2\obj\Debug\BM2.exe
+C:\Users\vhnvo\source\repos\BM2\BM2\obj\Debug\BM2.pdb
+C:\Users\kun\OneDrive\Tài liệu\ptud\BM2\BM2\bin\Debug\BM2.exe.config
+C:\Users\kun\OneDrive\Tài liệu\ptud\BM2\BM2\bin\Debug\BM2.exe
+C:\Users\kun\OneDrive\Tài liệu\ptud\BM2\BM2\bin\Debug\BM2.pdb
+C:\Users\kun\OneDrive\Tài liệu\ptud\BM2\BM2\obj\Debug\BM2.csprojAssemblyReference.cache
+C:\Users\kun\OneDrive\Tài liệu\ptud\BM2\BM2\obj\Debug\BM2.TheDocGia.resources
+C:\Users\kun\OneDrive\Tài liệu\ptud\BM2\BM2\obj\Debug\BM2.Properties.Resources.resources
+C:\Users\kun\OneDrive\Tài liệu\ptud\BM2\BM2\obj\Debug\BM2.csproj.GenerateResource.cache
+C:\Users\kun\OneDrive\Tài liệu\ptud\BM2\BM2\obj\Debug\BM2.csproj.CoreCompileInputs.cache
+C:\Users\kun\OneDrive\Tài liệu\ptud\BM2\BM2\obj\Debug\BM2.exe
+C:\Users\kun\OneDrive\Tài liệu\ptud\BM2\BM2\obj\Debug\BM2.pdb
