@@ -8,7 +8,7 @@ namespace QLDG
     public partial class Model1 : DbContext
     {
         public Model1()
-            : base("name=Model11")
+            : base("name=Model1")
         {
         }
 
@@ -17,6 +17,7 @@ namespace QLDG
         public virtual DbSet<MatSach> MatSaches { get; set; }
         public virtual DbSet<MuonSach> MuonSaches { get; set; }
         public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
+        public virtual DbSet<TaiKhoanNV> TaiKhoanNVs { get; set; }
         public virtual DbSet<ThanhLy> ThanhLies { get; set; }
         public virtual DbSet<TheDocGia> TheDocGias { get; set; }
         public virtual DbSet<TraSach> TraSaches { get; set; }
@@ -60,17 +61,13 @@ namespace QLDG
                 .IsUnicode(false);
 
             modelBuilder.Entity<HoSo>()
-                .Property(e => e.TenDN)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<HoSo>()
-                .Property(e => e.MatKhau)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<HoSo>()
                 .HasMany(e => e.DanhSachSaches)
                 .WithOptional(e => e.HoSo)
                 .HasForeignKey(e => e.MaNgNhan);
+
+            modelBuilder.Entity<HoSo>()
+                .HasOptional(e => e.TaiKhoanNV)
+                .WithRequired(e => e.HoSo);
 
             modelBuilder.Entity<HoSo>()
                 .HasMany(e => e.MatSaches)
@@ -109,6 +106,18 @@ namespace QLDG
                 .Property(e => e.MaSach)
                 .IsUnicode(false);
 
+            modelBuilder.Entity<TaiKhoanNV>()
+                .Property(e => e.MaNV)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<TaiKhoanNV>()
+                .Property(e => e.TenDN)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<TaiKhoanNV>()
+                .Property(e => e.MatKhau)
+                .IsUnicode(false);
+
             modelBuilder.Entity<ThanhLy>()
                 .Property(e => e.MaSach)
                 .IsUnicode(false);
@@ -119,18 +128,6 @@ namespace QLDG
 
             modelBuilder.Entity<TheDocGia>()
                 .Property(e => e.MS)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<TheDocGia>()
-                .Property(e => e.TenDN)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<TheDocGia>()
-                .Property(e => e.MatKhau)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<TheDocGia>()
-                .Property(e => e.Loai)
                 .IsUnicode(false);
 
             modelBuilder.Entity<TheDocGia>()

@@ -71,6 +71,12 @@
     <Compile Include="MatSach.cs" />
     <Compile Include="Model1.cs" />
     <Compile Include="MuonSach.cs" />
+    <Compile Include="PhieuMuon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PhieuMuon.Designer.cs">
+      <DependentUpon>PhieuMuon.cs</DependentUpon>
+    </Compile>
     <Compile Include="QLDG.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +86,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="sysdiagram.cs" />
+    <Compile Include="TaiKhoanNV.cs" />
     <Compile Include="ThanhLy.cs" />
     <Compile Include="TheDocGia.cs" />
     <Compile Include="TraSach.cs" />
@@ -95,6 +102,9 @@
     <Compile Include="XuatThe.Designer.cs">
       <DependentUpon>XuatThe.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="PhieuMuon.resx">
+      <DependentUpon>PhieuMuon.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="QLDG.resx">
       <DependentUpon>QLDG.cs</DependentUpon>
     </EmbeddedResource>
@@ -139,6 +149,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\1490793853-user-interface15_82360.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

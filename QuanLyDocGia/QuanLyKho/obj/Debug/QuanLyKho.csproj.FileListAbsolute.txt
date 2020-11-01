@@ -39,3 +39,4 @@ D:\Project\Libary-Management\QuanLyDocGia\QuanLyKho\obj\Debug\QuanLyKho.csproj.C
 D:\Project\Libary-Management\QuanLyDocGia\QuanLyKho\obj\Debug\QuanLyKho.csproj.CopyComplete
 D:\Project\Libary-Management\QuanLyDocGia\QuanLyKho\obj\Debug\QuanLyKho.exe
 D:\Project\Libary-Management\QuanLyDocGia\QuanLyKho\obj\Debug\QuanLyKho.pdb
+C:\Users\kun\source\repos\DarkDipper\Libary-Management\QuanLyDocGia\QuanLyKho\bin\Debug\itextsharp.dll

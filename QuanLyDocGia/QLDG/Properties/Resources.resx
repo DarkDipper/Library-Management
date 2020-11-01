@@ -118,16 +118,19 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="rsz_npl" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\rsz_npl.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="1490793853-user-interface15_82360" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1490793853-user-interface15_82360.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="122433784_340374563893007_4932301094657328512_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\122433784_340374563893007_4932301094657328512_n.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="rsz_npl" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\rsz_npl.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="1490793864-user-interface16_82335" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1490793864-user-interface16_82335.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="1490793853-user-interface15_82360" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\1490793853-user-interface15_82360.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Untitled" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Untitled.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

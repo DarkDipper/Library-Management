@@ -21,12 +21,6 @@ namespace Trang_Chu
         [StringLength(5)]
         public string MS { get; set; }
 
-        [StringLength(50)]
-        public string TenDN { get; set; }
-
-        [StringLength(100)]
-        public string MatKhau { get; set; }
-
         [StringLength(100)]
         public string HoTen { get; set; }
 
@@ -34,9 +28,6 @@ namespace Trang_Chu
 
         [StringLength(100)]
         public string DiaChi { get; set; }
-
-        [StringLength(1)]
-        public string Loai { get; set; }
 
         [StringLength(50)]
         public string Email { get; set; }

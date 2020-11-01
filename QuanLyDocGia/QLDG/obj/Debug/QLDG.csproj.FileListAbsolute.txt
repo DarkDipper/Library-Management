@@ -34,3 +34,4 @@ C:\Users\kun\source\repos\DarkDipper\Libary-Management\QuanLyDocGia\QLDG\bin\Deb
 C:\Users\kun\source\repos\DarkDipper\Libary-Management\QuanLyDocGia\QLDG\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\kun\source\repos\DarkDipper\Libary-Management\QuanLyDocGia\QLDG\bin\Debug\EntityFramework.xml
 C:\Users\kun\source\repos\DarkDipper\Libary-Management\QuanLyDocGia\QLDG\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\kun\source\repos\DarkDipper\Libary-Management\QuanLyDocGia\QLDG\obj\Debug\QLDG.PhieuMuon.resources

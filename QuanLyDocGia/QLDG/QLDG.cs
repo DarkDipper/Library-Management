@@ -24,16 +24,12 @@ namespace QLDG
         }
         SqlConnection con;
         Model1 qltv = new Model1();
-        public HoSo NV;
+        public string NV;
         // tạo biến để kiểm tra đúng sau khi nhấn button 
         bool pname = false;
         bool paddress = false;
-        bool pcreater = false;
-        bool ptype = false;
         bool pmail = false;
         bool pdate = false;
-        bool dn = false;
-        bool mk = false;
         int SizeBang;
         //===================================bổ trợ======================
         public bool KiemTraSach(string txt_muonSach)
@@ -82,38 +78,28 @@ namespace QLDG
         {
             SqlCommand cmd = new SqlCommand("select MaSach as N'Mã sách'," +
                                           "TenSach as N'Tên sách'," +
-                                          "TheLoai as N'Thể loại'," +
-                                          "TacGia as N'Tác giả'," +
-                                          "NamXuatBan as N'Năm xuất bản'," +
-                                          "NhaXuatBan as N'Nhà xuất bản'," +
-                                          "CONVERT (varchar(10), NgayNhap, 103) AS N'Ngày nhập'," +
-                                          "TriGia as N'Trị giá'," +
-                                          "TinhTrang as N'Tình trạng'," +
-                                          "HoSo.HoTen as N'Họ và tên người nhận' " +
-                                          "from DanhSachSach,HoSo " +
-                                          "where DanhSachSach.MaNgNhan = HoSo.MaNV", con);
+                                          "TinhTrang as N'Tình trạng'" +
+                                          "from DanhSachSach", con);
             SqlDataReader rd = cmd.ExecuteReader();
             data d = new data();
             d.Load(rd);
             dataSachMuon.DataSource = d;
         }
-        public void HienThiMuon()
+    /*    public void HienThiMuon()
         {
-            string sql_select = "select MaDocGia as N'Mã độc giả',MaSach as N'Mã sách',NgayMuon as N'Ngày mượn' from MuonSach";
+            string sql_select = "select MaDocGia as N'Mã độc giả',MaSach as N'Mã sách',CONVERT (varchar(10), NgayMuon, 103) AS N'Ngày mượn' from MuonSach";
             SqlCommand cmd = new SqlCommand(sql_select, con);
             SqlDataReader rd = cmd.ExecuteReader();
             data d = new data();
             d.Load(rd);
             dataPhieuMuon.DataSource = d;
-        }
+        }*/
         public void Hienthi()
         {
             string sql_select = "select MS as N'Mã độc giả'," +
-                "G.TenDN as N'Tên đăng nhập'," +
                 "G.HoTen as N'Họ và tên'," +
                 "CONVERT (varchar(10), G.NgaySinh, 103) AS N'Ngày sinh'," +
                 "G.DiaChi as N'Địa chỉ'," +
-                "G.Loai as N'Loại'," +
                 "G.Email," +
                 "CONVERT (varchar(10), G.NgayLapThe, 103) AS N'Ngày lập thẻ'," +
                 "G.TongNo as N'Tổng nợ'," +
@@ -126,36 +112,12 @@ namespace QLDG
             dataTheDocGia.DataSource = d;
 
         }
-        public void HienthiDG()
-        {
-            string sql_select = "select MS as N'Mã độc giả'," +
-                "G.TenDN as N'Tên đăng nhập'," +
-                "G.HoTen as N'Họ và tên'," +
-                "CONVERT (varchar(10), G.NgaySinh, 103) AS N'Ngày sinh'," +
-                "G.DiaChi as N'Địa chỉ'," +
-                "G.Loai as N'Loại'," +
-                "G.Email," +
-                "CONVERT (varchar(10), G.NgayLapThe, 103) AS N'Ngày lập thẻ'," +
-                "G.TongNo as N'Tổng nợ'," +
-                "S.HoTen as N'Tên người lập' " +
-                "from TheDocGia G,HoSo S where MaNgLap=MaNV ";
-            SqlCommand cmd = new SqlCommand(sql_select, con);
-            SqlDataReader rd = cmd.ExecuteReader();
-            data d = new data();
-            d.Load(rd);
-            dataDGMuon.DataSource = d;
-
-        }
         public void Set_true()
         {
             pname = true;
             paddress = true;
-            pcreater = true;
-            ptype = true;
             pmail = true;
             pdate = true;
-            dn = true;
-            mk = true;
             er.SetError(f2Name, null);
         }
         public void Set_false()
@@ -163,12 +125,8 @@ namespace QLDG
             Tick.Clear();
             pname = false;
             paddress = false;
-            pcreater = false;
-            ptype = false;
             pmail = false;
             pdate = false;
-            dn = false;
-            mk = false;
             er.SetError(f2Name, null);
             buttonSua.Enabled = false;
         }
@@ -176,10 +134,7 @@ namespace QLDG
         {
             f2Name.Text = "";
             f2Address.Text = "";
-            textBox2.Text = "";
-            textBox1.Text = "";
             f2Email.Text = "";
-            f2Type.SelectedIndex = -1;
             textMS.Text = "";
         }
         public void ThongKe()
@@ -332,7 +287,7 @@ namespace QLDG
             }
         }
 
-        private void f2Type_Leave(object sender, EventArgs e)
+  /*      private void f2Type_Leave(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(f2Type.Text))
             {
@@ -352,9 +307,9 @@ namespace QLDG
                 ptype = true;
 
             }
-        }
+        }*/
 
-        private void textBox2_Leave(object sender, EventArgs e)
+      /*  private void textBox2_Leave(object sender, EventArgs e)
         {
             if (textBox2.Text.Length == 0)
             {
@@ -402,23 +357,25 @@ namespace QLDG
                 er.SetError(textBox1, "Không đúng dữ liệu nhập");
                 mk = false;
             }
-        }
+        }*/
 
         private void QLDG_Load(object sender, EventArgs e)
         {
-            
             this.ActiveControl = f2Name;  // Con trỏ đặt ngay tại Name 
             string conString = ConfigurationManager.ConnectionStrings["QuanLyDG"].ConnectionString.ToString();
             
             con = new SqlConnection(conString);
             con.Open();
             Hienthi();
-            HienThiMuon();
+        //    HienThiMuon();
             HienThiKho();
-            HienthiDG();
-            button_muonXoa.Enabled = false;
+       //     button_muonXoa.Enabled = false;
             SizeBang = dataTheDocGia.Rows.Count;
             f2NgaySinh.Text = DateTime.Today.ToString();
+            foreach(var item in qltv.TheDocGias)
+            {
+                txt_muonDG.Items.Add(item.MS.ToString());
+            } 
             for (int k = 0; k < dataTheDocGia.Rows.Count - 1; k++)
             {
                 string chuoi = dataTheDocGia.Rows[k].Cells[0].Value.ToString();
@@ -447,11 +404,11 @@ namespace QLDG
 
         private void buttonSign_up_Click(object sender, EventArgs e)
         {
-            if (paddress == true && pdate == true && pmail == true && pname == true && dn == true && mk == true && ptype == true)
+            if (paddress == true && pdate == true && pmail == true && pname == true )
             {
 
 
-                string sql_in = $@"Insert into TheDocGia values('{TaoMa()}','{textBox2.Text}','{textBox1.Text}',N'{f2Name.Text}','{f2NgaySinh.Value.ToString("yyyyMMdd")}',N'{f2Address.Text}','{f2Type.Text}','{f2Email.Text}','{DateTime.Today.ToString("yyyyMMdd")}',0,'{NV.MaNV}')";
+                string sql_in = $@"Insert into TheDocGia values('{TaoMa()}',N'{f2Name.Text}','{f2NgaySinh.Value.ToString("yyyyMMdd")}',N'{f2Address.Text}','{f2Email.Text}','{DateTime.Today.ToString("yyyyMMdd")}',0,'{NV}')";
                 SqlCommand cmd = new SqlCommand(sql_in, con);
                  try
                  {
@@ -471,13 +428,6 @@ namespace QLDG
             }
             else MessageBox.Show("Đăng kí thất bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
-        int dem = 0;
-        private void button_Eye_Click(object sender, EventArgs e)
-        {
-            dem++;
-            if (dem % 2 == 1) { textBox1.UseSystemPasswordChar = false; button_Eye.Image = global::QLDG.Properties.Resources._1490793853_user_interface15_82360; }
-            else { textBox1.UseSystemPasswordChar = true; button_Eye.Image = global::QLDG.Properties.Resources._1490793864_user_interface16_82335; }
-        }
 
         private void dataTheDocGia_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -496,12 +446,10 @@ namespace QLDG
             {
                 buttonSua.Enabled = true;
                 buttonXoa.Enabled = true;
-                f2Name.Text = dataTheDocGia.SelectedCells[2].Value.ToString();
-                f2Address.Text = dataTheDocGia.SelectedCells[4].Value.ToString();
-                textBox2.Text = dataTheDocGia.SelectedCells[1].Value.ToString();
-                f2Email.Text = dataTheDocGia.SelectedCells[6].Value.ToString();
-                f2Type.Text = dataTheDocGia.SelectedCells[5].Value.ToString();
-                f2NgaySinh.Value = DateTime.ParseExact(dataTheDocGia.SelectedCells[3].Value.ToString(), "dd/MM/yyyy", CultureInfo.InvariantCulture);
+                f2Name.Text = dataTheDocGia.SelectedCells[1].Value.ToString();
+                f2Address.Text = dataTheDocGia.SelectedCells[3].Value.ToString();
+                f2Email.Text = dataTheDocGia.SelectedCells[4].Value.ToString();
+                f2NgaySinh.Value = DateTime.ParseExact(dataTheDocGia.SelectedCells[2].Value.ToString(), "dd/MM/yyyy", CultureInfo.InvariantCulture);
                 textMS.Text = dataTheDocGia.SelectedCells[0].Value.ToString();
                 buttonSign_up.Enabled = false;
                 //f2Type.Enabled = false;
@@ -521,10 +469,10 @@ namespace QLDG
 
         private void buttonSua_Click(object sender, EventArgs e)
         {
-            if (paddress == true && pdate == true && pmail == true && pname == true && dn == true && mk == true && ptype == true)
+            if (paddress == true && pdate == true && pmail == true && pname == true )
             {
                 er.SetError(f2Name, null);
-                string sql_ed = $"update TheDocGia set TenDN='{textBox2.Text}',HoTen=N'{f2Name.Text}',NgaySinh='{f2NgaySinh.Value.ToString("yyyyMMdd")}',DiaChi=N'{f2Address.Text}',Loai='{f2Type.Text}',Email='{f2Email.Text}',TongNo=0 where MS='{textMS.Text}'";
+                string sql_ed = $"update TheDocGia set HoTen=N'{f2Name.Text}',NgaySinh='{f2NgaySinh.Value.ToString("yyyyMMdd")}',DiaChi=N'{f2Address.Text}',Email='{f2Email.Text}',TongNo=0 where MS='{textMS.Text}'";
                 SqlCommand cmd = new SqlCommand(sql_ed, con);
                 try
                 {
@@ -582,7 +530,7 @@ namespace QLDG
 
         private void button3_Click(object sender, EventArgs e)
         {
-            if (paddress == true && pdate == true && pmail == true && pname == true && dn == true && mk == true && ptype == true)
+            if (paddress == true && pdate == true && pmail == true && pname == true  )
             {
   /*                     public string MS;
         public string Ten;
@@ -595,12 +543,11 @@ namespace QLDG
         var x = new XuatThe();
                 x.MS = textMS.Text;
                 x.Ten = f2Name.Text;
-                x.Loai = f2Type.Text;
                 x.DiaChi = f2Address.Text;
-                x.NgayLapThe = dataTheDocGia.SelectedCells[7].Value.ToString();
+                x.NgayLapThe = dataTheDocGia.SelectedCells[5].Value.ToString();
                 x.NgaySinh = f2NgaySinh.Value.ToString("dd/MM/yyyy");
                 x.Email = f2Email.Text;
-                x.NgLap= dataTheDocGia.SelectedCells[9].Value.ToString();
+                x.NgLap= dataTheDocGia.SelectedCells[7].Value.ToString();
                this.Hide();
                 x.ShowDialog();
                 this.Show();
@@ -634,62 +581,73 @@ namespace QLDG
 
         private void button_muonlammoi_Click(object sender, EventArgs e)
         {
-            txt_muonDG.Text = "";
-            txt_muonSach.Text = "";
+            txt_muonDG.SelectedIndex = -1;
+            txt_muonSach.Items.Clear();
             txt_muonSach.Enabled = true;
             txt_muonDG.Enabled = true;
-            button_muonXoa.Enabled = false;
+       //     button_muonXoa.Enabled = false;
 
         }
         
         private void button_themmuon_Click(object sender, EventArgs e)
-        {
-            if (txt_muonDG.TextLength != 0 && txt_muonSach.TextLength != 0)
+        { 
+            if (txt_muonDG.Text.Length != 0 && txt_muonSach.Items.Count != 0)
             {
-                TheDocGia x = new TheDocGia();
-                TheDocGia dg = qltv.TheDocGias.SingleOrDefault(p => p.MS == txt_muonDG.Text);
-                if (dg != null)
+                foreach (string muonSach in txt_muonSach.Items)
                 {
-                    DateTime data1 = DateTime.Today;
-                    DateTime data2 = dg.NgayLapThe.Value;
-                    if(((TimeSpan)(data1-data2)).Days > 180) MessageBox.Show("Thẻ đã hết hạn", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    else
+                    TheDocGia x = new TheDocGia();
+                    TheDocGia dg = qltv.TheDocGias.SingleOrDefault(p => p.MS == txt_muonDG.Text);
+                    if (dg != null)
                     {
-                        if (KiemTraSach(txt_muonSach.Text))
+                        DateTime data1 = DateTime.Today;
+                        DateTime data2 = dg.NgayLapThe.Value;
+                        if (((TimeSpan)(data1 - data2)).Days > 180) MessageBox.Show("Thẻ đã hết hạn", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        else
                         {
-                            if (KiemtraSachQuaHanCuaNguoiMuon(txt_muonDG.Text))
+                            if (KiemTraSach(muonSach))
                             {
-                                if (KiemTraSoSachMuonTrong4ngay(txt_muonDG.Text))
+                                if (KiemtraSachQuaHanCuaNguoiMuon(txt_muonDG.Text))
                                 {
-                                    string sql_ed = $"update DanhSachSach set TinhTrang='Không có' "+$"where MaSach='{txt_muonSach.Text}'";
-                                    SqlCommand cmd1 = new SqlCommand(sql_ed, con);
-                                    DanhSachSach sach = qltv.DanhSachSaches.SingleOrDefault(p => p.MaSach == txt_muonSach.Text);
-                                    sach.TinhTrang = "Không có";
-                                    qltv.DanhSachSaches.AddOrUpdate(sach);
-                                    string qin = $@"Insert into MuonSach values('{txt_muonDG.Text}','{txt_muonSach.Text}','{DateTime.Today.ToString("yyyyMMdd")}')";
-                                    SqlCommand cmd = new SqlCommand(qin, con);
-                                    try
+                                    if (KiemTraSoSachMuonTrong4ngay(txt_muonDG.Text))
                                     {
-                                        cmd1.ExecuteNonQuery();
-                                        cmd.ExecuteNonQuery();
-                                        MessageBox.Show("Thêm thành công", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
-                                        txt_muonSach.Text = "";
-                                        HienThiMuon();
-                                        HienThiKho();
+                                        string sql_ed = $"update DanhSachSach set TinhTrang='Không có' " + $"where MaSach='{muonSach}'";
+                                        SqlCommand cmd1 = new SqlCommand(sql_ed, con);
+                                        DanhSachSach sach = qltv.DanhSachSaches.SingleOrDefault(p => p.MaSach == muonSach);
+                                        sach.TinhTrang = "Không có";
+                                        qltv.DanhSachSaches.AddOrUpdate(sach);
+                                        string qin = $@"Insert into MuonSach values('{txt_muonDG.Text}','{muonSach}','{DateTime.Today.ToString("yyyyMMdd")}')";
+                                        SqlCommand cmd = new SqlCommand(qin, con);
+                                        try
+                                        {
+                                            cmd1.ExecuteNonQuery();
+                                            cmd.ExecuteNonQuery();
+                                            txt_muonSach.Text = "";
+                                          //  HienThiMuon();
+                                            HienThiKho();
+                                           
+                                        }
+                                        catch
+                                        {
+                                            MessageBox.Show("Đã tồn tại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                        }
                                     }
-                                    catch
-                                    {
-                                        MessageBox.Show("Đã tồn tại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                                    }
+                                    else MessageBox.Show("Không thể mượn thêm được nữa", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                                 }
-                                else MessageBox.Show("Không thể mượn thêm được nữa", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                else MessageBox.Show("Đã có sách quá hạn chưa trả", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                             }
-                            else MessageBox.Show("Đã có sách quá hạn chưa trả", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            else MessageBox.Show($"Mã sách {muonSach} không tồn tại hoặc đã mượn", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         }
-                        else MessageBox.Show("Sách không tồn tại hoặc đã mượn", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
+                    else MessageBox.Show("Thông tin không tồn tại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
-                else MessageBox.Show("Thông tin không tồn tại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                if (MessageBox.Show("Có xuất phiếu mượn không", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.OK)
+                {
+                    var x = new PhieuMuon();
+                    x.MaDocGia = txt_muonDG.Text;
+                    this.Hide();
+                    x.ShowDialog();
+                    this.Show();
+                }
             }
             else MessageBox.Show("Thiếu thông tin", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
@@ -729,7 +687,7 @@ namespace QLDG
             }
         }
 
-        private void comboBox_muontimPhieu_SelectedIndexChanged(object sender, EventArgs e)
+  /*      private void comboBox_muontimPhieu_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (comboBox_muontimPhieu.SelectedIndex == 0)
             {
@@ -750,8 +708,8 @@ namespace QLDG
                 txt_muonSach.Text = "";
             }
         }
-
-        private void button_muonTim_Click(object sender, EventArgs e)
+*/
+ /*       private void button_muonTim_Click(object sender, EventArgs e)
         {
             if (comboBox_muontimPhieu.SelectedIndex == -1) MessageBox.Show("Vui lòng chọn cách tìm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             else if (comboBox_muontimPhieu.SelectedIndex == 2)
@@ -770,34 +728,11 @@ namespace QLDG
                 d.Load(rd);
                 dataPhieuMuon.DataSource = d;
             }
-        }
-
-        private void txt_muonDG_Leave(object sender, EventArgs e)
+        }*/
+   /*     private void button_muonXoa_Click(object sender, EventArgs e)
         {
-            string sql_select = "select MS as N'Mã độc giả'," +
-                "G.TenDN as N'Tên đăng nhập'," +
-                "G.HoTen as N'Họ và tên'," +
-                "CONVERT (varchar(10), G.NgaySinh, 103) AS N'Ngày sinh'," +
-                "G.DiaChi as N'Địa chỉ'," +
-                "G.Loai as N'Loại'," +
-                "G.Email," +
-                "CONVERT (varchar(10), G.NgayLapThe, 103) AS N'Ngày lập thẻ'," +
-                "G.TongNo as N'Tổng nợ'," +
-                "S.HoTen as N'Tên người lập' " +
-                $"from TheDocGia G,HoSo S where MaNgLap=MaNV and MS='{txt_muonDG.Text}'";
-            SqlCommand cmd = new SqlCommand(sql_select, con);
-            SqlDataReader rd = cmd.ExecuteReader();
-            data d = new data();
-            d.Load(rd);
-            dataDGMuon.DataSource = d;
-        }
-
-        private void button_muonXoa_Click(object sender, EventArgs e)
-        {
-            if (txt_muonDG.TextLength != 0 && txt_muonSach.TextLength != 0)
-            {
                 string sqlXoa;
-                sqlXoa = $"DELETE FROM MuonSach WHERE MaSach='{txt_muonSach.Text}'and MaDocGia = '{txt_muonDG.Text}'";
+                sqlXoa = $"DELETE FROM MuonSach WHERE MaSach='{dataPhieuMuon.SelectedCells[1].Value.ToString()}'and MaDocGia = '{dataPhieuMuon.SelectedCells[0].Value.ToString()}'";
                 if (MessageBox.Show($"Có thật sự muốn xóa", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.OK)
                 {
                     string sql_ed = $"update DanhSachSach set TinhTrang='Còn'" + $"where MaSach='{txt_muonSach.Text}'";
@@ -811,10 +746,9 @@ namespace QLDG
                     qltv.DanhSachSaches.AddOrUpdate(sach);
                     HienThiKho();
                 }
-            }
-        }
+        }*/
 
-        private void dataPhieuMuon_CellClick(object sender, DataGridViewCellEventArgs e)
+/*        private void dataPhieuMuon_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             try
             {
@@ -823,22 +757,6 @@ namespace QLDG
                 button_muonXoa.Enabled = true;
                 txt_muonDG.Enabled = false;
                 txt_muonSach.Enabled = false;
-                string sql_select = "select MS as N'Mã độc giả'," +
-                "G.TenDN as N'Tên đăng nhập'," +
-                "G.HoTen as N'Họ và tên'," +
-                "CONVERT (varchar(10), G.NgaySinh, 103) AS N'Ngày sinh'," +
-                "G.DiaChi as N'Địa chỉ'," +
-                "G.Loai as N'Loại'," +
-                "G.Email," +
-                "CONVERT (varchar(10), G.NgayLapThe, 103) AS N'Ngày lập thẻ'," +
-                "G.TongNo as N'Tổng nợ'," +
-                "S.HoTen as N'Tên người lập' " +
-                $"from TheDocGia G,HoSo S where MaNgLap=MaNV and MS='{txt_muonDG.Text}'";
-                SqlCommand cmd = new SqlCommand(sql_select, con);
-                SqlDataReader rd = cmd.ExecuteReader();
-                data d = new data();
-                d.Load(rd);
-                dataDGMuon.DataSource = d;
             }
             catch
             {
@@ -846,11 +764,31 @@ namespace QLDG
                 txt_muonDG.Enabled = true;
                 txt_muonSach.Enabled = true;
             }
-        }
+        }*/
 
-        private void button_muonXuatphieu_Click(object sender, EventArgs e)
+        private void dataSachMuon_DoubleClick(object sender, EventArgs e)
         {
-
+            try
+            {
+                txt_muonSach.Items.Add(dataSachMuon.SelectedCells[0].Value.ToString());
+            }
+            catch
+            {
+                MessageBox.Show("Không thể lấy mã sách", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
+
+        private void txt_muonSach_DoubleClick(object sender, EventArgs e)
+        {
+            try
+            {
+                txt_muonSach.Items.RemoveAt(txt_muonSach.SelectedIndex);
+            }
+            catch
+            {
+                MessageBox.Show("Không tìm thấy mã sách nào !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
     }
 }

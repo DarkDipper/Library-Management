@@ -39,14 +39,10 @@ namespace QLDG
         [StringLength(10)]
         public string BoPhan { get; set; }
 
-        [StringLength(50)]
-        public string TenDN { get; set; }
-
-        [StringLength(100)]
-        public string MatKhau { get; set; }
-
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<DanhSachSach> DanhSachSaches { get; set; }
+
+        public virtual TaiKhoanNV TaiKhoanNV { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<MatSach> MatSaches { get; set; }

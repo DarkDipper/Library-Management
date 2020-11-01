@@ -5,10 +5,10 @@ namespace Trang_Chu
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Linq;
 
-    public partial class QuanLyThuVien : DbContext
+    public partial class QuanLyTV : DbContext
     {
-        public QuanLyThuVien()
-            : base("name=QuanLyThuVien2")
+        public QuanLyTV()
+            : base("name=QuanLyTV")
         {
         }
 
@@ -17,6 +17,7 @@ namespace Trang_Chu
         public virtual DbSet<MatSach> MatSaches { get; set; }
         public virtual DbSet<MuonSach> MuonSaches { get; set; }
         public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
+        public virtual DbSet<TaiKhoanNV> TaiKhoanNVs { get; set; }
         public virtual DbSet<ThanhLy> ThanhLies { get; set; }
         public virtual DbSet<TheDocGia> TheDocGias { get; set; }
         public virtual DbSet<TraSach> TraSaches { get; set; }
@@ -60,17 +61,13 @@ namespace Trang_Chu
                 .IsUnicode(false);
 
             modelBuilder.Entity<HoSo>()
-                .Property(e => e.TenDN)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<HoSo>()
-                .Property(e => e.MatKhau)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<HoSo>()
                 .HasMany(e => e.DanhSachSaches)
                 .WithOptional(e => e.HoSo)
                 .HasForeignKey(e => e.MaNgNhan);
+
+            modelBuilder.Entity<HoSo>()
+                .HasOptional(e => e.TaiKhoanNV)
+                .WithRequired(e => e.HoSo);
 
             modelBuilder.Entity<HoSo>()
                 .HasMany(e => e.MatSaches)
@@ -109,6 +106,18 @@ namespace Trang_Chu
                 .Property(e => e.MaSach)
                 .IsUnicode(false);
 
+            modelBuilder.Entity<TaiKhoanNV>()
+                .Property(e => e.MaNV)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<TaiKhoanNV>()
+                .Property(e => e.TenDN)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<TaiKhoanNV>()
+                .Property(e => e.MatKhau)
+                .IsUnicode(false);
+
             modelBuilder.Entity<ThanhLy>()
                 .Property(e => e.MaSach)
                 .IsUnicode(false);
@@ -119,18 +128,6 @@ namespace Trang_Chu
 
             modelBuilder.Entity<TheDocGia>()
                 .Property(e => e.MS)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<TheDocGia>()
-                .Property(e => e.TenDN)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<TheDocGia>()
-                .Property(e => e.MatKhau)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<TheDocGia>()
-                .Property(e => e.Loai)
                 .IsUnicode(false);
 
             modelBuilder.Entity<TheDocGia>()

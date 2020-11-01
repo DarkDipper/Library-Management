@@ -25,7 +25,7 @@ namespace QLDG
         public string Ten;
         public string NgaySinh;
         public string NgayLapThe;
-        public string Loai;
+        public string Loai ="Khách";
         public string DiaChi;
         public string Email;
         public string NgLap;
@@ -52,8 +52,8 @@ namespace QLDG
         {
             if (xuatThe_ten != null)
             {
-             //   try
-           //    {
+                try
+                {
                     Document The = new Document(iTextSharp.text.PageSize.HALFLETTER);
                     PdfWriter TheWriter = PdfWriter.GetInstance(The, new FileStream($@"{xuatThe_duongdan.Text + xuatThe_ten.Text}.pdf", FileMode.Create));
                     System.Drawing.Image img1 = global::QLDG.Properties.Resources.rsz_npl;
@@ -130,7 +130,7 @@ namespace QLDG
                     table.AddCell(new Phrase($"   ", f3));
 
                     Paragraph Enter = new Paragraph("             ");
-                    Paragraph p7 = new Paragraph($"THẺ ĐỘC GIẢ - {MS}", f2);
+                    Paragraph p7 = new Paragraph($"CHI TIẾT ĐỘC GIẢ - {MS}", f2);
                     Paragraph p8 = new Paragraph($"(Thẻ có giá trị sử dụng 180 ngày kể từ ngày lập thẻ)", f4);
                     p7.Alignment = Element.ALIGN_CENTER;
                     p8.Alignment = Element.ALIGN_CENTER;
@@ -144,11 +144,11 @@ namespace QLDG
                     The.Close();
                     TheWriter.Close();
                    MessageBox.Show("Thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-              //  }
-             //   catch
-              //  {
-              ///      MessageBox.Show("Thất bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-             //   }
+                }
+                catch
+                {
+                    MessageBox.Show("Thất bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             else MessageBox.Show("Thất bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }

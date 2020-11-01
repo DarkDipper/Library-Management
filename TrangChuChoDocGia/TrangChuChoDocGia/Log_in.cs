@@ -28,100 +28,127 @@ namespace  Trang_Chu
         private void Dang_nhap_button_Click(object sender, EventArgs e)
         {
             bool check = false;
-            QuanLyThuVien cmd=new QuanLyThuVien();
-            if (List.SelectedIndex==0)
+            QuanLyTV cmd = new QuanLyTV();
+            TaiKhoanNV x = new TaiKhoanNV();
+            var ds = from tmp in cmd.TaiKhoanNVs select tmp;
+            foreach (var item in ds)
             {
-                TheDocGia BanDoc = new TheDocGia();
-                var DS_DocGia = from tmp in cmd.TheDocGias select tmp;
-                foreach(var tmp in DS_DocGia)
+                if (item.TenDN == User_name.Text && item.MatKhau == Pass_word.Text)
                 {
-                    if (tmp.TenDN == User_name.Text && tmp.MatKhau == Pass_word.Text)
+                    check = true;
+                    HoSo nv = cmd.HoSoes.SingleOrDefault(p => p.MaNV == item.MaNV);
+                    if (nv.BoPhan == "Thủ thư")
                     {
-                        check = true;
-                        BanDoc = tmp;
+                        QLDG.QLDG qldg = new QLDG.QLDG();
+                        qldg.NV = nv.MaNV;
+                        this.Hide();
+                        qldg.ShowDialog();
+                        this.Show();
                     }
-                }
-                if (check)
-                {
-                    Trang_chu_cho_doc_gia x = new Trang_chu_cho_doc_gia(BanDoc);
-                    x.ShowDialog();
-                }
-                else
-                {
-                    MessageBox.Show("Sai mật khẩu hoặc tên đăng nhập", "Thông báo",MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-
-            }
-            else if(List.SelectedIndex==2)
-            {
-                QLDG.HoSo NV = new QLDG.HoSo();
-                var DS_NV = from tmp in cmd.HoSoes select tmp;
-                foreach (var tmp in DS_NV)
-                {
-                    if (tmp.TenDN == User_name.Text && tmp.MatKhau == Pass_word.Text&&tmp.BoPhan==List.Text)
+                    else if (nv.BoPhan == "Thủ kho")
                     {
-                        check = true;
-                        NV.TenDN = tmp.TenDN;
-                        NV.HoTen = tmp.HoTen;
-                        NV.MaNV = tmp.MaNV;
-                        NV.MatKhau = tmp.MatKhau;
-                        NV.NgaySinh = tmp.NgaySinh;
-                        NV.BangCap = tmp.BangCap;
-                        NV.BoPhan = tmp.BoPhan;
-                        NV.DiaChi = tmp.DiaChi;
-                        NV.DienThoai = tmp.DienThoai;
-                        
+                        QuanLyKho.QuanLyKho qlk = new QuanLyKho.QuanLyKho();
+                        qlk.Mathukho = nv.MaNV;
+                        this.Hide();
+                        qlk.ShowDialog();
+                        this.Show();
                     }
-                }
-                if (check)
-                {
-                    QLDG.QLDG x = new QLDG.QLDG();
-                    x.NV = NV;
-                    this.Hide();
-                    x.ShowDialog();
-                    this.Show();
-                }
-                else
-                {
-                    MessageBox.Show("Sai mật khẩu hoặc tên đăng nhập", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }else if(List.SelectedIndex==3)
-            {
-                QLDG.HoSo NV = new QLDG.HoSo();
-                var DS_NV = from tmp in cmd.HoSoes select tmp;
-                foreach (var tmp in DS_NV)
-                {
-                    if (tmp.TenDN == User_name.Text && tmp.MatKhau == Pass_word.Text&&tmp.BoPhan==List.Text)
-                    {
-                        check = true;
-                        NV.TenDN = tmp.TenDN;
-                        NV.HoTen = tmp.HoTen;
-                        NV.MaNV = tmp.MaNV;
-                        NV.MatKhau = tmp.MatKhau;
-                        NV.NgaySinh = tmp.NgaySinh;
-                        NV.BangCap = tmp.BangCap;
-                        NV.BoPhan = tmp.BoPhan;
-                        NV.DiaChi = tmp.DiaChi;
-                        NV.DienThoai = tmp.DienThoai;
-
-                    }
-                }
-                if (check)
-                {
-                    QuanLyKho.QuanLyKho x = new QuanLyKho.QuanLyKho();
-                    x.Mathukho = NV.MaNV;
-                    this.Hide();
-                    x.ShowDialog();
-                    this.Show();
-                }
-                else
-                {
-                    //MessageBox.Show("Sai mật khẩu hoặc tên đăng nhập", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    MessageBox.Show($"{NV.BoPhan} {List.SelectedItem}");
                 }
             }
-        }
+            if(!check) MessageBox.Show("Sai mật khẩu hoặc tên đăng nhập", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                /* if (List.SelectedIndex==0)
+                 {
+                     TheDocGia BanDoc = new TheDocGia();
+                     var DS_DocGia = from tmp in cmd.TheDocGias select tmp;
+                     foreach(var tmp in DS_DocGia)
+                     {
+                         if (tmp.TenDN == User_name.Text && tmp.MatKhau == Pass_word.Text)
+                         {
+                             check = true;
+                             BanDoc = tmp;
+                         }
+                     }
+                     if (check)
+                     {
+                         Trang_chu_cho_doc_gia x = new Trang_chu_cho_doc_gia(BanDoc);
+                         x.ShowDialog();
+                     }
+                     else
+                     {
+                         MessageBox.Show("Sai mật khẩu hoặc tên đăng nhập", "Thông báo",MessageBoxButtons.OK, MessageBoxIcon.Error);
+                     }
 
-        
+                 }
+                 else if(List.SelectedIndex==2)
+                 {
+                     QLDG.HoSo NV = new QLDG.HoSo();
+                     var DS_NV = from tmp in cmd.HoSoes select tmp;
+                     foreach (var tmp in DS_NV)
+                     {
+                         if (tmp.TenDN == User_name.Text && tmp.MatKhau == Pass_word.Text&&tmp.BoPhan==List.Text)
+                         {
+                             check = true;
+                             NV.TenDN = tmp.TenDN;
+                             NV.HoTen = tmp.HoTen;
+                             NV.MaNV = tmp.MaNV;
+                             NV.MatKhau = tmp.MatKhau;
+                             NV.NgaySinh = tmp.NgaySinh;
+                             NV.BangCap = tmp.BangCap;
+                             NV.BoPhan = tmp.BoPhan;
+                             NV.DiaChi = tmp.DiaChi;
+                             NV.DienThoai = tmp.DienThoai;
+
+                         }
+                     }
+                     if (check)
+                     {
+                         QLDG.QLDG x = new QLDG.QLDG();
+                         x.NV = NV;
+                         this.Hide();
+                         x.ShowDialog();
+                         this.Show();
+                     }
+                     else
+                     {
+                         MessageBox.Show("Sai mật khẩu hoặc tên đăng nhập", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                     }
+                 }else if(List.SelectedIndex==3)
+                 {
+                     QLDG.HoSo NV = new QLDG.HoSo();
+                     var DS_NV = from tmp in cmd.HoSoes select tmp;
+                     foreach (var tmp in DS_NV)
+                     {
+                         if (tmp.TenDN == User_name.Text && tmp.MatKhau == Pass_word.Text&&tmp.BoPhan==List.Text)
+                         {
+                             check = true;
+                             NV.TenDN = tmp.TenDN;
+                             NV.HoTen = tmp.HoTen;
+                             NV.MaNV = tmp.MaNV;
+                             NV.MatKhau = tmp.MatKhau;
+                             NV.NgaySinh = tmp.NgaySinh;
+                             NV.BangCap = tmp.BangCap;
+                             NV.BoPhan = tmp.BoPhan;
+                             NV.DiaChi = tmp.DiaChi;
+                             NV.DienThoai = tmp.DienThoai;
+
+                         }
+                     }
+                     if (check)
+                     {
+                         QuanLyKho.QuanLyKho x = new QuanLyKho.QuanLyKho();
+                         x.Mathukho = NV.MaNV;
+                         this.Hide();
+                         x.ShowDialog();
+                         this.Show();
+                     }
+                     else
+                     {
+                         //MessageBox.Show("Sai mật khẩu hoặc tên đăng nhập", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                         MessageBox.Show($"{NV.BoPhan} {List.SelectedItem}");
+                     }
+                 }
+             }
+     */
+            }
     }
 }
