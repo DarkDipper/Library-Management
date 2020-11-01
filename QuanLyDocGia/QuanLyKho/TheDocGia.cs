@@ -1,4 +1,4 @@
-namespace Trang_Chu
+namespace QuanLyKho
 {
     using System;
     using System.Collections.Generic;
@@ -6,45 +6,38 @@ namespace Trang_Chu
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    [Table("DanhSachSach")]
-    public partial class DanhSachSach
+    [Table("TheDocGia")]
+    public partial class TheDocGia
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public DanhSachSach()
+        public TheDocGia()
         {
             MatSaches = new HashSet<MatSach>();
             MuonSaches = new HashSet<MuonSach>();
-            ThanhLies = new HashSet<ThanhLy>();
             TraSaches = new HashSet<TraSach>();
         }
 
         [Key]
         [StringLength(5)]
-        public string MaSach { get; set; }
+        public string MS { get; set; }
 
         [StringLength(100)]
-        public string TenSach { get; set; }
+        public string HoTen { get; set; }
+
+        public DateTime? NgaySinh { get; set; }
 
         [StringLength(100)]
-        public string TacGia { get; set; }
+        public string DiaChi { get; set; }
 
         [StringLength(50)]
-        public string TheLoai { get; set; }
+        public string Email { get; set; }
 
-        public int? NamXuatBan { get; set; }
+        public DateTime? NgayLapThe { get; set; }
 
-        [StringLength(100)]
-        public string NhaXuatBan { get; set; }
-
-        public DateTime? NgayNhap { get; set; }
-
-        public int? TriGia { get; set; }
-
-        [StringLength(30)]
-        public string TinhTrang { get; set; }
+        public int? TongNo { get; set; }
 
         [StringLength(5)]
-        public string MaNgNhan { get; set; }
+        public string MaNgLap { get; set; }
 
         public virtual HoSo HoSo { get; set; }
 
@@ -53,9 +46,6 @@ namespace Trang_Chu
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<MuonSach> MuonSaches { get; set; }
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ThanhLy> ThanhLies { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TraSach> TraSaches { get; set; }

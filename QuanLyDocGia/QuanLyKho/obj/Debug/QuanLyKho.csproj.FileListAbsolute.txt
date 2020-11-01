@@ -17,7 +17,6 @@ C:\Users\kun\source\repos\DarkDipper\Libary-Management\QuanLyDocGia\QuanLyKho\ob
 C:\Users\kun\source\repos\DarkDipper\Libary-Management\QuanLyDocGia\QuanLyKho\bin\Debug\BouncyCastle.Crypto.dll
 C:\Users\kun\source\repos\DarkDipper\Libary-Management\QuanLyDocGia\QuanLyKho\bin\Debug\itextsharp.xml
 C:\Users\kun\source\repos\DarkDipper\Libary-Management\QuanLyDocGia\QuanLyKho\obj\Debug\QuanLyKho.XuatKhoSach.resources
-C:\Users\kun\source\repos\DarkDipper\Libary-Management\QuanLyDocGia\QuanLyKho\obj\Debug\QuanLyKho.DanhSachSach.resources
 D:\Project\Libary-Management\QuanLyDocGia\QuanLyKho\bin\Debug\QuanLyKho.exe.config
 D:\Project\Libary-Management\QuanLyDocGia\QuanLyKho\bin\Debug\QuanLyKho.exe
 D:\Project\Libary-Management\QuanLyDocGia\QuanLyKho\bin\Debug\QuanLyKho.pdb
@@ -40,3 +39,4 @@ D:\Project\Libary-Management\QuanLyDocGia\QuanLyKho\obj\Debug\QuanLyKho.csproj.C
 D:\Project\Libary-Management\QuanLyDocGia\QuanLyKho\obj\Debug\QuanLyKho.exe
 D:\Project\Libary-Management\QuanLyDocGia\QuanLyKho\obj\Debug\QuanLyKho.pdb
 C:\Users\kun\source\repos\DarkDipper\Libary-Management\QuanLyDocGia\QuanLyKho\bin\Debug\itextsharp.dll
+C:\Users\kun\source\repos\DarkDipper\Libary-Management\QuanLyDocGia\QuanLyKho\obj\Debug\QuanLyKho.DanhSachSach_PDF.resources

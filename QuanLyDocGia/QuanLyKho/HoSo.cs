@@ -1,4 +1,4 @@
-namespace Trang_Chu
+namespace QuanLyKho
 {
     using System;
     using System.Collections.Generic;
@@ -6,58 +6,53 @@ namespace Trang_Chu
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    [Table("DanhSachSach")]
-    public partial class DanhSachSach
+    [Table("HoSo")]
+    public partial class HoSo
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public DanhSachSach()
+        public HoSo()
         {
+            DanhSachSaches = new HashSet<DanhSachSach>();
             MatSaches = new HashSet<MatSach>();
-            MuonSaches = new HashSet<MuonSach>();
+            TheDocGias = new HashSet<TheDocGia>();
             ThanhLies = new HashSet<ThanhLy>();
-            TraSaches = new HashSet<TraSach>();
         }
 
         [Key]
         [StringLength(5)]
-        public string MaSach { get; set; }
+        public string MaNV { get; set; }
 
         [StringLength(100)]
-        public string TenSach { get; set; }
+        public string HoTen { get; set; }
 
-        [StringLength(100)]
-        public string TacGia { get; set; }
+        public DateTime? NgaySinh { get; set; }
 
         [StringLength(50)]
-        public string TheLoai { get; set; }
-
-        public int? NamXuatBan { get; set; }
+        public string BangCap { get; set; }
 
         [StringLength(100)]
-        public string NhaXuatBan { get; set; }
+        public string DiaChi { get; set; }
 
-        public DateTime? NgayNhap { get; set; }
+        [StringLength(12)]
+        public string DienThoai { get; set; }
 
-        public int? TriGia { get; set; }
+        [StringLength(10)]
+        public string BoPhan { get; set; }
 
-        [StringLength(30)]
-        public string TinhTrang { get; set; }
+        public DateTime? NgayLamViec { get; set; }
 
-        [StringLength(5)]
-        public string MaNgNhan { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<DanhSachSach> DanhSachSaches { get; set; }
 
-        public virtual HoSo HoSo { get; set; }
+        public virtual TaiKhoanNV TaiKhoanNV { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<MatSach> MatSaches { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<MuonSach> MuonSaches { get; set; }
+        public virtual ICollection<TheDocGia> TheDocGias { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ThanhLy> ThanhLies { get; set; }
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<TraSach> TraSaches { get; set; }
     }
 }

@@ -30,6 +30,9 @@ namespace QLDG
         bool paddress = false;
         bool pmail = false;
         bool pdate = false;
+        bool dn = false;
+        bool mk = false;
+
         int SizeBang;
         //===================================bổ trợ======================
         public bool KiemTraSach(string txt_muonSach)
@@ -361,7 +364,17 @@ namespace QLDG
 
         private void QLDG_Load(object sender, EventArgs e)
         {
-            this.ActiveControl = f2Name;  // Con trỏ đặt ngay tại Name 
+            HoSo x = qltv.HoSoes.SingleOrDefault(p => p.MaNV == NV);
+            tt_Ten.Text = x.HoTen;
+            tt_ngaysinh.Text = x.NgaySinh.Value.ToString("dd/MM/yyyy");
+            tt_diachi.Text = x.DiaChi;
+            tt_dienthoai.Text = x.DienThoai;
+            tt_bangcap.Text = x.BangCap;
+            tt_nlv.Text = x.NgayLamViec.Value.ToString("dd/MM/yyyy");
+            TaiKhoanNV y = qltv.TaiKhoanNVs.SingleOrDefault(p => p.MaNV == NV);
+            tt_tenDN.Text = y.TenDN;
+            tt_Matkhau.Text = y.MatKhau;
+            tt_mnv.Text = y.MaNV;
             string conString = ConfigurationManager.ConnectionStrings["QuanLyDG"].ConnectionString.ToString();
             
             con = new SqlConnection(conString);
@@ -790,5 +803,70 @@ namespace QLDG
             }
         }
 
+        private void tt_tenDN_Leave(object sender, EventArgs e)
+        {
+            if (tt_tenDN.Text.Length == 0)
+            {
+                Tick.Clear();
+                er.SetError(this.tt_tenDN, "Bạn chưa nhập tên đăng nhập! ");
+                dn = false;
+            }
+            else if (Regex.IsMatch(tt_tenDN.Text, "^[a-zA-Z0-9]*$"))
+            {
+                er.Clear();
+                Tick.SetError(tt_tenDN, "xong");
+                dn = true;
+            }
+            else
+            {
+                Tick.Clear();
+                er.SetError(tt_tenDN, "Không đúng dữ liệu nhập");
+                dn = false;
+            }
+        }
+
+        private void tt_Matkhau_Leave(object sender, EventArgs e)
+        {
+            if (tt_Matkhau.Text.Length == 0)
+            {
+                Tick.Clear();
+                er.SetError(this.tt_Matkhau, "Bạn chưa nhập mật khẩu! ");
+                mk = false;
+            }
+            else if (tt_Matkhau.Text.Length < 9)
+            {
+                Tick.Clear();
+                er.SetError(tt_Matkhau, "Mật khẩu quá ngắn");
+                mk = false;
+            }
+            else if (Regex.IsMatch(tt_Matkhau.Text, "^[!-~]*$"))
+            {
+                er.Clear();
+                Tick.SetError(tt_Matkhau, "xong");
+                mk = true;
+            }
+            else
+            {
+                Tick.Clear();
+                er.SetError(tt_Matkhau, "Không đúng dữ liệu nhập");
+                mk = false;
+            }
+        }
+
+        private void LuuThayDoi_Click(object sender, EventArgs e)
+        {
+            if (dn == true && mk == true)
+            {
+                TaiKhoanNV x = qltv.TaiKhoanNVs.SingleOrDefault(p => p.MaNV == NV);
+                x.TenDN = tt_tenDN.Text;
+                x.MatKhau = tt_Matkhau.Text;
+                qltv.SaveChanges();
+                MessageBox.Show("Lưu thành công", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Lưu thất bại", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+            }
+        }
     }
 }
