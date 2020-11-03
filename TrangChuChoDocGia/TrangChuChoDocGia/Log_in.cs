@@ -33,10 +33,11 @@ namespace  Trang_Chu
             var ds = from tmp in cmd.TaiKhoanNVs select tmp;
             foreach (var item in ds)
             {
+               // MessageBox.Show("đâsd");
                 if (item.TenDN == User_name.Text && item.MatKhau == Pass_word.Text)
                 {
                     check = true;
-                    /*HoSo nv = cmd.HoSoes.SingleOrDefault(p => p.MaNV == item.MaNV);
+                    HoSo nv = cmd.HoSoes.SingleOrDefault(p => p.MaNV == item.MaNV);
                     if (nv.BoPhan == "Thủ thư")
                     {
                         QLDG.QLDG qldg = new QLDG.QLDG();
@@ -52,7 +53,7 @@ namespace  Trang_Chu
                         this.Hide();
                         qlk.ShowDialog();
                         this.Show();
-                    }*/
+                    }
                 }
             }
             if(!check) MessageBox.Show("Sai mật khẩu hoặc tên đăng nhập", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
