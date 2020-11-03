@@ -28,7 +28,7 @@ namespace QLDG
         public string MaSach;
         public string TenSach;
         public string TheLoai;
-        Model1 qltv = new Model1();
+        QuanLyTV qltv = new QuanLyTV();
         private void PhieuMuon_Load(object sender, EventArgs e)
         {
             NgayTra = NgayMuon.AddDays(+7);

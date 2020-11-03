@@ -5,10 +5,10 @@ namespace QLDG
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Linq;
 
-    public partial class Model1 : DbContext
+    public partial class QuanLyTV : DbContext
     {
-        public Model1()
-            : base("name=Model1")
+        public QuanLyTV()
+            : base("name=QuanLyTV")
         {
         }
 
