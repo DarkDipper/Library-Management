@@ -1,0 +1,10 @@
+C:\Users\kun\source\repos\DarkDipper\Libary-Management\From_dang_ky\From_dang_ky\bin\Debug\From_dang_ky.exe.config
+C:\Users\kun\source\repos\DarkDipper\Libary-Management\From_dang_ky\From_dang_ky\bin\Debug\From_dang_ky.exe
+C:\Users\kun\source\repos\DarkDipper\Libary-Management\From_dang_ky\From_dang_ky\bin\Debug\From_dang_ky.pdb
+C:\Users\kun\source\repos\DarkDipper\Libary-Management\From_dang_ky\From_dang_ky\obj\Debug\From_dang_ky.csprojAssemblyReference.cache
+C:\Users\kun\source\repos\DarkDipper\Libary-Management\From_dang_ky\From_dang_ky\obj\Debug\From_dang_ky.Form_DangKy.resources
+C:\Users\kun\source\repos\DarkDipper\Libary-Management\From_dang_ky\From_dang_ky\obj\Debug\From_dang_ky.Properties.Resources.resources
+C:\Users\kun\source\repos\DarkDipper\Libary-Management\From_dang_ky\From_dang_ky\obj\Debug\From_dang_ky.csproj.GenerateResource.cache
+C:\Users\kun\source\repos\DarkDipper\Libary-Management\From_dang_ky\From_dang_ky\obj\Debug\From_dang_ky.csproj.CoreCompileInputs.cache
+C:\Users\kun\source\repos\DarkDipper\Libary-Management\From_dang_ky\From_dang_ky\obj\Debug\From_dang_ky.exe
+C:\Users\kun\source\repos\DarkDipper\Libary-Management\From_dang_ky\From_dang_ky\obj\Debug\From_dang_ky.pdb

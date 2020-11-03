@@ -26,7 +26,7 @@ namespace QLDG
         public ListView Dsss;
         public int TienPhat;
         public int TongNo;
-        Model1 qltv = new Model1();
+        QuanLyTV qltv = new QuanLyTV();
 
         private void PhieuMat_Load(object sender, EventArgs e)
         {
