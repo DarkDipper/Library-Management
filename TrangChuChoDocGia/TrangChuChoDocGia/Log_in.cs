@@ -24,7 +24,6 @@ namespace  Trang_Chu
         /// Xử lý thông tin và mật khẩu
         /// 
         /// 
-        string x = "chào";
         private void Dang_nhap_button_Click(object sender, EventArgs e)
         {
             bool check = false;
@@ -36,7 +35,7 @@ namespace  Trang_Chu
                 if (item.TenDN == User_name.Text && item.MatKhau == Pass_word.Text)
                 {
                     check = true;
-                    /*HoSo nv = cmd.HoSoes.SingleOrDefault(p => p.MaNV == item.MaNV);
+                    HoSo nv = cmd.HoSoes.SingleOrDefault(p => p.MaNV == item.MaNV);
                     if (nv.BoPhan == "Thủ thư")
                     {
                         QLDG.QLDG qldg = new QLDG.QLDG();
@@ -52,9 +51,12 @@ namespace  Trang_Chu
                         this.Hide();
                         qlk.ShowDialog();
                         this.Show();
-                    }*/
+                    }
                 }
             }
+            User_name.Text = "";
+            Pass_word.Text="";
+            User_name.Focus();
             if(!check) MessageBox.Show("Sai mật khẩu hoặc tên đăng nhập", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
     }

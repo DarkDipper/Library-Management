@@ -43,3 +43,25 @@ C:\Users\kun\source\repos\DarkDipper\Libary-Management\TrangChuChoDocGia\TrangCh
 C:\Users\kun\source\repos\DarkDipper\Libary-Management\TrangChuChoDocGia\TrangChuChoDocGia\obj\Debug\QuanLyThuVien.csproj.CopyComplete
 C:\Users\kun\source\repos\DarkDipper\Libary-Management\TrangChuChoDocGia\TrangChuChoDocGia\obj\Debug\Trang Chu.exe
 C:\Users\kun\source\repos\DarkDipper\Libary-Management\TrangChuChoDocGia\TrangChuChoDocGia\obj\Debug\Trang Chu.pdb
+D:\Project\Library-Management\TrangChuChoDocGia\TrangChuChoDocGia\bin\Debug\Trang Chu.exe.config
+D:\Project\Library-Management\TrangChuChoDocGia\TrangChuChoDocGia\bin\Debug\Trang Chu.exe
+D:\Project\Library-Management\TrangChuChoDocGia\TrangChuChoDocGia\bin\Debug\Trang Chu.pdb
+D:\Project\Library-Management\TrangChuChoDocGia\TrangChuChoDocGia\bin\Debug\BouncyCastle.Crypto.dll
+D:\Project\Library-Management\TrangChuChoDocGia\TrangChuChoDocGia\bin\Debug\itextsharp.dll
+D:\Project\Library-Management\TrangChuChoDocGia\TrangChuChoDocGia\bin\Debug\QLDG.exe
+D:\Project\Library-Management\TrangChuChoDocGia\TrangChuChoDocGia\bin\Debug\QuanLyKho.exe
+D:\Project\Library-Management\TrangChuChoDocGia\TrangChuChoDocGia\bin\Debug\QLDG.pdb
+D:\Project\Library-Management\TrangChuChoDocGia\TrangChuChoDocGia\bin\Debug\QLDG.exe.config
+D:\Project\Library-Management\TrangChuChoDocGia\TrangChuChoDocGia\bin\Debug\QuanLyKho.pdb
+D:\Project\Library-Management\TrangChuChoDocGia\TrangChuChoDocGia\bin\Debug\QuanLyKho.exe.config
+D:\Project\Library-Management\TrangChuChoDocGia\TrangChuChoDocGia\bin\Debug\EntityFramework.xml
+D:\Project\Library-Management\TrangChuChoDocGia\TrangChuChoDocGia\bin\Debug\EntityFramework.SqlServer.xml
+D:\Project\Library-Management\TrangChuChoDocGia\TrangChuChoDocGia\bin\Debug\itextsharp.xml
+D:\Project\Library-Management\TrangChuChoDocGia\TrangChuChoDocGia\obj\Debug\QuanLyThuVien.csprojAssemblyReference.cache
+D:\Project\Library-Management\TrangChuChoDocGia\TrangChuChoDocGia\obj\Debug\Trang_Chu.Log_in.resources
+D:\Project\Library-Management\TrangChuChoDocGia\TrangChuChoDocGia\obj\Debug\Trang_Chu.Properties.Resources.resources
+D:\Project\Library-Management\TrangChuChoDocGia\TrangChuChoDocGia\obj\Debug\QuanLyThuVien.csproj.GenerateResource.cache
+D:\Project\Library-Management\TrangChuChoDocGia\TrangChuChoDocGia\obj\Debug\QuanLyThuVien.csproj.CoreCompileInputs.cache
+D:\Project\Library-Management\TrangChuChoDocGia\TrangChuChoDocGia\obj\Debug\QuanLyThuVien.csproj.CopyComplete
+D:\Project\Library-Management\TrangChuChoDocGia\TrangChuChoDocGia\obj\Debug\Trang Chu.exe
+D:\Project\Library-Management\TrangChuChoDocGia\TrangChuChoDocGia\obj\Debug\Trang Chu.pdb
