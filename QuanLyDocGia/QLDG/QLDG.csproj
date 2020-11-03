@@ -69,7 +69,6 @@
     <Compile Include="DanhSachSach.cs" />
     <Compile Include="HoSo.cs" />
     <Compile Include="MatSach.cs" />
-    <Compile Include="Model1.cs" />
     <Compile Include="MuonSach.cs" />
     <Compile Include="PhieuMat.cs">
       <SubType>Form</SubType>
@@ -102,6 +101,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QuanLyThuVienDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="QuanLyTV.cs" />
     <Compile Include="sysdiagram.cs" />
     <Compile Include="TaiKhoanNV.cs" />
     <Compile Include="ThanhLy.cs" />

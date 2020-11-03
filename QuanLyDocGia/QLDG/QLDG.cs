@@ -23,7 +23,7 @@ namespace QLDG
             InitializeComponent();
         }
        // SqlConnection con;
-        Model1 qltv = new Model1();
+        QuanLyTV qltv = new QuanLyTV();
         public string NV="E.001";
         // tạo biến để kiểm tra đúng sau khi nhấn button 
         bool pname = false;
