@@ -39,6 +39,8 @@ namespace Trang_Chu
         [StringLength(10)]
         public string BoPhan { get; set; }
 
+        public DateTime? NgayLamViec { get; set; }
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<DanhSachSach> DanhSachSaches { get; set; }
 

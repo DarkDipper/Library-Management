@@ -23,8 +23,6 @@ namespace QLDG
 
         public int? TienPhat { get; set; }
 
-        public int? TienNo { get; set; }
-
         public int? SoNgayMuon { get; set; }
 
         public virtual DanhSachSach DanhSachSach { get; set; }

@@ -69,12 +69,25 @@
     <Compile Include="DanhSachSach.cs" />
     <Compile Include="HoSo.cs" />
     <Compile Include="MatSach.cs" />
+    <Compile Include="Model1.cs" />
     <Compile Include="MuonSach.cs" />
+    <Compile Include="PhieuMat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PhieuMat.Designer.cs">
+      <DependentUpon>PhieuMat.cs</DependentUpon>
+    </Compile>
     <Compile Include="PhieuMuon.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="PhieuMuon.Designer.cs">
       <DependentUpon>PhieuMuon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PhieuTra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PhieuTra.Designer.cs">
+      <DependentUpon>PhieuTra.cs</DependentUpon>
     </Compile>
     <Compile Include="QLDG.cs">
       <SubType>Form</SubType>
@@ -84,17 +97,21 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="QuanLyTV.cs" />
+    <Compile Include="QuanLyThuVienDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLyThuVienDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="sysdiagram.cs" />
     <Compile Include="TaiKhoanNV.cs" />
     <Compile Include="ThanhLy.cs" />
     <Compile Include="TheDocGia.cs" />
     <Compile Include="TraSach.cs" />
-    <Compile Include="XuatTable.cs">
+    <Compile Include="XuatBAng.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="XuatTable.Designer.cs">
-      <DependentUpon>XuatTable.cs</DependentUpon>
+    <Compile Include="XuatBAng.Designer.cs">
+      <DependentUpon>XuatBAng.cs</DependentUpon>
     </Compile>
     <Compile Include="XuatThe.cs">
       <SubType>Form</SubType>
@@ -102,8 +119,14 @@
     <Compile Include="XuatThe.Designer.cs">
       <DependentUpon>XuatThe.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="PhieuMat.resx">
+      <DependentUpon>PhieuMat.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PhieuMuon.resx">
       <DependentUpon>PhieuMuon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhieuTra.resx">
+      <DependentUpon>PhieuTra.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="QLDG.resx">
       <DependentUpon>QLDG.cs</DependentUpon>
@@ -118,8 +141,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="XuatTable.resx">
-      <DependentUpon>XuatTable.cs</DependentUpon>
+    <EmbeddedResource Include="XuatBAng.resx">
+      <DependentUpon>XuatBAng.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="XuatThe.resx">
       <DependentUpon>XuatThe.cs</DependentUpon>
@@ -139,6 +162,17 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="QuanLyThuVienDataSet.xsc">
+      <DependentUpon>QuanLyThuVienDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLyThuVienDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QuanLyThuVienDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QuanLyThuVienDataSet.xss">
+      <DependentUpon>QuanLyThuVienDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Resources\rsz_npl.png" />
   </ItemGroup>
   <ItemGroup>

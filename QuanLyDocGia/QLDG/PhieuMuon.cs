@@ -43,7 +43,7 @@ namespace QLDG
                 sr.Close();
             }
             else xuatMuon_duongdan.Text = $@"C:\Users\";
-            xuatMuon_ten.Text = $"{TenDocGia}-{NgayMuon.ToString("dd-MM-yyyy")}";
+            xuatMuon_ten.Text = $"B_{TenDocGia}_{NgayMuon.ToString("dd-MM-yyyy")}";
         }
         private void buttonxuatMuon_duongDan_Click(object sender, EventArgs e)
         {
@@ -106,7 +106,7 @@ namespace QLDG
                 p3.Alignment = Element.ALIGN_LEFT;
                 p4.Alignment = Element.ALIGN_LEFT;
                 Paragraph Enter = new Paragraph("             ");
-                Paragraph p7 = new Paragraph($"   PHIẾU MƯỢN SÁCH-{MaDocGia}", f2);
+                Paragraph p7 = new Paragraph($"   PHIẾU MƯỢN SÁCH - {MaDocGia}", f2);
                 p7.Alignment = Element.ALIGN_CENTER;
                 PdfPTable table = new PdfPTable(3);
                 table.DefaultCell.Padding = 3;

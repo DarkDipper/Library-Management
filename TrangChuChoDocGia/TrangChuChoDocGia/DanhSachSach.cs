@@ -28,7 +28,7 @@ namespace Trang_Chu
         [StringLength(100)]
         public string TacGia { get; set; }
 
-        [StringLength(1)]
+        [StringLength(50)]
         public string TheLoai { get; set; }
 
         public int? NamXuatBan { get; set; }
