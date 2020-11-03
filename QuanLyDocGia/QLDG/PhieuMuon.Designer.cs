@@ -57,7 +57,7 @@
             this.xuatMuon_xuat.Name = "xuatMuon_xuat";
             this.xuatMuon_xuat.Size = new System.Drawing.Size(151, 33);
             this.xuatMuon_xuat.TabIndex = 28;
-            this.xuatMuon_xuat.Text = "Xuất và cập nhật";
+            this.xuatMuon_xuat.Text = "Xuất phiếu";
             this.xuatMuon_xuat.UseVisualStyleBackColor = true;
             this.xuatMuon_xuat.Click += new System.EventHandler(this.xuatMuon_xuat_Click);
             // 
@@ -125,7 +125,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "PhieuMuon";
-            this.Text = "PhieuMuon";
+            this.Text = "Xuất phiếu mượn";
             this.Load += new System.EventHandler(this.PhieuMuon_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -164,14 +164,18 @@
             // 
             // textBox2
             // 
+            this.textBox2.BackColor = System.Drawing.Color.OrangeRed;
+            this.textBox2.ForeColor = System.Drawing.Color.DarkOrange;
             this.textBox2.Location = new System.Drawing.Point(719, 81);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(203, 2);
+            this.textBox2.Size = new System.Drawing.Size(221, 2);
             this.textBox2.TabIndex = 20;
             // 
             // textBox1
             // 
+            this.textBox1.BackColor = System.Drawing.Color.OrangeRed;
+            this.textBox1.ForeColor = System.Drawing.Color.DarkOrange;
             this.textBox1.Location = new System.Drawing.Point(437, 81);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
@@ -182,7 +186,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(642, 73);
+            this.label9.Location = new System.Drawing.Point(643, 73);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(71, 16);
             this.label9.TabIndex = 18;
@@ -190,6 +194,7 @@
             // 
             // dataKho
             // 
+            this.dataKho.BackgroundColor = System.Drawing.SystemColors.MenuBar;
             this.dataKho.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataKho.Location = new System.Drawing.Point(437, 92);
             this.dataKho.Name = "dataKho";

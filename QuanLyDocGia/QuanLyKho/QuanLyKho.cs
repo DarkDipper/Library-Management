@@ -24,29 +24,36 @@ namespace QuanLyKho
             AutoValidate = AutoValidate.EnableAllowFocusChange;
         }
         //========================================================Hàm bổ trợ ===================================================
-        SqlConnection con;
+        //SqlConnection con;
         public int SizeBang;
         public int i = 1;
-        public string Mathukho;
+        public string Mathukho="E.002";
         QLTV01 qltv = new QLTV01();
         public void HienThi()
-        {
-            SqlCommand cmd = new SqlCommand("select MaSach as N'Mã sách'," +
-                                           "TenSach as N'Tên sách'," +
-                                           "TheLoai as N'Thể loại'," +
-                                           "TacGia as N'Tác giả'," +
-                                           "NamXuatBan as N'Năm xuất bản'," +
-                                           "NhaXuatBan as N'Nhà xuất bản'," +
-                                           "CONVERT (varchar(10), NgayNhap, 103) AS N'Ngày nhập'," +
-                                           "TriGia as N'Trị giá'," +
-                                           "TinhTrang as N'Tình trạng'," +
-                                           "HoSo.HoTen as N'Họ và tên người nhận' " +
-                                           "from DanhSachSach,HoSo " +
-                                           "where DanhSachSach.MaNgNhan = HoSo.MaNV", con);
-            SqlDataReader rd = cmd.ExecuteReader();
-            data d = new data();
-            d.Load(rd);
-            dataKho.DataSource = d;
+        {/*SqlCommand cmd = new SqlCommand("select MaSach as N'Mã sách'," +
+                                                                        "TenSach as N'Tên sách'," +
+                                    "TheLoai as N'Thể loại'," +
+                                        "TacGia as N'Tác giả'," +
+                                               "NamXuatBan as N'Năm xuất bản'," +
+                      "NhaXuatBan as N'Nhà xuất bản'," +
+                         "CONVERT (varchar(10), NgayNhap, 103) AS N'Ngày nhập'," +
+                          "TriGia as N'Trị giá'," +
+                        "TinhTrang as N'Tình trạng'," +
+                        "HoSo.HoTen as N'Họ và tên người nhận' " +
+                                        "from DanhSachSach,HoSo " +
+                     "where DanhSachSach.MaNgNhan = HoSo.MaNV", con);*/
+            var dsk = from item in qltv.DanhSachSaches from a in qltv.HoSoes where a.MaNV == item.MaNgNhan select new { ms = item.MaSach, tens = item.TenSach,tl=item.TheLoai,tg=item.TacGia,nxb=item.NamXuatBan,nhaxb=item.NhaXuatBan,nn=item.NgayNhap,trg=item.TriGia, tt = item.TinhTrang,ngn= a.HoTen};
+            dataKho.DataSource = dsk.ToList();
+            dataKho.Columns[0].HeaderText = "Mã sách";
+            dataKho.Columns[1].HeaderText = "Tên sách";
+            dataKho.Columns[2].HeaderText = "Thể Loại";
+            dataKho.Columns[3].HeaderText = "Tác giả";
+            dataKho.Columns[4].HeaderText = "Năm xuất bản";
+            dataKho.Columns[5].HeaderText = "Nhà xuất bản";
+            dataKho.Columns[6].HeaderText = "Ngày nhập";
+            dataKho.Columns[7].HeaderText = "Trị giá";
+            dataKho.Columns[8].HeaderText = "Tình trạng";
+            dataKho.Columns[9].HeaderText = "Người nhận";
 
         }
         public void ThongKe()
@@ -103,9 +110,9 @@ namespace QuanLyKho
             tt_tenDN.Text = y.TenDN;
             tt_Matkhau.Text = y.MatKhau;
             tt_mnv.Text = y.MaNV;
-            string conString = ConfigurationManager.ConnectionStrings["QuanLyDG"].ConnectionString.ToString();
-            con = new SqlConnection(conString);
-            con.Open();
+         //   string conString = ConfigurationManager.ConnectionStrings["QuanLyDG"].ConnectionString.ToString();
+           // con = new SqlConnection(conString);
+           // con.Open();
             HienThi();
             for (int k = 0; k < dataKho.Rows.Count - 1; k++)
             {
@@ -224,7 +231,7 @@ namespace QuanLyKho
             }
             else
             {
-                string sql_find = "select MaSach as N'Mã sách'," +
+                /*string sql_find = "select MaSach as N'Mã sách'," +
                                            "TenSach as N'Tên sách'," +
                                            "TheLoai as N'Thể loại'," +
                                            "TacGia as N'Tác giả'," +
@@ -235,18 +242,56 @@ namespace QuanLyKho
                                            "TinhTrang as N'Tình trạng'," +
                                            "HoSo.HoTen as N'Họ và tên người nhận' " +
                                            "from DanhSachSach,HoSo " +
-                                           "where DanhSachSach.MaNgNhan = HoSo.MaNV";
-                if (comboBox_Tim.SelectedIndex == 0) sql_find += $" and MaSach='{Kho_MaSach.Text}'";
-                else if (comboBox_Tim.SelectedIndex == 1) sql_find += $" and TenSach like N'%{Kho_TenSach.Text}%'";
-                else if (comboBox_Tim.SelectedIndex == 2) sql_find += $" and TheLoai='{Kho_TheLoai.Text}'";
-                else if (comboBox_Tim.SelectedIndex == 3) sql_find += $" and TacGia like N'%{Kho_TacGia.Text.Trim()}%'";
-                else sql_find += $" and YEAR(GETDATE())-NamXuatBan > 8";
-                SqlCommand cmd = new SqlCommand(sql_find, con);
-                cmd.ExecuteNonQuery();
-                SqlDataReader rd = cmd.ExecuteReader();
-                data d = new data();
-                d.Load(rd);
-                dataKho.DataSource = d;
+                                           "where DanhSachSach.MaNgNhan = HoSo.MaNV";*/
+                var dsss = from i in qltv.DanhSachSaches select i;
+                List<DanhSachSach> tim = new List<DanhSachSach>();
+                if (comboBox_Tim.SelectedIndex == 0)
+                {
+                    foreach(var x in dsss)
+                    {
+                        if (x.MaSach == Kho_MaSach.Text) tim.Add(x);
+                    }
+                }
+                else if (comboBox_Tim.SelectedIndex == 1)
+                {
+                    foreach (var x in dsss)
+                    {
+                        if (x.TenSach.Contains(Kho_TenSach.Text)) tim.Add(x);
+                    }
+                }
+                else if (comboBox_Tim.SelectedIndex == 2)
+                {
+                    foreach (var x in dsss)
+                    {
+                        if (x.TheLoai == Kho_TheLoai.Text) tim.Add(x);
+                    }
+                }
+                else if (comboBox_Tim.SelectedIndex == 3)
+                {
+                    foreach (var x in dsss)
+                    {
+                        if (x.TacGia.Contains(Kho_TacGia.Text)) tim.Add(x);
+                    }
+                }
+                else
+                {
+                    foreach (var x in dsss)
+                    {
+                        if (DateTime.Today.Year - x.NamXuatBan > 8) tim.Add(x);
+                    }
+                }
+                var dsk = from item in tim from a in qltv.HoSoes where a.MaNV == item.MaNgNhan select new { ms = item.MaSach, tens = item.TenSach, tl = item.TheLoai, tg = item.TacGia, nxb = item.NamXuatBan, nhaxb = item.NhaXuatBan, nn = item.NgayNhap, trg = item.TriGia, tt = item.TinhTrang,ngn = a.HoTen };
+                dataKho.DataSource = dsk.ToList();
+                dataKho.Columns[0].HeaderText = "Mã sách";
+                dataKho.Columns[1].HeaderText = "Tên sách";
+                dataKho.Columns[2].HeaderText = "Thể Loại";
+                dataKho.Columns[3].HeaderText = "Tác giả";
+                dataKho.Columns[4].HeaderText = "Năm xuất bản";
+                dataKho.Columns[5].HeaderText = "Nhà xuất bản";
+                dataKho.Columns[6].HeaderText = "Ngày nhập";
+                dataKho.Columns[7].HeaderText = "Trị giá";
+                dataKho.Columns[8].HeaderText = "Tình trạng";
+                dataKho.Columns[9].HeaderText = "Người nhận";
             }
         }
 
@@ -254,16 +299,24 @@ namespace QuanLyKho
         {
             if (ValidateChildren(ValidationConstraints.Enabled))
             {
-                string sql_ed = $"update DanhSachSach set TenSach=" +
+
+                DanhSachSach x = qltv.DanhSachSaches.SingleOrDefault(p => p.MaSach == Kho_MaSach.Text);
+                x.TenSach = Kho_TenSach.Text;
+                x.TheLoai = Kho_TheLoai.Text;
+                x.TacGia = Kho_TacGia.Text;
+                x.NamXuatBan = int.Parse(Kho_NamXuatBan.Value.ToString());
+                x.NhaXuatBan = Kho_NhaXuatBan.Text;
+                x.TriGia = int.Parse((double.Parse(Kho_Gia.Value.ToString()) * 1000).ToString());
+                /*string sql_ed = $"update DanhSachSach set TenSach=" +
                     $"N'{Kho_TenSach.Text}',TacGia=N'{Kho_TacGia.Text}'," +
                     $"TheLoai=N'{Kho_TheLoai.Text}',NamXuatBan={Kho_NamXuatBan.Value}," +
                     $"NhaXuatBan=N'{Kho_NhaXuatBan.Text}',TriGia={Kho_Gia.Value * 1000}" +
                     $"where MaSach='{Kho_MaSach.Text}'";
                 SqlCommand cmd = new SqlCommand(sql_ed, con);
-                cmd.ExecuteNonQuery();
+                cmd.ExecuteNonQuery();*/
                 try
                 {
-                   
+                    qltv.DanhSachSaches.AddOrUpdate(x);
                     MessageBox.Show("Sửa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     HienThi();
 
@@ -279,12 +332,16 @@ namespace QuanLyKho
         private void button_Xoa_Click_1(object sender, EventArgs e)
         {
 
-            string sqlXoa;
+            /*string sqlXoa;
             sqlXoa = $"DELETE FROM DanhSachSach WHERE MaSach='{Kho_MaSach.Text}'";
+            */
             if (MessageBox.Show($"Có thật sự muốn xóa \"{Kho_MaSach.Text}-{Kho_TenSach.Text}\"", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.OK)
             {
-                SqlCommand cmd = new SqlCommand(sqlXoa, con);
-                cmd.ExecuteNonQuery();
+                var sach = qltv.DanhSachSaches.SingleOrDefault(p=>p.MaSach==Kho_MaSach.Text);
+                // SqlCommand cmd = new SqlCommand(sqlXoa, con);
+                qltv.DanhSachSaches.Remove(sach);
+                qltv.SaveChanges();
+               // cmd.ExecuteNonQuery();
                 HienThi();
                 Reset_ThuocTinh();
                 SizeBang--;
@@ -296,28 +353,42 @@ namespace QuanLyKho
         {
             if (ValidateChildren(ValidationConstraints.Enabled))
             {
-                string sql_in = $@"Insert into DanhSachSach values(
-                        '{TaoMa()}',
-                        N'{Kho_TenSach.Text}',
-                        N'{Kho_TacGia.Text}',
-                        N'{Kho_TheLoai.Text}',
-                        '{Kho_NamXuatBan.Value.ToString()}',
-                        N'{Kho_NhaXuatBan.Text}',
-                        '{DateTime.Today.ToString("yyyyMMdd")}',
-                        {Kho_Gia.Value * 1000},
-                        N'Còn',
-                        '{Mathukho}'
-                    )";
-                SqlCommand cmd = new SqlCommand(sql_in, con);
-                cmd.ExecuteNonQuery();
-                SizeBang++;
+                var y =new DanhSachSach();
+                i++;
+                y.MaSach = TaoMa();
+                y.TheLoai = Kho_TheLoai.Text;
+                y.TenSach = Kho_TenSach.Text;
+                y.TacGia = Kho_TacGia.Text;
+                y.NamXuatBan = int.Parse(Kho_NamXuatBan.Value.ToString());
+                y.NhaXuatBan = Kho_NhaXuatBan.Text;
+                y.TriGia = int.Parse((double.Parse(Kho_Gia.Value.ToString()) * 1000).ToString());
+                y.NgayNhap = DateTime.Today;
+                y.MaNgNhan = Mathukho;
+                y.TinhTrang = "Còn";
+                qltv.DanhSachSaches.Add(y);
+                qltv.SaveChanges();
+                 /* string sql_in = $@"Insert into DanhSachSach values(
+                          '{TaoMa()}',
+                          N'{Kho_TenSach.Text}',
+                          N'{Kho_TacGia.Text}',
+                          N'{Kho_TheLoai.Text}',
+                          '{Kho_NamXuatBan.Value.ToString()}',
+                          N'{Kho_NhaXuatBan.Text}',
+                          '{DateTime.Today.ToString("yyyyMMdd")}',
+                          {Kho_Gia.Value * 1000},
+                          N'Còn',
+                          '{Mathukho}'
+                      )";
+                  SqlCommand cmd = new SqlCommand(sql_in, con);
+                  cmd.ExecuteNonQuery();*/
+                 SizeBang++;
                 ThongKe();
                 i++;
                 Reset_ThuocTinh();
                 HienThi();
                 MessageBox.Show("Thêm thành công ", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
-               /* var x = new XuatThongTinSach();
-                x.MaSach = TaoMa();
+               // var x = new XuatThongTinSach();
+                /*x.MaSach = TaoMa();
                 x.TheLoai = Kho_TheLoai.Text;
                 x.TenSach = Kho_TenSach.Text;
                 x.TacGia = Kho_TacGia.Text;
@@ -325,10 +396,10 @@ namespace QuanLyKho
                 x.NhaXuatBan = Kho_NhaXuatBan.Text;
                 x.TriGia = Kho_Gia.Value.ToString() + ".000 đồng";
                 x.NgayNhap = DateTime.Today.ToString("dd/MM/yyyy");
-                x.NguoiTiepNhan = "??";
-                this.Hide();
-                x.ShowDialog();
-                this.Show();*/
+                x.NguoiTiepNhan = "??";*/
+               // this.Hide();
+               // x.ShowDialog();
+                //this.Show();
             }
             else MessageBox.Show("Đăng kí thất bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
@@ -339,7 +410,7 @@ namespace QuanLyKho
             {
                 AutoValidate = AutoValidate.Disable;
                 e.Cancel = true;
-                con.Close();
+              //  con.Close();
             }
         }
 
