@@ -93,3 +93,6 @@ C:\Users\kun\source\repos\DarkDipper\Library-Management\TrangChuChoDocGia\TrangC
 C:\Users\kun\source\repos\DarkDipper\Library-Management\TrangChuChoDocGia\TrangChuChoDocGia\bin\Debug\FormThuTruong.pdb
 C:\Users\kun\source\repos\DarkDipper\Library-Management\TrangChuChoDocGia\TrangChuChoDocGia\bin\Debug\FormThuTruong.exe.config
 C:\Users\kun\source\repos\DarkDipper\Library-Management\TrangChuChoDocGia\TrangChuChoDocGia\bin\Debug\CircularProgressBar.xml
+C:\Users\kun\source\repos\DarkDipper\Library-Management\TrangChuChoDocGia\TrangChuChoDocGia\bin\Debug\From_dang_ky.exe
+C:\Users\kun\source\repos\DarkDipper\Library-Management\TrangChuChoDocGia\TrangChuChoDocGia\bin\Debug\From_dang_ky.pdb
+C:\Users\kun\source\repos\DarkDipper\Library-Management\TrangChuChoDocGia\TrangChuChoDocGia\bin\Debug\From_dang_ky.exe.config

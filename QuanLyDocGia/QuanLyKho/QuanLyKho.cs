@@ -705,6 +705,7 @@ namespace QuanLyKho
                 TaiKhoanNV x = qltv.TaiKhoanNVs.SingleOrDefault(p => p.MaNV == Mathukho);
                 x.TenDN = tt_tenDN.Text;
                 x.MatKhau = tt_Matkhau.Text;
+                qltv.TaiKhoanNVs.AddOrUpdate(x);
                 qltv.SaveChanges();
                 MessageBox.Show("Lưu thành công", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
             }

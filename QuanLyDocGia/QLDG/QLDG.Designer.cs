@@ -270,7 +270,7 @@
             // 
             // button_Excel
             // 
-            this.button_Excel.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.button_Excel.ForeColor = System.Drawing.Color.ForestGreen;
             this.button_Excel.Location = new System.Drawing.Point(39, 21);
             this.button_Excel.Name = "button_Excel";
             this.button_Excel.Size = new System.Drawing.Size(174, 33);
@@ -330,7 +330,7 @@
             // 
             // buttonTìm
             // 
-            this.buttonTìm.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.buttonTìm.ForeColor = System.Drawing.Color.ForestGreen;
             this.buttonTìm.Location = new System.Drawing.Point(172, 17);
             this.buttonTìm.Name = "buttonTìm";
             this.buttonTìm.Size = new System.Drawing.Size(61, 24);
@@ -385,7 +385,7 @@
             // 
             // buttonXoa
             // 
-            this.buttonXoa.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.buttonXoa.ForeColor = System.Drawing.Color.ForestGreen;
             this.buttonXoa.Location = new System.Drawing.Point(192, 104);
             this.buttonXoa.Name = "buttonXoa";
             this.buttonXoa.Size = new System.Drawing.Size(117, 30);
@@ -396,7 +396,7 @@
             // 
             // button3
             // 
-            this.button3.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.button3.ForeColor = System.Drawing.Color.ForestGreen;
             this.button3.Location = new System.Drawing.Point(438, 104);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(117, 30);
@@ -407,7 +407,7 @@
             // 
             // buttonSua
             // 
-            this.buttonSua.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.buttonSua.ForeColor = System.Drawing.Color.ForestGreen;
             this.buttonSua.Location = new System.Drawing.Point(315, 104);
             this.buttonSua.Name = "buttonSua";
             this.buttonSua.Size = new System.Drawing.Size(117, 30);
@@ -418,7 +418,7 @@
             // 
             // buttonSign_up
             // 
-            this.buttonSign_up.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.buttonSign_up.ForeColor = System.Drawing.Color.ForestGreen;
             this.buttonSign_up.Location = new System.Drawing.Point(69, 104);
             this.buttonSign_up.Name = "buttonSign_up";
             this.buttonSign_up.Size = new System.Drawing.Size(117, 30);
@@ -558,7 +558,7 @@
             // button_themmuon
             // 
             this.button_themmuon.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_themmuon.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.button_themmuon.ForeColor = System.Drawing.Color.ForestGreen;
             this.button_themmuon.Location = new System.Drawing.Point(11, 261);
             this.button_themmuon.Name = "button_themmuon";
             this.button_themmuon.Size = new System.Drawing.Size(108, 27);
@@ -570,7 +570,7 @@
             // button_muonlammoi
             // 
             this.button_muonlammoi.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_muonlammoi.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.button_muonlammoi.ForeColor = System.Drawing.Color.ForestGreen;
             this.button_muonlammoi.Location = new System.Drawing.Point(125, 259);
             this.button_muonlammoi.Name = "button_muonlammoi";
             this.button_muonlammoi.Size = new System.Drawing.Size(108, 29);
@@ -640,7 +640,7 @@
             // button_muonTimSach
             // 
             this.button_muonTimSach.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_muonTimSach.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.button_muonTimSach.ForeColor = System.Drawing.Color.ForestGreen;
             this.button_muonTimSach.Location = new System.Drawing.Point(239, 22);
             this.button_muonTimSach.Name = "button_muonTimSach";
             this.button_muonTimSach.Size = new System.Drawing.Size(111, 28);
@@ -728,8 +728,8 @@
             // 
             // button_Lammoi
             // 
-            this.button_Lammoi.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_Lammoi.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.button_Lammoi.Font = new System.Drawing.Font("Palatino Linotype", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_Lammoi.ForeColor = System.Drawing.Color.ForestGreen;
             this.button_Lammoi.Location = new System.Drawing.Point(21, 226);
             this.button_Lammoi.Name = "button_Lammoi";
             this.button_Lammoi.Size = new System.Drawing.Size(237, 45);
@@ -784,8 +784,8 @@
             // 
             // button_trathanhtoan
             // 
-            this.button_trathanhtoan.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_trathanhtoan.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.button_trathanhtoan.Font = new System.Drawing.Font("Palatino Linotype", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_trathanhtoan.ForeColor = System.Drawing.Color.ForestGreen;
             this.button_trathanhtoan.Location = new System.Drawing.Point(274, 226);
             this.button_trathanhtoan.Name = "button_trathanhtoan";
             this.button_trathanhtoan.Size = new System.Drawing.Size(213, 45);
@@ -958,8 +958,8 @@
             // 
             // button_Lammoi_mat
             // 
-            this.button_Lammoi_mat.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_Lammoi_mat.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.button_Lammoi_mat.Font = new System.Drawing.Font("Palatino Linotype", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_Lammoi_mat.ForeColor = System.Drawing.Color.ForestGreen;
             this.button_Lammoi_mat.Location = new System.Drawing.Point(21, 226);
             this.button_Lammoi_mat.Name = "button_Lammoi_mat";
             this.button_Lammoi_mat.Size = new System.Drawing.Size(237, 45);
@@ -1014,8 +1014,8 @@
             // 
             // button_thanhtoan_mat
             // 
-            this.button_thanhtoan_mat.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_thanhtoan_mat.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.button_thanhtoan_mat.Font = new System.Drawing.Font("Palatino Linotype", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_thanhtoan_mat.ForeColor = System.Drawing.Color.ForestGreen;
             this.button_thanhtoan_mat.Location = new System.Drawing.Point(274, 226);
             this.button_thanhtoan_mat.Name = "button_thanhtoan_mat";
             this.button_thanhtoan_mat.Size = new System.Drawing.Size(213, 45);
@@ -1176,7 +1176,7 @@
             // 
             this.DangXuat.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.DangXuat.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DangXuat.ForeColor = System.Drawing.Color.Gray;
+            this.DangXuat.ForeColor = System.Drawing.Color.ForestGreen;
             this.DangXuat.Location = new System.Drawing.Point(226, 33);
             this.DangXuat.Name = "DangXuat";
             this.DangXuat.Size = new System.Drawing.Size(170, 46);
@@ -1189,7 +1189,7 @@
             // 
             this.LuuThayDoi.Enabled = false;
             this.LuuThayDoi.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LuuThayDoi.ForeColor = System.Drawing.Color.Gray;
+            this.LuuThayDoi.ForeColor = System.Drawing.Color.ForestGreen;
             this.LuuThayDoi.Location = new System.Drawing.Point(28, 33);
             this.LuuThayDoi.Name = "LuuThayDoi";
             this.LuuThayDoi.Size = new System.Drawing.Size(170, 46);

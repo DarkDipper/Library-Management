@@ -152,6 +152,7 @@
             this.button_DangXuat.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button_DangXuat.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button_DangXuat.UseVisualStyleBackColor = false;
+            this.button_DangXuat.Click += new System.EventHandler(this.button_DangXuat_Click);
             // 
             // button_ThongTinCaNhan
             // 
@@ -168,6 +169,7 @@
             this.button_ThongTinCaNhan.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button_ThongTinCaNhan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button_ThongTinCaNhan.UseVisualStyleBackColor = false;
+            this.button_ThongTinCaNhan.Click += new System.EventHandler(this.button_ThongTinCaNhan_Click);
             // 
             // button_BaoCao
             // 
@@ -216,6 +218,7 @@
             this.button_DangKy.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button_DangKy.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button_DangKy.UseVisualStyleBackColor = false;
+            this.button_DangKy.Click += new System.EventHandler(this.button_DangKy_Click);
             // 
             // button_NhanVien
             // 
@@ -239,6 +242,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.CancelButton = this.button_DangXuat;
             this.ClientSize = new System.Drawing.Size(917, 619);
             this.Controls.Add(this.button_Sach);
             this.Controls.Add(this.button6);
@@ -252,9 +256,9 @@
             this.Controls.Add(this.circularProgressBar_DG);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.Black;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
-            this.MinimizeBox = false;
             this.Name = "ThuTruong";
             this.Text = "Thủ Trưởng";
             this.Load += new System.EventHandler(this.Form1_Load);
