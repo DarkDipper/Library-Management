@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace FormThuTruong
 {
-    public partial class Form1 : Form
+    public partial class ThuTruong : Form
     {
-        public Form1()
+        public ThuTruong()
         {
             InitializeComponent();
         }

@@ -135,7 +135,7 @@ namespace QLDG
         //=========================================== Xử lý =================
         private void f2Name_Leave(object sender, EventArgs e)
         {
-            if (f2Name.Text.Length != 0)
+            /*if (f2Name.Text.Length != 0)
             {
                 string fullname = f2Name.Text;
                 string space = " ";
@@ -217,6 +217,75 @@ namespace QLDG
                 Tick.SetError(f2Name, "xong");
                 pname = true;
 
+            }*/
+            if (f2Name.Text.Length != 0)
+            {
+                char[] trimChars = { '\\', '|', '\'',' ', '@', ' ', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '!', '@', '#', '$', '%', '^', '&', ' ', '(', ')', '-', '=', '_', '+', '[', '{', ']', '}', ';', ':', '"', ',', '<', '.', '>', '/', '?' };
+                f2Name.Text = f2Name.Text.Trim(trimChars);
+                int slc = 0;
+                bool c = false;
+                for (int i = 0; i < f2Name.Text.Length; i++)
+                {
+                    if (f2Name.Text[i] >= 33 && f2Name.Text[i] <= 57 || f2Name.Text[i] >= 58 && f2Name.Text[i] <= 64 || f2Name.Text[i] >= 91 && f2Name.Text[i] <= 96 || f2Name.Text[i] >= 123 && f2Name.Text[i] <= 126)
+                    {
+                        f2Name.Text = f2Name.Text.Remove(i, 1);
+                        i = -1;
+                    }
+                }
+                for (int i = 0; i < f2Name.Text.Length; i++)
+                {
+                    if (c != true && f2Name.Text[i] >= 'a' && f2Name.Text[i] <= 'z' || c != true && f2Name.Text[i] >= 'A' && f2Name.Text[i] <= 'Z')
+                    {
+                        slc++;
+                        c = true;
+                    }
+                    if (f2Name.Text[i] == ' ' && c == true)
+                    {
+                        c = false;
+                    }
+                }
+                for (int i = 0; i < f2Name.Text.Length; i++)
+                {
+                    if (f2Name.Text[i] == ' ' && f2Name.Text[i + 1] == ' ')
+                    {
+                        f2Name.Text = f2Name.Text.Remove(i, 1);
+                    }
+                }
+                c = false;
+                string x = "";
+                string xx = "";
+                for (int i = 0; i < f2Name.Text.Length; i++)
+                {
+                    if (c == false && f2Name.Text[i] >= 'a' && f2Name.Text[i] <= 'z' || c == false && f2Name.Text[i] >= 'A' && f2Name.Text[i] <= 'Z')
+                    {
+                        x += f2Name.Text[i];
+                    }
+                    if (f2Name.Text[i] == ' ')
+                    {
+                        c = true;
+                    }
+                    if (c == true || i + 1 == f2Name.Text.Length)
+                    {
+                        x = x.Substring(0, 1).ToUpper() + x.Substring(1, x.Length - 1).ToLower();
+                        slc--;
+                        xx += x + " ";
+                        x = "";
+                        c = false;
+                    }
+                }
+                f2Name.Text = xx.Trim();
+            }
+            if (f2Name.Text.Length == 0)
+            {
+                Tick.Clear();
+                er.SetError(this.f2Name, "Vui lòng nhập lại!!");
+                pname = false;
+            }
+            else
+            {
+                er.Clear();
+                Tick.SetError(f2Name, "xong");
+                pname = true;
             }
         }
 

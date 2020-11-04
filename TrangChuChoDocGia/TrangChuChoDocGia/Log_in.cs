@@ -32,6 +32,7 @@ namespace  Trang_Chu
             var ds = from tmp in cmd.TaiKhoanNVs select tmp;
             foreach (var item in ds)
             {
+               // MessageBox.Show("đâsd");
                 if (item.TenDN == User_name.Text && item.MatKhau == Pass_word.Text)
                 {
                     check = true;

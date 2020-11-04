@@ -1,6 +1,6 @@
 ﻿namespace FormThuTruong
 {
-    partial class Form1
+    partial class ThuTruong
     {
         /// <summary>
         /// Required designer variable.
