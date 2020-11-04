@@ -1,0 +1,14 @@
+D:\Project\Library-Management\Form_Thu_Truong\FormThuTruong\FormThuTruong\bin\Debug\FormThuTruong.exe.config
+D:\Project\Library-Management\Form_Thu_Truong\FormThuTruong\FormThuTruong\bin\Debug\FormThuTruong.exe
+D:\Project\Library-Management\Form_Thu_Truong\FormThuTruong\FormThuTruong\bin\Debug\FormThuTruong.pdb
+D:\Project\Library-Management\Form_Thu_Truong\FormThuTruong\FormThuTruong\bin\Debug\CircularProgressBar.dll
+D:\Project\Library-Management\Form_Thu_Truong\FormThuTruong\FormThuTruong\bin\Debug\WinFormAnimation.dll
+D:\Project\Library-Management\Form_Thu_Truong\FormThuTruong\FormThuTruong\bin\Debug\CircularProgressBar.xml
+D:\Project\Library-Management\Form_Thu_Truong\FormThuTruong\FormThuTruong\obj\Debug\FormThuTruong.csprojAssemblyReference.cache
+D:\Project\Library-Management\Form_Thu_Truong\FormThuTruong\FormThuTruong\obj\Debug\FormThuTruong.Form1.resources
+D:\Project\Library-Management\Form_Thu_Truong\FormThuTruong\FormThuTruong\obj\Debug\FormThuTruong.Properties.Resources.resources
+D:\Project\Library-Management\Form_Thu_Truong\FormThuTruong\FormThuTruong\obj\Debug\FormThuTruong.csproj.GenerateResource.cache
+D:\Project\Library-Management\Form_Thu_Truong\FormThuTruong\FormThuTruong\obj\Debug\FormThuTruong.csproj.CoreCompileInputs.cache
+D:\Project\Library-Management\Form_Thu_Truong\FormThuTruong\FormThuTruong\obj\Debug\FormThuTruong.csproj.CopyComplete
+D:\Project\Library-Management\Form_Thu_Truong\FormThuTruong\FormThuTruong\obj\Debug\FormThuTruong.exe
+D:\Project\Library-Management\Form_Thu_Truong\FormThuTruong\FormThuTruong\obj\Debug\FormThuTruong.pdb
