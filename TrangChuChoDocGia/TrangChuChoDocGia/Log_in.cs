@@ -54,10 +54,17 @@ namespace  Trang_Chu
                     }
                 }
             }
-            User_name.Text = "";
-            Pass_word.Text="";
-            User_name.Focus();
-            if(!check) MessageBox.Show("Sai mật khẩu hoặc tên đăng nhập", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            if (!check)
+            {
+                MessageBox.Show("Sai mật khẩu hoặc tên đăng nhập", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            else
+            {
+                User_name.Text = "";
+                Pass_word.Text = "";
+                User_name.Focus();
+            }
+        }
     }
 }
