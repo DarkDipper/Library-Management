@@ -1174,6 +1174,7 @@
             // 
             // DangXuat
             // 
+            this.DangXuat.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.DangXuat.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DangXuat.ForeColor = System.Drawing.Color.Gray;
             this.DangXuat.Location = new System.Drawing.Point(226, 33);
@@ -1182,9 +1183,11 @@
             this.DangXuat.TabIndex = 1;
             this.DangXuat.Text = "Đăng xuất";
             this.DangXuat.UseVisualStyleBackColor = true;
+            this.DangXuat.Click += new System.EventHandler(this.DangXuat_Click);
             // 
             // LuuThayDoi
             // 
+            this.LuuThayDoi.Enabled = false;
             this.LuuThayDoi.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LuuThayDoi.ForeColor = System.Drawing.Color.Gray;
             this.LuuThayDoi.Location = new System.Drawing.Point(28, 33);
@@ -1214,6 +1217,7 @@
             // 
             // tt_Matkhau
             // 
+            this.tt_Matkhau.Enabled = false;
             this.tt_Matkhau.Location = new System.Drawing.Point(176, 90);
             this.tt_Matkhau.Multiline = true;
             this.tt_Matkhau.Name = "tt_Matkhau";
@@ -1223,6 +1227,7 @@
             // 
             // tt_tenDN
             // 
+            this.tt_tenDN.Enabled = false;
             this.tt_tenDN.Location = new System.Drawing.Point(176, 42);
             this.tt_tenDN.Multiline = true;
             this.tt_tenDN.Name = "tt_tenDN";
@@ -1446,6 +1451,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.DangXuat;
             this.ClientSize = new System.Drawing.Size(902, 368);
             this.Controls.Add(this.tabControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -1453,7 +1459,6 @@
             this.MaximizeBox = false;
             this.Name = "QLDG";
             this.Text = "Quản lý độc giả";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.QLDG_FormClosing);
             this.Load += new System.EventHandler(this.QLDG_Load);
             this.tabControl1.ResumeLayout(false);
             this.Thongtin.ResumeLayout(false);

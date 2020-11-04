@@ -65,3 +65,31 @@ D:\Project\Library-Management\TrangChuChoDocGia\TrangChuChoDocGia\obj\Debug\Quan
 D:\Project\Library-Management\TrangChuChoDocGia\TrangChuChoDocGia\obj\Debug\QuanLyThuVien.csproj.CopyComplete
 D:\Project\Library-Management\TrangChuChoDocGia\TrangChuChoDocGia\obj\Debug\Trang Chu.exe
 D:\Project\Library-Management\TrangChuChoDocGia\TrangChuChoDocGia\obj\Debug\Trang Chu.pdb
+C:\Users\kun\source\repos\DarkDipper\Library-Management\TrangChuChoDocGia\TrangChuChoDocGia\bin\Debug\Trang Chu.exe.config
+C:\Users\kun\source\repos\DarkDipper\Library-Management\TrangChuChoDocGia\TrangChuChoDocGia\bin\Debug\Trang Chu.exe
+C:\Users\kun\source\repos\DarkDipper\Library-Management\TrangChuChoDocGia\TrangChuChoDocGia\bin\Debug\Trang Chu.pdb
+C:\Users\kun\source\repos\DarkDipper\Library-Management\TrangChuChoDocGia\TrangChuChoDocGia\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\kun\source\repos\DarkDipper\Library-Management\TrangChuChoDocGia\TrangChuChoDocGia\bin\Debug\itextsharp.dll
+C:\Users\kun\source\repos\DarkDipper\Library-Management\TrangChuChoDocGia\TrangChuChoDocGia\bin\Debug\QLDG.exe
+C:\Users\kun\source\repos\DarkDipper\Library-Management\TrangChuChoDocGia\TrangChuChoDocGia\bin\Debug\QuanLyKho.exe
+C:\Users\kun\source\repos\DarkDipper\Library-Management\TrangChuChoDocGia\TrangChuChoDocGia\bin\Debug\QLDG.pdb
+C:\Users\kun\source\repos\DarkDipper\Library-Management\TrangChuChoDocGia\TrangChuChoDocGia\bin\Debug\QLDG.exe.config
+C:\Users\kun\source\repos\DarkDipper\Library-Management\TrangChuChoDocGia\TrangChuChoDocGia\bin\Debug\QuanLyKho.pdb
+C:\Users\kun\source\repos\DarkDipper\Library-Management\TrangChuChoDocGia\TrangChuChoDocGia\bin\Debug\QuanLyKho.exe.config
+C:\Users\kun\source\repos\DarkDipper\Library-Management\TrangChuChoDocGia\TrangChuChoDocGia\bin\Debug\EntityFramework.xml
+C:\Users\kun\source\repos\DarkDipper\Library-Management\TrangChuChoDocGia\TrangChuChoDocGia\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\kun\source\repos\DarkDipper\Library-Management\TrangChuChoDocGia\TrangChuChoDocGia\bin\Debug\itextsharp.xml
+C:\Users\kun\source\repos\DarkDipper\Library-Management\TrangChuChoDocGia\TrangChuChoDocGia\obj\Debug\QuanLyThuVien.csprojAssemblyReference.cache
+C:\Users\kun\source\repos\DarkDipper\Library-Management\TrangChuChoDocGia\TrangChuChoDocGia\obj\Debug\Trang_Chu.Log_in.resources
+C:\Users\kun\source\repos\DarkDipper\Library-Management\TrangChuChoDocGia\TrangChuChoDocGia\obj\Debug\Trang_Chu.Properties.Resources.resources
+C:\Users\kun\source\repos\DarkDipper\Library-Management\TrangChuChoDocGia\TrangChuChoDocGia\obj\Debug\QuanLyThuVien.csproj.GenerateResource.cache
+C:\Users\kun\source\repos\DarkDipper\Library-Management\TrangChuChoDocGia\TrangChuChoDocGia\obj\Debug\QuanLyThuVien.csproj.CoreCompileInputs.cache
+C:\Users\kun\source\repos\DarkDipper\Library-Management\TrangChuChoDocGia\TrangChuChoDocGia\obj\Debug\QuanLyThuVien.csproj.CopyComplete
+C:\Users\kun\source\repos\DarkDipper\Library-Management\TrangChuChoDocGia\TrangChuChoDocGia\obj\Debug\Trang Chu.exe
+C:\Users\kun\source\repos\DarkDipper\Library-Management\TrangChuChoDocGia\TrangChuChoDocGia\obj\Debug\Trang Chu.pdb
+C:\Users\kun\source\repos\DarkDipper\Library-Management\TrangChuChoDocGia\TrangChuChoDocGia\bin\Debug\FormThuTruong.exe
+C:\Users\kun\source\repos\DarkDipper\Library-Management\TrangChuChoDocGia\TrangChuChoDocGia\bin\Debug\CircularProgressBar.dll
+C:\Users\kun\source\repos\DarkDipper\Library-Management\TrangChuChoDocGia\TrangChuChoDocGia\bin\Debug\WinFormAnimation.dll
+C:\Users\kun\source\repos\DarkDipper\Library-Management\TrangChuChoDocGia\TrangChuChoDocGia\bin\Debug\FormThuTruong.pdb
+C:\Users\kun\source\repos\DarkDipper\Library-Management\TrangChuChoDocGia\TrangChuChoDocGia\bin\Debug\FormThuTruong.exe.config
+C:\Users\kun\source\repos\DarkDipper\Library-Management\TrangChuChoDocGia\TrangChuChoDocGia\bin\Debug\CircularProgressBar.xml

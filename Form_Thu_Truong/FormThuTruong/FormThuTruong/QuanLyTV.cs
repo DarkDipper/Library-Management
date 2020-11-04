@@ -1,14 +1,14 @@
-namespace QuanLyKho
+namespace FormThuTruong
 {
     using System;
     using System.Data.Entity;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Linq;
 
-    public partial class QLTV01 : DbContext
+    public partial class QuanLyTV : DbContext
     {
-        public QLTV01()
-            : base("name=QLTV01")
+        public QuanLyTV()
+            : base("name=QuanLyTV")
         {
         }
 

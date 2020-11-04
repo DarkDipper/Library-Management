@@ -588,6 +588,7 @@
             this.DangXuat.TabIndex = 1;
             this.DangXuat.Text = "Đăng xuất";
             this.DangXuat.UseVisualStyleBackColor = true;
+            this.DangXuat.Click += new System.EventHandler(this.DangXuat_Click);
             // 
             // LuuThayDoi
             // 

@@ -148,6 +148,10 @@
     <None Include="Resources\Wallpaper.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Form_Thu_Truong\FormThuTruong\FormThuTruong\FormThuTruong.csproj">
+      <Project>{aee40ad1-965f-4d79-895e-4fd15392f797}</Project>
+      <Name>FormThuTruong</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\QuanLyDocGia\QLDG\QLDG.csproj">
       <Project>{a511976b-c0b3-42d6-ab8d-86f792aee843}</Project>
       <Name>QLDG</Name>

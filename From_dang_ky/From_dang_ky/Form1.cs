@@ -88,6 +88,11 @@ namespace From_dang_ky
             }
         }
 
+        private void combo_Bophan_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
         private void button_DangKy_Click(object sender, EventArgs e)
         {
             if (ValidateChildren(ValidationConstraints.Enabled))

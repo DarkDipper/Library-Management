@@ -51,7 +51,7 @@
             this.label_Hoten.AutoSize = true;
             this.label_Hoten.Location = new System.Drawing.Point(49, 53);
             this.label_Hoten.Name = "label_Hoten";
-            this.label_Hoten.Size = new System.Drawing.Size(86, 22);
+            this.label_Hoten.Size = new System.Drawing.Size(68, 19);
             this.label_Hoten.TabIndex = 0;
             this.label_Hoten.Text = "Họ và tên";
             // 
@@ -59,7 +59,7 @@
             // 
             this.txt_Hoten.Location = new System.Drawing.Point(169, 53);
             this.txt_Hoten.Name = "txt_Hoten";
-            this.txt_Hoten.Size = new System.Drawing.Size(245, 30);
+            this.txt_Hoten.Size = new System.Drawing.Size(245, 26);
             this.txt_Hoten.TabIndex = 1;
             this.txt_Hoten.Validating += new System.ComponentModel.CancelEventHandler(this.txt_Hoten_Validating);
             // 
@@ -68,7 +68,7 @@
             this.label_NgaySinh.AutoSize = true;
             this.label_NgaySinh.Location = new System.Drawing.Point(49, 116);
             this.label_NgaySinh.Name = "label_NgaySinh";
-            this.label_NgaySinh.Size = new System.Drawing.Size(88, 22);
+            this.label_NgaySinh.Size = new System.Drawing.Size(69, 19);
             this.label_NgaySinh.TabIndex = 0;
             this.label_NgaySinh.Text = "Ngày sinh";
             // 
@@ -77,7 +77,7 @@
             this.label_DiaChi.AutoSize = true;
             this.label_DiaChi.Location = new System.Drawing.Point(49, 188);
             this.label_DiaChi.Name = "label_DiaChi";
-            this.label_DiaChi.Size = new System.Drawing.Size(68, 22);
+            this.label_DiaChi.Size = new System.Drawing.Size(51, 19);
             this.label_DiaChi.TabIndex = 0;
             this.label_DiaChi.Text = "Địa chỉ";
             // 
@@ -85,7 +85,7 @@
             // 
             this.txt_DiaChi.Location = new System.Drawing.Point(169, 180);
             this.txt_DiaChi.Name = "txt_DiaChi";
-            this.txt_DiaChi.Size = new System.Drawing.Size(245, 30);
+            this.txt_DiaChi.Size = new System.Drawing.Size(245, 26);
             this.txt_DiaChi.TabIndex = 3;
             // 
             // DatePick_NgaySinh
@@ -96,7 +96,7 @@
             this.DatePick_NgaySinh.Location = new System.Drawing.Point(169, 116);
             this.DatePick_NgaySinh.Margin = new System.Windows.Forms.Padding(4);
             this.DatePick_NgaySinh.Name = "DatePick_NgaySinh";
-            this.DatePick_NgaySinh.Size = new System.Drawing.Size(245, 30);
+            this.DatePick_NgaySinh.Size = new System.Drawing.Size(245, 26);
             this.DatePick_NgaySinh.TabIndex = 2;
             this.DatePick_NgaySinh.Validating += new System.ComponentModel.CancelEventHandler(this.DatePick_NgaySinh_Validating);
             // 
@@ -105,7 +105,7 @@
             this.label_BoPhan.AutoSize = true;
             this.label_BoPhan.Location = new System.Drawing.Point(49, 308);
             this.label_BoPhan.Name = "label_BoPhan";
-            this.label_BoPhan.Size = new System.Drawing.Size(75, 22);
+            this.label_BoPhan.Size = new System.Drawing.Size(60, 19);
             this.label_BoPhan.TabIndex = 3;
             this.label_BoPhan.Text = "Bộ phận";
             // 
@@ -118,8 +118,9 @@
             "Thủ quỹ"});
             this.combo_Bophan.Location = new System.Drawing.Point(169, 300);
             this.combo_Bophan.Name = "combo_Bophan";
-            this.combo_Bophan.Size = new System.Drawing.Size(245, 30);
+            this.combo_Bophan.Size = new System.Drawing.Size(245, 27);
             this.combo_Bophan.TabIndex = 5;
+            this.combo_Bophan.SelectedIndexChanged += new System.EventHandler(this.combo_Bophan_SelectedIndexChanged);
             this.combo_Bophan.Validating += new System.ComponentModel.CancelEventHandler(this.combo_Bophan_Validating);
             // 
             // label_SDT
@@ -127,7 +128,7 @@
             this.label_SDT.AutoSize = true;
             this.label_SDT.Location = new System.Drawing.Point(49, 363);
             this.label_SDT.Name = "label_SDT";
-            this.label_SDT.Size = new System.Drawing.Size(114, 22);
+            this.label_SDT.Size = new System.Drawing.Size(88, 19);
             this.label_SDT.TabIndex = 0;
             this.label_SDT.Text = "Số điện thoại";
             // 
@@ -135,7 +136,7 @@
             // 
             this.txtSDT.Location = new System.Drawing.Point(169, 355);
             this.txtSDT.Name = "txtSDT";
-            this.txtSDT.Size = new System.Drawing.Size(245, 30);
+            this.txtSDT.Size = new System.Drawing.Size(245, 26);
             this.txtSDT.TabIndex = 6;
             this.txtSDT.Validating += new System.ComponentModel.CancelEventHandler(this.txtSDT_Validating);
             // 
@@ -144,7 +145,7 @@
             this.label_Email.AutoSize = true;
             this.label_Email.Location = new System.Drawing.Point(49, 248);
             this.label_Email.Name = "label_Email";
-            this.label_Email.Size = new System.Drawing.Size(83, 22);
+            this.label_Email.Size = new System.Drawing.Size(66, 19);
             this.label_Email.TabIndex = 0;
             this.label_Email.Text = "Bằng cấp";
             // 
@@ -160,7 +161,7 @@
             "Tiến sĩ"});
             this.combo_BangCap.Location = new System.Drawing.Point(169, 240);
             this.combo_BangCap.Name = "combo_BangCap";
-            this.combo_BangCap.Size = new System.Drawing.Size(245, 30);
+            this.combo_BangCap.Size = new System.Drawing.Size(245, 27);
             this.combo_BangCap.TabIndex = 4;
             this.combo_BangCap.Validating += new System.ComponentModel.CancelEventHandler(this.combo_BangCap_Validating);
             // 
@@ -183,7 +184,7 @@
             // 
             // Form_DangKy
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.ClientSize = new System.Drawing.Size(565, 514);

@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
 namespace FormThuTruong
 {
     public partial class ThuTruong : Form
@@ -16,7 +15,7 @@ namespace FormThuTruong
         {
             InitializeComponent();
         }
-
+        public string NV;
         private void Form1_Load(object sender, EventArgs e)
         {
 
@@ -27,6 +26,14 @@ namespace FormThuTruong
 
         }
 
-       
+        private void button6_Click(object sender, EventArgs e)
+        {
+            QLDG.QLDG x = new QLDG.QLDG();
+            x.check = true;
+            x.NV = NV;
+            this.Hide();
+            x.ShowDialog();
+            this.Show();
+        }
     }
 }

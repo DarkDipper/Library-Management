@@ -25,6 +25,7 @@ namespace QLDG
        // SqlConnection con;
         QuanLyTV qltv = new QuanLyTV();
         public string NV="E.001";
+        public bool check =false;
         // tạo biến để kiểm tra đúng sau khi nhấn button 
         bool pname = false;
         bool paddress = false;
@@ -340,17 +341,24 @@ namespace QLDG
         }
         private void QLDG_Load(object sender, EventArgs e)
         {
-            HoSo x = qltv.HoSoes.SingleOrDefault(p => p.MaNV == NV);
-            tt_Ten.Text = x.HoTen;
-            tt_ngaysinh.Text = x.NgaySinh.Value.ToString("dd/MM/yyyy");
-            tt_diachi.Text = x.DiaChi;
-            tt_dienthoai.Text = x.DienThoai;
-            tt_bangcap.Text = x.BangCap;
-            tt_nlv.Text = x.NgayLamViec.Value.ToString("dd/MM/yyyy");
-            TaiKhoanNV y = qltv.TaiKhoanNVs.SingleOrDefault(p => p.MaNV == NV);
-            tt_tenDN.Text = y.TenDN;
-            tt_Matkhau.Text = y.MatKhau;
-            tt_mnv.Text = y.MaNV;
+            // MessageBox.Show($"{NV}");
+            if (!check)
+            {
+                HoSo x = qltv.HoSoes.SingleOrDefault(p => p.MaNV == NV);
+                tt_Ten.Text = x.HoTen;
+                tt_ngaysinh.Text = x.NgaySinh.Value.ToString("dd/MM/yyyy");
+                tt_diachi.Text = x.DiaChi;
+                tt_dienthoai.Text = x.DienThoai;
+                tt_bangcap.Text = x.BangCap;
+                tt_nlv.Text = x.NgayLamViec.Value.ToString("dd/MM/yyyy");
+                TaiKhoanNV y = qltv.TaiKhoanNVs.SingleOrDefault(p => p.MaNV == NV);
+                tt_tenDN.Text = y.TenDN;
+                tt_Matkhau.Text = y.MatKhau;
+                tt_mnv.Text = y.MaNV;
+                tt_tenDN.Enabled = true;
+                tt_Matkhau.Enabled = true;
+                LuuThayDoi.Enabled = true;
+            }
             Hienthi();
             HienThiKho();
             SizeBang = dataTheDocGia.Rows.Count;
@@ -376,15 +384,6 @@ namespace QLDG
             label_TongNo_mat.Text = "";
             ThongKe();
         }
-
-        private void QLDG_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            if (MessageBox.Show("Trở về \"Đăng nhập\" ", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) != System.Windows.Forms.DialogResult.OK)
-            {
-                e.Cancel = true;
-            }
-        }
-
         private void buttonSign_up_Click(object sender, EventArgs e)
         {
             if (paddress == true && pdate == true && pmail == true && pname == true )
@@ -1035,6 +1034,11 @@ namespace QLDG
             this.Hide();
             x.ShowDialog();
             this.Show();
+        }
+
+        private void DangXuat_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

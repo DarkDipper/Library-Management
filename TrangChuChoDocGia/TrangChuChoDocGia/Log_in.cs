@@ -53,6 +53,14 @@ namespace  Trang_Chu
                         qlk.ShowDialog();
                         this.Show();
                     }
+                    else if(nv.BoPhan=="Thủ trưởng")
+                    {
+                        FormThuTruong.ThuTruong boss = new FormThuTruong.ThuTruong();
+                        boss.NV = nv.MaNV;
+                        this.Hide();
+                        boss.ShowDialog();
+                        this.Show();
+                    }
                 }
             }
             User_name.Text = "";

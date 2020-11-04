@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.circularProgressBar1 = new CircularProgressBar.CircularProgressBar();
-            this.circularProgressBar2 = new CircularProgressBar.CircularProgressBar();
+            this.circularProgressBar_DG = new CircularProgressBar.CircularProgressBar();
+            this.circularProgressBar_SACH = new CircularProgressBar.CircularProgressBar();
             this.button_Sach = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button_DangXuat = new System.Windows.Forms.Button();
@@ -40,67 +40,69 @@
             this.button_NhanVien = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // circularProgressBar1
+            // circularProgressBar_DG
             // 
-            this.circularProgressBar1.AnimationFunction = WinFormAnimation.KnownAnimationFunctions.Liner;
-            this.circularProgressBar1.AnimationSpeed = 500;
-            this.circularProgressBar1.BackColor = System.Drawing.Color.Transparent;
-            this.circularProgressBar1.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Bold);
-            this.circularProgressBar1.ForeColor = System.Drawing.Color.Gainsboro;
-            this.circularProgressBar1.InnerColor = System.Drawing.Color.Transparent;
-            this.circularProgressBar1.InnerMargin = 2;
-            this.circularProgressBar1.InnerWidth = -1;
-            this.circularProgressBar1.Location = new System.Drawing.Point(631, 12);
-            this.circularProgressBar1.MarqueeAnimationSpeed = 2000;
-            this.circularProgressBar1.Name = "circularProgressBar1";
-            this.circularProgressBar1.OuterColor = System.Drawing.Color.Gainsboro;
-            this.circularProgressBar1.OuterMargin = -25;
-            this.circularProgressBar1.OuterWidth = 10;
-            this.circularProgressBar1.ProgressColor = System.Drawing.Color.LawnGreen;
-            this.circularProgressBar1.ProgressWidth = 25;
-            this.circularProgressBar1.SecondaryFont = new System.Drawing.Font("Microsoft Sans Serif", 36F);
-            this.circularProgressBar1.Size = new System.Drawing.Size(256, 258);
-            this.circularProgressBar1.StartAngle = 270;
-            this.circularProgressBar1.SubscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
-            this.circularProgressBar1.SubscriptMargin = new System.Windows.Forms.Padding(10, -35, 0, 0);
-            this.circularProgressBar1.SubscriptText = ".23";
-            this.circularProgressBar1.SuperscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
-            this.circularProgressBar1.SuperscriptMargin = new System.Windows.Forms.Padding(10, 35, 0, 0);
-            this.circularProgressBar1.SuperscriptText = "°C";
-            this.circularProgressBar1.TabIndex = 0;
-            this.circularProgressBar1.TextMargin = new System.Windows.Forms.Padding(8, 8, 0, 0);
-            this.circularProgressBar1.Value = 68;
+            this.circularProgressBar_DG.AnimationFunction = WinFormAnimation.KnownAnimationFunctions.Liner;
+            this.circularProgressBar_DG.AnimationSpeed = 500;
+            this.circularProgressBar_DG.BackColor = System.Drawing.Color.Transparent;
+            this.circularProgressBar_DG.Font = new System.Drawing.Font("Palatino Linotype", 27.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.circularProgressBar_DG.ForeColor = System.Drawing.Color.GreenYellow;
+            this.circularProgressBar_DG.InnerColor = System.Drawing.Color.Transparent;
+            this.circularProgressBar_DG.InnerMargin = 2;
+            this.circularProgressBar_DG.InnerWidth = -1;
+            this.circularProgressBar_DG.Location = new System.Drawing.Point(631, 12);
+            this.circularProgressBar_DG.MarqueeAnimationSpeed = 2000;
+            this.circularProgressBar_DG.Name = "circularProgressBar_DG";
+            this.circularProgressBar_DG.OuterColor = System.Drawing.Color.Gainsboro;
+            this.circularProgressBar_DG.OuterMargin = -25;
+            this.circularProgressBar_DG.OuterWidth = 10;
+            this.circularProgressBar_DG.ProgressColor = System.Drawing.Color.LimeGreen;
+            this.circularProgressBar_DG.ProgressWidth = 25;
+            this.circularProgressBar_DG.SecondaryFont = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.circularProgressBar_DG.Size = new System.Drawing.Size(256, 258);
+            this.circularProgressBar_DG.StartAngle = 270;
+            this.circularProgressBar_DG.SubscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
+            this.circularProgressBar_DG.SubscriptMargin = new System.Windows.Forms.Padding(10, -35, 0, 0);
+            this.circularProgressBar_DG.SubscriptText = "";
+            this.circularProgressBar_DG.SuperscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
+            this.circularProgressBar_DG.SuperscriptMargin = new System.Windows.Forms.Padding(-10, -10, 0, 0);
+            this.circularProgressBar_DG.SuperscriptText = "? %";
+            this.circularProgressBar_DG.TabIndex = 0;
+            this.circularProgressBar_DG.Text = "ĐỘC GIẢ";
+            this.circularProgressBar_DG.TextMargin = new System.Windows.Forms.Padding(8, 8, 0, 0);
+            this.circularProgressBar_DG.Value = 68;
             // 
-            // circularProgressBar2
+            // circularProgressBar_SACH
             // 
-            this.circularProgressBar2.AnimationFunction = WinFormAnimation.KnownAnimationFunctions.Liner;
-            this.circularProgressBar2.AnimationSpeed = 500;
-            this.circularProgressBar2.BackColor = System.Drawing.Color.Transparent;
-            this.circularProgressBar2.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Bold);
-            this.circularProgressBar2.ForeColor = System.Drawing.Color.Gainsboro;
-            this.circularProgressBar2.InnerColor = System.Drawing.Color.Transparent;
-            this.circularProgressBar2.InnerMargin = 2;
-            this.circularProgressBar2.InnerWidth = -1;
-            this.circularProgressBar2.Location = new System.Drawing.Point(631, 329);
-            this.circularProgressBar2.MarqueeAnimationSpeed = 2000;
-            this.circularProgressBar2.Name = "circularProgressBar2";
-            this.circularProgressBar2.OuterColor = System.Drawing.Color.Gainsboro;
-            this.circularProgressBar2.OuterMargin = -25;
-            this.circularProgressBar2.OuterWidth = 10;
-            this.circularProgressBar2.ProgressColor = System.Drawing.Color.DeepSkyBlue;
-            this.circularProgressBar2.ProgressWidth = 25;
-            this.circularProgressBar2.SecondaryFont = new System.Drawing.Font("Microsoft Sans Serif", 36F);
-            this.circularProgressBar2.Size = new System.Drawing.Size(256, 258);
-            this.circularProgressBar2.StartAngle = 270;
-            this.circularProgressBar2.SubscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
-            this.circularProgressBar2.SubscriptMargin = new System.Windows.Forms.Padding(10, -35, 0, 0);
-            this.circularProgressBar2.SubscriptText = ".23";
-            this.circularProgressBar2.SuperscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
-            this.circularProgressBar2.SuperscriptMargin = new System.Windows.Forms.Padding(10, 35, 0, 0);
-            this.circularProgressBar2.SuperscriptText = "°C";
-            this.circularProgressBar2.TabIndex = 0;
-            this.circularProgressBar2.TextMargin = new System.Windows.Forms.Padding(8, 8, 0, 0);
-            this.circularProgressBar2.Value = 45;
+            this.circularProgressBar_SACH.AnimationFunction = WinFormAnimation.KnownAnimationFunctions.Liner;
+            this.circularProgressBar_SACH.AnimationSpeed = 500;
+            this.circularProgressBar_SACH.BackColor = System.Drawing.Color.Transparent;
+            this.circularProgressBar_SACH.Font = new System.Drawing.Font("Palatino Linotype", 27.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.circularProgressBar_SACH.ForeColor = System.Drawing.Color.Aqua;
+            this.circularProgressBar_SACH.InnerColor = System.Drawing.Color.Transparent;
+            this.circularProgressBar_SACH.InnerMargin = 2;
+            this.circularProgressBar_SACH.InnerWidth = -1;
+            this.circularProgressBar_SACH.Location = new System.Drawing.Point(631, 329);
+            this.circularProgressBar_SACH.MarqueeAnimationSpeed = 2000;
+            this.circularProgressBar_SACH.Name = "circularProgressBar_SACH";
+            this.circularProgressBar_SACH.OuterColor = System.Drawing.Color.Gainsboro;
+            this.circularProgressBar_SACH.OuterMargin = -25;
+            this.circularProgressBar_SACH.OuterWidth = 10;
+            this.circularProgressBar_SACH.ProgressColor = System.Drawing.Color.DeepSkyBlue;
+            this.circularProgressBar_SACH.ProgressWidth = 25;
+            this.circularProgressBar_SACH.SecondaryFont = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.circularProgressBar_SACH.Size = new System.Drawing.Size(256, 258);
+            this.circularProgressBar_SACH.StartAngle = 270;
+            this.circularProgressBar_SACH.SubscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
+            this.circularProgressBar_SACH.SubscriptMargin = new System.Windows.Forms.Padding(10, -35, 0, 0);
+            this.circularProgressBar_SACH.SubscriptText = " ";
+            this.circularProgressBar_SACH.SuperscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
+            this.circularProgressBar_SACH.SuperscriptMargin = new System.Windows.Forms.Padding(10, -10, 0, 0);
+            this.circularProgressBar_SACH.SuperscriptText = "? %";
+            this.circularProgressBar_SACH.TabIndex = 0;
+            this.circularProgressBar_SACH.Text = "SÁCH";
+            this.circularProgressBar_SACH.TextMargin = new System.Windows.Forms.Padding(8, 8, 0, 0);
+            this.circularProgressBar_SACH.Value = 45;
             // 
             // button_Sach
             // 
@@ -133,6 +135,7 @@
             this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button_DangXuat
             // 
@@ -231,9 +234,9 @@
             this.button_NhanVien.UseVisualStyleBackColor = false;
             this.button_NhanVien.Click += new System.EventHandler(this.button_NhanVien_Click);
             // 
-            // Form1
+            // ThuTruong
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSlateGray;
             this.ClientSize = new System.Drawing.Size(917, 619);
@@ -245,14 +248,14 @@
             this.Controls.Add(this.button_TaiChinh);
             this.Controls.Add(this.button_DangKy);
             this.Controls.Add(this.button_NhanVien);
-            this.Controls.Add(this.circularProgressBar2);
-            this.Controls.Add(this.circularProgressBar1);
+            this.Controls.Add(this.circularProgressBar_SACH);
+            this.Controls.Add(this.circularProgressBar_DG);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.Black;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "Form1";
+            this.Name = "ThuTruong";
             this.Text = "Thủ Trưởng";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
@@ -262,8 +265,8 @@
 
         #endregion
 
-        private CircularProgressBar.CircularProgressBar circularProgressBar1;
-        private CircularProgressBar.CircularProgressBar circularProgressBar2;
+        private CircularProgressBar.CircularProgressBar circularProgressBar_DG;
+        private CircularProgressBar.CircularProgressBar circularProgressBar_SACH;
         private System.Windows.Forms.Button button_NhanVien;
         private System.Windows.Forms.Button button_DangKy;
         private System.Windows.Forms.Button button_TaiChinh;

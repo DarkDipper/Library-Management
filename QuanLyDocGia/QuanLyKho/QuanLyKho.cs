@@ -28,7 +28,7 @@ namespace QuanLyKho
         public int SizeBang;
         public int i = 1;
         public string Mathukho="E.002";
-        QLTV01 qltv = new QLTV01();
+        QuanLyTV qltv = new QuanLyTV();
         public void HienThi()
         {/*SqlCommand cmd = new SqlCommand("select MaSach as N'Mã sách'," +
                                                                         "TenSach as N'Tên sách'," +
@@ -406,12 +406,11 @@ namespace QuanLyKho
 
         private void QuanLyKho_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (MessageBox.Show("Trở về \"Đăng nhập\" ", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) != System.Windows.Forms.DialogResult.OK)
-            {
+            
                 AutoValidate = AutoValidate.Disable;
                 e.Cancel = true;
               //  con.Close();
-            }
+            
         }
 
         private void Kho_Gia_Validating(object sender, CancelEventArgs e)
@@ -713,6 +712,11 @@ namespace QuanLyKho
             {
                 MessageBox.Show("Lưu thất bại", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
             }
+        }
+
+        private void DangXuat_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
