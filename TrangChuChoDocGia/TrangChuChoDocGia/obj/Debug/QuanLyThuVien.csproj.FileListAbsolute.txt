@@ -93,3 +93,9 @@ C:\Users\kun\source\repos\DarkDipper\Library-Management\TrangChuChoDocGia\TrangC
 C:\Users\kun\source\repos\DarkDipper\Library-Management\TrangChuChoDocGia\TrangChuChoDocGia\bin\Debug\FormThuTruong.pdb
 C:\Users\kun\source\repos\DarkDipper\Library-Management\TrangChuChoDocGia\TrangChuChoDocGia\bin\Debug\FormThuTruong.exe.config
 C:\Users\kun\source\repos\DarkDipper\Library-Management\TrangChuChoDocGia\TrangChuChoDocGia\bin\Debug\CircularProgressBar.xml
+D:\Project\Library-Management\TrangChuChoDocGia\TrangChuChoDocGia\bin\Debug\FormThuTruong.exe
+D:\Project\Library-Management\TrangChuChoDocGia\TrangChuChoDocGia\bin\Debug\CircularProgressBar.dll
+D:\Project\Library-Management\TrangChuChoDocGia\TrangChuChoDocGia\bin\Debug\WinFormAnimation.dll
+D:\Project\Library-Management\TrangChuChoDocGia\TrangChuChoDocGia\bin\Debug\FormThuTruong.pdb
+D:\Project\Library-Management\TrangChuChoDocGia\TrangChuChoDocGia\bin\Debug\FormThuTruong.exe.config
+D:\Project\Library-Management\TrangChuChoDocGia\TrangChuChoDocGia\bin\Debug\CircularProgressBar.xml

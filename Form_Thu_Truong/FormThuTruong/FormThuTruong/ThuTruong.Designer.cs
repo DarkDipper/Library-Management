@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ThuTruong));
             this.circularProgressBar_DG = new CircularProgressBar.CircularProgressBar();
             this.circularProgressBar_SACH = new CircularProgressBar.CircularProgressBar();
             this.button_Sach = new System.Windows.Forms.Button();
@@ -38,6 +39,10 @@
             this.button_TaiChinh = new System.Windows.Forms.Button();
             this.button_DangKy = new System.Windows.Forms.Button();
             this.button_NhanVien = new System.Windows.Forms.Button();
+            this.label_DocGia = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label_Sach = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // circularProgressBar_DG
@@ -47,10 +52,10 @@
             this.circularProgressBar_DG.BackColor = System.Drawing.Color.Transparent;
             this.circularProgressBar_DG.Font = new System.Drawing.Font("Palatino Linotype", 27.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.circularProgressBar_DG.ForeColor = System.Drawing.Color.GreenYellow;
-            this.circularProgressBar_DG.InnerColor = System.Drawing.Color.Transparent;
+            this.circularProgressBar_DG.InnerColor = System.Drawing.Color.AntiqueWhite;
             this.circularProgressBar_DG.InnerMargin = 2;
             this.circularProgressBar_DG.InnerWidth = -1;
-            this.circularProgressBar_DG.Location = new System.Drawing.Point(631, 12);
+            this.circularProgressBar_DG.Location = new System.Drawing.Point(665, 12);
             this.circularProgressBar_DG.MarqueeAnimationSpeed = 2000;
             this.circularProgressBar_DG.Name = "circularProgressBar_DG";
             this.circularProgressBar_DG.OuterColor = System.Drawing.Color.Gainsboro;
@@ -59,16 +64,15 @@
             this.circularProgressBar_DG.ProgressColor = System.Drawing.Color.LimeGreen;
             this.circularProgressBar_DG.ProgressWidth = 25;
             this.circularProgressBar_DG.SecondaryFont = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.circularProgressBar_DG.Size = new System.Drawing.Size(256, 258);
+            this.circularProgressBar_DG.Size = new System.Drawing.Size(214, 215);
             this.circularProgressBar_DG.StartAngle = 270;
             this.circularProgressBar_DG.SubscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
             this.circularProgressBar_DG.SubscriptMargin = new System.Windows.Forms.Padding(10, -35, 0, 0);
             this.circularProgressBar_DG.SubscriptText = "";
             this.circularProgressBar_DG.SuperscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
             this.circularProgressBar_DG.SuperscriptMargin = new System.Windows.Forms.Padding(-10, -10, 0, 0);
-            this.circularProgressBar_DG.SuperscriptText = "? %";
+            this.circularProgressBar_DG.SuperscriptText = "";
             this.circularProgressBar_DG.TabIndex = 0;
-            this.circularProgressBar_DG.Text = "ĐỘC GIẢ";
             this.circularProgressBar_DG.TextMargin = new System.Windows.Forms.Padding(8, 8, 0, 0);
             this.circularProgressBar_DG.Value = 68;
             // 
@@ -79,10 +83,10 @@
             this.circularProgressBar_SACH.BackColor = System.Drawing.Color.Transparent;
             this.circularProgressBar_SACH.Font = new System.Drawing.Font("Palatino Linotype", 27.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.circularProgressBar_SACH.ForeColor = System.Drawing.Color.Aqua;
-            this.circularProgressBar_SACH.InnerColor = System.Drawing.Color.Transparent;
+            this.circularProgressBar_SACH.InnerColor = System.Drawing.Color.Plum;
             this.circularProgressBar_SACH.InnerMargin = 2;
             this.circularProgressBar_SACH.InnerWidth = -1;
-            this.circularProgressBar_SACH.Location = new System.Drawing.Point(631, 329);
+            this.circularProgressBar_SACH.Location = new System.Drawing.Point(657, 297);
             this.circularProgressBar_SACH.MarqueeAnimationSpeed = 2000;
             this.circularProgressBar_SACH.Name = "circularProgressBar_SACH";
             this.circularProgressBar_SACH.OuterColor = System.Drawing.Color.Gainsboro;
@@ -91,16 +95,15 @@
             this.circularProgressBar_SACH.ProgressColor = System.Drawing.Color.DeepSkyBlue;
             this.circularProgressBar_SACH.ProgressWidth = 25;
             this.circularProgressBar_SACH.SecondaryFont = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.circularProgressBar_SACH.Size = new System.Drawing.Size(256, 258);
+            this.circularProgressBar_SACH.Size = new System.Drawing.Size(222, 229);
             this.circularProgressBar_SACH.StartAngle = 270;
             this.circularProgressBar_SACH.SubscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
             this.circularProgressBar_SACH.SubscriptMargin = new System.Windows.Forms.Padding(10, -35, 0, 0);
             this.circularProgressBar_SACH.SubscriptText = " ";
             this.circularProgressBar_SACH.SuperscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
             this.circularProgressBar_SACH.SuperscriptMargin = new System.Windows.Forms.Padding(10, -10, 0, 0);
-            this.circularProgressBar_SACH.SuperscriptText = "? %";
+            this.circularProgressBar_SACH.SuperscriptText = "";
             this.circularProgressBar_SACH.TabIndex = 0;
-            this.circularProgressBar_SACH.Text = "SÁCH";
             this.circularProgressBar_SACH.TextMargin = new System.Windows.Forms.Padding(8, 8, 0, 0);
             this.circularProgressBar_SACH.Value = 45;
             // 
@@ -234,12 +237,62 @@
             this.button_NhanVien.UseVisualStyleBackColor = false;
             this.button_NhanVien.Click += new System.EventHandler(this.button_NhanVien_Click);
             // 
+            // label_DocGia
+            // 
+            this.label_DocGia.AutoSize = true;
+            this.label_DocGia.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.label_DocGia.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_DocGia.ForeColor = System.Drawing.Color.DarkBlue;
+            this.label_DocGia.Location = new System.Drawing.Point(759, 98);
+            this.label_DocGia.Name = "label_DocGia";
+            this.label_DocGia.Size = new System.Drawing.Size(47, 33);
+            this.label_DocGia.TabIndex = 2;
+            this.label_DocGia.Text = "?/?";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.LightPink;
+            this.label2.Location = new System.Drawing.Point(719, 236);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(107, 34);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Độc giả";
+            // 
+            // label_Sach
+            // 
+            this.label_Sach.AutoSize = true;
+            this.label_Sach.BackColor = System.Drawing.Color.Plum;
+            this.label_Sach.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Sach.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.label_Sach.Location = new System.Drawing.Point(759, 392);
+            this.label_Sach.Name = "label_Sach";
+            this.label_Sach.Size = new System.Drawing.Size(47, 33);
+            this.label_Sach.TabIndex = 4;
+            this.label_Sach.Text = "?/?";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Plum;
+            this.label4.Location = new System.Drawing.Point(724, 546);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(73, 34);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "Sách";
+            // 
             // ThuTruong
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSlateGray;
             this.ClientSize = new System.Drawing.Size(917, 619);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label_Sach);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label_DocGia);
             this.Controls.Add(this.button_Sach);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button_DangXuat);
@@ -252,6 +305,7 @@
             this.Controls.Add(this.circularProgressBar_DG);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.Black;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -275,6 +329,10 @@
         private System.Windows.Forms.Button button_DangXuat;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button_Sach;
+        private System.Windows.Forms.Label label_DocGia;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label_Sach;
+        private System.Windows.Forms.Label label4;
     }
 }
 

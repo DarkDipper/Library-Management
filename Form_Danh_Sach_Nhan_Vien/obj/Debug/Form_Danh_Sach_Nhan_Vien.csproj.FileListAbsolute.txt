@@ -1,0 +1,15 @@
+D:\Project\Library-Management\Form_Danh_Sach_Nhan_Vien\bin\Debug\Form_Danh_Sach_Nhan_Vien.exe.config
+D:\Project\Library-Management\Form_Danh_Sach_Nhan_Vien\bin\Debug\Form_Danh_Sach_Nhan_Vien.exe
+D:\Project\Library-Management\Form_Danh_Sach_Nhan_Vien\bin\Debug\Form_Danh_Sach_Nhan_Vien.pdb
+D:\Project\Library-Management\Form_Danh_Sach_Nhan_Vien\obj\Debug\Form_Danh_Sach_Nhan_Vien.csprojAssemblyReference.cache
+D:\Project\Library-Management\Form_Danh_Sach_Nhan_Vien\obj\Debug\Form_Danh_Sach_Nhan_Vien.DanhSachNhanVien.resources
+D:\Project\Library-Management\Form_Danh_Sach_Nhan_Vien\obj\Debug\Form_Danh_Sach_Nhan_Vien.Properties.Resources.resources
+D:\Project\Library-Management\Form_Danh_Sach_Nhan_Vien\obj\Debug\Form_Danh_Sach_Nhan_Vien.csproj.GenerateResource.cache
+D:\Project\Library-Management\Form_Danh_Sach_Nhan_Vien\obj\Debug\Form_Danh_Sach_Nhan_Vien.csproj.CoreCompileInputs.cache
+D:\Project\Library-Management\Form_Danh_Sach_Nhan_Vien\obj\Debug\Form_Danh_Sach_Nhan_Vien.exe
+D:\Project\Library-Management\Form_Danh_Sach_Nhan_Vien\obj\Debug\Form_Danh_Sach_Nhan_Vien.pdb
+D:\Project\Library-Management\Form_Danh_Sach_Nhan_Vien\bin\Debug\EntityFramework.dll
+D:\Project\Library-Management\Form_Danh_Sach_Nhan_Vien\bin\Debug\EntityFramework.SqlServer.dll
+D:\Project\Library-Management\Form_Danh_Sach_Nhan_Vien\bin\Debug\EntityFramework.xml
+D:\Project\Library-Management\Form_Danh_Sach_Nhan_Vien\bin\Debug\EntityFramework.SqlServer.xml
+D:\Project\Library-Management\Form_Danh_Sach_Nhan_Vien\obj\Debug\Form_Danh_Sach_Nhan_Vien.csproj.CopyComplete
