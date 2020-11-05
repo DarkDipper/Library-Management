@@ -65,7 +65,6 @@
             this.txt_muonSach = new System.Windows.Forms.ListBox();
             this.txt_muonDG = new System.Windows.Forms.ComboBox();
             this.button_themmuon = new System.Windows.Forms.Button();
-            this.button_muonlammoi = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
@@ -143,6 +142,8 @@
             this.label8 = new System.Windows.Forms.Label();
             this.er = new System.Windows.Forms.ErrorProvider(this.components);
             this.Tick = new System.Windows.Forms.ErrorProvider(this.components);
+            this.groupBox13 = new System.Windows.Forms.GroupBox();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.tabControl1.SuspendLayout();
             this.Thongtin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataTheDocGia)).BeginInit();
@@ -166,6 +167,7 @@
             this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.er)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Tick)).BeginInit();
+            this.groupBox13.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -178,7 +180,7 @@
             this.tabControl1.Location = new System.Drawing.Point(12, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(885, 348);
+            this.tabControl1.Size = new System.Drawing.Size(911, 348);
             this.tabControl1.TabIndex = 1;
             // 
             // Thongtin
@@ -508,13 +510,14 @@
             // 
             // muon
             // 
+            this.muon.Controls.Add(this.groupBox13);
             this.muon.Controls.Add(this.groupBox7);
             this.muon.Controls.Add(this.groupBox6);
             this.muon.Controls.Add(this.groupBox4);
             this.muon.Location = new System.Drawing.Point(4, 22);
             this.muon.Name = "muon";
             this.muon.Padding = new System.Windows.Forms.Padding(3);
-            this.muon.Size = new System.Drawing.Size(877, 322);
+            this.muon.Size = new System.Drawing.Size(903, 322);
             this.muon.TabIndex = 1;
             this.muon.Text = "Mượn sách";
             this.muon.UseVisualStyleBackColor = true;
@@ -524,12 +527,11 @@
             this.groupBox7.Controls.Add(this.txt_muonSach);
             this.groupBox7.Controls.Add(this.txt_muonDG);
             this.groupBox7.Controls.Add(this.button_themmuon);
-            this.groupBox7.Controls.Add(this.button_muonlammoi);
             this.groupBox7.Controls.Add(this.label7);
             this.groupBox7.Controls.Add(this.label6);
             this.groupBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox7.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.groupBox7.Location = new System.Drawing.Point(513, 11);
+            this.groupBox7.Location = new System.Drawing.Point(397, 10);
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.Size = new System.Drawing.Size(237, 307);
             this.groupBox7.TabIndex = 1;
@@ -559,25 +561,13 @@
             // 
             this.button_themmuon.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_themmuon.ForeColor = System.Drawing.Color.ForestGreen;
-            this.button_themmuon.Location = new System.Drawing.Point(11, 261);
+            this.button_themmuon.Location = new System.Drawing.Point(64, 251);
             this.button_themmuon.Name = "button_themmuon";
-            this.button_themmuon.Size = new System.Drawing.Size(108, 27);
+            this.button_themmuon.Size = new System.Drawing.Size(116, 43);
             this.button_themmuon.TabIndex = 8;
             this.button_themmuon.Text = "Thêm";
             this.button_themmuon.UseVisualStyleBackColor = true;
             this.button_themmuon.Click += new System.EventHandler(this.button_themmuon_Click);
-            // 
-            // button_muonlammoi
-            // 
-            this.button_muonlammoi.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_muonlammoi.ForeColor = System.Drawing.Color.ForestGreen;
-            this.button_muonlammoi.Location = new System.Drawing.Point(125, 259);
-            this.button_muonlammoi.Name = "button_muonlammoi";
-            this.button_muonlammoi.Size = new System.Drawing.Size(108, 29);
-            this.button_muonlammoi.TabIndex = 7;
-            this.button_muonlammoi.Text = "Làm mới";
-            this.button_muonlammoi.UseVisualStyleBackColor = true;
-            this.button_muonlammoi.Click += new System.EventHandler(this.button_muonlammoi_Click);
             // 
             // label7
             // 
@@ -603,7 +593,7 @@
             // 
             this.groupBox6.Controls.Add(this.dataSachMuon);
             this.groupBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox6.Location = new System.Drawing.Point(122, 113);
+            this.groupBox6.Location = new System.Drawing.Point(6, 112);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(382, 205);
             this.groupBox6.TabIndex = 1;
@@ -630,7 +620,7 @@
             this.groupBox4.Controls.Add(this.label4);
             this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox4.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.groupBox4.Location = new System.Drawing.Point(122, 7);
+            this.groupBox4.Location = new System.Drawing.Point(6, 6);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(382, 100);
             this.groupBox4.TabIndex = 0;
@@ -1447,12 +1437,33 @@
             this.Tick.ContainerControl = this;
             this.Tick.Icon = ((System.Drawing.Icon)(resources.GetObject("Tick.Icon")));
             // 
+            // groupBox13
+            // 
+            this.groupBox13.Controls.Add(this.richTextBox1);
+            this.groupBox13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox13.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.groupBox13.Location = new System.Drawing.Point(640, 10);
+            this.groupBox13.Name = "groupBox13";
+            this.groupBox13.Size = new System.Drawing.Size(256, 307);
+            this.groupBox13.TabIndex = 11;
+            this.groupBox13.TabStop = false;
+            this.groupBox13.Text = "Gợi ý";
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Location = new System.Drawing.Point(7, 18);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.ReadOnly = true;
+            this.richTextBox1.Size = new System.Drawing.Size(243, 276);
+            this.richTextBox1.TabIndex = 0;
+            this.richTextBox1.Text = "";
+            // 
             // QLDG
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.DangXuat;
-            this.ClientSize = new System.Drawing.Size(902, 368);
+            this.ClientSize = new System.Drawing.Size(924, 368);
             this.Controls.Add(this.tabControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -1494,6 +1505,7 @@
             this.groupBox5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.er)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Tick)).EndInit();
+            this.groupBox13.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1543,7 +1555,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox comboBox_muonTimSach;
         private System.Windows.Forms.Button button_themmuon;
-        private System.Windows.Forms.Button button_muonlammoi;
         private System.Windows.Forms.Button button_muonTimSach;
         private System.Windows.Forms.TextBox txt_muontimSach;
         private System.Windows.Forms.ComboBox txt_muonDG;
@@ -1613,6 +1624,8 @@
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.Label label_TongNo_mat;
         private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.GroupBox groupBox13;
+        private System.Windows.Forms.RichTextBox richTextBox1;
     }
 }
 

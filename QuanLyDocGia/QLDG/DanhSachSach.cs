@@ -52,7 +52,10 @@ namespace QLDG
         [StringLength(500)]
         public string MoTa { get; set; }
 
-        public int? DanhGia { get; set; }
+        public double? DanhGia { get; set; }
+
+        [StringLength(1000)]
+        public string LuotDanhGia { get; set; }
 
         public virtual HoSo HoSo { get; set; }
 

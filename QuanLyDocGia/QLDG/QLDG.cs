@@ -102,6 +102,17 @@ namespace QLDG
             dataTheDocGia.Columns[5].DefaultCellStyle.Format = "dd/MM/yyyy";
 
         }
+        void GoiY()
+        {
+            string sachvip = "";
+            var sach = from i in qltv.DanhSachSaches where i.DanhGia >= 4.3 select i;
+            foreach (var i in sach)
+            {
+                sachvip += i.MaSach + "\n" + i.TenSach + "\n --------------------------------------------\n";
+            }
+            //MessageBox.Show(sachvip);
+            richTextBox1.Text = sachvip;
+        }
         public void Set_true()
         {
             pname = true;
@@ -126,6 +137,7 @@ namespace QLDG
             f2Address.Text = "";
             f2Email.Text = "";
             textMS.Text = "";
+            
         }
         public void ThongKe()
         {
@@ -136,98 +148,98 @@ namespace QLDG
         //=========================================== Xử lý =================
         private void f2Name_Leave(object sender, EventArgs e)
         {
+            /* if (f2Name.Text.Length != 0)
+             {
+                 string fullname = f2Name.Text;
+                 string space = " ";
+                 // Xử lý cắt dấu cách đầu tên
+                 bool dau = false; //dung de check dau cach dung dau
+                 for (int i = 0; i < fullname.Length && dau == false; i++)
+                 {
+                     if (fullname[i] == ' ' && dau == false)
+                     {
+                         fullname = fullname.Remove(i, 1);
+                         i = -1;
+                     }
+                     else dau = true;
+                 }
+                 if (f2Name.Text.Length == 0)
+                 {
+                     er.SetError(this.f2Name, "Vui lòng nhập lại!");
+                     pname = false;
+                 }
+                 //Xử lý cắt dấu cách cuối tên 
+                 bool cuoi = false;
+                 for (int i = fullname.Length - 1; i >= 0 && cuoi == false; i--)
+                 {
+                     if (fullname[i] == ' ' && cuoi == false)
+                     {
+                         fullname = fullname.Remove(fullname.Length - 1, 1);
+                         i = fullname.Length;
+                     }
+                     else cuoi = true;
+                 }
+                 if (f2Name.Text.Length == 0)
+                 {
+                     er.SetError(this.f2Name, "Vui lòng nhập lại!");
+                     pname = false;
+                 }
+                 f2Name.Text = fullname; // gán lại chuỗi sau khi sửa
+                 //Tiếp tục check phần ký tự
+                 for (int i = 0; i < f2Name.Text.Length; i++)
+                 {
+                     if (f2Name.Text[i] >= 33 && f2Name.Text[i] <= 57 || f2Name.Text[i] >= 58 && f2Name.Text[i] <= 64 || f2Name.Text[i] >= 91 && f2Name.Text[i] <= 96 || f2Name.Text[i] >= 123 && f2Name.Text[i] <= 126)
+                     {
+                         f2Name.Text = f2Name.Text.Remove(i, 1);
+                         i = -1;
+                     }
+                 }
+                 if (f2Name.Text.Length == 0)
+                 {
+                     Tick.Clear();
+                     er.SetError(this.f2Name, "Vui lòng nhập lại!");
+                     pname = false;
+                 }
+                 if (f2Name.Text.Length != 0)
+                 {
+                     er.Clear();
+                     int slc = 1;
+                     for (int i = 0; i < f2Name.Text.Length; i++)
+                         if (f2Name.Text[i] == ' ') slc++;
+                     string[] parts = f2Name.Text.Split(new string[] { space }, StringSplitOptions.RemoveEmptyEntries);
+                     f2Name.Text = "";
+                     bool hetchu = false;
+                     for (int i = 0; i < slc; i++)
+                     {
+                         parts[i] = parts[i].Substring(0, 1).ToUpper() + parts[i].Substring(1, parts[i].Length - 1).ToLower();
+                         f2Name.Text = f2Name.Text + parts[i];
+                         if (i >= 0 && i < slc) hetchu = true;
+                         if (hetchu == true) f2Name.Text += " ";
+                     }
+                 }
+             }
+             if (f2Name.Text.Length == 0)
+             {
+                 Tick.Clear();
+                 er.SetError(this.f2Name, "Bạn chưa nhập tên! ");
+                 pname = false;
+             }
+             else
+             {
+                 er.Clear();
+                 Tick.SetError(f2Name, "xong");
+                 pname = true;
+
+             }*/
             if (f2Name.Text.Length != 0)
             {
-                string fullname = f2Name.Text;
-                string space = " ";
-                // Xử lý cắt dấu cách đầu tên
-                bool dau = false; //dung de check dau cach dung dau
-                for (int i = 0; i < fullname.Length && dau == false; i++)
-                {
-                    if (fullname[i] == ' ' && dau == false)
-                    {
-                        fullname = fullname.Remove(i, 1);
-                        i = -1;
-                    }
-                    else dau = true;
-                }
-                if (f2Name.Text.Length == 0)
-                {
-                    er.SetError(this.f2Name, "Vui lòng nhập lại!");
-                    pname = false;
-                }
-                //Xử lý cắt dấu cách cuối tên 
-                bool cuoi = false;
-                for (int i = fullname.Length - 1; i >= 0 && cuoi == false; i--)
-                {
-                    if (fullname[i] == ' ' && cuoi == false)
-                    {
-                        fullname = fullname.Remove(fullname.Length - 1, 1);
-                        i = fullname.Length;
-                    }
-                    else cuoi = true;
-                }
-                if (f2Name.Text.Length == 0)
-                {
-                    er.SetError(this.f2Name, "Vui lòng nhập lại!");
-                    pname = false;
-                }
-                f2Name.Text = fullname; // gán lại chuỗi sau khi sửa
-                //Tiếp tục check phần ký tự
-                for (int i = 0; i < f2Name.Text.Length; i++)
-                {
-                    if (f2Name.Text[i] >= 33 && f2Name.Text[i] <= 57 || f2Name.Text[i] >= 58 && f2Name.Text[i] <= 64 || f2Name.Text[i] >= 91 && f2Name.Text[i] <= 96 || f2Name.Text[i] >= 123 && f2Name.Text[i] <= 126)
-                    {
-                        f2Name.Text = f2Name.Text.Remove(i, 1);
-                        i = -1;
-                    }
-                }
-                if (f2Name.Text.Length == 0)
-                {
-                    Tick.Clear();
-                    er.SetError(this.f2Name, "Vui lòng nhập lại!");
-                    pname = false;
-                }
-                if (f2Name.Text.Length != 0)
-                {
-                    er.Clear();
-                    int slc = 1;
-                    for (int i = 0; i < f2Name.Text.Length; i++)
-                        if (f2Name.Text[i] == ' ') slc++;
-                    string[] parts = f2Name.Text.Split(new string[] { space }, StringSplitOptions.RemoveEmptyEntries);
-                    f2Name.Text = "";
-                    bool hetchu = false;
-                    for (int i = 0; i < slc; i++)
-                    {
-                        parts[i] = parts[i].Substring(0, 1).ToUpper() + parts[i].Substring(1, parts[i].Length - 1).ToLower();
-                        f2Name.Text = f2Name.Text + parts[i];
-                        if (i >= 0 && i < slc) hetchu = true;
-                        if (hetchu == true) f2Name.Text += " ";
-                    }
-                }
-            }
-            if (f2Name.Text.Length == 0)
-            {
-                Tick.Clear();
-                er.SetError(this.f2Name, "Bạn chưa nhập tên! ");
-                pname = false;
-            }
-            else
-            {
-                er.Clear();
-                Tick.SetError(f2Name, "xong");
-                pname = true;
-
-            }
-            /*if (f2Name.Text.Length != 0)
-            {
-                char[] trimChars = { '\\', '|', '\'',' ', '@', ' ', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '!', '@', '#', '$', '%', '^', '&', ' ', '(', ')', '-', '=', '_', '+', '[', '{', ']', '}', ';', ':', '"', ',', '<', '.', '>', '/', '?' };
+                char[] trimChars = { '\\', '|', '\'', ' ', '@', ' ', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '-', '=', '_', '+', '[', '{', ']', '}', ';', ':', '"', ',', '<', '.', '>', '/', '?' };
                 f2Name.Text = f2Name.Text.Trim(trimChars);
                 int slc = 0;
                 bool c = false;
                 for (int i = 0; i < f2Name.Text.Length; i++)
                 {
-                    if(c == false && f2Name.Text[i] >= 127 || c == false && f2Name.Text[i] >= 'a' && f2Name.Text[i] <= 'z' || c == false && f2Name.Text[i] >= 'A' && f2Name.Text[i] <= 'Z')
+                    if (f2Name.Text[i] >= 33 && f2Name.Text[i] <= 57 || f2Name.Text[i] >= 58 && f2Name.Text[i] <= 64 || f2Name.Text[i] >= 91 && f2Name.Text[i] <= 96 || f2Name.Text[i] >= 123 && f2Name.Text[i] <= 126)
                     {
                         f2Name.Text = f2Name.Text.Remove(i, 1);
                         i = -1;
@@ -257,7 +269,7 @@ namespace QLDG
                 string xx = "";
                 for (int i = 0; i < f2Name.Text.Length; i++)
                 {
-                    if (c == false && f2Name.Text[i] >= 'a' && f2Name.Text[i] <= 'z' || c == false && f2Name.Text[i] >= 'A' && f2Name.Text[i] <= 'Z')
+                    if (c == false && f2Name.Text[i] >= 127 || c == false && f2Name.Text[i] >= 'a' && f2Name.Text[i] <= 'z' || c == false && f2Name.Text[i] >= 'A' && f2Name.Text[i] <= 'Z')
                     {
                         x += f2Name.Text[i];
                     }
@@ -285,9 +297,9 @@ namespace QLDG
             else
             {
                 er.Clear();
-                Tick.SetError(f2Name, "xong");
+                Tick.SetError(f2Name, "You passed!");
                 pname = true;
-            }*/
+            }
         }
 
         private void f2NgaySinh_Leave(object sender, EventArgs e)
@@ -361,6 +373,7 @@ namespace QLDG
             }
             Hienthi();
             HienThiKho();
+            GoiY();
             SizeBang = dataTheDocGia.Rows.Count;
             f2NgaySinh.Text = DateTime.Today.ToString();
             foreach(var item in qltv.TheDocGias)
@@ -549,14 +562,12 @@ namespace QLDG
         }
         private void button_muonlammoi_Click(object sender, EventArgs e)
         {
-            txt_muonDG.SelectedIndex = -1;
-            txt_muonSach.Items.Clear();
-            txt_muonSach.Enabled = true;
-            txt_muonDG.Enabled = true;
+            
         }
         
         private void button_themmuon_Click(object sender, EventArgs e)
-        { 
+        {
+            GoiY();
             if (txt_muonDG.Text.Length != 0 && txt_muonSach.Items.Count != 0)
             {
                 foreach (string muonSach in txt_muonSach.Items)
@@ -613,8 +624,13 @@ namespace QLDG
                     x.ShowDialog();
                     this.Show();
                 }
+                
             }
             else MessageBox.Show("Thiếu thông tin", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            txt_muonDG.SelectedIndex = -1;
+            txt_muonSach.Items.Clear();
+            txt_muonSach.Enabled = true;
+            txt_muonDG.Enabled = true;
         }
 
         private void button_muonTimSach_Click(object sender, EventArgs e)
@@ -767,9 +783,13 @@ namespace QLDG
         int tongno = 0;
         private void button_trathanhtoan_Click(object sender, EventArgs e)
         {
+            GoiY();
             tongno = 0;
             if (listBox_Tra.Items.Count != 0)
             {
+                FormDanhGia danhGia = new FormDanhGia();
+                danhGia.tra = listBox_Tra;
+                danhGia.ShowDialog();
                 ListViewItem dstra;
                 foreach (string i in listBox_Tra.Items)
                 {
@@ -800,7 +820,7 @@ namespace QLDG
                         tongno += ((songay - 7) * 1000);
                         tra.TienPhat= ((songay - 7) * 1000);
                     }
-                    qltv.TraSaches.Add(tra);
+                    qltv.TraSaches.AddOrUpdate(tra);
                     qltv.SaveChanges();
                     dstra = new ListViewItem(a);
                     listViewTra.Items.Add(dstra);
@@ -895,6 +915,7 @@ namespace QLDG
 
         private void button_Lammoi_Click(object sender, EventArgs e)
         {
+            GoiY();
             comboBox_MDG.SelectedIndex = -1;
             comboBox_MDG.Enabled = true;
             listBox_MSach.Items.Clear();
@@ -991,13 +1012,15 @@ namespace QLDG
                     MuonSach sach = qltv.MuonSaches.SingleOrDefault(p => p.MaSach == i && p.MaDocGia == comboBox_MDGmat.Text);
                     DanhSachSach dss = qltv.DanhSachSaches.SingleOrDefault(p => p.MaSach == i);
                     MatSach mat = new MatSach();
+                    dss.TinhTrang = "Mất";
                     double gia = (double)dss.TriGia;
                     mat.MaDocGia = comboBox_MDGmat.Text;
                     mat.MaNgGhiNhan = NV;
                     mat.MaSach = i;
                     mat.SoTienThu= int.Parse((gia * 1.2).ToString());
                     mat.NgayGhiNhan = DateTime.Today;
-                    qltv.MatSaches.Add(mat);
+                    qltv.DanhSachSaches.AddOrUpdate(dss);
+                    qltv.MatSaches.AddOrUpdate(mat);
                     qltv.MuonSaches.Remove(sach);
                     qltv.SaveChanges();
                     a[1] = gia.ToString();

@@ -30,9 +30,9 @@
         {
             this.circularProgressBar_DG = new CircularProgressBar.CircularProgressBar();
             this.circularProgressBar_SACH = new CircularProgressBar.CircularProgressBar();
+            this.button_DangXuat = new System.Windows.Forms.Button();
             this.button_Sach = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
-            this.button_DangXuat = new System.Windows.Forms.Button();
             this.button_ThongTinCaNhan = new System.Windows.Forms.Button();
             this.button_BaoCao = new System.Windows.Forms.Button();
             this.button_TaiChinh = new System.Windows.Forms.Button();
@@ -104,6 +104,23 @@
             this.circularProgressBar_SACH.TextMargin = new System.Windows.Forms.Padding(8, 8, 0, 0);
             this.circularProgressBar_SACH.Value = 45;
             // 
+            // button_DangXuat
+            // 
+            this.button_DangXuat.AutoSize = true;
+            this.button_DangXuat.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.button_DangXuat.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.button_DangXuat.FlatAppearance.BorderSize = 0;
+            this.button_DangXuat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_DangXuat.Image = global::FormThuTruong.Properties.Resources.log_out_icon_icons_com_50106;
+            this.button_DangXuat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_DangXuat.Location = new System.Drawing.Point(29, 454);
+            this.button_DangXuat.Name = "button_DangXuat";
+            this.button_DangXuat.Size = new System.Drawing.Size(229, 98);
+            this.button_DangXuat.TabIndex = 1;
+            this.button_DangXuat.Text = "Đăng Xuất";
+            this.button_DangXuat.UseVisualStyleBackColor = false;
+            this.button_DangXuat.Click += new System.EventHandler(this.button_DangXuat_Click);
+            // 
             // button_Sach
             // 
             this.button_Sach.AutoSize = true;
@@ -111,13 +128,12 @@
             this.button_Sach.FlatAppearance.BorderSize = 0;
             this.button_Sach.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_Sach.Image = global::FormThuTruong.Properties.Resources.education_books_library_icon_149685;
+            this.button_Sach.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_Sach.Location = new System.Drawing.Point(29, 172);
             this.button_Sach.Name = "button_Sach";
             this.button_Sach.Size = new System.Drawing.Size(229, 98);
             this.button_Sach.TabIndex = 1;
             this.button_Sach.Text = "Sách";
-            this.button_Sach.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button_Sach.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button_Sach.UseVisualStyleBackColor = false;
             // 
             // button6
@@ -127,32 +143,14 @@
             this.button6.FlatAppearance.BorderSize = 0;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Image = global::FormThuTruong.Properties.Resources.reading_sign_icon_icons_com_68507;
+            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button6.Location = new System.Drawing.Point(29, 313);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(229, 98);
             this.button6.TabIndex = 1;
             this.button6.Text = "Độc Giả";
-            this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button6.UseVisualStyleBackColor = false;
             this.button6.Click += new System.EventHandler(this.button6_Click);
-            // 
-            // button_DangXuat
-            // 
-            this.button_DangXuat.AutoSize = true;
-            this.button_DangXuat.BackColor = System.Drawing.Color.DarkTurquoise;
-            this.button_DangXuat.FlatAppearance.BorderSize = 0;
-            this.button_DangXuat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_DangXuat.Image = global::FormThuTruong.Properties.Resources.log_out_icon_icons_com_50106;
-            this.button_DangXuat.Location = new System.Drawing.Point(29, 454);
-            this.button_DangXuat.Name = "button_DangXuat";
-            this.button_DangXuat.Size = new System.Drawing.Size(229, 98);
-            this.button_DangXuat.TabIndex = 1;
-            this.button_DangXuat.Text = "Đăng Xuất";
-            this.button_DangXuat.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button_DangXuat.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button_DangXuat.UseVisualStyleBackColor = false;
-            this.button_DangXuat.Click += new System.EventHandler(this.button_DangXuat_Click);
             // 
             // button_ThongTinCaNhan
             // 
@@ -161,13 +159,12 @@
             this.button_ThongTinCaNhan.FlatAppearance.BorderSize = 0;
             this.button_ThongTinCaNhan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_ThongTinCaNhan.Image = global::FormThuTruong.Properties.Resources._4092564_about_mobile_ui_profile_ui_user_website_114033__1_;
+            this.button_ThongTinCaNhan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_ThongTinCaNhan.Location = new System.Drawing.Point(342, 454);
             this.button_ThongTinCaNhan.Name = "button_ThongTinCaNhan";
             this.button_ThongTinCaNhan.Size = new System.Drawing.Size(223, 98);
             this.button_ThongTinCaNhan.TabIndex = 1;
             this.button_ThongTinCaNhan.Text = "Thông Tin Cá Nhân";
-            this.button_ThongTinCaNhan.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button_ThongTinCaNhan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button_ThongTinCaNhan.UseVisualStyleBackColor = false;
             this.button_ThongTinCaNhan.Click += new System.EventHandler(this.button_ThongTinCaNhan_Click);
             // 
@@ -178,13 +175,12 @@
             this.button_BaoCao.FlatAppearance.BorderSize = 0;
             this.button_BaoCao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_BaoCao.Image = global::FormThuTruong.Properties.Resources._1491253410_6document_report_82881;
+            this.button_BaoCao.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_BaoCao.Location = new System.Drawing.Point(342, 313);
             this.button_BaoCao.Name = "button_BaoCao";
             this.button_BaoCao.Size = new System.Drawing.Size(229, 98);
             this.button_BaoCao.TabIndex = 1;
             this.button_BaoCao.Text = "Báo Cáo";
-            this.button_BaoCao.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button_BaoCao.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button_BaoCao.UseVisualStyleBackColor = false;
             // 
             // button_TaiChinh
@@ -194,13 +190,12 @@
             this.button_TaiChinh.FlatAppearance.BorderSize = 0;
             this.button_TaiChinh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_TaiChinh.Image = global::FormThuTruong.Properties.Resources._1486564172_finance_loan_money_81492;
+            this.button_TaiChinh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_TaiChinh.Location = new System.Drawing.Point(342, 172);
             this.button_TaiChinh.Name = "button_TaiChinh";
             this.button_TaiChinh.Size = new System.Drawing.Size(229, 98);
             this.button_TaiChinh.TabIndex = 1;
             this.button_TaiChinh.Text = "Tài Chính";
-            this.button_TaiChinh.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button_TaiChinh.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button_TaiChinh.UseVisualStyleBackColor = false;
             // 
             // button_DangKy
@@ -210,13 +205,12 @@
             this.button_DangKy.FlatAppearance.BorderSize = 0;
             this.button_DangKy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_DangKy.Image = global::FormThuTruong.Properties.Resources.signupsign_inscribirs_2798;
+            this.button_DangKy.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_DangKy.Location = new System.Drawing.Point(342, 33);
             this.button_DangKy.Name = "button_DangKy";
             this.button_DangKy.Size = new System.Drawing.Size(229, 98);
             this.button_DangKy.TabIndex = 1;
             this.button_DangKy.Text = "Đăng Ký";
-            this.button_DangKy.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button_DangKy.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button_DangKy.UseVisualStyleBackColor = false;
             this.button_DangKy.Click += new System.EventHandler(this.button_DangKy_Click);
             // 
@@ -227,13 +221,12 @@
             this.button_NhanVien.FlatAppearance.BorderSize = 0;
             this.button_NhanVien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_NhanVien.Image = global::FormThuTruong.Properties.Resources.users_icon_icons_com_57999;
+            this.button_NhanVien.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_NhanVien.Location = new System.Drawing.Point(29, 33);
             this.button_NhanVien.Name = "button_NhanVien";
             this.button_NhanVien.Size = new System.Drawing.Size(229, 98);
             this.button_NhanVien.TabIndex = 1;
             this.button_NhanVien.Text = "Nhân Viên";
-            this.button_NhanVien.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button_NhanVien.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button_NhanVien.UseVisualStyleBackColor = false;
             this.button_NhanVien.Click += new System.EventHandler(this.button_NhanVien_Click);
             // 
@@ -260,6 +253,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "ThuTruong";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thủ Trưởng";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);

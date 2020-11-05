@@ -13,6 +13,7 @@ using System.Windows.Forms;
 using System.Runtime.CompilerServices;
 using System.Data.Entity.Migrations;
 using System.Text.RegularExpressions;
+using System.IO;
 
 namespace QuanLyKho
 {
@@ -22,6 +23,25 @@ namespace QuanLyKho
         {
             InitializeComponent();
             AutoValidate = AutoValidate.EnableAllowFocusChange;
+        }
+        public Image ByteArrayToImage(byte[] byteArrayIn)
+        {
+            using (var ms = new MemoryStream(byteArrayIn))
+            {
+                var returnImage = Image.FromStream(ms);
+
+                return returnImage;
+            }
+        }
+        // Ảnh sang byte
+        public byte[] ImageToByteArray(System.Drawing.Image imageIn)
+        {
+            using (var ms = new MemoryStream())
+            {
+                imageIn.Save(ms, System.Drawing.Imaging.ImageFormat.Gif);
+
+                return ms.ToArray();
+            }
         }
         //========================================================Hàm bổ trợ ===================================================
         //SqlConnection con;
@@ -95,6 +115,7 @@ namespace QuanLyKho
             Kho_NamXuatBan.Value = Kho_NamXuatBan.Minimum;
             Kho_NhaXuatBan.Text = "";
             Kho_Gia.Value = Kho_Gia.Minimum;
+            text_MoTA.Text = "";
         }
         //------------------------------------------------------------Xử lý chức năng----------------------------------------
         private void QuanLyKho_Load(object sender, EventArgs e)
@@ -365,6 +386,8 @@ namespace QuanLyKho
                 y.NgayNhap = DateTime.Today;
                 y.MaNgNhan = Mathukho;
                 y.TinhTrang = "Còn";
+                y.DanhGia = 0;
+                y.LuotDanhGia = "";
                 qltv.DanhSachSaches.Add(y);
                 qltv.SaveChanges();
                  /* string sql_in = $@"Insert into DanhSachSach values(
@@ -604,6 +627,7 @@ namespace QuanLyKho
                 Kho_MaSach.Enabled = true;
                 Kho_TacGia.Enabled = false;
                 Kho_NhaXuatBan.Enabled = false;
+                text_MoTA.Enabled = false;
             }
             else if (comboBox_Tim.SelectedIndex == 1)
             {
@@ -614,6 +638,7 @@ namespace QuanLyKho
                 Kho_MaSach.Enabled = false;
                 Kho_TacGia.Enabled = false;
                 Kho_NhaXuatBan.Enabled = false;
+                text_MoTA.Enabled = false;
             }
             else if (comboBox_Tim.SelectedIndex == 3)
             {
@@ -624,6 +649,7 @@ namespace QuanLyKho
                 Kho_MaSach.Enabled = false;
                 Kho_TacGia.Enabled = true;
                 Kho_NhaXuatBan.Enabled = false;
+                text_MoTA.Enabled = false;
             }
             else if (comboBox_Tim.SelectedIndex == 2)
             {
@@ -634,6 +660,7 @@ namespace QuanLyKho
                 Kho_MaSach.Enabled = false;
                 Kho_TacGia.Enabled = false;
                 Kho_NhaXuatBan.Enabled = false;
+                text_MoTA.Enabled = false;
             }
             else
             {
@@ -644,6 +671,7 @@ namespace QuanLyKho
                 Kho_MaSach.Enabled = false;
                 Kho_TacGia.Enabled = true;
                 Kho_NhaXuatBan.Enabled = true;
+                text_MoTA.Enabled = false;
             }
         }
         bool dn = false;

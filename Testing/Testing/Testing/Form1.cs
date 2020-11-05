@@ -57,5 +57,10 @@ namespace Testing
             x.SaveFiles.Add(A);
             x.SaveChanges();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

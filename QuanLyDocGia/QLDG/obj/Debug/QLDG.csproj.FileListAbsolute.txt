@@ -83,3 +83,4 @@ C:\Users\kun\source\repos\DarkDipper\Library-Management\QuanLyDocGia\QLDG\obj\De
 C:\Users\kun\source\repos\DarkDipper\Library-Management\QuanLyDocGia\QLDG\obj\Debug\QLDG.csproj.CopyComplete
 C:\Users\kun\source\repos\DarkDipper\Library-Management\QuanLyDocGia\QLDG\obj\Debug\QLDG.exe
 C:\Users\kun\source\repos\DarkDipper\Library-Management\QuanLyDocGia\QLDG\obj\Debug\QLDG.pdb
+C:\Users\kun\source\repos\DarkDipper\Library-Management\QuanLyDocGia\QLDG\obj\Debug\QLDG.FormDanhGia.resources

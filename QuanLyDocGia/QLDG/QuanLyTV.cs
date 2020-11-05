@@ -33,6 +33,10 @@ namespace QLDG
                 .IsUnicode(false);
 
             modelBuilder.Entity<DanhSachSach>()
+                .Property(e => e.LuotDanhGia)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<DanhSachSach>()
                 .HasMany(e => e.MatSaches)
                 .WithRequired(e => e.DanhSachSach)
                 .WillCascadeOnDelete(false);
