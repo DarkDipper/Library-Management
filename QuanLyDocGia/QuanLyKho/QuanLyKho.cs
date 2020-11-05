@@ -145,7 +145,7 @@ namespace QuanLyKho
                 if (so != i) break;
                 else i++;
             }
-            SizeBang = dataKho.Rows.Count;
+            SizeBang = dataKho.Rows.Count+1;
             //MessageBox.Show($"{i.ToString()}");
             button_Sua.Enabled = false;
             button_Xoa.Enabled = false;
@@ -185,6 +185,8 @@ namespace QuanLyKho
                     Kho_NhaXuatBan.Text = dataKho.SelectedCells[5].Value.ToString();
                     double money = double.Parse(dataKho.SelectedCells[7].Value.ToString());
                     Kho_Gia.Value = int.Parse((money * 0.001).ToString());
+                    var sach = qltv.DanhSachSaches.SingleOrDefault(p => p.MaSach == Kho_MaSach.Text);
+                    text_MoTA.Text = sach.MoTa;
                     button_Them.Enabled = false;
                     button_Sua.Enabled = true;
                     button_Xoa.Enabled = true;
@@ -328,6 +330,7 @@ namespace QuanLyKho
                 x.NamXuatBan = int.Parse(Kho_NamXuatBan.Value.ToString());
                 x.NhaXuatBan = Kho_NhaXuatBan.Text;
                 x.TriGia = int.Parse((double.Parse(Kho_Gia.Value.ToString()) * 1000).ToString());
+                x.MoTa = text_MoTA.Text;
                 /*string sql_ed = $"update DanhSachSach set TenSach=" +
                     $"N'{Kho_TenSach.Text}',TacGia=N'{Kho_TacGia.Text}'," +
                     $"TheLoai=N'{Kho_TheLoai.Text}',NamXuatBan={Kho_NamXuatBan.Value}," +
@@ -338,6 +341,7 @@ namespace QuanLyKho
                 try
                 {
                     qltv.DanhSachSaches.AddOrUpdate(x);
+                    qltv.SaveChanges();
                     MessageBox.Show("Sửa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     HienThi();
 
@@ -388,6 +392,7 @@ namespace QuanLyKho
                 y.TinhTrang = "Còn";
                 y.DanhGia = 0;
                 y.LuotDanhGia = "";
+                y.MoTa = text_MoTA.Text;
                 qltv.DanhSachSaches.Add(y);
                 qltv.SaveChanges();
                  /* string sql_in = $@"Insert into DanhSachSach values(
@@ -427,14 +432,12 @@ namespace QuanLyKho
             else MessageBox.Show("Đăng kí thất bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
-        private void QuanLyKho_FormClosing(object sender, FormClosingEventArgs e)
+       /* private void QuanLyKho_FormClosing(object sender, FormClosingEventArgs e)
         {
-            
                 AutoValidate = AutoValidate.Disable;
                 e.Cancel = true;
               //  con.Close();
-            
-        }
+        }*/
 
         private void Kho_Gia_Validating(object sender, CancelEventArgs e)
         {
@@ -507,43 +510,10 @@ namespace QuanLyKho
             {
                 if (Kho_TacGia.Text.Length != 0)
                 {
-                    string fullname = Kho_TacGia.Text;
-                    string space = " ";
-                    // Xử lý cắt dấu cách đầu tên
-                    bool dau = false; //dung de check dau cach dung dau
-                    for (int i = 0; i < fullname.Length && dau == false; i++)
-                    {
-                        if (fullname[i] == ' ' && dau == false)
-                        {
-                            fullname = fullname.Remove(i, 1);
-                            i = -1;
-                        }
-                        else dau = true;
-                    }
-                    if (Kho_TacGia.Text.Length == 0)
-                    {
-                        errorProvider1.SetError(this.Kho_TacGia, "Vui lòng nhập lại!");
-                        e.Cancel = true;
-                    }
-                    //Xử lý cắt dấu cách cuối tên 
-                    bool cuoi = false;
-                    for (int i = fullname.Length - 1; i >= 0 && cuoi == false; i--)
-                    {
-                        if (fullname[i] == ' ' && cuoi == false)
-                        {
-                            fullname = fullname.Remove(fullname.Length - 1, 1);
-                            i = fullname.Length;
-                        }
-                        else cuoi = true;
-                    }
-                    if (Kho_TacGia.Text.Length == 0)
-                    {
-                        errorProvider1.SetError(this.Kho_TacGia, "Vui lòng nhập lại!");
-                        e.Cancel = true;
-                    }
-                    // Xử lý phần dấu cách trước và sau chuỗi xong
-                    Kho_TacGia.Text = fullname; // gán lại chuỗi sau khi sửa
-                    //Tiếp tục check phần ký tự
+                    char[] trimChars = { '\\', '|', '\'', ' ', '@', ' ', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '-', '=', '_', '+', '[', '{', ']', '}', ';', ':', '"', ',', '<', '.', '>', '/', '?' };
+                    Kho_TacGia.Text = Kho_TacGia.Text.Trim(trimChars);
+                    int slc = 0;
+                    bool c = false;
                     for (int i = 0; i < Kho_TacGia.Text.Length; i++)
                     {
                         if (Kho_TacGia.Text[i] >= 33 && Kho_TacGia.Text[i] <= 57 || Kho_TacGia.Text[i] >= 58 && Kho_TacGia.Text[i] <= 64 || Kho_TacGia.Text[i] >= 91 && Kho_TacGia.Text[i] <= 96 || Kho_TacGia.Text[i] >= 123 && Kho_TacGia.Text[i] <= 126)
@@ -552,44 +522,60 @@ namespace QuanLyKho
                             i = -1;
                         }
                     }
-                    if (Kho_TacGia.Text.Length == 0)
+                    for (int i = 0; i < Kho_TacGia.Text.Length; i++)
                     {
-                        Tick.Clear();
-                        errorProvider1.SetError(this.Kho_TacGia, "Vui lòng nhập lại!");
-                        e.Cancel = true;
-                    }
-                    if (Kho_TacGia.Text.Length != 0)
-                    {
-                        errorProvider1.Clear();
-                        //Đếm số lượng từ có trong tên để viết hoa chữ đầu  
-                        int slc = 1;
-                        for (int i = 0; i < Kho_TacGia.Text.Length; i++)
-                            if (Kho_TacGia.Text[i] == ' ') slc++;
-                        //Viết hoa chữ đầu và nhấn đầu chữ sau
-                        string[] parts = Kho_TacGia.Text.Split(new string[] { space }, StringSplitOptions.RemoveEmptyEntries);
-                        Kho_TacGia.Text = "";
-                        bool hetchu = false;
-                        for (int i = 0; i < slc; i++)
+                        if (c != true && Kho_TacGia.Text[i] >= 'a' && Kho_TacGia.Text[i] <= 'z' || c != true && Kho_TacGia.Text[i] >= 'A' && Kho_TacGia.Text[i] <= 'Z')
                         {
-                            parts[i] = parts[i].Substring(0, 1).ToUpper() + parts[i].Substring(1, parts[i].Length - 1).ToLower();
-                            Kho_TacGia.Text = Kho_TacGia.Text + parts[i];
-                            if (i >= 0 && i < slc) hetchu = true;
-                            if (hetchu == true) Kho_TacGia.Text += " ";
+                            slc++;
+                            c = true;
+                        }
+                        if (Kho_TacGia.Text[i] == ' ' && c == true)
+                        {
+                            c = false;
                         }
                     }
+                    for (int i = 0; i < Kho_TacGia.Text.Length; i++)
+                    {
+                        if (Kho_TacGia.Text[i] == ' ' && Kho_TacGia.Text[i + 1] == ' ')
+                        {
+                            Kho_TacGia.Text = Kho_TacGia.Text.Remove(i, 1);
+                        }
+                    }
+                    c = false;
+                    string x = "";
+                    string xx = "";
+                    for (int i = 0; i < Kho_TacGia.Text.Length; i++)
+                    {
+                        if (c == false && Kho_TacGia.Text[i] >= 127 || c == false && Kho_TacGia.Text[i] >= 'a' && Kho_TacGia.Text[i] <= 'z' || c == false && Kho_TacGia.Text[i] >= 'A' && Kho_TacGia.Text[i] <= 'Z')
+                        {
+                            x += Kho_TacGia.Text[i];
+                        }
+                        if (Kho_TacGia.Text[i] == ' ')
+                        {
+                            c = true;
+                        }
+                        if (c == true || i + 1 == Kho_TacGia.Text.Length)
+                        {
+                            x = x.Substring(0, 1).ToUpper() + x.Substring(1, x.Length - 1).ToLower();
+                            slc--;
+                            xx += x + " ";
+                            x = "";
+                            c = false;
+                        }
+                    }
+                    Kho_TacGia.Text = xx.Trim();
                 }
                 if (Kho_TacGia.Text.Length == 0)
                 {
                     Tick.Clear();
-                    errorProvider1.SetError(this.Kho_TacGia, "Bạn chưa nhập tên! ");
-                    e.Cancel = true;
+                    errorProvider1.SetError(this.Kho_TacGia, "Vui lòng nhập lại!!");
+                    e.Cancel=true;
                 }
                 else
                 {
                     errorProvider1.Clear();
-                    Tick.SetError(Kho_TacGia, "xong");
+                    Tick.SetError(Kho_TacGia, "You passed!");
                     e.Cancel = false;
-
                 }
             }
             catch
@@ -671,7 +657,7 @@ namespace QuanLyKho
                 Kho_MaSach.Enabled = false;
                 Kho_TacGia.Enabled = true;
                 Kho_NhaXuatBan.Enabled = true;
-                text_MoTA.Enabled = false;
+                text_MoTA.Enabled = true;
             }
         }
         bool dn = false;
@@ -746,6 +732,11 @@ namespace QuanLyKho
         private void DangXuat_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void Kho_MaSach_Validating(object sender, CancelEventArgs e)
+        {
+
         }
     }
 }

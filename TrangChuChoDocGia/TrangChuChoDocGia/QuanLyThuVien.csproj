@@ -64,6 +64,12 @@
   <ItemGroup>
     <Compile Include="DanhSachSach.cs" />
     <Compile Include="HoSo.cs" />
+    <Compile Include="LayLaiMatKhau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LayLaiMatKhau.Designer.cs">
+      <DependentUpon>LayLaiMatKhau.cs</DependentUpon>
+    </Compile>
     <Compile Include="Log_in.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +86,9 @@
     <Compile Include="ThanhLy.cs" />
     <Compile Include="TheDocGia.cs" />
     <Compile Include="TraSach.cs" />
+    <EmbeddedResource Include="LayLaiMatKhau.resx">
+      <DependentUpon>LayLaiMatKhau.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Log_in.resx">
       <DependentUpon>Log_in.cs</DependentUpon>
     </EmbeddedResource>

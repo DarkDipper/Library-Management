@@ -75,5 +75,13 @@ namespace  Trang_Chu
                 User_name.Focus();
             }
         }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            LayLaiMatKhau x = new LayLaiMatKhau();
+            this.Hide();
+            x.ShowDialog();
+            this.Show();
+        }
     }
 }

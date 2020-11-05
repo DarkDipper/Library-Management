@@ -374,7 +374,7 @@ namespace QLDG
             Hienthi();
             HienThiKho();
             GoiY();
-            SizeBang = dataTheDocGia.Rows.Count;
+            SizeBang = dataTheDocGia.Rows.Count+1;
             f2NgaySinh.Text = DateTime.Today.ToString();
             foreach(var item in qltv.TheDocGias)
             {
@@ -803,7 +803,6 @@ namespace QLDG
                     tra.NgayTra = DateTime.Today;
                     tra.SoNgayMuon = (DateTime.Today - sach.NgayMuon).Value.Days;
                     dss.TinhTrang = "Còn";
-                    qltv.MuonSaches.Remove(sach);
                     qltv.DanhSachSaches.AddOrUpdate(dss);
                     qltv.SaveChanges();
                     int songay = (DateTime.Today - sach.NgayMuon).Value.Days;
@@ -855,7 +854,11 @@ namespace QLDG
                 listBox_MSach.Items.Clear();
                 foreach(MuonSach item in qltv.MuonSaches)
                 {
-                    if (item.MaDocGia == comboBox_MDG.Text) listBox_MSach.Items.Add(item.MaSach);
+                    if (item.MaDocGia == comboBox_MDG.Text)
+                    {
+                        var sach = qltv.DanhSachSaches.SingleOrDefault(p => p.MaSach == item.MaSach);
+                        if(sach.TinhTrang=="Không có") listBox_MSach.Items.Add(sach.MaSach);
+                    }
                 }
                 comboBox_MDG.Enabled = false;
             }
@@ -931,7 +934,11 @@ namespace QLDG
                 listBox_MsachMat.Items.Clear();
                 foreach (MuonSach item in qltv.MuonSaches)
                 {
-                    if (item.MaDocGia == comboBox_MDGmat.Text) listBox_MsachMat.Items.Add(item.MaSach);
+                    if (item.MaDocGia == comboBox_MDGmat.Text)
+                    {
+                        var sach = qltv.DanhSachSaches.SingleOrDefault(p => p.MaSach == item.MaSach);
+                        if (sach.TinhTrang == "Không có") listBox_MsachMat.Items.Add(sach.MaSach);
+                    }
                 }
                 comboBox_MDGmat.Enabled = false;
             }
@@ -1021,7 +1028,6 @@ namespace QLDG
                     mat.NgayGhiNhan = DateTime.Today;
                     qltv.DanhSachSaches.AddOrUpdate(dss);
                     qltv.MatSaches.AddOrUpdate(mat);
-                    qltv.MuonSaches.Remove(sach);
                     qltv.SaveChanges();
                     a[1] = gia.ToString();
                     a[2] = (gia * 1.2).ToString();
@@ -1064,6 +1070,11 @@ namespace QLDG
         private void DangXuat_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void comboBox_MDG_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

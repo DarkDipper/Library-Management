@@ -61,6 +61,8 @@
             this.t3 = new System.Windows.Forms.Label();
             this.t1 = new System.Windows.Forms.Label();
             this.muon = new System.Windows.Forms.TabPage();
+            this.groupBox13 = new System.Windows.Forms.GroupBox();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.txt_muonSach = new System.Windows.Forms.ListBox();
             this.txt_muonDG = new System.Windows.Forms.ComboBox();
@@ -142,8 +144,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.er = new System.Windows.Forms.ErrorProvider(this.components);
             this.Tick = new System.Windows.Forms.ErrorProvider(this.components);
-            this.groupBox13 = new System.Windows.Forms.GroupBox();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.tabControl1.SuspendLayout();
             this.Thongtin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataTheDocGia)).BeginInit();
@@ -151,6 +151,7 @@
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.muon.SuspendLayout();
+            this.groupBox13.SuspendLayout();
             this.groupBox7.SuspendLayout();
             this.groupBox6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataSachMuon)).BeginInit();
@@ -167,7 +168,6 @@
             this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.er)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Tick)).BeginInit();
-            this.groupBox13.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -197,7 +197,7 @@
             this.Thongtin.Location = new System.Drawing.Point(4, 22);
             this.Thongtin.Name = "Thongtin";
             this.Thongtin.Padding = new System.Windows.Forms.Padding(3);
-            this.Thongtin.Size = new System.Drawing.Size(877, 322);
+            this.Thongtin.Size = new System.Drawing.Size(903, 322);
             this.Thongtin.TabIndex = 0;
             this.Thongtin.Text = "Thẻ độc giả";
             this.Thongtin.UseVisualStyleBackColor = true;
@@ -522,6 +522,27 @@
             this.muon.Text = "Mượn sách";
             this.muon.UseVisualStyleBackColor = true;
             // 
+            // groupBox13
+            // 
+            this.groupBox13.Controls.Add(this.richTextBox1);
+            this.groupBox13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox13.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.groupBox13.Location = new System.Drawing.Point(640, 10);
+            this.groupBox13.Name = "groupBox13";
+            this.groupBox13.Size = new System.Drawing.Size(256, 307);
+            this.groupBox13.TabIndex = 11;
+            this.groupBox13.TabStop = false;
+            this.groupBox13.Text = "Gợi ý";
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Location = new System.Drawing.Point(7, 18);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.ReadOnly = true;
+            this.richTextBox1.Size = new System.Drawing.Size(243, 276);
+            this.richTextBox1.TabIndex = 0;
+            this.richTextBox1.Text = "";
+            // 
             // groupBox7
             // 
             this.groupBox7.Controls.Add(this.txt_muonSach);
@@ -689,7 +710,7 @@
             this.tra.Controls.Add(this.ThanhToanTra);
             this.tra.Location = new System.Drawing.Point(4, 22);
             this.tra.Name = "tra";
-            this.tra.Size = new System.Drawing.Size(877, 322);
+            this.tra.Size = new System.Drawing.Size(903, 322);
             this.tra.TabIndex = 3;
             this.tra.Text = "Trả sách";
             this.tra.UseVisualStyleBackColor = true;
@@ -813,6 +834,7 @@
             this.comboBox_MDG.Name = "comboBox_MDG";
             this.comboBox_MDG.Size = new System.Drawing.Size(161, 24);
             this.comboBox_MDG.TabIndex = 13;
+            this.comboBox_MDG.SelectedIndexChanged += new System.EventHandler(this.comboBox_MDG_SelectedIndexChanged);
             this.comboBox_MDG.SelectedValueChanged += new System.EventHandler(this.comboBox_MDG_SelectedValueChanged);
             // 
             // label17
@@ -919,7 +941,7 @@
             this.mat.Controls.Add(this.groupBox12);
             this.mat.Location = new System.Drawing.Point(4, 22);
             this.mat.Name = "mat";
-            this.mat.Size = new System.Drawing.Size(877, 322);
+            this.mat.Size = new System.Drawing.Size(903, 322);
             this.mat.TabIndex = 4;
             this.mat.Text = "Mất sách";
             this.mat.UseVisualStyleBackColor = true;
@@ -1144,7 +1166,7 @@
             this.Admin.Controls.Add(this.groupBox5);
             this.Admin.Location = new System.Drawing.Point(4, 22);
             this.Admin.Name = "Admin";
-            this.Admin.Size = new System.Drawing.Size(877, 322);
+            this.Admin.Size = new System.Drawing.Size(903, 322);
             this.Admin.TabIndex = 2;
             this.Admin.Text = "Tài khoản thủ thư";
             this.Admin.UseVisualStyleBackColor = true;
@@ -1437,27 +1459,6 @@
             this.Tick.ContainerControl = this;
             this.Tick.Icon = ((System.Drawing.Icon)(resources.GetObject("Tick.Icon")));
             // 
-            // groupBox13
-            // 
-            this.groupBox13.Controls.Add(this.richTextBox1);
-            this.groupBox13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox13.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.groupBox13.Location = new System.Drawing.Point(640, 10);
-            this.groupBox13.Name = "groupBox13";
-            this.groupBox13.Size = new System.Drawing.Size(256, 307);
-            this.groupBox13.TabIndex = 11;
-            this.groupBox13.TabStop = false;
-            this.groupBox13.Text = "Gợi ý";
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.Location = new System.Drawing.Point(7, 18);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.ReadOnly = true;
-            this.richTextBox1.Size = new System.Drawing.Size(243, 276);
-            this.richTextBox1.TabIndex = 0;
-            this.richTextBox1.Text = "";
-            // 
             // QLDG
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1481,6 +1482,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.muon.ResumeLayout(false);
+            this.groupBox13.ResumeLayout(false);
             this.groupBox7.ResumeLayout(false);
             this.groupBox7.PerformLayout();
             this.groupBox6.ResumeLayout(false);
@@ -1505,7 +1507,6 @@
             this.groupBox5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.er)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Tick)).EndInit();
-            this.groupBox13.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

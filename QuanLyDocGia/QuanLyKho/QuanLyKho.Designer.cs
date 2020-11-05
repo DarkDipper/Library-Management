@@ -34,6 +34,8 @@
             this.Tick = new System.Windows.Forms.ErrorProvider(this.components);
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.qls = new System.Windows.Forms.TabPage();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button2 = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -45,6 +47,13 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button_Excel = new System.Windows.Forms.Button();
             this.button_PDF = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.button_Tim = new System.Windows.Forms.Button();
+            this.comboBox_Tim = new System.Windows.Forms.ComboBox();
+            this.button_Sua = new System.Windows.Forms.Button();
+            this.button_Xoa = new System.Windows.Forms.Button();
+            this.button_Them = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label15 = new System.Windows.Forms.Label();
             this.text_MoTA = new System.Windows.Forms.TextBox();
@@ -87,21 +96,15 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.button_Them = new System.Windows.Forms.Button();
-            this.button_Xoa = new System.Windows.Forms.Button();
-            this.button_Sua = new System.Windows.Forms.Button();
-            this.comboBox_Tim = new System.Windows.Forms.ComboBox();
-            this.button_Tim = new System.Windows.Forms.Button();
-            this.label8 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Tick)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.qls.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataKho)).BeginInit();
             this.groupBox3.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Kho_Gia)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Kho_NamXuatBan)).BeginInit();
@@ -109,9 +112,6 @@
             this.groupBox9.SuspendLayout();
             this.groupBox8.SuspendLayout();
             this.groupBox5.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.groupBox4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // errorProvider1
@@ -157,6 +157,25 @@
             this.qls.TabIndex = 0;
             this.qls.Text = "Quản lý sách";
             this.qls.UseVisualStyleBackColor = true;
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.pictureBox1);
+            this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox4.Location = new System.Drawing.Point(6, 10);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(330, 381);
+            this.groupBox4.TabIndex = 21;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Bìa sách";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(7, 19);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(317, 356);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // button2
             // 
@@ -280,6 +299,94 @@
             this.button_PDF.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button_PDF.UseVisualStyleBackColor = true;
             this.button_PDF.Click += new System.EventHandler(this.button_PDF_Click_1);
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.label8);
+            this.groupBox2.Controls.Add(this.button_Tim);
+            this.groupBox2.Controls.Add(this.comboBox_Tim);
+            this.groupBox2.Controls.Add(this.button_Sua);
+            this.groupBox2.Controls.Add(this.button_Xoa);
+            this.groupBox2.Controls.Add(this.button_Them);
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Location = new System.Drawing.Point(661, 6);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(104, 262);
+            this.groupBox2.TabIndex = 12;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Chức năng";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(8, 161);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(85, 15);
+            this.label8.TabIndex = 3;
+            this.label8.Text = "Chọn cách tìm";
+            // 
+            // button_Tim
+            // 
+            this.button_Tim.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_Tim.Location = new System.Drawing.Point(12, 210);
+            this.button_Tim.Name = "button_Tim";
+            this.button_Tim.Size = new System.Drawing.Size(75, 45);
+            this.button_Tim.TabIndex = 4;
+            this.button_Tim.Text = "Tìm";
+            this.button_Tim.UseVisualStyleBackColor = true;
+            this.button_Tim.Click += new System.EventHandler(this.button_Tim_Click_1);
+            // 
+            // comboBox_Tim
+            // 
+            this.comboBox_Tim.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_Tim.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox_Tim.FormattingEnabled = true;
+            this.comboBox_Tim.Items.AddRange(new object[] {
+            "Mã sách",
+            "Tên sách",
+            "Thể loại",
+            "Tên tác giả",
+            "Đã cũ",
+            "Tất cả"});
+            this.comboBox_Tim.Location = new System.Drawing.Point(12, 180);
+            this.comboBox_Tim.Name = "comboBox_Tim";
+            this.comboBox_Tim.Size = new System.Drawing.Size(75, 24);
+            this.comboBox_Tim.TabIndex = 3;
+            this.comboBox_Tim.SelectedIndexChanged += new System.EventHandler(this.comboBox_Tim_SelectedIndexChanged);
+            // 
+            // button_Sua
+            // 
+            this.button_Sua.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_Sua.Location = new System.Drawing.Point(12, 110);
+            this.button_Sua.Name = "button_Sua";
+            this.button_Sua.Size = new System.Drawing.Size(75, 40);
+            this.button_Sua.TabIndex = 2;
+            this.button_Sua.Text = "Sửa";
+            this.button_Sua.UseVisualStyleBackColor = true;
+            this.button_Sua.Click += new System.EventHandler(this.button_Sua_Click_1);
+            // 
+            // button_Xoa
+            // 
+            this.button_Xoa.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_Xoa.Location = new System.Drawing.Point(11, 64);
+            this.button_Xoa.Name = "button_Xoa";
+            this.button_Xoa.Size = new System.Drawing.Size(75, 40);
+            this.button_Xoa.TabIndex = 1;
+            this.button_Xoa.Text = "Xóa";
+            this.button_Xoa.UseVisualStyleBackColor = true;
+            this.button_Xoa.Click += new System.EventHandler(this.button_Xoa_Click_1);
+            // 
+            // button_Them
+            // 
+            this.button_Them.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_Them.Location = new System.Drawing.Point(12, 18);
+            this.button_Them.Name = "button_Them";
+            this.button_Them.Size = new System.Drawing.Size(75, 40);
+            this.button_Them.TabIndex = 0;
+            this.button_Them.Text = "Thêm";
+            this.button_Them.UseVisualStyleBackColor = true;
+            this.button_Them.Click += new System.EventHandler(this.button_Them_Click_1);
             // 
             // groupBox1
             // 
@@ -413,12 +520,13 @@
             this.Kho_MaSach.Name = "Kho_MaSach";
             this.Kho_MaSach.Size = new System.Drawing.Size(204, 22);
             this.Kho_MaSach.TabIndex = 0;
+            this.Kho_MaSach.Validating += new System.ComponentModel.CancelEventHandler(this.Kho_MaSach_Validating);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(3, 245);
+            this.label7.Location = new System.Drawing.Point(3, 248);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(33, 15);
             this.label7.TabIndex = 11;
@@ -775,113 +883,6 @@
             this.label14.TabIndex = 0;
             this.label14.Text = "Họ và tên :";
             // 
-            // button_Them
-            // 
-            this.button_Them.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_Them.Location = new System.Drawing.Point(12, 18);
-            this.button_Them.Name = "button_Them";
-            this.button_Them.Size = new System.Drawing.Size(75, 40);
-            this.button_Them.TabIndex = 0;
-            this.button_Them.Text = "Thêm";
-            this.button_Them.UseVisualStyleBackColor = true;
-            this.button_Them.Click += new System.EventHandler(this.button_Them_Click_1);
-            // 
-            // button_Xoa
-            // 
-            this.button_Xoa.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_Xoa.Location = new System.Drawing.Point(11, 64);
-            this.button_Xoa.Name = "button_Xoa";
-            this.button_Xoa.Size = new System.Drawing.Size(75, 40);
-            this.button_Xoa.TabIndex = 1;
-            this.button_Xoa.Text = "Xóa";
-            this.button_Xoa.UseVisualStyleBackColor = true;
-            this.button_Xoa.Click += new System.EventHandler(this.button_Xoa_Click_1);
-            // 
-            // button_Sua
-            // 
-            this.button_Sua.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_Sua.Location = new System.Drawing.Point(12, 110);
-            this.button_Sua.Name = "button_Sua";
-            this.button_Sua.Size = new System.Drawing.Size(75, 40);
-            this.button_Sua.TabIndex = 2;
-            this.button_Sua.Text = "Sửa";
-            this.button_Sua.UseVisualStyleBackColor = true;
-            this.button_Sua.Click += new System.EventHandler(this.button_Sua_Click_1);
-            // 
-            // comboBox_Tim
-            // 
-            this.comboBox_Tim.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox_Tim.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox_Tim.FormattingEnabled = true;
-            this.comboBox_Tim.Items.AddRange(new object[] {
-            "Mã sách",
-            "Tên sách",
-            "Thể loại",
-            "Tên tác giả",
-            "Đã cũ",
-            "Tất cả"});
-            this.comboBox_Tim.Location = new System.Drawing.Point(12, 180);
-            this.comboBox_Tim.Name = "comboBox_Tim";
-            this.comboBox_Tim.Size = new System.Drawing.Size(75, 24);
-            this.comboBox_Tim.TabIndex = 3;
-            this.comboBox_Tim.SelectedIndexChanged += new System.EventHandler(this.comboBox_Tim_SelectedIndexChanged);
-            // 
-            // button_Tim
-            // 
-            this.button_Tim.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_Tim.Location = new System.Drawing.Point(12, 210);
-            this.button_Tim.Name = "button_Tim";
-            this.button_Tim.Size = new System.Drawing.Size(75, 45);
-            this.button_Tim.TabIndex = 4;
-            this.button_Tim.Text = "Tìm";
-            this.button_Tim.UseVisualStyleBackColor = true;
-            this.button_Tim.Click += new System.EventHandler(this.button_Tim_Click_1);
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(8, 161);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(85, 15);
-            this.label8.TabIndex = 3;
-            this.label8.Text = "Chọn cách tìm";
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.label8);
-            this.groupBox2.Controls.Add(this.button_Tim);
-            this.groupBox2.Controls.Add(this.comboBox_Tim);
-            this.groupBox2.Controls.Add(this.button_Sua);
-            this.groupBox2.Controls.Add(this.button_Xoa);
-            this.groupBox2.Controls.Add(this.button_Them);
-            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(661, 6);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(104, 262);
-            this.groupBox2.TabIndex = 12;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Chức năng";
-            // 
-            // groupBox4
-            // 
-            this.groupBox4.Controls.Add(this.pictureBox1);
-            this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox4.Location = new System.Drawing.Point(6, 10);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(330, 381);
-            this.groupBox4.TabIndex = 21;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Ảnh sách";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(7, 19);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(317, 346);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // QuanLyKho
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -893,15 +894,18 @@
             this.MaximizeBox = false;
             this.Name = "QuanLyKho";
             this.Text = "Quản lý kho sách";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.QuanLyKho_FormClosing);
             this.Load += new System.EventHandler(this.QuanLyKho_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Tick)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.qls.ResumeLayout(false);
             this.qls.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataKho)).EndInit();
             this.groupBox3.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Kho_Gia)).EndInit();
@@ -912,10 +916,6 @@
             this.groupBox8.PerformLayout();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.groupBox4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

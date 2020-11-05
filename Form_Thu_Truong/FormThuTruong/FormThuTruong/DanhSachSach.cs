@@ -52,7 +52,9 @@ namespace FormThuTruong
         [StringLength(500)]
         public string MoTa { get; set; }
 
-        public float? DanhGia { get; set; }
+        public double? DanhGia { get; set; }
+
+        [StringLength(1000)]
         public string LuotDanhGia { get; set; }
 
         public virtual HoSo HoSo { get; set; }
