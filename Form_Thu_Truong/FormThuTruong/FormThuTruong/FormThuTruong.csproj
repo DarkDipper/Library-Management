@@ -152,6 +152,10 @@
     <None Include="Resources\4092564-about-mobile-ui-profile-ui-user-website_114033 %281%29.ico" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\Form_Danh_Sach_Nhan_Vien\Form_Danh_Sach_Nhan_Vien.csproj">
+      <Project>{736081ad-3cf8-4204-b2f3-3ec4006fc437}</Project>
+      <Name>Form_Danh_Sach_Nhan_Vien</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\..\From_dang_ky\From_dang_ky\From_dang_ky.csproj">
       <Project>{80b53431-5fde-4538-bcae-222124e368bd}</Project>
       <Name>From_dang_ky</Name>
