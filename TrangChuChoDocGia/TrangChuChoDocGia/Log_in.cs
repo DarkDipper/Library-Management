@@ -61,6 +61,14 @@ namespace  Trang_Chu
                         boss.ShowDialog();
                         this.Show();
                     }
+                    else if (nv.BoPhan == "Thủ quỹ")
+                    {
+                        WindowsFormsApp4.ThuQuy quy1 = new WindowsFormsApp4.ThuQuy();
+                        quy1.NV = nv.MaNV;
+                        this.Hide();
+                        quy1.ShowDialog();
+                        this.Show();
+                    }
                 }
             }
 

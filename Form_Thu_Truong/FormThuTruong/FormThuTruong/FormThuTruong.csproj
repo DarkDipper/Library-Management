@@ -61,6 +61,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BaoCao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaoCao.Designer.cs">
+      <DependentUpon>BaoCao.cs</DependentUpon>
+    </Compile>
     <Compile Include="CaNhan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,6 +75,7 @@
     </Compile>
     <Compile Include="DanhSachSach.cs" />
     <Compile Include="HoSo.cs" />
+    <Compile Include="LichSuMuon.cs" />
     <Compile Include="MatSach.cs" />
     <Compile Include="MuonSach.cs" />
     <Compile Include="NhanVien.cs">
@@ -80,7 +87,6 @@
     <Compile Include="QuanLyTV.cs" />
     <Compile Include="sysdiagram.cs" />
     <Compile Include="TaiKhoanNV.cs" />
-    <Compile Include="ThanhLy.cs" />
     <Compile Include="TheDocGia.cs" />
     <Compile Include="ThuTruong.cs">
       <SubType>Form</SubType>
@@ -91,6 +97,9 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TraSach.cs" />
+    <EmbeddedResource Include="BaoCao.resx">
+      <DependentUpon>BaoCao.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CaNhan.resx">
       <DependentUpon>CaNhan.cs</DependentUpon>
     </EmbeddedResource>
@@ -152,10 +161,6 @@
     <None Include="Resources\4092564-about-mobile-ui-profile-ui-user-website_114033 %281%29.ico" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Form_Danh_Sach_Nhan_Vien\Form_Danh_Sach_Nhan_Vien.csproj">
-      <Project>{736081ad-3cf8-4204-b2f3-3ec4006fc437}</Project>
-      <Name>Form_Danh_Sach_Nhan_Vien</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\..\From_dang_ky\From_dang_ky\From_dang_ky.csproj">
       <Project>{80b53431-5fde-4538-bcae-222124e368bd}</Project>
       <Name>From_dang_ky</Name>
@@ -167,6 +172,10 @@
     <ProjectReference Include="..\..\..\QuanLyDocGia\QuanLyKho\QuanLyKho.csproj">
       <Project>{24ff2127-db60-4551-aa51-02444a7f4ce4}</Project>
       <Name>QuanLyKho</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\WindowsFormsApp4\WindowsFormsApp4\WindowsFormsApp4\WindowsFormsApp4.csproj">
+      <Project>{b04299b3-8a70-49af-8625-07df303e4f81}</Project>
+      <Name>WindowsFormsApp4</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

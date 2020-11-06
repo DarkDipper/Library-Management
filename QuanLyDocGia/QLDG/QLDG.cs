@@ -7,6 +7,7 @@ using System.Data.Entity.Migrations;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Globalization;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -33,9 +34,19 @@ namespace QLDG
         bool pdate = false;
         bool dn = false;
         bool mk = false;
+        bool dt = false;
 
         int SizeBang;
         //===================================bổ trợ======================
+        public Image ByteArrayToImage(byte[] byteArrayIn)
+        {
+            using (var ms = new MemoryStream(byteArrayIn))
+            {
+                var returnImage = Image.FromStream(ms);
+
+                return returnImage;
+            }
+        }
         public bool KiemTraSach(string txt_muonSach)
         {
             var sach = qltv.DanhSachSaches.SingleOrDefault(p => p.MaSach == txt_muonSach);
@@ -105,7 +116,7 @@ namespace QLDG
         void GoiY()
         {
             string sachvip = "";
-            var sach = from i in qltv.DanhSachSaches where i.DanhGia >= 4.3 select i;
+            var sach = from i in qltv.DanhSachSaches where i.DanhGia >= 4.3 && i.TinhTrang == "Còn" select i;
             foreach (var i in sach)
             {
                 sachvip += i.MaSach + "\n" + i.TenSach + "\n --------------------------------------------\n";
@@ -369,6 +380,7 @@ namespace QLDG
                 tt_mnv.Text = y.MaNV;
                 tt_tenDN.Enabled = true;
                 tt_Matkhau.Enabled = true;
+                tt_dienthoai.Enabled = true;
                 LuuThayDoi.Enabled = true;
             }
             Hienthi();
@@ -690,6 +702,7 @@ namespace QLDG
             try
             {
                 txt_muonSach.Items.Add(dataSachMuon.SelectedCells[0].Value.ToString());
+                
             }
             catch
             {
@@ -758,10 +771,43 @@ namespace QLDG
                 mk = false;
             }
         }
-
+        private void tt_dienthoai_Leave(object sender, EventArgs e)
+        {
+            if (tt_dienthoai.Text.Length == 10)
+            {
+                if (tt_dienthoai.Text[0] == '0')
+                {
+                    for (int i = 0; i < 10; i++)
+                    {
+                        if (!(48 <= (int)tt_dienthoai.Text[i] && (int)tt_dienthoai.Text[i] <= 57))
+                        {
+                            Tick.Clear();
+                            er.SetError(tt_dienthoai, "Có ký tự không phải số trong số điện thoại");
+                            dt = false;
+                            return;
+                        }
+                    }
+                }
+                else
+                {
+                    Tick.Clear();
+                    er.SetError(tt_dienthoai, "Số điện thoại phải bắt đầu số 0 ");
+                    dt = false;
+                }
+                er.Clear();
+                Tick.SetError(tt_dienthoai, "Xong");
+                dt = true;
+            }
+            else
+            {
+                Tick.Clear();
+                er.SetError(tt_dienthoai, "Số điện thoại không đủ 10 chữ số");
+                dt = false;
+            }
+        }
         private void LuuThayDoi_Click(object sender, EventArgs e)
         {
-            if (dn == true && mk == true)
+            if (dn == true && mk == true && dt == true )
             {
                 TaiKhoanNV x = qltv.TaiKhoanNVs.SingleOrDefault(p => p.MaNV == NV);
                 x.TenDN = tt_tenDN.Text;
@@ -1075,6 +1121,15 @@ namespace QLDG
         private void comboBox_MDG_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void dataSachMuon_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string sach = dataSachMuon.SelectedCells[0].Value.ToString();
+            var x = qltv.DanhSachSaches.SingleOrDefault(p => p.MaSach == sach);
+            //MessageBox.Show($"{x.TenSach}");
+            if (x.Anh != null) pictureBox1.Image = ByteArrayToImage(x.Anh);
+            else pictureBox1.Image = null;
         }
     }
 }

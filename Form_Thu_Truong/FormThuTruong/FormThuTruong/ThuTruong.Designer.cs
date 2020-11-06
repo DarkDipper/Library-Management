@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ThuTruong));
             this.circularProgressBar_DG = new CircularProgressBar.CircularProgressBar();
             this.circularProgressBar_SACH = new CircularProgressBar.CircularProgressBar();
             this.button_DangXuat = new System.Windows.Forms.Button();
@@ -135,6 +136,7 @@
             this.button_Sach.TabIndex = 1;
             this.button_Sach.Text = "Sách";
             this.button_Sach.UseVisualStyleBackColor = false;
+            this.button_Sach.Click += new System.EventHandler(this.button_Sach_Click);
             // 
             // button6
             // 
@@ -197,6 +199,7 @@
             this.button_TaiChinh.TabIndex = 1;
             this.button_TaiChinh.Text = "Tài Chính";
             this.button_TaiChinh.UseVisualStyleBackColor = false;
+            this.button_TaiChinh.Click += new System.EventHandler(this.button_TaiChinh_Click);
             // 
             // button_DangKy
             // 
@@ -250,6 +253,7 @@
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "ThuTruong";

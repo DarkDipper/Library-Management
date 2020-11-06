@@ -24,6 +24,15 @@ namespace QuanLyKho
             InitializeComponent();
             AutoValidate = AutoValidate.EnableAllowFocusChange;
         }
+        public int SizeBang;
+        public int i = 1;
+        public string Mathukho = "E.002";
+        public bool check = false;
+        QuanLyTV qltv = new QuanLyTV();
+
+        //========================================================Hàm bổ trợ ===================================================
+        //SqlConnection con;
+
         public Image ByteArrayToImage(byte[] byteArrayIn)
         {
             using (var ms = new MemoryStream(byteArrayIn))
@@ -43,12 +52,6 @@ namespace QuanLyKho
                 return ms.ToArray();
             }
         }
-        //========================================================Hàm bổ trợ ===================================================
-        //SqlConnection con;
-        public int SizeBang;
-        public int i = 1;
-        public string Mathukho="E.002";
-        QuanLyTV qltv = new QuanLyTV();
         public void HienThi()
         {/*SqlCommand cmd = new SqlCommand("select MaSach as N'Mã sách'," +
                                                                         "TenSach as N'Tên sách'," +
@@ -120,17 +123,24 @@ namespace QuanLyKho
         //------------------------------------------------------------Xử lý chức năng----------------------------------------
         private void QuanLyKho_Load(object sender, EventArgs e)
         {
-            HoSo x = qltv.HoSoes.SingleOrDefault(p => p.MaNV == Mathukho);
-            tt_Ten.Text = x.HoTen;
-            tt_ngaysinh.Text = x.NgaySinh.Value.ToString("dd/MM/yyyy");
-            tt_diachi.Text = x.DiaChi;
-            tt_dienthoai.Text = x.DienThoai;
-            tt_bangcap.Text = x.BangCap;
-            tt_nlv.Text = x.NgayLamViec.Value.ToString("dd/MM/yyyy");
-            TaiKhoanNV y = qltv.TaiKhoanNVs.SingleOrDefault(p => p.MaNV == Mathukho);
-            tt_tenDN.Text = y.TenDN;
-            tt_Matkhau.Text = y.MatKhau;
-            tt_mnv.Text = y.MaNV;
+            if (!check)
+            {
+                HoSo x = qltv.HoSoes.SingleOrDefault(p => p.MaNV == Mathukho);
+                tt_Ten.Text = x.HoTen;
+                tt_ngaysinh.Text = x.NgaySinh.Value.ToString("dd/MM/yyyy");
+                tt_diachi.Text = x.DiaChi;
+                tt_dienthoai.Text = x.DienThoai;
+                tt_bangcap.Text = x.BangCap;
+                tt_nlv.Text = x.NgayLamViec.Value.ToString("dd/MM/yyyy");
+                TaiKhoanNV y = qltv.TaiKhoanNVs.SingleOrDefault(p => p.MaNV == Mathukho);
+                tt_tenDN.Text = y.TenDN;
+                tt_Matkhau.Text = y.MatKhau;
+                tt_mnv.Text = y.MaNV;
+                tt_tenDN.Enabled = true;
+                tt_Matkhau.Enabled = true;
+                tt_dienthoai.Enabled = true;
+                LuuThayDoi.Enabled = true;
+            } 
          //   string conString = ConfigurationManager.ConnectionStrings["QuanLyDG"].ConnectionString.ToString();
            // con = new SqlConnection(conString);
            // con.Open();
@@ -187,6 +197,8 @@ namespace QuanLyKho
                     Kho_Gia.Value = int.Parse((money * 0.001).ToString());
                     var sach = qltv.DanhSachSaches.SingleOrDefault(p => p.MaSach == Kho_MaSach.Text);
                     text_MoTA.Text = sach.MoTa;
+                    if (sach.Anh != null) pictureBox1.Image = ByteArrayToImage(sach.Anh);
+                    else pictureBox1.Image = null;
                     button_Them.Enabled = false;
                     button_Sua.Enabled = true;
                     button_Xoa.Enabled = true;
@@ -231,6 +243,7 @@ namespace QuanLyKho
                 x.TriGia = Kho_Gia.Value.ToString() + ".000 đồng";
                 x.NgayNhap = dataKho.SelectedCells[6].Value.ToString();
                 x.NguoiTiepNhan = dataKho.SelectedCells[8].Value.ToString();
+                x.anh = pictureBox1.Image;
                 this.Hide();
                 x.ShowDialog();
                 this.Show();
@@ -331,6 +344,7 @@ namespace QuanLyKho
                 x.NhaXuatBan = Kho_NhaXuatBan.Text;
                 x.TriGia = int.Parse((double.Parse(Kho_Gia.Value.ToString()) * 1000).ToString());
                 x.MoTa = text_MoTA.Text;
+                if(pictureBox1.Image!=null) x.Anh = ImageToByteArray(pictureBox1.Image);
                 /*string sql_ed = $"update DanhSachSach set TenSach=" +
                     $"N'{Kho_TenSach.Text}',TacGia=N'{Kho_TacGia.Text}'," +
                     $"TheLoai=N'{Kho_TheLoai.Text}',NamXuatBan={Kho_NamXuatBan.Value}," +
@@ -393,6 +407,16 @@ namespace QuanLyKho
                 y.DanhGia = 0;
                 y.LuotDanhGia = "";
                 y.MoTa = text_MoTA.Text;
+                Image anh = pictureBox1.Image;
+                var byte_anh = ImageToByteArray(anh);
+                y.Anh = byte_anh;
+               /*      Image Y = pictureBox1.BackgroundImage;
+                var Z = ImageToByteArray(Y);
+                SaveFile A = new SaveFile();
+                A.Name = "Yes";
+                A.Files = Z;
+                x.SaveFiles.Add(A);
+                x.SaveChanges();*/
                 qltv.DanhSachSaches.Add(y);
                 qltv.SaveChanges();
                  /* string sql_in = $@"Insert into DanhSachSach values(
@@ -662,7 +686,7 @@ namespace QuanLyKho
         }
         bool dn = false;
         bool mk = false;
-
+        bool dt = false;
         private void tt_tenDN_Leave(object sender, EventArgs e)
         {
             if (tt_tenDN.Text.Length == 0)
@@ -712,9 +736,43 @@ namespace QuanLyKho
                 mk = false;
             }
         }
+        private void tt_dienthoai_Leave(object sender, EventArgs e)
+        {
+            if (tt_dienthoai.Text.Length == 10)
+            {
+                if (tt_dienthoai.Text[0] == '0')
+                {
+                    for (int i = 0; i < 10; i++)
+                    {
+                        if (!(48 <= (int)tt_dienthoai.Text[i] && (int)tt_dienthoai.Text[i] <= 57))
+                        {
+                            Tick.Clear();
+                            errorProvider1.SetError(tt_dienthoai, "Có ký tự không phải số trong số điện thoại");
+                            dt = false;
+                            return;
+                        }
+                    }
+                }
+                else
+                {
+                    Tick.Clear();
+                    errorProvider1.SetError(tt_dienthoai, "Số điện thoại phải bắt đầu số 0 ");
+                    dt = false;
+                }
+                errorProvider1.Clear();
+                Tick.SetError(tt_dienthoai, "Xong");
+                dt = true;
+            }
+            else
+            {
+                Tick.Clear();
+                errorProvider1.SetError(tt_dienthoai, "Số điện thoại không đủ 10 chữ số");
+                dt = false;
+            }
+        }
         private void LuuThayDoi_Click_1(object sender, EventArgs e)
         {
-            if (dn == true && mk == true)
+            if (dn == true && mk == true && dt == true)
             {
                 TaiKhoanNV x = qltv.TaiKhoanNVs.SingleOrDefault(p => p.MaNV == Mathukho);
                 x.TenDN = tt_tenDN.Text;
@@ -737,6 +795,19 @@ namespace QuanLyKho
         private void Kho_MaSach_Validating(object sender, CancelEventArgs e)
         {
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            using (var fbd = new OpenFileDialog())
+            {
+                DialogResult result = fbd.ShowDialog();
+
+                if (result == DialogResult.OK && !string.IsNullOrWhiteSpace(fbd.FileName))
+                {
+                    pictureBox1.Image = Image.FromFile(fbd.FileName);
+                }
+            }
         }
     }
 }
