@@ -579,6 +579,7 @@ namespace QLDG
         
         private void button_themmuon_Click(object sender, EventArgs e)
         {
+            bool kt = true;
             GoiY();
             if (txt_muonDG.Text.Length != 0 && txt_muonSach.Items.Count != 0)
             {
@@ -590,7 +591,18 @@ namespace QLDG
                     {
                         DateTime data1 = DateTime.Today;
                         DateTime data2 = dg.NgayLapThe.Value;
-                        if (((TimeSpan)(data1 - data2)).Days > 180) MessageBox.Show("Thẻ đã hết hạn", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        if (((TimeSpan)(data1 - data2)).Days > 180)
+                        {
+                            MessageBox.Show("Thẻ đã hết hạn", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            kt = false;
+                            break;
+                        }
+                        else if(dg.TongNo > 1000000)
+                        {
+                            MessageBox.Show("Nợ quá cho phép (hơn 1 triệu)", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            kt = false;
+                            break;
+                        } 
                         else
                         {
                             if (KiemTraSach(muonSach))
@@ -601,6 +613,11 @@ namespace QLDG
                                     {
                                         DanhSachSach sach = qltv.DanhSachSaches.SingleOrDefault(p => p.MaSach == muonSach);
                                         sach.TinhTrang = "Không có";
+                                        LichSuMuon ls = new LichSuMuon();
+                                        ls.TheLoai = sach.TheLoai;
+                                        ls.SoLuot += 1;
+                                        ls.Thang = DateTime.Today.ToString("MM/yyyy");
+                                        qltv.LichSuMuons.AddOrUpdate(ls);
                                         qltv.DanhSachSaches.AddOrUpdate(sach);
                                         MuonSach xy = new MuonSach();
                                         xy.MaDocGia = txt_muonDG.Text;
@@ -612,29 +629,49 @@ namespace QLDG
                                             qltv.SaveChanges();
                                             txt_muonSach.Text = "";
                                             HienThiKho();
-                                           
+
                                         }
                                         catch
                                         {
                                             MessageBox.Show("Đã tồn tại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                                         }
                                     }
-                                    else MessageBox.Show("Không thể mượn thêm được nữa", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                    else
+                                    {
+                                        //kt = false;
+                                        MessageBox.Show("Không thể mượn thêm được nữa", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                        break;
+
+                                    }
                                 }
-                                else MessageBox.Show("Đã có sách quá hạn chưa trả", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                else
+                                {
+
+                                    //  kt = false;
+                                    MessageBox.Show("Đã có sách quá hạn chưa trả", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                    break;
+                                }
                             }
                             else MessageBox.Show($"Mã sách {muonSach} không tồn tại hoặc đã mượn", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         }
                     }
-                    else MessageBox.Show("Thông tin không tồn tại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    else
+                    {
+                        MessageBox.Show("Thông tin không tồn tại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        kt = false;
+                        break;
+                    }
                 }
-                if (MessageBox.Show("Có xuất phiếu mượn không", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.OK)
+                if (kt)
                 {
-                    var x = new PhieuMuon();
-                    x.MaDocGia = txt_muonDG.Text;
-                    this.Hide();
-                    x.ShowDialog();
-                    this.Show();
+                    if (MessageBox.Show("Có xuất phiếu mượn không", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.OK)
+                    {
+                        var x = new PhieuMuon();
+                        x.MaDocGia = txt_muonDG.Text;
+                        this.Hide();
+                        x.ShowDialog();
+                        this.Show();
+                    }
                 }
                 
             }
