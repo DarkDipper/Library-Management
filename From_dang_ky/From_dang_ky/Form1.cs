@@ -93,6 +93,36 @@ namespace From_dang_ky
 
         }
 
+        private void Form_DangKy_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            e.Cancel = false;
+            AutoValidate = AutoValidate.Disable;
+            CausesValidation = false;
+        }
+
+        private void Button_X_Click(object sender, EventArgs e)
+        {
+            AutoValidate = AutoValidate.Disable;
+            CausesValidation = false;
+            this.Close();
+        }
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            if (keyData == Keys.Escape)
+            {
+                //CausesValidation = false;
+                AutoValidate = AutoValidate.Disable;
+                this.Close();
+                return true;
+            }
+            return base.ProcessCmdKey(ref msg, keyData);
+        }
+
+        private void Button_Minisize_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
+
         private void button_DangKy_Click(object sender, EventArgs e)
         {
             if (ValidateChildren(ValidationConstraints.Enabled))
@@ -110,6 +140,7 @@ namespace From_dang_ky
         public Form_DangKy()
         {
             InitializeComponent();
+            
         }
         public bool Only_letter(string x)
         {
@@ -135,7 +166,7 @@ namespace From_dang_ky
                 e.Cancel = true;
                 Check.SetError(txt_Hoten, "Sai dữ liệu đầu vào!");
             }
-            else
+            else 
             {
                 e.Cancel = false;
                 Check.SetError(txt_Hoten, null);

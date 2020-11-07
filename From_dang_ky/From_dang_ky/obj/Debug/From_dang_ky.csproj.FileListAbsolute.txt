@@ -18,3 +18,13 @@ C:\Users\kun\source\repos\DarkDipper\Library-Management\From_dang_ky\From_dang_k
 C:\Users\kun\source\repos\DarkDipper\Library-Management\From_dang_ky\From_dang_ky\obj\Debug\From_dang_ky.csproj.CoreCompileInputs.cache
 C:\Users\kun\source\repos\DarkDipper\Library-Management\From_dang_ky\From_dang_ky\obj\Debug\From_dang_ky.exe
 C:\Users\kun\source\repos\DarkDipper\Library-Management\From_dang_ky\From_dang_ky\obj\Debug\From_dang_ky.pdb
+D:\Project\Library-Management\From_dang_ky\From_dang_ky\bin\Debug\From_dang_ky.exe.config
+D:\Project\Library-Management\From_dang_ky\From_dang_ky\bin\Debug\From_dang_ky.exe
+D:\Project\Library-Management\From_dang_ky\From_dang_ky\bin\Debug\From_dang_ky.pdb
+D:\Project\Library-Management\From_dang_ky\From_dang_ky\obj\Debug\From_dang_ky.csprojAssemblyReference.cache
+D:\Project\Library-Management\From_dang_ky\From_dang_ky\obj\Debug\From_dang_ky.Form_DangKy.resources
+D:\Project\Library-Management\From_dang_ky\From_dang_ky\obj\Debug\From_dang_ky.Properties.Resources.resources
+D:\Project\Library-Management\From_dang_ky\From_dang_ky\obj\Debug\From_dang_ky.csproj.GenerateResource.cache
+D:\Project\Library-Management\From_dang_ky\From_dang_ky\obj\Debug\From_dang_ky.csproj.CoreCompileInputs.cache
+D:\Project\Library-Management\From_dang_ky\From_dang_ky\obj\Debug\From_dang_ky.exe
+D:\Project\Library-Management\From_dang_ky\From_dang_ky\obj\Debug\From_dang_ky.pdb
