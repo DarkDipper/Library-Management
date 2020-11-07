@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Configuration;
 using System.Data;
+using System.Data.Entity.Core.Mapping;
 using System.Data.Entity.Migrations;
 using System.Data.SqlClient;
 using System.Drawing;
@@ -115,6 +116,7 @@ namespace QLDG
         }
         void GoiY()
         {
+            richTextBox1.Clear();
             string sachvip = "";
             var sach = from i in qltv.DanhSachSaches where i.DanhGia >= 4.3 && i.TinhTrang == "Còn" select i;
             foreach (var i in sach)
@@ -155,6 +157,44 @@ namespace QLDG
             double thongke = (double)((SizeBang - 1) * 0.2);
             progressBar_thongke.Value = (int)Math.Round(thongke, 0);
             label_thongke.Text = $"{(SizeBang - 1).ToString()}/500";
+        }
+        void LoadTra()
+        {
+            string kt = "";
+            comboBox_MDG.Items.Clear();
+            var ds = from i in qltv.MuonSaches where i.TrangThai == "Chưa" select i; 
+            foreach( var dg in ds)
+            {
+                if (dg.MaDocGia != kt)
+                {
+                    var sach = qltv.DanhSachSaches.SingleOrDefault(p => p.MaSach == dg.MaSach);
+                    if (sach.TinhTrang == "Không có")
+                    {
+                        comboBox_MDG.Items.Add(dg.MaDocGia);
+                        kt = dg.MaDocGia;
+                    }
+                   
+                }
+            }
+        }
+        void LoadMat()
+        {
+            string kt = "";
+            comboBox_MDGmat.Items.Clear();
+            var ds = from i in qltv.MuonSaches where i.TrangThai == "Chưa" select i;
+            foreach (var dg in ds)
+            {
+                if (dg.MaDocGia != kt)
+                {
+                    var sach = qltv.DanhSachSaches.SingleOrDefault(p => p.MaSach == dg.MaSach);
+                    if (sach.TinhTrang == "Không có")
+                    {
+                        comboBox_MDGmat.Items.Add(dg.MaDocGia);
+                        kt = dg.MaDocGia;
+                    }
+
+                }
+            }
         }
         //=========================================== Xử lý =================
         private void f2Name_Leave(object sender, EventArgs e)
@@ -391,9 +431,8 @@ namespace QLDG
             foreach(var item in qltv.TheDocGias)
             {
                 txt_muonDG.Items.Add(item.MS.ToString());
-                comboBox_MDG.Items.Add(item.MS.ToString());
-                comboBox_MDGmat.Items.Add(item.MS.ToString());
-            } 
+            }
+            
             for (int k = 0; k < dataTheDocGia.Rows.Count - 1; k++)
             {
                 string chuoi = dataTheDocGia.Rows[k].Cells[0].Value.ToString();
@@ -408,6 +447,8 @@ namespace QLDG
             label_NoMuon.Text = "";
             label_TongNo_mat.Text = "";
             ThongKe();
+            LoadTra();
+            LoadMat();
         }
         private void buttonSign_up_Click(object sender, EventArgs e)
         {
@@ -572,15 +613,11 @@ namespace QLDG
                 ThongKe();
             }
         }
-        private void button_muonlammoi_Click(object sender, EventArgs e)
-        {
-            
-        }
         
         private void button_themmuon_Click(object sender, EventArgs e)
         {
             bool kt = true;
-            GoiY();
+            
             if (txt_muonDG.Text.Length != 0 && txt_muonSach.Items.Count != 0)
             {
                 foreach (string muonSach in txt_muonSach.Items)
@@ -633,13 +670,14 @@ namespace QLDG
                                         xy.MaDocGia = txt_muonDG.Text;
                                         xy.MaSach = muonSach;
                                         xy.NgayMuon = DateTime.Today;
+                                        xy.TrangThai = "Chưa";
                                         try
                                         {
                                             qltv.MuonSaches.AddOrUpdate(xy);
                                             qltv.SaveChanges();
                                             txt_muonSach.Text = "";
                                             HienThiKho();
-
+                                            GoiY();
                                         }
                                         catch
                                         {
@@ -876,7 +914,7 @@ namespace QLDG
         int tongno = 0;
         private void button_trathanhtoan_Click(object sender, EventArgs e)
         {
-            GoiY();
+            
             tongno = 0;
             if (listBox_Tra.Items.Count != 0)
             {
@@ -896,6 +934,8 @@ namespace QLDG
                     tra.NgayTra = DateTime.Today;
                     tra.SoNgayMuon = (DateTime.Today - sach.NgayMuon).Value.Days;
                     dss.TinhTrang = "Còn";
+                    sach.TrangThai = "Duyệt";
+                    qltv.MuonSaches.AddOrUpdate(sach);
                     qltv.DanhSachSaches.AddOrUpdate(dss);
                     qltv.SaveChanges();
                     int songay = (DateTime.Today - sach.NgayMuon).Value.Days;
@@ -938,6 +978,8 @@ namespace QLDG
                 Hienthi();
             }
             else MessageBox.Show("Thanh toán thất bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            LoadTra();
+            GoiY();
         }
 
         private void comboBox_MDG_SelectedValueChanged(object sender, EventArgs e)
@@ -1012,6 +1054,7 @@ namespace QLDG
         private void button_Lammoi_Click(object sender, EventArgs e)
         {
             GoiY();
+            LoadTra();
             comboBox_MDG.SelectedIndex = -1;
             comboBox_MDG.Enabled = true;
             listBox_MSach.Items.Clear();
@@ -1097,6 +1140,8 @@ namespace QLDG
             listBox_Mat.Items.Clear();
             listViewMat.Items.Clear();
             label_TongNo_mat.Text = "";
+            GoiY();
+            LoadMat();
         }
 
         private void button_thanhtoan_mat_Click(object sender, EventArgs e)
@@ -1119,6 +1164,8 @@ namespace QLDG
                     mat.MaSach = i;
                     mat.SoTienThu= int.Parse((gia * 1.2).ToString());
                     mat.NgayGhiNhan = DateTime.Today;
+                    sach.TrangThai = "Duyệt";
+                    qltv.MuonSaches.AddOrUpdate(sach);
                     qltv.DanhSachSaches.AddOrUpdate(dss);
                     qltv.MatSaches.AddOrUpdate(mat);
                     qltv.SaveChanges();
@@ -1149,6 +1196,8 @@ namespace QLDG
                 Hienthi();
             }
             else MessageBox.Show("Thanh toán thất bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            GoiY();
+            LoadMat();
         }
 
         private void button_Excel_Click(object sender, EventArgs e)
@@ -1177,6 +1226,10 @@ namespace QLDG
             //MessageBox.Show($"{x.TenSach}");
             if (x.Anh != null) pictureBox1.Image = ByteArrayToImage(x.Anh);
             else pictureBox1.Image = null;
+        }
+        private void tra_Click(object sender, EventArgs e)
+        {
+            LoadTra();
         }
     }
 }
