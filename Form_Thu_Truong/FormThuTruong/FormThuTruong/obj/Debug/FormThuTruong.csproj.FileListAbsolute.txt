@@ -47,3 +47,4 @@ C:\Users\kun\source\repos\DarkDipper\Library-Management\Form_Thu_Truong\FormThuT
 C:\Users\kun\source\repos\DarkDipper\Library-Management\Form_Thu_Truong\FormThuTruong\FormThuTruong\bin\Debug\WindowsFormsApp4.exe
 C:\Users\kun\source\repos\DarkDipper\Library-Management\Form_Thu_Truong\FormThuTruong\FormThuTruong\bin\Debug\WindowsFormsApp4.pdb
 C:\Users\kun\source\repos\DarkDipper\Library-Management\Form_Thu_Truong\FormThuTruong\FormThuTruong\bin\Debug\WindowsFormsApp4.exe.config
+C:\Users\kun\source\repos\DarkDipper\Library-Management\Form_Thu_Truong\FormThuTruong\FormThuTruong\obj\Debug\FormThuTruong.BaoCao.resources

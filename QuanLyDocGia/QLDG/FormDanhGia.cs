@@ -99,7 +99,8 @@ namespace QLDG
             foreach (string i in tra.Items)
             {
                 var sach = qltv.DanhSachSaches.SingleOrDefault(p => p.MaSach == i);
-                sach.LuotDanhGia += a[j].ToString();
+                if (a[j] > 0) sach.LuotDanhGia += a[j].ToString();
+                else sach.LuotDanhGia += "";
                 sach.DanhGia = DanhGia(sach.LuotDanhGia);
                 qltv.DanhSachSaches.AddOrUpdate(sach);
                 qltv.SaveChanges();

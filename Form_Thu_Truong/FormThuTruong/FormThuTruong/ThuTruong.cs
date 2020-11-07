@@ -89,5 +89,13 @@ namespace FormThuTruong
             x.ShowDialog();
             this.Show();
         }
+
+        private void button_BaoCao_Click(object sender, EventArgs e)
+        {
+            BaoCao x = new BaoCao();
+            this.Hide();
+            x.ShowDialog();
+            this.Show();
+        }
     }
 }

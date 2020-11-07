@@ -613,11 +613,21 @@ namespace QLDG
                                     {
                                         DanhSachSach sach = qltv.DanhSachSaches.SingleOrDefault(p => p.MaSach == muonSach);
                                         sach.TinhTrang = "Không có";
-                                        LichSuMuon ls = new LichSuMuon();
-                                        ls.TheLoai = sach.TheLoai;
-                                        ls.SoLuot += 1;
-                                        ls.Thang = DateTime.Today.ToString("MM/yyyy");
-                                        qltv.LichSuMuons.AddOrUpdate(ls);
+                                        string ngay = DateTime.Today.ToString("MM/yyyy");
+                                        var ls = qltv.LichSuMuons.SingleOrDefault(p => p.TheLoai == sach.TheLoai && p.Thang == ngay);
+                                        if (ls == null)
+                                        {
+                                            LichSuMuon lsm = new LichSuMuon();
+                                            lsm.TheLoai = sach.TheLoai;
+                                            lsm.Thang = DateTime.Today.ToString("MM/yyyy");
+                                            lsm.SoLuot = 1;
+                                            qltv.LichSuMuons.Add(lsm);
+                                        }
+                                        else
+                                        {
+                                            ls.SoLuot += 1;
+                                            qltv.LichSuMuons.AddOrUpdate(ls);
+                                        }
                                         qltv.DanhSachSaches.AddOrUpdate(sach);
                                         MuonSach xy = new MuonSach();
                                         xy.MaDocGia = txt_muonDG.Text;
@@ -625,7 +635,7 @@ namespace QLDG
                                         xy.NgayMuon = DateTime.Today;
                                         try
                                         {
-                                            qltv.MuonSaches.Add(xy);
+                                            qltv.MuonSaches.AddOrUpdate(xy);
                                             qltv.SaveChanges();
                                             txt_muonSach.Text = "";
                                             HienThiKho();

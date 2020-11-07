@@ -20,19 +20,26 @@ namespace WindowsFormsApp4
         public string NV = "E.004";
         public bool check = false;
         QuanLyTV quanLy = new QuanLyTV();
+        void LoadNo()
+        {
+            var x = from i in quanLy.TheDocGias where i.TongNo > 0 select i;
+            foreach (var i in x) comboBox1.Items.Add(i.MS);
+        }
         private void Form1_Load(object sender, EventArgs e)
         {
             if (check) button2.Enabled = false;
-            var x = from i in quanLy.TheDocGias select i;
-            foreach (var i in x) comboBox1.Items.Add(i.MS);
+            LoadNo();
         }
         private void comboBox1_SelectedValueChanged(object sender, EventArgs e)
         {
-            txtIn.Enabled = true;
-            var x = quanLy.TheDocGias.SingleOrDefault(p => p.MS == comboBox1.Text);
-            txtTenDG.Text = x.HoTen;
-            txtTien.Text = (x.TongNo*0.001).ToString();
-            if (txtTien.Text == "0") txtIn.Enabled = false;
+            if (comboBox1.Text!="")
+            {
+                txtIn.Enabled = true;
+                var x = quanLy.TheDocGias.SingleOrDefault(p => p.MS == comboBox1.Text);
+                txtTenDG.Text = x.HoTen;
+                txtTien.Text = (x.TongNo * 0.001).ToString();
+                if (txtTien.Text == "0") txtIn.Enabled = false;
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -44,11 +51,20 @@ namespace WindowsFormsApp4
                 quanLy.TheDocGias.AddOrUpdate(x);
                 quanLy.SaveChanges();
                 MessageBox.Show("Đã trả nợ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                comboBox1.Items.Clear();
+                LoadNo();
+                //comboBox1.Items.RemoveAt(comboBox1.SelectedIndex);
             }
             catch
             {
                 MessageBox.Show("Thất bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            txtConno.Text = "";
+            txtIn.Value = 0;
+            txtOut.Text = "";
+            txtTenDG.Text = "";
+            txtTien.Text = "";
+            comboBox1.SelectedIndex = -1;
         }
 
         private void txtIn_Leave(object sender, EventArgs e)

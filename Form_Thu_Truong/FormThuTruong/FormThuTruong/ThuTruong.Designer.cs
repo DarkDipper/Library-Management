@@ -184,6 +184,7 @@
             this.button_BaoCao.TabIndex = 1;
             this.button_BaoCao.Text = "Báo Cáo";
             this.button_BaoCao.UseVisualStyleBackColor = false;
+            this.button_BaoCao.Click += new System.EventHandler(this.button_BaoCao_Click);
             // 
             // button_TaiChinh
             // 
