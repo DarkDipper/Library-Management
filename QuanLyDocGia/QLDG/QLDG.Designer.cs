@@ -186,6 +186,7 @@
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(1096, 348);
             this.tabControl1.TabIndex = 1;
+      //      this.tabControl1.Click += new System.EventHandler(this.tabControl1_Click);
             // 
             // Thongtin
             // 
@@ -741,6 +742,7 @@
             this.tra.TabIndex = 3;
             this.tra.Text = "Trả sách";
             this.tra.UseVisualStyleBackColor = true;
+            this.tra.Click += new System.EventHandler(this.tra_Click);
             // 
             // groupBox10
             // 

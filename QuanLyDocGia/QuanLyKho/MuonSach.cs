@@ -20,6 +20,7 @@ namespace QuanLyKho
         public string MaSach { get; set; }
 
         public DateTime? NgayMuon { get; set; }
+        public string TrangThai { get; set; }
 
         public virtual DanhSachSach DanhSachSach { get; set; }
 

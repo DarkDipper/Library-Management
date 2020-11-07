@@ -58,9 +58,14 @@ namespace QLDG
         }
         float DanhGia(string x)
         {
+            float dem = 0;
             float tong = 0;
-            for (int i = 0; i < x.Length; i++) tong += float.Parse(x[i].ToString());
-            return (float)tong /( x.Length);
+            for (int i = 0; i < x.Length; i++)
+            {
+               if (x[i] != '0') dem++;
+               tong += float.Parse(x[i].ToString());
+            }
+            return (float)tong /(dem);
         }
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -99,8 +104,8 @@ namespace QLDG
             foreach (string i in tra.Items)
             {
                 var sach = qltv.DanhSachSaches.SingleOrDefault(p => p.MaSach == i);
-                if (a[j] > 0) sach.LuotDanhGia += a[j].ToString();
-                else sach.LuotDanhGia += "";
+                sach.LuotDanhGia += a[j].ToString();
+               // else sach.LuotDanhGia += "";
                 sach.DanhGia = DanhGia(sach.LuotDanhGia);
                 qltv.DanhSachSaches.AddOrUpdate(sach);
                 qltv.SaveChanges();

@@ -70,6 +70,46 @@ namespace FormThuTruong
 
         private void BaoCao_Load(object sender, EventArgs e)
         {
+            string[] b = new string[4];
+            ListViewItem dss;
+            var danhSaches = from i in quanLy.DanhSachSaches select i;
+            try
+            {
+                int k = 1;
+                int cu = 0, mat = 0;
+                foreach (var i in danhSaches)
+                {
+
+                    if (DateTime.Today.Year - i.NamXuatBan > 8)
+                    {
+                        b[0] = k.ToString();
+                        b[1] = i.MaSach;
+                        b[2] = i.TenSach;
+                        b[3] = "Đã cũ";
+                        dss = new ListViewItem(b);
+                        listView1.Items.Add(dss);
+                        k++;
+                        cu++;
+                    }
+                    if (i.TinhTrang == "Mất")
+                    {
+                        b[0] = k.ToString();
+                        b[1] = i.MaSach;
+                        b[2] = i.TenSach;
+                        b[3] = "Đã mất";
+                        dss = new ListViewItem(b);
+                        listView1.Items.Add(dss);
+                        k++;
+                        mat++;
+                    }
+                }
+                Cu.Text = cu.ToString();
+                Mat.Text = mat.ToString();
+            }
+            catch
+            {
+
+            }
             int tong = 0;
             string ngay = dateTimePicker1.Value.ToString("MM/yyyy");
             var x = from i in quanLy.LichSuMuons where i.Thang == ngay select i;
@@ -153,22 +193,8 @@ namespace FormThuTruong
             {
 
             }
-            var muon = from i in quanLy.MuonSaches select i;
-            try
-            {
-                foreach(var i in muon)
-                {
-                    var tra = quanLy.TraSaches.SingleOrDefault(p => p.MaSach == i.MaSach && p.MaDocGia == i.MaDocGia);
-                    if (tra == null)
-                    {
-
-                    }
-                }
-            }
-            catch
-            {
-
-            }
+           
+          
         }
     }
 }
