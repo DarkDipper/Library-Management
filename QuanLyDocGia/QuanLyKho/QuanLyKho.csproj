@@ -74,6 +74,7 @@
     </Compile>
     <Compile Include="DanhSachSach.cs" />
     <Compile Include="HoSo.cs" />
+    <Compile Include="LichSuMuon.cs" />
     <Compile Include="MatSach.cs" />
     <Compile Include="MuonSach.cs" />
     <Compile Include="QuanLyKho.cs">
@@ -87,7 +88,6 @@
     <Compile Include="QuanLyTV.cs" />
     <Compile Include="sysdiagram.cs" />
     <Compile Include="TaiKhoanNV.cs" />
-    <Compile Include="ThanhLy.cs" />
     <Compile Include="TheDocGia.cs" />
     <Compile Include="TraSach.cs" />
     <Compile Include="XuatKhoSach.cs">

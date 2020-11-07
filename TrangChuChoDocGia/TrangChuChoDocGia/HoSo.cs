@@ -15,7 +15,6 @@ namespace Trang_Chu
             DanhSachSaches = new HashSet<DanhSachSach>();
             MatSaches = new HashSet<MatSach>();
             TheDocGias = new HashSet<TheDocGia>();
-            ThanhLies = new HashSet<ThanhLy>();
         }
 
         [Key]
@@ -51,8 +50,5 @@ namespace Trang_Chu
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TheDocGia> TheDocGias { get; set; }
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ThanhLy> ThanhLies { get; set; }
     }
 }

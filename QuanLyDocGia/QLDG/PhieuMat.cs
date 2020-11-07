@@ -84,7 +84,7 @@ namespace QLDG
                 iTextSharp.text.Image text_img2 = iTextSharp.text.Image.GetInstance(img2, System.Drawing.Imaging.ImageFormat.Png);
                 //iTextSharp.text.Image Info_img2 = iTextSharp.text.Image.GetInstance(img2, System.Drawing.Imaging.ImageFormat.Png);
                 //Info_img2.SetAbsolutePosition(The.PageSize.Width - 280f - 60f,The.PageSize.Height - 40f - 190f );
-                text_img1.SetAbsolutePosition(The.PageSize.Width - 280f - 60f, The.PageSize.Height - 30f - 75f);
+                text_img1.SetAbsolutePosition(The.PageSize.Width - 280f - 60f, The.PageSize.Height - 10f - 75f);
                 text_img2.SetAbsolutePosition(The.PageSize.Width - 120f - 60f, The.PageSize.Height - 290f - 75f);
                 // The.Add(text_img);
                 iTextSharp.text.Font f1 = FontFactory.GetFont(iTextSharp.text.Font.FontFamily.TIMES_ROMAN.ToString(), 25, iTextSharp.text.Font.BOLD, iTextSharp.text.BaseColor.BLUE);
@@ -112,7 +112,7 @@ namespace QLDG
                 p4.Alignment = Element.ALIGN_LEFT;
                 p8.Alignment = Element.ALIGN_LEFT;
                 Paragraph Enter = new Paragraph("             ");
-                Paragraph p7 = new Paragraph($"   PHIẾU GHI NHẬN MẤT SÁCH - {MaDocGia}", f2);
+                Paragraph p7 = new Paragraph($"PHIẾU GHI NHẬN MẤT SÁCH - {MaDocGia}", f2);
                 p7.Alignment = Element.ALIGN_CENTER;
                 PdfPTable table = new PdfPTable(4);
                 table.DefaultCell.Padding = 3;

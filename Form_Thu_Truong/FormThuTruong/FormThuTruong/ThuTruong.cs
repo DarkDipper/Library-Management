@@ -69,5 +69,33 @@ namespace FormThuTruong
         {
             this.Close();
         }
+
+        private void button_Sach_Click(object sender, EventArgs e)
+        {
+            QuanLyKho.QuanLyKho x = new QuanLyKho.QuanLyKho();
+            x.Mathukho = NV;
+            x.check = true;
+            this.Hide();
+            x.ShowDialog();
+            this.Show();
+        }
+
+        private void button_TaiChinh_Click(object sender, EventArgs e)
+        {
+            WindowsFormsApp4.ThuQuy x = new WindowsFormsApp4.ThuQuy();
+            x.NV = NV;
+            x.check = true;
+            this.Hide();
+            x.ShowDialog();
+            this.Show();
+        }
+
+        private void button_BaoCao_Click(object sender, EventArgs e)
+        {
+            BaoCao x = new BaoCao();
+            this.Hide();
+            x.ShowDialog();
+            this.Show();
+        }
     }
 }

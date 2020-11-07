@@ -14,11 +14,11 @@ namespace QLDG
 
         public virtual DbSet<DanhSachSach> DanhSachSaches { get; set; }
         public virtual DbSet<HoSo> HoSoes { get; set; }
+        public virtual DbSet<LichSuMuon> LichSuMuons { get; set; }
         public virtual DbSet<MatSach> MatSaches { get; set; }
         public virtual DbSet<MuonSach> MuonSaches { get; set; }
         public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<TaiKhoanNV> TaiKhoanNVs { get; set; }
-        public virtual DbSet<ThanhLy> ThanhLies { get; set; }
         public virtual DbSet<TheDocGia> TheDocGias { get; set; }
         public virtual DbSet<TraSach> TraSaches { get; set; }
 
@@ -37,17 +37,12 @@ namespace QLDG
                 .IsUnicode(false);
 
             modelBuilder.Entity<DanhSachSach>()
-                .HasMany(e => e.MatSaches)
-                .WithRequired(e => e.DanhSachSach)
-                .WillCascadeOnDelete(false);
-
-            modelBuilder.Entity<DanhSachSach>()
                 .HasMany(e => e.MuonSaches)
                 .WithRequired(e => e.DanhSachSach)
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<DanhSachSach>()
-                .HasMany(e => e.ThanhLies)
+                .HasMany(e => e.MatSaches)
                 .WithRequired(e => e.DanhSachSach)
                 .WillCascadeOnDelete(false);
 
@@ -84,12 +79,6 @@ namespace QLDG
                 .WithOptional(e => e.HoSo)
                 .HasForeignKey(e => e.MaNgLap);
 
-            modelBuilder.Entity<HoSo>()
-                .HasMany(e => e.ThanhLies)
-                .WithRequired(e => e.HoSo)
-                .HasForeignKey(e => e.MaNgThanhLy)
-                .WillCascadeOnDelete(false);
-
             modelBuilder.Entity<MatSach>()
                 .Property(e => e.MaDocGia)
                 .IsUnicode(false);
@@ -120,14 +109,6 @@ namespace QLDG
 
             modelBuilder.Entity<TaiKhoanNV>()
                 .Property(e => e.MatKhau)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<ThanhLy>()
-                .Property(e => e.MaSach)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<ThanhLy>()
-                .Property(e => e.MaNgThanhLy)
                 .IsUnicode(false);
 
             modelBuilder.Entity<TheDocGia>()

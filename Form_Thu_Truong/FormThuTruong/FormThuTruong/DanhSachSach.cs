@@ -12,9 +12,8 @@ namespace FormThuTruong
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public DanhSachSach()
         {
-            MatSaches = new HashSet<MatSach>();
             MuonSaches = new HashSet<MuonSach>();
-            ThanhLies = new HashSet<ThanhLy>();
+            MatSaches = new HashSet<MatSach>();
             TraSaches = new HashSet<TraSach>();
         }
 
@@ -60,13 +59,10 @@ namespace FormThuTruong
         public virtual HoSo HoSo { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<MatSach> MatSaches { get; set; }
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<MuonSach> MuonSaches { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ThanhLy> ThanhLies { get; set; }
+        public virtual ICollection<MatSach> MatSaches { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TraSach> TraSaches { get; set; }

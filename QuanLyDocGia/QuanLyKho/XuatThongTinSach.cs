@@ -29,6 +29,7 @@ namespace QuanLyKho
         public string NgayNhap;
         public string NguoiTiepNhan;
         public string TriGia;
+        public System.Drawing.Image anh;
         private void buttonxuatThongTinSach_duongDan_Click(object sender, EventArgs e)
         {
             using (var fbd = new FolderBrowserDialog())
@@ -56,9 +57,9 @@ namespace QuanLyKho
                     Document The = new Document(iTextSharp.text.PageSize.HALFLETTER);
                     PdfWriter TheWriter = PdfWriter.GetInstance(The, new FileStream($@"{xuatThongTinSach_duongdan.Text + xuatThongTinSach_ten.Text}.pdf", FileMode.Create));
                     System.Drawing.Image img1 = global::QuanLyKho.Properties.Resources.rsz_npl;
-                    //System.Drawing.Image img2 = global::BM2.Properties.Resources._2x3;
+                    System.Drawing.Image img2 = anh;
                     iTextSharp.text.Image text_img1 = iTextSharp.text.Image.GetInstance(img1, System.Drawing.Imaging.ImageFormat.Png);
-                    //iTextSharp.text.Image Info_img2 = iTextSharp.text.Image.GetInstance(img2, System.Drawing.Imaging.ImageFormat.Png);
+                    iTextSharp.text.Image Info_img2 = iTextSharp.text.Image.GetInstance(img2, System.Drawing.Imaging.ImageFormat.Gif);
                     //Info_img2.SetAbsolutePosition(The.PageSize.Width - 280f - 60f,The.PageSize.Height - 40f - 190f );
                     text_img1.SetAbsolutePosition(The.PageSize.Width - 280f - 60f, The.PageSize.Height - 30f - 75f);
                     // The.Add(text_img);
@@ -107,9 +108,9 @@ namespace QuanLyKho
                     The.Add(p7);
                     The.Add(Enter);
                     The.Add(table);
+                   // The.Add(Info_img2);
                     The.Close();
                     TheWriter.Close();
-
                     var x = new QuanLyKho();
                     x.ThongKe();
                     MessageBox.Show("Thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);

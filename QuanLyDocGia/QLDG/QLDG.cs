@@ -7,6 +7,7 @@ using System.Data.Entity.Migrations;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Globalization;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -33,9 +34,19 @@ namespace QLDG
         bool pdate = false;
         bool dn = false;
         bool mk = false;
+        bool dt = false;
 
         int SizeBang;
         //===================================bổ trợ======================
+        public Image ByteArrayToImage(byte[] byteArrayIn)
+        {
+            using (var ms = new MemoryStream(byteArrayIn))
+            {
+                var returnImage = Image.FromStream(ms);
+
+                return returnImage;
+            }
+        }
         public bool KiemTraSach(string txt_muonSach)
         {
             var sach = qltv.DanhSachSaches.SingleOrDefault(p => p.MaSach == txt_muonSach);
@@ -105,7 +116,7 @@ namespace QLDG
         void GoiY()
         {
             string sachvip = "";
-            var sach = from i in qltv.DanhSachSaches where i.DanhGia >= 4.3 select i;
+            var sach = from i in qltv.DanhSachSaches where i.DanhGia >= 4.3 && i.TinhTrang == "Còn" select i;
             foreach (var i in sach)
             {
                 sachvip += i.MaSach + "\n" + i.TenSach + "\n --------------------------------------------\n";
@@ -369,6 +380,7 @@ namespace QLDG
                 tt_mnv.Text = y.MaNV;
                 tt_tenDN.Enabled = true;
                 tt_Matkhau.Enabled = true;
+                tt_dienthoai.Enabled = true;
                 LuuThayDoi.Enabled = true;
             }
             Hienthi();
@@ -567,6 +579,7 @@ namespace QLDG
         
         private void button_themmuon_Click(object sender, EventArgs e)
         {
+            bool kt = true;
             GoiY();
             if (txt_muonDG.Text.Length != 0 && txt_muonSach.Items.Count != 0)
             {
@@ -578,7 +591,18 @@ namespace QLDG
                     {
                         DateTime data1 = DateTime.Today;
                         DateTime data2 = dg.NgayLapThe.Value;
-                        if (((TimeSpan)(data1 - data2)).Days > 180) MessageBox.Show("Thẻ đã hết hạn", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        if (((TimeSpan)(data1 - data2)).Days > 180)
+                        {
+                            MessageBox.Show("Thẻ đã hết hạn", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            kt = false;
+                            break;
+                        }
+                        else if(dg.TongNo > 1000000)
+                        {
+                            MessageBox.Show("Nợ quá cho phép (hơn 1 triệu)", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            kt = false;
+                            break;
+                        } 
                         else
                         {
                             if (KiemTraSach(muonSach))
@@ -589,6 +613,21 @@ namespace QLDG
                                     {
                                         DanhSachSach sach = qltv.DanhSachSaches.SingleOrDefault(p => p.MaSach == muonSach);
                                         sach.TinhTrang = "Không có";
+                                        string ngay = DateTime.Today.ToString("MM/yyyy");
+                                        var ls = qltv.LichSuMuons.SingleOrDefault(p => p.TheLoai == sach.TheLoai && p.Thang == ngay);
+                                        if (ls == null)
+                                        {
+                                            LichSuMuon lsm = new LichSuMuon();
+                                            lsm.TheLoai = sach.TheLoai;
+                                            lsm.Thang = DateTime.Today.ToString("MM/yyyy");
+                                            lsm.SoLuot = 1;
+                                            qltv.LichSuMuons.Add(lsm);
+                                        }
+                                        else
+                                        {
+                                            ls.SoLuot += 1;
+                                            qltv.LichSuMuons.AddOrUpdate(ls);
+                                        }
                                         qltv.DanhSachSaches.AddOrUpdate(sach);
                                         MuonSach xy = new MuonSach();
                                         xy.MaDocGia = txt_muonDG.Text;
@@ -596,33 +635,53 @@ namespace QLDG
                                         xy.NgayMuon = DateTime.Today;
                                         try
                                         {
-                                            qltv.MuonSaches.Add(xy);
+                                            qltv.MuonSaches.AddOrUpdate(xy);
                                             qltv.SaveChanges();
                                             txt_muonSach.Text = "";
                                             HienThiKho();
-                                           
+
                                         }
                                         catch
                                         {
                                             MessageBox.Show("Đã tồn tại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                                         }
                                     }
-                                    else MessageBox.Show("Không thể mượn thêm được nữa", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                    else
+                                    {
+                                        //kt = false;
+                                        MessageBox.Show("Không thể mượn thêm được nữa", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                        break;
+
+                                    }
                                 }
-                                else MessageBox.Show("Đã có sách quá hạn chưa trả", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                else
+                                {
+
+                                    //  kt = false;
+                                    MessageBox.Show("Đã có sách quá hạn chưa trả", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                    break;
+                                }
                             }
                             else MessageBox.Show($"Mã sách {muonSach} không tồn tại hoặc đã mượn", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         }
                     }
-                    else MessageBox.Show("Thông tin không tồn tại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    else
+                    {
+                        MessageBox.Show("Thông tin không tồn tại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        kt = false;
+                        break;
+                    }
                 }
-                if (MessageBox.Show("Có xuất phiếu mượn không", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.OK)
+                if (kt)
                 {
-                    var x = new PhieuMuon();
-                    x.MaDocGia = txt_muonDG.Text;
-                    this.Hide();
-                    x.ShowDialog();
-                    this.Show();
+                    if (MessageBox.Show("Có xuất phiếu mượn không", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.OK)
+                    {
+                        var x = new PhieuMuon();
+                        x.MaDocGia = txt_muonDG.Text;
+                        this.Hide();
+                        x.ShowDialog();
+                        this.Show();
+                    }
                 }
                 
             }
@@ -690,6 +749,7 @@ namespace QLDG
             try
             {
                 txt_muonSach.Items.Add(dataSachMuon.SelectedCells[0].Value.ToString());
+                
             }
             catch
             {
@@ -758,10 +818,43 @@ namespace QLDG
                 mk = false;
             }
         }
-
+        private void tt_dienthoai_Leave(object sender, EventArgs e)
+        {
+            if (tt_dienthoai.Text.Length == 10)
+            {
+                if (tt_dienthoai.Text[0] == '0')
+                {
+                    for (int i = 0; i < 10; i++)
+                    {
+                        if (!(48 <= (int)tt_dienthoai.Text[i] && (int)tt_dienthoai.Text[i] <= 57))
+                        {
+                            Tick.Clear();
+                            er.SetError(tt_dienthoai, "Có ký tự không phải số trong số điện thoại");
+                            dt = false;
+                            return;
+                        }
+                    }
+                }
+                else
+                {
+                    Tick.Clear();
+                    er.SetError(tt_dienthoai, "Số điện thoại phải bắt đầu số 0 ");
+                    dt = false;
+                }
+                er.Clear();
+                Tick.SetError(tt_dienthoai, "Xong");
+                dt = true;
+            }
+            else
+            {
+                Tick.Clear();
+                er.SetError(tt_dienthoai, "Số điện thoại không đủ 10 chữ số");
+                dt = false;
+            }
+        }
         private void LuuThayDoi_Click(object sender, EventArgs e)
         {
-            if (dn == true && mk == true)
+            if (dn == true && mk == true && dt == true )
             {
                 TaiKhoanNV x = qltv.TaiKhoanNVs.SingleOrDefault(p => p.MaNV == NV);
                 x.TenDN = tt_tenDN.Text;
@@ -1075,6 +1168,15 @@ namespace QLDG
         private void comboBox_MDG_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void dataSachMuon_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string sach = dataSachMuon.SelectedCells[0].Value.ToString();
+            var x = qltv.DanhSachSaches.SingleOrDefault(p => p.MaSach == sach);
+            //MessageBox.Show($"{x.TenSach}");
+            if (x.Anh != null) pictureBox1.Image = ByteArrayToImage(x.Anh);
+            else pictureBox1.Image = null;
         }
     }
 }

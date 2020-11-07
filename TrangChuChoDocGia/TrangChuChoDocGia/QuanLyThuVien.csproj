@@ -70,6 +70,7 @@
     <Compile Include="LayLaiMatKhau.Designer.cs">
       <DependentUpon>LayLaiMatKhau.cs</DependentUpon>
     </Compile>
+    <Compile Include="LichSuMuon.cs" />
     <Compile Include="Log_in.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,7 +84,6 @@
     <Compile Include="QuanLyTV.cs" />
     <Compile Include="sysdiagram.cs" />
     <Compile Include="TaiKhoanNV.cs" />
-    <Compile Include="ThanhLy.cs" />
     <Compile Include="TheDocGia.cs" />
     <Compile Include="TraSach.cs" />
     <EmbeddedResource Include="LayLaiMatKhau.resx">
@@ -168,6 +168,10 @@
     <ProjectReference Include="..\..\QuanLyDocGia\QuanLyKho\QuanLyKho.csproj">
       <Project>{24ff2127-db60-4551-aa51-02444a7f4ce4}</Project>
       <Name>QuanLyKho</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\WindowsFormsApp4\WindowsFormsApp4\WindowsFormsApp4\WindowsFormsApp4.csproj">
+      <Project>{b04299b3-8a70-49af-8625-07df303e4f81}</Project>
+      <Name>WindowsFormsApp4</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

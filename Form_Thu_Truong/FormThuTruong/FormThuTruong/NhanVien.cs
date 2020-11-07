@@ -17,32 +17,31 @@ namespace FormThuTruong
             InitializeComponent();
         }
         QuanLyTV qltv = new QuanLyTV();
-        string[] a = new string[2];
+        string[] a = new string[7];
         ListViewItem ds;
         private void NhanVien_Load(object sender, EventArgs e)
         {
             var x = from item in qltv.HoSoes select item;
             foreach(var nv in x)
             {
-                if(nv.BoPhan=="Thủ thư")
+                a[0] = nv.MaNV;
+                a[1] = nv.HoTen;
+                a[2] = nv.NgaySinh.Value.ToString("dd/MM/yyyy");
+                a[3] = nv.BangCap;
+                a[4] = nv.DiaChi; 
+                a[5] = nv.DienThoai;
+                a[6] = nv.NgayLamViec.Value.ToString("dd/MM/yyyy");
+                ds = new ListViewItem(a);
+                if (nv.BoPhan=="Thủ thư")
                 {
-                    a[0] = nv.MaNV;
-                    a[1] = nv.HoTen;
-                    ds = new ListViewItem(a);
                     listView1.Items.Add(ds);
                 }
                 if (nv.BoPhan == "Thủ kho")
                 {
-                    a[0] = nv.MaNV;
-                    a[1] = nv.HoTen;
-                    ds = new ListViewItem(a);
                     listView2.Items.Add(ds);
                 }
                 if (nv.BoPhan == "Thủ quỹ")
                 {
-                    a[0] = nv.MaNV;
-                    a[1] = nv.HoTen;
-                    ds = new ListViewItem(a);
                     listView3.Items.Add(ds);
                 }
             }

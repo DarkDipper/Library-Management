@@ -35,6 +35,7 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.qls = new System.Windows.Forms.TabPage();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.button3 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button2 = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -84,9 +85,9 @@
             this.tt_tdn = new System.Windows.Forms.Label();
             this.tt_mk = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.tt_dienthoai = new System.Windows.Forms.TextBox();
             this.tt_nlv = new System.Windows.Forms.Label();
             this.tt3 = new System.Windows.Forms.Label();
-            this.tt_dienthoai = new System.Windows.Forms.Label();
             this.tt_diachi = new System.Windows.Forms.Label();
             this.tt_bangcap = new System.Windows.Forms.Label();
             this.tt_ngaysinh = new System.Windows.Forms.Label();
@@ -160,6 +161,7 @@
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.button3);
             this.groupBox4.Controls.Add(this.pictureBox1);
             this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox4.Location = new System.Drawing.Point(6, 10);
@@ -169,11 +171,22 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Bìa sách";
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(7, 340);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(155, 35);
+            this.button3.TabIndex = 1;
+            this.button3.Text = "Chọn ảnh bìa";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Location = new System.Drawing.Point(7, 19);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(317, 356);
+            this.pictureBox1.Size = new System.Drawing.Size(317, 315);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -639,6 +652,7 @@
             // 
             // LuuThayDoi
             // 
+            this.LuuThayDoi.Enabled = false;
             this.LuuThayDoi.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LuuThayDoi.ForeColor = System.Drawing.Color.Gray;
             this.LuuThayDoi.Location = new System.Drawing.Point(28, 33);
@@ -668,6 +682,7 @@
             // 
             // tt_Matkhau
             // 
+            this.tt_Matkhau.Enabled = false;
             this.tt_Matkhau.Location = new System.Drawing.Point(176, 90);
             this.tt_Matkhau.Multiline = true;
             this.tt_Matkhau.Name = "tt_Matkhau";
@@ -677,6 +692,7 @@
             // 
             // tt_tenDN
             // 
+            this.tt_tenDN.Enabled = false;
             this.tt_tenDN.Location = new System.Drawing.Point(176, 42);
             this.tt_tenDN.Multiline = true;
             this.tt_tenDN.Name = "tt_tenDN";
@@ -730,9 +746,9 @@
             // 
             // groupBox5
             // 
+            this.groupBox5.Controls.Add(this.tt_dienthoai);
             this.groupBox5.Controls.Add(this.tt_nlv);
             this.groupBox5.Controls.Add(this.tt3);
-            this.groupBox5.Controls.Add(this.tt_dienthoai);
             this.groupBox5.Controls.Add(this.tt_diachi);
             this.groupBox5.Controls.Add(this.tt_bangcap);
             this.groupBox5.Controls.Add(this.tt_ngaysinh);
@@ -750,6 +766,15 @@
             this.groupBox5.TabIndex = 3;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Thông tin hồ sơ";
+            // 
+            // tt_dienthoai
+            // 
+            this.tt_dienthoai.Enabled = false;
+            this.tt_dienthoai.Location = new System.Drawing.Point(135, 209);
+            this.tt_dienthoai.Name = "tt_dienthoai";
+            this.tt_dienthoai.Size = new System.Drawing.Size(249, 36);
+            this.tt_dienthoai.TabIndex = 12;
+            this.tt_dienthoai.Leave += new System.EventHandler(this.tt_dienthoai_Leave);
             // 
             // tt_nlv
             // 
@@ -772,17 +797,6 @@
             this.tt3.Size = new System.Drawing.Size(151, 25);
             this.tt3.TabIndex = 10;
             this.tt3.Text = "Ngày làm việc : ";
-            // 
-            // tt_dienthoai
-            // 
-            this.tt_dienthoai.AutoSize = true;
-            this.tt_dienthoai.Font = new System.Drawing.Font("Cambria", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tt_dienthoai.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.tt_dienthoai.Location = new System.Drawing.Point(131, 214);
-            this.tt_dienthoai.Name = "tt_dienthoai";
-            this.tt_dienthoai.Size = new System.Drawing.Size(95, 22);
-            this.tt_dienthoai.TabIndex = 9;
-            this.tt_dienthoai.Text = "(Unknow)";
             // 
             // tt_diachi
             // 
@@ -964,7 +978,6 @@
         private System.Windows.Forms.Label tt_tdn;
         private System.Windows.Forms.Label tt_mk;
         private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.Label tt_dienthoai;
         private System.Windows.Forms.Label tt_diachi;
         private System.Windows.Forms.Label tt_bangcap;
         private System.Windows.Forms.Label tt_ngaysinh;
@@ -987,6 +1000,8 @@
         private System.Windows.Forms.Button button_Them;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TextBox tt_dienthoai;
+        private System.Windows.Forms.Button button3;
     }
 }
 
