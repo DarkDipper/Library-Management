@@ -33,11 +33,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.6.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\..\..\QuanLyThuVien\packages\BouncyCastle.1.8.6.1\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\..\..\QuanLyThuVien\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\..\..\QuanLyThuVien\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.2, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\..\..\QuanLyThuVien\packages\iTextSharp.5.5.13.2\lib\itextsharp.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -60,6 +66,12 @@
     <Compile Include="LichSuMuon.cs" />
     <Compile Include="MatSach.cs" />
     <Compile Include="MuonSach.cs" />
+    <Compile Include="PhieuTraNo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PhieuTraNo.Designer.cs">
+      <DependentUpon>PhieuTraNo.cs</DependentUpon>
+    </Compile>
     <Compile Include="QuanLyTV.cs" />
     <Compile Include="sysdiagram.cs" />
     <Compile Include="TaiKhoanNV.cs" />
@@ -79,6 +91,9 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TraSach.cs" />
+    <EmbeddedResource Include="PhieuTraNo.resx">
+      <DependentUpon>PhieuTraNo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ThongtinThuquy.resx">
       <DependentUpon>ThongtinThuquy.cs</DependentUpon>
     </EmbeddedResource>
@@ -93,6 +108,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -107,6 +123,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rsz_npl.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

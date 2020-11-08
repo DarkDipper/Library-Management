@@ -179,7 +179,8 @@ namespace FormThuTruong
                 string kq = "000";
                 string xultchuoi = tongno.ToString();
                 //MessageBox.Show(xultchuoi);
-                int l = xultchuoi.Length -3;
+                int l = xultchuoi.Length;
+                if (l > 3) l -= 3;
                // MessageBox.Show(l.ToString());
                 while(l > 3)
                 {

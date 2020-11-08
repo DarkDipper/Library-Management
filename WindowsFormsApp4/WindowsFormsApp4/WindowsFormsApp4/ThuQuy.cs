@@ -38,7 +38,11 @@ namespace WindowsFormsApp4
                 var x = quanLy.TheDocGias.SingleOrDefault(p => p.MS == comboBox1.Text);
                 txtTenDG.Text = x.HoTen;
                 txtTien.Text = (x.TongNo * 0.001).ToString();
-                if (txtTien.Text == "0") txtIn.Enabled = false;
+                if (txtTien.Text == "0")
+                {
+                    txtIn.Enabled = false;
+                    button1.Enabled = false;
+                }
             }
         }
 
@@ -47,12 +51,23 @@ namespace WindowsFormsApp4
             try
             {
                 var x = quanLy.TheDocGias.SingleOrDefault(p => p.MS == comboBox1.Text);
+                var y = quanLy.HoSoes.SingleOrDefault(p => p.MaNV == NV);
                 x.TongNo = int.Parse(txtConno.Text) * 1000;
                 quanLy.TheDocGias.AddOrUpdate(x);
                 quanLy.SaveChanges();
                 MessageBox.Show("Đã trả nợ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 comboBox1.Items.Clear();
                 LoadNo();
+                PhieuTraNo pn = new PhieuTraNo();
+                pn.MS = x.MS;
+                pn.Ten = txtTenDG.Text;
+                pn.tienno = txtTien.Text;
+                pn.tienthu = txtIn.Value.ToString();
+                pn.conlai = txtConno.Text;
+                pn.ngghinhan = y.HoTen;
+                this.Hide();
+                pn.ShowDialog();
+                this.Show();
                 //comboBox1.Items.RemoveAt(comboBox1.SelectedIndex);
             }
             catch
