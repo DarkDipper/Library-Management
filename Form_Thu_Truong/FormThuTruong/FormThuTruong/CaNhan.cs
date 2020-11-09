@@ -37,34 +37,12 @@ namespace FormThuTruong
             tt_Matkhau.Enabled = true;
             LuuThayDoi.Enabled = true;
         }
-        bool dn = false;
         bool mk = false;
         private void DangXuat_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void tt_tenDN_Leave(object sender, EventArgs e)
-        {
-            if (tt_tenDN.Text.Length == 0)
-            {
-                Tick.Clear();
-                er.SetError(this.tt_tenDN, "Bạn chưa nhập tên đăng nhập! ");
-                dn = false;
-            }
-            else if (Regex.IsMatch(tt_tenDN.Text, "^[a-zA-Z0-9]*$"))
-            {
-                er.Clear();
-                Tick.SetError(tt_tenDN, "xong");
-                dn = true;
-            }
-            else
-            {
-                Tick.Clear();
-                er.SetError(tt_tenDN, "Không đúng dữ liệu nhập");
-                dn = false;
-            }
-        }
 
         private void tt_Matkhau_Leave(object sender, EventArgs e)
         {
@@ -96,7 +74,7 @@ namespace FormThuTruong
 
         private void LuuThayDoi_Click(object sender, EventArgs e)
         {
-            if (dn == true && mk == true)
+            if (mk == true)
             {
                 TaiKhoanNV x = qltv.TaiKhoanNVs.SingleOrDefault(p => p.MaNV == nv);
                 x.TenDN = tt_tenDN.Text;

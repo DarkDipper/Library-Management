@@ -194,7 +194,28 @@ namespace FormThuTruong
             {
 
             }
-           
+            string[] c = new string[4];
+            ListViewItem ds1;
+            var phaluat = from i in quanLy.TheDocGias where i.TongNo > 500000 && (DateTime.Today - i.NgayLapThe).Value.Days > 180 select i;
+            try
+            {
+                int d = 0;
+                foreach(var i in phaluat)
+                {
+                    c[0] = d.ToString();
+                    c[1] = i.MS;
+                    c[2] = i.HoTen;
+                    c[3] = i.NgaySinh.Value.ToString("dd/MM/yyyy");
+                    d++;
+                    ds1 = new ListViewItem(c);
+                    listView2.Items.Add(ds1);
+                }
+                dansu.Text = d.ToString();
+            }
+            catch
+            {
+
+            }
           
         }
     }

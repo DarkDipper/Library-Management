@@ -130,5 +130,23 @@
   <ItemGroup>
     <None Include="Resources\Untitled.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pay_cash_payment_money_dollar_bill_icon_143267.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\idcard_119573.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4092564-about-mobile-ui-profile-ui-user-website_114033 %281%29.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4092564-about-mobile-ui-profile-ui-user-website_114033 %281%291.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\diskette_save_saveas_1514.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\log_out_icon_153555.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

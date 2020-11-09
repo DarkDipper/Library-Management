@@ -150,5 +150,53 @@
   <ItemGroup>
     <None Include="Resources\file_type_pdf_icon_130274.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\applicationimagejpg_103464.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addressbook-edit256_24774.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addressbook_addressbook_add_librodedireccion_2815.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search_book_open_search_locate_6178.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addressbook_addressbook_delete_librodedireccion_2816.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete_delete_deleteusers_delete_male_user_maleclient_2348.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\business_application_addmale_useradd_insert_add_user_client_2312.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addressbook_addressbook_search_librodedireccion_2818.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addressbook_addressbook_search_librodedireccion_28181.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addressbook_addressbook_delete_librodedireccion_2816.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addressbook-edit256_24774.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addressbook_addressbook_search_librodedireccion_2818 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\applicationimagepng_103490.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\diskette_save_saveas_1514.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\log_out_icon_153555.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addressbook_addressbook_add_librodedireccion_2815.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

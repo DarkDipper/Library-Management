@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity.Migrations;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -14,7 +15,9 @@ namespace From_dang_ky
     {
         string HoTen, BangCap, BoPhan, SDT,DiaChi;
         DateTime NgaySinh;
-
+        QuanLyTV quanLy = new QuanLyTV();
+        int k = 0;
+        int t = 0; 
         private void DatePick_NgaySinh_Validating(object sender, CancelEventArgs e)
         {
             if (DateTime.Now.Year - DatePick_NgaySinh.Value.Year < 18)
@@ -133,7 +136,49 @@ namespace From_dang_ky
                 BangCap = combo_BangCap.Text;
                 BoPhan = combo_Bophan.Text;
                 SDT = txtSDT.Text;
-                
+                var hs = from i in quanLy.HoSoes select i;
+                foreach(var i in hs)
+                {
+                    string chuoi_so = i.MaNV.Substring(2);
+                    int so = int.Parse($"{chuoi_so}");
+                    if (so != k) break;
+                    else k++;
+                }
+                var tk = from i in quanLy.TaiKhoanNVs select i;
+                foreach (var i in tk)
+                {
+                    string chuoi_so = i.TenDN.Substring(8);
+                    int so = int.Parse($"{chuoi_so}");
+                    if (so != t) break;
+                    else t++;
+                }
+                TaiKhoanNV taiKhoan = new TaiKhoanNV();
+                taiKhoan.MaNV = TaoMA();
+                taiKhoan.TenDN = TaoMANV();
+                taiKhoan.MatKhau = "123";
+                quanLy.TaiKhoanNVs.AddOrUpdate(taiKhoan);
+                HoSo hoSo = new HoSo();
+                hoSo.MaNV = TaoMA();
+                hoSo.HoTen = HoTen;
+                hoSo.NgaySinh = NgaySinh;
+                hoSo.DiaChi = DiaChi;
+                hoSo.BangCap = BangCap;
+                hoSo.BoPhan = BoPhan;
+                hoSo.DienThoai = SDT;
+                hoSo.NgayLamViec = DateTime.Today;
+                quanLy.HoSoes.AddOrUpdate(hoSo);
+                MessageBox.Show($"Đăng kí thành công với Tên đăng nhập là :\"{TaoMANV()}\" và Mật khẩu là :\"123\"", "Chúc mừng", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                quanLy.SaveChanges();
+                txt_Hoten.Text="";
+                DatePick_NgaySinh.Value = DateTime.Today;
+                txt_DiaChi.Text="";
+                combo_BangCap.SelectedIndex=-1;
+                combo_Bophan.SelectedIndex=-1;
+                txtSDT.Text = "";
+            }
+            else
+            {
+                MessageBox.Show("Thất bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -141,6 +186,32 @@ namespace From_dang_ky
         {
             InitializeComponent();
             
+        }
+
+        private void txt_DiaChi_Validating(object sender, CancelEventArgs e)
+        {
+            if (txt_DiaChi.Text == "")
+            {
+                e.Cancel = true;
+                Check.SetError(txt_Hoten, "Sai dữ liệu đầu vào!");
+            }
+            else
+            {
+                e.Cancel = false;
+                Check.SetError(txt_Hoten, null);
+            }
+        }
+
+        public string TaoMA()
+        {
+            if (k < 10) return $"E.00{k.ToString()}";
+            else if (k < 100) return $"E.0{k.ToString()}";
+            else return $"E.{k.ToString()}";
+        }
+        public string TaoMANV()
+        {
+            if (k < 10) return $"nhanvien0{k.ToString()}";
+            else return $"nhanvien{k.ToString()}";
         }
         public bool Only_letter(string x)
         {
@@ -161,15 +232,81 @@ namespace From_dang_ky
         }
         private void txt_Hoten_Validating(object sender, CancelEventArgs e)
         {
-            if (!Only_letter(txt_Hoten.Text) || txt_Hoten.Text.Length == 0)
+            try
             {
-                e.Cancel = true;
-                Check.SetError(txt_Hoten, "Sai dữ liệu đầu vào!");
+                if (txt_Hoten.Text.Length != 0)
+                {
+                    char[] trimChars = { '\\', '|', '\'', ' ', '@', ' ', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '-', '=', '_', '+', '[', '{', ']', '}', ';', ':', '"', ',', '<', '.', '>', '/', '?' };
+                    txt_Hoten.Text = txt_Hoten.Text.Trim(trimChars);
+                    int slc = 0;
+                    bool c = false;
+                    for (int i = 0; i < txt_Hoten.Text.Length; i++)
+                    {
+                        if (txt_Hoten.Text[i] >= 33 && txt_Hoten.Text[i] <= 57 || txt_Hoten.Text[i] >= 58 && txt_Hoten.Text[i] <= 64 || txt_Hoten.Text[i] >= 91 && txt_Hoten.Text[i] <= 96 || txt_Hoten.Text[i] >= 123 && txt_Hoten.Text[i] <= 126)
+                        {
+                            txt_Hoten.Text = txt_Hoten.Text.Remove(i, 1);
+                            i = -1;
+                        }
+                    }
+                    for (int i = 0; i < txt_Hoten.Text.Length; i++)
+                    {
+                        if (c != true && txt_Hoten.Text[i] >= 'a' && txt_Hoten.Text[i] <= 'z' || c != true && txt_Hoten.Text[i] >= 'A' && txt_Hoten.Text[i] <= 'Z')
+                        {
+                            slc++;
+                            c = true;
+                        }
+                        if (txt_Hoten.Text[i] == ' ' && c == true)
+                        {
+                            c = false;
+                        }
+                    }
+                    for (int i = 0; i < txt_Hoten.Text.Length; i++)
+                    {
+                        if (txt_Hoten.Text[i] == ' ' && txt_Hoten.Text[i + 1] == ' ')
+                        {
+                            txt_Hoten.Text = txt_Hoten.Text.Remove(i, 1);
+                        }
+                    }
+                    c = false;
+                    string x = "";
+                    string xx = "";
+                    for (int i = 0; i < txt_Hoten.Text.Length; i++)
+                    {
+                        if (c == false && txt_Hoten.Text[i] >= 127 || c == false && txt_Hoten.Text[i] >= 'a' && txt_Hoten.Text[i] <= 'z' || c == false && txt_Hoten.Text[i] >= 'A' && txt_Hoten.Text[i] <= 'Z')
+                        {
+                            x += txt_Hoten.Text[i];
+                        }
+                        if (txt_Hoten.Text[i] == ' ')
+                        {
+                            c = true;
+                        }
+                        if (c == true || i + 1 == txt_Hoten.Text.Length)
+                        {
+                            x = x.Substring(0, 1).ToUpper() + x.Substring(1, x.Length - 1).ToLower();
+                            slc--;
+                            xx += x + " ";
+                            x = "";
+                            c = false;
+                        }
+                    }
+                    txt_Hoten.Text = xx.Trim();
+                }
+                if (txt_Hoten.Text.Length == 0)
+                {
+                    Check.SetError(this.txt_Hoten, "Vui lòng nhập lại!!");
+                    e.Cancel = true;
+                }
+                else
+                {
+                    Check.Clear();
+                    e.Cancel = false;
+                }
             }
-            else 
+            catch
             {
-                e.Cancel = false;
-                Check.SetError(txt_Hoten, null);
+                
+                Check.SetError(this.txt_Hoten, "Vui lòng nhập lại!");
+                e.Cancel = true;
             }
         }
     }

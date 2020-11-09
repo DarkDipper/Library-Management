@@ -14,6 +14,7 @@ using System.Runtime.CompilerServices;
 using System.Data.Entity.Migrations;
 using System.Text.RegularExpressions;
 using System.IO;
+using System.Reflection;
 
 namespace QuanLyKho
 {
@@ -25,9 +26,10 @@ namespace QuanLyKho
             AutoValidate = AutoValidate.EnableAllowFocusChange;
         }
         public int SizeBang;
-        public int i = 1;
+        public int i = 0;
         public string Mathukho = "E.002";
         public bool check = false;
+        //bool chon_anh = false;
         QuanLyTV qltv = new QuanLyTV();
 
         //========================================================Hàm bổ trợ ===================================================
@@ -37,7 +39,7 @@ namespace QuanLyKho
         {
             using (var ms = new MemoryStream(byteArrayIn))
             {
-                var returnImage = Image.FromStream(ms);
+                Image returnImage = Image.FromStream(ms);
 
                 return returnImage;
             }
@@ -81,10 +83,10 @@ namespace QuanLyKho
         }
         public void ThongKe()
         {
-            double thongke = (double)((SizeBang - 1) * 0.2);
+            double thongke = (double)((SizeBang - 1) * 1);
             progressBar_thongke.Value = (int)Math.Round(thongke, 0);
             // MessageBox.Show($"{progressBar_thongke.Value.ToString()}");
-            label_thongke.Text = $"{(SizeBang - 1).ToString()}/500";
+            label_thongke.Text = $"{(SizeBang - 1).ToString()}/100";
         }
         public string TaoMa()
         {
@@ -120,6 +122,22 @@ namespace QuanLyKho
             Kho_Gia.Value = Kho_Gia.Minimum;
             text_MoTA.Text = "";
         }
+        void LoadForm()
+        {
+            i = 0;
+            for (int k = 0; k < dataKho.Rows.Count ; k++)
+            {
+                string chuoi = dataKho.Rows[k].Cells[0].Value.ToString();
+                string chuoi_so = chuoi.Substring(2);
+                // MessageBox.Show($"{chuoi_so}");
+                int so = int.Parse($"{chuoi_so}");
+                //MessageBox.Show($"{(so).ToString()}");
+                if (so != i) break;
+                else i++;
+            }
+            //MessageBox.Show(i.ToString());
+           SizeBang = dataKho.Rows.Count + 1;
+        }
         //------------------------------------------------------------Xử lý chức năng----------------------------------------
         private void QuanLyKho_Load(object sender, EventArgs e)
         {
@@ -145,21 +163,13 @@ namespace QuanLyKho
            // con = new SqlConnection(conString);
            // con.Open();
             HienThi();
-            for (int k = 0; k < dataKho.Rows.Count - 1; k++)
-            {
-                string chuoi = dataKho.Rows[k].Cells[0].Value.ToString();
-                string chuoi_so = chuoi.Substring(2);
-                // MessageBox.Show($"{chuoi_so}");
-                int so = int.Parse($"{chuoi_so}");
-                //MessageBox.Show($"{(so).ToString()}");
-                if (so != i) break;
-                else i++;
-            }
-            SizeBang = dataKho.Rows.Count+1;
+            
             //MessageBox.Show($"{i.ToString()}");
             button_Sua.Enabled = false;
             button_Xoa.Enabled = false;
             button_Them.Enabled = true;
+            LoadForm();
+           // MessageBox.Show(i.ToString());
             ThongKe();
         }
         //==============================================Xử Lý==========================================
@@ -330,7 +340,7 @@ namespace QuanLyKho
                 dataKho.Columns[9].HeaderText = "Người nhận";
             }
         }
-
+        bool Check = false;
         private void button_Sua_Click_1(object sender, EventArgs e)
         {
             if (ValidateChildren(ValidationConstraints.Enabled))
@@ -344,7 +354,12 @@ namespace QuanLyKho
                 x.NhaXuatBan = Kho_NhaXuatBan.Text;
                 x.TriGia = int.Parse((double.Parse(Kho_Gia.Value.ToString()) * 1000).ToString());
                 x.MoTa = text_MoTA.Text;
-                if(pictureBox1.Image!=null) x.Anh = ImageToByteArray(pictureBox1.Image);
+                if (Check)
+                {
+                    x.Anh = ImageToByteArray(pictureBox1.Image);
+                }
+               // if(pictureBox1.Image!=null)
+                //x.Anh = ImageToByteArray(pictureBox1.Image);
                 /*string sql_ed = $"update DanhSachSach set TenSach=" +
                     $"N'{Kho_TenSach.Text}',TacGia=N'{Kho_TacGia.Text}'," +
                     $"TheLoai=N'{Kho_TheLoai.Text}',NamXuatBan={Kho_NamXuatBan.Value}," +
@@ -354,7 +369,7 @@ namespace QuanLyKho
                 cmd.ExecuteNonQuery();*/
                 try
                 {
-                    qltv.DanhSachSaches.AddOrUpdate(x);
+                    qltv.DanhSachSaches.AddOrUpdate(x); 
                     qltv.SaveChanges();
                     MessageBox.Show("Sửa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     HienThi();
@@ -370,10 +385,7 @@ namespace QuanLyKho
 
         private void button_Xoa_Click_1(object sender, EventArgs e)
         {
-
-            /*string sqlXoa;
-            sqlXoa = $"DELETE FROM DanhSachSach WHERE MaSach='{Kho_MaSach.Text}'";
-            */
+            
             if (MessageBox.Show($"Có thật sự muốn xóa \"{Kho_MaSach.Text}-{Kho_TenSach.Text}\"", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.OK)
             {
                 var sach = qltv.DanhSachSaches.SingleOrDefault(p=>p.MaSach==Kho_MaSach.Text);
@@ -381,11 +393,15 @@ namespace QuanLyKho
                 qltv.DanhSachSaches.Remove(sach);
                 qltv.SaveChanges();
                // cmd.ExecuteNonQuery();
-                HienThi();
+                
                 Reset_ThuocTinh();
-                SizeBang--;
-                ThongKe();
+               
+                
             }
+            HienThi();
+            LoadForm();
+           // MessageBox.Show(i.ToString());
+            ThongKe();
         }
 
         private void button_Them_Click_1(object sender, EventArgs e)
@@ -393,7 +409,6 @@ namespace QuanLyKho
             if (ValidateChildren(ValidationConstraints.Enabled))
             {
                 var y =new DanhSachSach();
-                i++;
                 y.MaSach = TaoMa();
                 y.TheLoai = Kho_TheLoai.Text;
                 y.TenSach = Kho_TenSach.Text;
@@ -407,9 +422,11 @@ namespace QuanLyKho
                 y.DanhGia = 0;
                 y.LuotDanhGia = "";
                 y.MoTa = text_MoTA.Text;
-                Image anh = pictureBox1.Image;
-                var byte_anh = ImageToByteArray(anh);
-                y.Anh = byte_anh;
+                if (pictureBox1.Image!=null) {
+                    Image anh = pictureBox1.Image;
+                    var byte_anh = ImageToByteArray(anh);
+                    y.Anh = byte_anh;
+                }
                /*      Image Y = pictureBox1.BackgroundImage;
                 var Z = ImageToByteArray(Y);
                 SaveFile A = new SaveFile();
@@ -419,41 +436,16 @@ namespace QuanLyKho
                 x.SaveChanges();*/
                 qltv.DanhSachSaches.Add(y);
                 qltv.SaveChanges();
-                 /* string sql_in = $@"Insert into DanhSachSach values(
-                          '{TaoMa()}',
-                          N'{Kho_TenSach.Text}',
-                          N'{Kho_TacGia.Text}',
-                          N'{Kho_TheLoai.Text}',
-                          '{Kho_NamXuatBan.Value.ToString()}',
-                          N'{Kho_NhaXuatBan.Text}',
-                          '{DateTime.Today.ToString("yyyyMMdd")}',
-                          {Kho_Gia.Value * 1000},
-                          N'Còn',
-                          '{Mathukho}'
-                      )";
-                  SqlCommand cmd = new SqlCommand(sql_in, con);
-                  cmd.ExecuteNonQuery();*/
-                 SizeBang++;
-                ThongKe();
-                i++;
                 Reset_ThuocTinh();
-                HienThi();
+                
+                
                 MessageBox.Show("Thêm thành công ", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
-               // var x = new XuatThongTinSach();
-                /*x.MaSach = TaoMa();
-                x.TheLoai = Kho_TheLoai.Text;
-                x.TenSach = Kho_TenSach.Text;
-                x.TacGia = Kho_TacGia.Text;
-                x.NamXuatBan = Kho_NamXuatBan.Text;
-                x.NhaXuatBan = Kho_NhaXuatBan.Text;
-                x.TriGia = Kho_Gia.Value.ToString() + ".000 đồng";
-                x.NgayNhap = DateTime.Today.ToString("dd/MM/yyyy");
-                x.NguoiTiepNhan = "??";*/
-               // this.Hide();
-               // x.ShowDialog();
-                //this.Show();
             }
-            else MessageBox.Show("Đăng kí thất bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            else MessageBox.Show("Thất bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            HienThi();
+            LoadForm();
+           // MessageBox.Show(i.ToString());
+            ThongKe();
         }
 
        /* private void QuanLyKho_FormClosing(object sender, FormClosingEventArgs e)
@@ -684,31 +676,9 @@ namespace QuanLyKho
                 text_MoTA.Enabled = true;
             }
         }
-        bool dn = false;
         bool mk = false;
         bool dt = false;
-        private void tt_tenDN_Leave(object sender, EventArgs e)
-        {
-            if (tt_tenDN.Text.Length == 0)
-            {
-                Tick.Clear();
-                errorProvider1.SetError(this.tt_tenDN, "Bạn chưa nhập tên đăng nhập! ");
-                dn = false;
-            }
-            else if (Regex.IsMatch(tt_tenDN.Text, "^[a-zA-Z0-9]*$"))
-            {
-                errorProvider1.Clear();
-                Tick.SetError(tt_tenDN, "xong");
-                dn = true;
-            }
-            else
-            {
-                Tick.Clear();
-                errorProvider1.SetError(tt_tenDN, "Không đúng dữ liệu nhập");
-                dn = false;
-            }
-        }
-
+        
         private void tt_Matkhau_Leave(object sender, EventArgs e)
         {
             if (tt_Matkhau.Text.Length == 0)
@@ -772,7 +742,7 @@ namespace QuanLyKho
         }
         private void LuuThayDoi_Click_1(object sender, EventArgs e)
         {
-            if (dn == true && mk == true && dt == true)
+            if (mk == true && dt == true)
             {
                 TaiKhoanNV x = qltv.TaiKhoanNVs.SingleOrDefault(p => p.MaNV == Mathukho);
                 x.TenDN = tt_tenDN.Text;
@@ -808,6 +778,11 @@ namespace QuanLyKho
                     pictureBox1.Image = Image.FromFile(fbd.FileName);
                 }
             }
+        }
+
+        private void pictureBox1_Paint(object sender, PaintEventArgs e)
+        {
+            Check = true;
         }
     }
 }

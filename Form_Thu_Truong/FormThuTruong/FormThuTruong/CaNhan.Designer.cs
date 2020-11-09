@@ -28,14 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CaNhan));
             this.groupBox9 = new System.Windows.Forms.GroupBox();
             this.DangXuat = new System.Windows.Forms.Button();
-            this.LuuThayDoi = new System.Windows.Forms.Button();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.tt_tenDN = new System.Windows.Forms.Label();
             this.tt_Matkhau = new System.Windows.Forms.TextBox();
-            this.tt_tenDN = new System.Windows.Forms.TextBox();
             this.tt_mnv = new System.Windows.Forms.Label();
             this.tt = new System.Windows.Forms.Label();
             this.tt_tdn = new System.Windows.Forms.Label();
@@ -53,8 +51,9 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.Tick = new System.Windows.Forms.ErrorProvider(this.components);
-            this.er = new System.Windows.Forms.ErrorProvider(this.components);
+            this.Tick = new System.Windows.Forms.ErrorProvider();
+            this.er = new System.Windows.Forms.ErrorProvider();
+            this.LuuThayDoi = new System.Windows.Forms.Button();
             this.groupBox9.SuspendLayout();
             this.groupBox8.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -80,31 +79,20 @@
             this.DangXuat.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.DangXuat.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DangXuat.ForeColor = System.Drawing.Color.Gray;
+            this.DangXuat.Image = global::FormThuTruong.Properties.Resources.log_out_icon_153555;
+            this.DangXuat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.DangXuat.Location = new System.Drawing.Point(226, 33);
             this.DangXuat.Name = "DangXuat";
             this.DangXuat.Size = new System.Drawing.Size(170, 46);
             this.DangXuat.TabIndex = 1;
-            this.DangXuat.Text = "Đăng xuất";
+            this.DangXuat.Text = "     Đăng xuất";
             this.DangXuat.UseVisualStyleBackColor = true;
             this.DangXuat.Click += new System.EventHandler(this.DangXuat_Click);
             // 
-            // LuuThayDoi
-            // 
-            this.LuuThayDoi.Enabled = false;
-            this.LuuThayDoi.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LuuThayDoi.ForeColor = System.Drawing.Color.Gray;
-            this.LuuThayDoi.Location = new System.Drawing.Point(28, 33);
-            this.LuuThayDoi.Name = "LuuThayDoi";
-            this.LuuThayDoi.Size = new System.Drawing.Size(170, 46);
-            this.LuuThayDoi.TabIndex = 0;
-            this.LuuThayDoi.Text = "Lưu thay đổi";
-            this.LuuThayDoi.UseVisualStyleBackColor = true;
-            this.LuuThayDoi.Click += new System.EventHandler(this.LuuThayDoi_Click);
-            // 
             // groupBox8
             // 
-            this.groupBox8.Controls.Add(this.tt_Matkhau);
             this.groupBox8.Controls.Add(this.tt_tenDN);
+            this.groupBox8.Controls.Add(this.tt_Matkhau);
             this.groupBox8.Controls.Add(this.tt_mnv);
             this.groupBox8.Controls.Add(this.tt);
             this.groupBox8.Controls.Add(this.tt_tdn);
@@ -118,6 +106,17 @@
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Thông tin bảo mật";
             // 
+            // tt_tenDN
+            // 
+            this.tt_tenDN.AutoSize = true;
+            this.tt_tenDN.Font = new System.Drawing.Font("Cambria", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tt_tenDN.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.tt_tenDN.Location = new System.Drawing.Point(172, 51);
+            this.tt_tenDN.Name = "tt_tenDN";
+            this.tt_tenDN.Size = new System.Drawing.Size(95, 22);
+            this.tt_tenDN.TabIndex = 12;
+            this.tt_tenDN.Text = "(Unknow)";
+            // 
             // tt_Matkhau
             // 
             this.tt_Matkhau.Enabled = false;
@@ -127,16 +126,6 @@
             this.tt_Matkhau.Size = new System.Drawing.Size(213, 42);
             this.tt_Matkhau.TabIndex = 14;
             this.tt_Matkhau.Leave += new System.EventHandler(this.tt_Matkhau_Leave);
-            // 
-            // tt_tenDN
-            // 
-            this.tt_tenDN.Enabled = false;
-            this.tt_tenDN.Location = new System.Drawing.Point(176, 42);
-            this.tt_tenDN.Multiline = true;
-            this.tt_tenDN.Name = "tt_tenDN";
-            this.tt_tenDN.Size = new System.Drawing.Size(213, 39);
-            this.tt_tenDN.TabIndex = 13;
-            this.tt_tenDN.Leave += new System.EventHandler(this.tt_tenDN_Leave);
             // 
             // tt_mnv
             // 
@@ -350,6 +339,21 @@
             this.er.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.er.ContainerControl = this;
             // 
+            // LuuThayDoi
+            // 
+            this.LuuThayDoi.Enabled = false;
+            this.LuuThayDoi.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LuuThayDoi.ForeColor = System.Drawing.Color.Gray;
+            this.LuuThayDoi.Image = global::FormThuTruong.Properties.Resources.diskette_save_saveas_1514;
+            this.LuuThayDoi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.LuuThayDoi.Location = new System.Drawing.Point(28, 33);
+            this.LuuThayDoi.Name = "LuuThayDoi";
+            this.LuuThayDoi.Size = new System.Drawing.Size(170, 46);
+            this.LuuThayDoi.TabIndex = 0;
+            this.LuuThayDoi.Text = "     Lưu thay đổi";
+            this.LuuThayDoi.UseVisualStyleBackColor = true;
+            this.LuuThayDoi.Click += new System.EventHandler(this.LuuThayDoi_Click);
+            // 
             // CaNhan
             // 
             this.AcceptButton = this.LuuThayDoi;
@@ -384,7 +388,6 @@
         private System.Windows.Forms.Button LuuThayDoi;
         private System.Windows.Forms.GroupBox groupBox8;
         private System.Windows.Forms.TextBox tt_Matkhau;
-        private System.Windows.Forms.TextBox tt_tenDN;
         private System.Windows.Forms.Label tt_mnv;
         private System.Windows.Forms.Label tt;
         private System.Windows.Forms.Label tt_tdn;
@@ -404,5 +407,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ErrorProvider Tick;
         private System.Windows.Forms.ErrorProvider er;
+        private System.Windows.Forms.Label tt_tenDN;
     }
 }

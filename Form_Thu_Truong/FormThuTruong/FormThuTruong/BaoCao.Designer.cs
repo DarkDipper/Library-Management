@@ -52,19 +52,28 @@
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.Mat = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.Cu = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.listView1 = new System.Windows.Forms.ListView();
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Cu = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.Mat = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.listView2 = new System.Windows.Forms.ListView();
+            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.label9 = new System.Windows.Forms.Label();
+            this.dansu = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -86,7 +95,7 @@
             this.groupBox1.ForeColor = System.Drawing.Color.DimGray;
             this.groupBox1.Location = new System.Drawing.Point(13, 89);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(359, 569);
+            this.groupBox1.Size = new System.Drawing.Size(359, 579);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thống kê tình hình mượn sách theo thể loại";
@@ -375,10 +384,50 @@
             this.groupBox3.ForeColor = System.Drawing.Color.DimGray;
             this.groupBox3.Location = new System.Drawing.Point(379, 349);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(409, 309);
+            this.groupBox3.Size = new System.Drawing.Size(409, 167);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Thống kê sách đã cũ hoặc mất";
+            // 
+            // Mat
+            // 
+            this.Mat.AutoSize = true;
+            this.Mat.ForeColor = System.Drawing.Color.Black;
+            this.Mat.Location = new System.Drawing.Point(334, 138);
+            this.Mat.Name = "Mat";
+            this.Mat.Size = new System.Drawing.Size(18, 22);
+            this.Mat.TabIndex = 21;
+            this.Mat.Text = "0";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.ForeColor = System.Drawing.Color.DimGray;
+            this.label8.Location = new System.Drawing.Point(222, 138);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(106, 22);
+            this.label8.TabIndex = 20;
+            this.label8.Text = "Số sách mất :";
+            // 
+            // Cu
+            // 
+            this.Cu.AutoSize = true;
+            this.Cu.ForeColor = System.Drawing.Color.Black;
+            this.Cu.Location = new System.Drawing.Point(133, 138);
+            this.Cu.Name = "Cu";
+            this.Cu.Size = new System.Drawing.Size(18, 22);
+            this.Cu.TabIndex = 19;
+            this.Cu.Text = "0";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.ForeColor = System.Drawing.Color.DimGray;
+            this.label6.Location = new System.Drawing.Point(33, 138);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(94, 22);
+            this.label6.TabIndex = 18;
+            this.label6.Text = "Số sách cũ :";
             // 
             // listView1
             // 
@@ -393,7 +442,7 @@
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(11, 22);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(387, 245);
+            this.listView1.Size = new System.Drawing.Size(387, 113);
             this.listView1.TabIndex = 17;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -421,46 +470,6 @@
             this.columnHeader7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.columnHeader7.Width = 83;
             // 
-            // Cu
-            // 
-            this.Cu.AutoSize = true;
-            this.Cu.ForeColor = System.Drawing.Color.Black;
-            this.Cu.Location = new System.Drawing.Point(135, 276);
-            this.Cu.Name = "Cu";
-            this.Cu.Size = new System.Drawing.Size(18, 22);
-            this.Cu.TabIndex = 19;
-            this.Cu.Text = "0";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.ForeColor = System.Drawing.Color.DimGray;
-            this.label6.Location = new System.Drawing.Point(35, 276);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(94, 22);
-            this.label6.TabIndex = 18;
-            this.label6.Text = "Số sách cũ :";
-            // 
-            // Mat
-            // 
-            this.Mat.AutoSize = true;
-            this.Mat.ForeColor = System.Drawing.Color.Black;
-            this.Mat.Location = new System.Drawing.Point(334, 276);
-            this.Mat.Name = "Mat";
-            this.Mat.Size = new System.Drawing.Size(18, 22);
-            this.Mat.TabIndex = 21;
-            this.Mat.Text = "0";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.ForeColor = System.Drawing.Color.DimGray;
-            this.label8.Location = new System.Drawing.Point(222, 276);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(106, 22);
-            this.label8.TabIndex = 20;
-            this.label8.Text = "Số sách mất :";
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -472,11 +481,86 @@
             this.label7.TabIndex = 17;
             this.label7.Text = "BÁO CÁO ";
             // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.dansu);
+            this.groupBox4.Controls.Add(this.label9);
+            this.groupBox4.Controls.Add(this.listView2);
+            this.groupBox4.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox4.ForeColor = System.Drawing.Color.DimGray;
+            this.groupBox4.Location = new System.Drawing.Point(379, 522);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(409, 146);
+            this.groupBox4.TabIndex = 22;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Thống kê độc giả bị truy cứu pháp lý";
+            // 
+            // listView2
+            // 
+            this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader8,
+            this.columnHeader9,
+            this.columnHeader10,
+            this.columnHeader11});
+            this.listView2.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listView2.FullRowSelect = true;
+            this.listView2.GridLines = true;
+            this.listView2.HideSelection = false;
+            this.listView2.Location = new System.Drawing.Point(11, 22);
+            this.listView2.Name = "listView2";
+            this.listView2.Size = new System.Drawing.Size(387, 92);
+            this.listView2.TabIndex = 17;
+            this.listView2.UseCompatibleStateImageBehavior = false;
+            this.listView2.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader8
+            // 
+            this.columnHeader8.Text = "STT";
+            this.columnHeader8.Width = 41;
+            // 
+            // columnHeader9
+            // 
+            this.columnHeader9.Text = "Mã số";
+            this.columnHeader9.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // columnHeader10
+            // 
+            this.columnHeader10.Text = "Họ và tên";
+            this.columnHeader10.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader10.Width = 191;
+            // 
+            // columnHeader11
+            // 
+            this.columnHeader11.Text = "Ngày sinh";
+            this.columnHeader11.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader11.Width = 83;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.ForeColor = System.Drawing.Color.DimGray;
+            this.label9.Location = new System.Drawing.Point(16, 117);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(93, 22);
+            this.label9.TabIndex = 23;
+            this.label9.Text = "Số độc giả :";
+            // 
+            // dansu
+            // 
+            this.dansu.AutoSize = true;
+            this.dansu.ForeColor = System.Drawing.Color.Black;
+            this.dansu.Location = new System.Drawing.Point(115, 121);
+            this.dansu.Name = "dansu";
+            this.dansu.Size = new System.Drawing.Size(18, 22);
+            this.dansu.TabIndex = 22;
+            this.dansu.Text = "0";
+            // 
             // BaoCao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 669);
+            this.ClientSize = new System.Drawing.Size(800, 680);
+            this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.ngaythangnamphat);
             this.Controls.Add(this.groupBox3);
@@ -494,6 +578,8 @@
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -534,5 +620,13 @@
         private System.Windows.Forms.Label Cu;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.Label dansu;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.ListView listView2;
+        private System.Windows.Forms.ColumnHeader columnHeader8;
+        private System.Windows.Forms.ColumnHeader columnHeader9;
+        private System.Windows.Forms.ColumnHeader columnHeader10;
+        private System.Windows.Forms.ColumnHeader columnHeader11;
     }
 }

@@ -37,7 +37,6 @@
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.button3 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button2 = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -78,8 +77,8 @@
             this.DangXuat = new System.Windows.Forms.Button();
             this.LuuThayDoi = new System.Windows.Forms.Button();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.tt_tenDN = new System.Windows.Forms.Label();
             this.tt_Matkhau = new System.Windows.Forms.TextBox();
-            this.tt_tenDN = new System.Windows.Forms.TextBox();
             this.tt_mnv = new System.Windows.Forms.Label();
             this.tt = new System.Windows.Forms.Label();
             this.tt_tdn = new System.Windows.Forms.Label();
@@ -141,7 +140,6 @@
             // qls
             // 
             this.qls.Controls.Add(this.groupBox4);
-            this.qls.Controls.Add(this.button2);
             this.qls.Controls.Add(this.textBox2);
             this.qls.Controls.Add(this.textBox1);
             this.qls.Controls.Add(this.label9);
@@ -173,9 +171,13 @@
             // 
             // button3
             // 
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Image = global::QuanLyKho.Properties.Resources.applicationimagepng_103490;
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button3.Location = new System.Drawing.Point(7, 340);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(155, 35);
+            this.button3.Size = new System.Drawing.Size(317, 35);
             this.button3.TabIndex = 1;
             this.button3.Text = "Chọn ảnh bìa";
             this.button3.UseVisualStyleBackColor = true;
@@ -183,23 +185,14 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.InitialImage = null;
             this.pictureBox1.Location = new System.Drawing.Point(7, 19);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(317, 315);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            // 
-            // button2
-            // 
-            this.button2.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(771, 360);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(137, 25);
-            this.button2.TabIndex = 16;
-            this.button2.Text = "Thanh lý sách";
-            this.button2.UseVisualStyleBackColor = true;
+            this.pictureBox1.Paint += new System.Windows.Forms.PaintEventHandler(this.pictureBox1_Paint);
             // 
             // textBox2
             // 
@@ -238,7 +231,7 @@
             this.dataKho.Location = new System.Drawing.Point(771, 87);
             this.dataKho.Name = "dataKho";
             this.dataKho.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataKho.Size = new System.Drawing.Size(504, 267);
+            this.dataKho.Size = new System.Drawing.Size(503, 267);
             this.dataKho.TabIndex = 17;
             this.dataKho.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataKho_CellClick);
             // 
@@ -253,9 +246,9 @@
             // 
             // progressBar_thongke
             // 
-            this.progressBar_thongke.Location = new System.Drawing.Point(914, 362);
+            this.progressBar_thongke.Location = new System.Drawing.Point(771, 362);
             this.progressBar_thongke.Name = "progressBar_thongke";
-            this.progressBar_thongke.Size = new System.Drawing.Size(310, 23);
+            this.progressBar_thongke.Size = new System.Drawing.Size(453, 23);
             this.progressBar_thongke.TabIndex = 14;
             // 
             // groupBox3
@@ -322,9 +315,9 @@
             this.groupBox2.Controls.Add(this.button_Xoa);
             this.groupBox2.Controls.Add(this.button_Them);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(661, 6);
+            this.groupBox2.Location = new System.Drawing.Point(655, 6);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(104, 262);
+            this.groupBox2.Size = new System.Drawing.Size(110, 262);
             this.groupBox2.TabIndex = 12;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Chức năng";
@@ -332,21 +325,23 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(8, 161);
+            this.label8.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(17, 158);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(85, 15);
+            this.label8.Size = new System.Drawing.Size(72, 19);
             this.label8.TabIndex = 3;
-            this.label8.Text = "Chọn cách tìm";
+            this.label8.Text = "Tìm kiếm";
             // 
             // button_Tim
             // 
             this.button_Tim.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_Tim.Image = global::QuanLyKho.Properties.Resources.addressbook_addressbook_search_librodedireccion_2818__1_;
+            this.button_Tim.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_Tim.Location = new System.Drawing.Point(12, 210);
             this.button_Tim.Name = "button_Tim";
-            this.button_Tim.Size = new System.Drawing.Size(75, 45);
+            this.button_Tim.Size = new System.Drawing.Size(92, 46);
             this.button_Tim.TabIndex = 4;
-            this.button_Tim.Text = "Tìm";
+            this.button_Tim.Text = "    Tìm";
             this.button_Tim.UseVisualStyleBackColor = true;
             this.button_Tim.Click += new System.EventHandler(this.button_Tim_Click_1);
             // 
@@ -364,40 +359,46 @@
             "Tất cả"});
             this.comboBox_Tim.Location = new System.Drawing.Point(12, 180);
             this.comboBox_Tim.Name = "comboBox_Tim";
-            this.comboBox_Tim.Size = new System.Drawing.Size(75, 24);
+            this.comboBox_Tim.Size = new System.Drawing.Size(92, 24);
             this.comboBox_Tim.TabIndex = 3;
             this.comboBox_Tim.SelectedIndexChanged += new System.EventHandler(this.comboBox_Tim_SelectedIndexChanged);
             // 
             // button_Sua
             // 
             this.button_Sua.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_Sua.Image = global::QuanLyKho.Properties.Resources.addressbook_edit256_247741;
+            this.button_Sua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_Sua.Location = new System.Drawing.Point(12, 110);
             this.button_Sua.Name = "button_Sua";
-            this.button_Sua.Size = new System.Drawing.Size(75, 40);
+            this.button_Sua.Size = new System.Drawing.Size(92, 40);
             this.button_Sua.TabIndex = 2;
-            this.button_Sua.Text = "Sửa";
+            this.button_Sua.Text = "    Sửa";
             this.button_Sua.UseVisualStyleBackColor = true;
             this.button_Sua.Click += new System.EventHandler(this.button_Sua_Click_1);
             // 
             // button_Xoa
             // 
             this.button_Xoa.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_Xoa.Image = global::QuanLyKho.Properties.Resources.addressbook_addressbook_delete_librodedireccion_28161;
+            this.button_Xoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_Xoa.Location = new System.Drawing.Point(11, 64);
             this.button_Xoa.Name = "button_Xoa";
-            this.button_Xoa.Size = new System.Drawing.Size(75, 40);
+            this.button_Xoa.Size = new System.Drawing.Size(93, 40);
             this.button_Xoa.TabIndex = 1;
-            this.button_Xoa.Text = "Xóa";
+            this.button_Xoa.Text = "     Xóa";
             this.button_Xoa.UseVisualStyleBackColor = true;
             this.button_Xoa.Click += new System.EventHandler(this.button_Xoa_Click_1);
             // 
             // button_Them
             // 
             this.button_Them.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_Them.Image = global::QuanLyKho.Properties.Resources.addressbook_addressbook_add_librodedireccion_28151;
+            this.button_Them.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_Them.Location = new System.Drawing.Point(12, 18);
             this.button_Them.Name = "button_Them";
-            this.button_Them.Size = new System.Drawing.Size(75, 40);
+            this.button_Them.Size = new System.Drawing.Size(92, 40);
             this.button_Them.TabIndex = 0;
-            this.button_Them.Text = "Thêm";
+            this.button_Them.Text = "      Thêm";
             this.button_Them.UseVisualStyleBackColor = true;
             this.button_Them.Click += new System.EventHandler(this.button_Them_Click_1);
             // 
@@ -642,9 +643,11 @@
             // 
             this.DangXuat.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DangXuat.ForeColor = System.Drawing.Color.Gray;
-            this.DangXuat.Location = new System.Drawing.Point(226, 33);
+            this.DangXuat.Image = global::QuanLyKho.Properties.Resources.log_out_icon_153555;
+            this.DangXuat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.DangXuat.Location = new System.Drawing.Point(211, 35);
             this.DangXuat.Name = "DangXuat";
-            this.DangXuat.Size = new System.Drawing.Size(170, 46);
+            this.DangXuat.Size = new System.Drawing.Size(202, 46);
             this.DangXuat.TabIndex = 1;
             this.DangXuat.Text = "Đăng xuất";
             this.DangXuat.UseVisualStyleBackColor = true;
@@ -655,18 +658,20 @@
             this.LuuThayDoi.Enabled = false;
             this.LuuThayDoi.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LuuThayDoi.ForeColor = System.Drawing.Color.Gray;
-            this.LuuThayDoi.Location = new System.Drawing.Point(28, 33);
+            this.LuuThayDoi.Image = global::QuanLyKho.Properties.Resources.diskette_save_saveas_1514;
+            this.LuuThayDoi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.LuuThayDoi.Location = new System.Drawing.Point(6, 35);
             this.LuuThayDoi.Name = "LuuThayDoi";
-            this.LuuThayDoi.Size = new System.Drawing.Size(170, 46);
+            this.LuuThayDoi.Size = new System.Drawing.Size(199, 46);
             this.LuuThayDoi.TabIndex = 0;
-            this.LuuThayDoi.Text = "Lưu thay đổi";
+            this.LuuThayDoi.Text = "   Lưu thay đổi";
             this.LuuThayDoi.UseVisualStyleBackColor = true;
             this.LuuThayDoi.Click += new System.EventHandler(this.LuuThayDoi_Click_1);
             // 
             // groupBox8
             // 
-            this.groupBox8.Controls.Add(this.tt_Matkhau);
             this.groupBox8.Controls.Add(this.tt_tenDN);
+            this.groupBox8.Controls.Add(this.tt_Matkhau);
             this.groupBox8.Controls.Add(this.tt_mnv);
             this.groupBox8.Controls.Add(this.tt);
             this.groupBox8.Controls.Add(this.tt_tdn);
@@ -680,6 +685,17 @@
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Thông tin bảo mật";
             // 
+            // tt_tenDN
+            // 
+            this.tt_tenDN.AutoSize = true;
+            this.tt_tenDN.Font = new System.Drawing.Font("Cambria", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tt_tenDN.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.tt_tenDN.Location = new System.Drawing.Point(172, 50);
+            this.tt_tenDN.Name = "tt_tenDN";
+            this.tt_tenDN.Size = new System.Drawing.Size(95, 22);
+            this.tt_tenDN.TabIndex = 13;
+            this.tt_tenDN.Text = "(Unknow)";
+            // 
             // tt_Matkhau
             // 
             this.tt_Matkhau.Enabled = false;
@@ -689,16 +705,6 @@
             this.tt_Matkhau.Size = new System.Drawing.Size(213, 42);
             this.tt_Matkhau.TabIndex = 14;
             this.tt_Matkhau.Leave += new System.EventHandler(this.tt_Matkhau_Leave);
-            // 
-            // tt_tenDN
-            // 
-            this.tt_tenDN.Enabled = false;
-            this.tt_tenDN.Location = new System.Drawing.Point(176, 42);
-            this.tt_tenDN.Multiline = true;
-            this.tt_tenDN.Name = "tt_tenDN";
-            this.tt_tenDN.Size = new System.Drawing.Size(213, 39);
-            this.tt_tenDN.TabIndex = 13;
-            this.tt_tenDN.Leave += new System.EventHandler(this.tt_tenDN_Leave);
             // 
             // tt_mnv
             // 
@@ -939,7 +945,6 @@
         private System.Windows.Forms.ErrorProvider Tick;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage qls;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label9;
@@ -972,7 +977,6 @@
         private System.Windows.Forms.Button LuuThayDoi;
         private System.Windows.Forms.GroupBox groupBox8;
         private System.Windows.Forms.TextBox tt_Matkhau;
-        private System.Windows.Forms.TextBox tt_tenDN;
         private System.Windows.Forms.Label tt_mnv;
         private System.Windows.Forms.Label tt;
         private System.Windows.Forms.Label tt_tdn;
@@ -1002,6 +1006,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox tt_dienthoai;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label tt_tenDN;
     }
 }
 

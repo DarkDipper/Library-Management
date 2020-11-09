@@ -20,13 +20,13 @@ namespace FormThuTruong
         QuanLyTV qltv = new QuanLyTV();
         private void Form1_Load(object sender, EventArgs e)
         {
-            double x = qltv.TheDocGias.Count();
-            circularProgressBar_DG.Value = (int)(x * 0.2);
-            circularProgressBar_DG.SuperscriptText = (double.Parse((x * 0.2).ToString())).ToString() + " %";
+            int x = qltv.TheDocGias.Count();
+            circularProgressBar_DG.Value = x;
+            circularProgressBar_DG.SuperscriptText =x.ToString() + " %";
             //MessageBox.Show($"dg {x.ToString()}");
-            double y = qltv.DanhSachSaches.Count();
-            circularProgressBar_SACH.Value = (int)(x * 0.2);
-            circularProgressBar_SACH.SuperscriptText= (double.Parse((y * 0.2).ToString())).ToString() + " %";
+            int y = qltv.DanhSachSaches.Count();
+            circularProgressBar_SACH.Value =y;
+            circularProgressBar_SACH.SuperscriptText=y.ToString() + " %";
             //MessageBox.Show($"sACH {y.ToString()}");
         }
 

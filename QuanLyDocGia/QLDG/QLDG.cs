@@ -33,7 +33,6 @@ namespace QLDG
         bool paddress = false;
         bool pmail = false;
         bool pdate = false;
-        bool dn = false;
         bool mk = false;
         bool dt = false;
 
@@ -100,7 +99,7 @@ namespace QLDG
         }
         public void Hienthi()
         {
-            var dsdg = from item in qltv.TheDocGias from a in qltv.HoSoes where a.MaNV==item.MaNgLap select new {ma=item.MS, hoten=item.HoTen,ns =item.NgaySinh,dc = item.DiaChi,e=item.Email,nlt=item.NgayLapThe,n=item.TongNo,tnl=a.HoTen };
+            var dsdg = from item in qltv.TheDocGias from a in qltv.HoSoes where a.MaNV==item.MaNgLap orderby item.MS ascending select new {ma=item.MS, hoten=item.HoTen,ns =item.NgaySinh,dc = item.DiaChi,e=item.Email,nlt=item.NgayLapThe,n=item.TongNo,tnl=a.HoTen };
             dataTheDocGia.DataSource = dsdg.ToList();
             dataTheDocGia.Columns[0].HeaderText = "Mã độc giả";
             dataTheDocGia.Columns[1].HeaderText = "Họ và tên";
@@ -154,9 +153,9 @@ namespace QLDG
         }
         public void ThongKe()
         {
-            double thongke = (double)((SizeBang - 1) * 0.2);
+            double thongke = (double)((SizeBang - 1));
             progressBar_thongke.Value = (int)Math.Round(thongke, 0);
-            label_thongke.Text = $"{(SizeBang - 1).ToString()}/500";
+            label_thongke.Text = $"{(SizeBang - 1).ToString()}/100";
         }
         void LoadTra()
         {
@@ -195,6 +194,19 @@ namespace QLDG
 
                 }
             }
+        }
+        void LoadForm()
+        {
+            i = 0;
+            for (int k = 0; k < dataTheDocGia.Rows.Count - 1; k++)
+            {
+                string chuoi = dataTheDocGia.Rows[k].Cells[0].Value.ToString();
+                string chuoi_so = chuoi.Substring(2);
+                int so = int.Parse($"{chuoi_so}");
+                if (so != i) break;
+                else i++;
+            }
+            SizeBang = dataTheDocGia.Rows.Count + 1;
         }
         //=========================================== Xử lý =================
         private void f2Name_Leave(object sender, EventArgs e)
@@ -426,36 +438,27 @@ namespace QLDG
             Hienthi();
             HienThiKho();
             GoiY();
-            SizeBang = dataTheDocGia.Rows.Count+1;
             f2NgaySinh.Text = DateTime.Today.ToString();
             foreach(var item in qltv.TheDocGias)
             {
                 txt_muonDG.Items.Add(item.MS.ToString());
             }
             
-            for (int k = 0; k < dataTheDocGia.Rows.Count - 1; k++)
-            {
-                string chuoi = dataTheDocGia.Rows[k].Cells[0].Value.ToString();
-                string chuoi_so = chuoi.Substring(2);
-                int so = int.Parse($"{chuoi_so}");
-                if (so != i) break;
-                else i++;
-            }
+            
             er.SetError(f2Name, null);
             buttonSua.Enabled = false;
             buttonXoa.Enabled = false;
             label_NoMuon.Text = "";
             label_TongNo_mat.Text = "";
-            ThongKe();
             LoadTra();
             LoadMat();
+            LoadForm();
+            ThongKe();
         }
         private void buttonSign_up_Click(object sender, EventArgs e)
         {
             if (paddress == true && pdate == true && pmail == true && pname == true )
             {
-
-                i++;
                 TheDocGia x = new TheDocGia();
                 x.MS = TaoMa(); x.HoTen = f2Name.Text; x.NgaySinh = f2NgaySinh.Value; x.DiaChi = f2Address.Text; x.Email = f2Email.Text; x.NgayLapThe = DateTime.Today; x.TongNo = 0; x.MaNgLap = NV;
                 qltv.TheDocGias.Add(x);
@@ -463,19 +466,19 @@ namespace QLDG
                 try
                  {
                     
-                    MessageBox.Show("Đăng kí thành công", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                    MessageBox.Show("Lập thẻ thành công", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
                     Reset_ThuocTinh();
                     Set_false();
-                    SizeBang++;
-                    ThongKe();
-                    Hienthi();
                   }
                   catch
                   {
-                    MessageBox.Show("Đăng kí thất bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Thất bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                   }
             }
-            else MessageBox.Show("Đăng kí thất bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            else MessageBox.Show("Thất bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            Hienthi();
+            LoadForm();
+            ThongKe();
         }
 
         private void dataTheDocGia_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -517,7 +520,6 @@ namespace QLDG
                     qltv.SaveChanges();
                     MessageBox.Show("Sửa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Hienthi();
-
                 }
                 catch
                 {
@@ -607,11 +609,11 @@ namespace QLDG
                 var x = qltv.TheDocGias.SingleOrDefault(p => p.MS == textMS.Text);
                 qltv.TheDocGias.Remove(x);
                 qltv.SaveChanges();
-                Hienthi();
                 Reset_ThuocTinh();
-                SizeBang--;
-                ThongKe();
             }
+            Hienthi();
+            LoadForm();
+            ThongKe();
         }
         
         private void button_themmuon_Click(object sender, EventArgs e)
@@ -807,27 +809,6 @@ namespace QLDG
             }
         }
 
-        private void tt_tenDN_Leave(object sender, EventArgs e)
-        {
-            if (tt_tenDN.Text.Length == 0)
-            {
-                Tick.Clear();
-                er.SetError(this.tt_tenDN, "Bạn chưa nhập tên đăng nhập! ");
-                dn = false;
-            }
-            else if (Regex.IsMatch(tt_tenDN.Text, "^[a-zA-Z0-9]*$"))
-            {
-                er.Clear();
-                Tick.SetError(tt_tenDN, "xong");
-                dn = true;
-            }
-            else
-            {
-                Tick.Clear();
-                er.SetError(tt_tenDN, "Không đúng dữ liệu nhập");
-                dn = false;
-            }
-        }
 
         private void tt_Matkhau_Leave(object sender, EventArgs e)
         {
@@ -892,7 +873,7 @@ namespace QLDG
         }
         private void LuuThayDoi_Click(object sender, EventArgs e)
         {
-            if (dn == true && mk == true && dt == true )
+            if (mk == true && dt == true )
             {
                 TaiKhoanNV x = qltv.TaiKhoanNVs.SingleOrDefault(p => p.MaNV == NV);
                 x.TenDN = tt_tenDN.Text;

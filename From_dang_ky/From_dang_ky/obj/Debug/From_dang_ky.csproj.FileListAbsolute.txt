@@ -28,3 +28,8 @@ D:\Project\Library-Management\From_dang_ky\From_dang_ky\obj\Debug\From_dang_ky.c
 D:\Project\Library-Management\From_dang_ky\From_dang_ky\obj\Debug\From_dang_ky.csproj.CoreCompileInputs.cache
 D:\Project\Library-Management\From_dang_ky\From_dang_ky\obj\Debug\From_dang_ky.exe
 D:\Project\Library-Management\From_dang_ky\From_dang_ky\obj\Debug\From_dang_ky.pdb
+C:\Users\kun\source\repos\DarkDipper\Library-Management\From_dang_ky\From_dang_ky\bin\Debug\EntityFramework.dll
+C:\Users\kun\source\repos\DarkDipper\Library-Management\From_dang_ky\From_dang_ky\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\kun\source\repos\DarkDipper\Library-Management\From_dang_ky\From_dang_ky\bin\Debug\EntityFramework.xml
+C:\Users\kun\source\repos\DarkDipper\Library-Management\From_dang_ky\From_dang_ky\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\kun\source\repos\DarkDipper\Library-Management\From_dang_ky\From_dang_ky\obj\Debug\From_dang_ky.csproj.CopyComplete

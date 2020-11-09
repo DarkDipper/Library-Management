@@ -196,5 +196,32 @@
   <ItemGroup>
     <None Include="Resources\Untitled.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addressbook_addressbook_add_librodedireccion_2815.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\diskette_save_saveas_1514.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\applicationimagepng_103490.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addressbook-edit256_24774.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addressbook_addressbook_delete_librodedireccion_2816.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1497548438-24_84794.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mimetypes_excel_611.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pay_cash_payment_money_dollar_bill_icon_143267.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\log_out_icon_153555.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

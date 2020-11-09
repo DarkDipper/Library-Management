@@ -63,6 +63,146 @@ namespace QuanLyKho.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap addressbook_addressbook_add_librodedireccion_2815 {
+            get {
+                object obj = ResourceManager.GetObject("addressbook_addressbook_add_librodedireccion_2815", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap addressbook_addressbook_add_librodedireccion_28151 {
+            get {
+                object obj = ResourceManager.GetObject("addressbook_addressbook_add_librodedireccion_28151", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap addressbook_addressbook_delete_librodedireccion_2816 {
+            get {
+                object obj = ResourceManager.GetObject("addressbook_addressbook_delete_librodedireccion_2816", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap addressbook_addressbook_delete_librodedireccion_28161 {
+            get {
+                object obj = ResourceManager.GetObject("addressbook_addressbook_delete_librodedireccion_28161", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap addressbook_addressbook_search_librodedireccion_2818 {
+            get {
+                object obj = ResourceManager.GetObject("addressbook_addressbook_search_librodedireccion_2818", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap addressbook_addressbook_search_librodedireccion_2818__1_ {
+            get {
+                object obj = ResourceManager.GetObject("addressbook_addressbook_search_librodedireccion_2818 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap addressbook_addressbook_search_librodedireccion_28181 {
+            get {
+                object obj = ResourceManager.GetObject("addressbook_addressbook_search_librodedireccion_28181", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap addressbook_edit256_24774 {
+            get {
+                object obj = ResourceManager.GetObject("addressbook-edit256_24774", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap addressbook_edit256_247741 {
+            get {
+                object obj = ResourceManager.GetObject("addressbook-edit256_247741", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap applicationimagejpg_103464 {
+            get {
+                object obj = ResourceManager.GetObject("applicationimagejpg_103464", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap applicationimagepng_103490 {
+            get {
+                object obj = ResourceManager.GetObject("applicationimagepng_103490", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap business_application_addmale_useradd_insert_add_user_client_2312 {
+            get {
+                object obj = ResourceManager.GetObject("business_application_addmale_useradd_insert_add_user_client_2312", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap delete_delete_deleteusers_delete_male_user_maleclient_2348 {
+            get {
+                object obj = ResourceManager.GetObject("delete_delete_deleteusers_delete_male_user_maleclient_2348", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap diskette_save_saveas_1514 {
+            get {
+                object obj = ResourceManager.GetObject("diskette_save_saveas_1514", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap file_type_excel_icon_130611 {
             get {
                 object obj = ResourceManager.GetObject("file_type_excel_icon_130611", resourceCulture);
@@ -83,6 +223,16 @@ namespace QuanLyKho.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap log_out_icon_153555 {
+            get {
+                object obj = ResourceManager.GetObject("log_out_icon_153555", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap PDF_24287 {
             get {
                 object obj = ResourceManager.GetObject("PDF_24287", resourceCulture);
@@ -96,6 +246,16 @@ namespace QuanLyKho.Properties {
         internal static System.Drawing.Bitmap rsz_npl {
             get {
                 object obj = ResourceManager.GetObject("rsz_npl", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap search_book_open_search_locate_6178 {
+            get {
+                object obj = ResourceManager.GetObject("search_book_open_search_locate_6178", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

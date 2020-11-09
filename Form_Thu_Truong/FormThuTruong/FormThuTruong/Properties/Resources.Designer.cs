@@ -103,9 +103,29 @@ namespace FormThuTruong.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap diskette_save_saveas_1514 {
+            get {
+                object obj = ResourceManager.GetObject("diskette_save_saveas_1514", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap education_books_library_icon_149685 {
             get {
                 object obj = ResourceManager.GetObject("education_books_library_icon_149685", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap log_out_icon_153555 {
+            get {
+                object obj = ResourceManager.GetObject("log_out_icon_153555", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

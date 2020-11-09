@@ -23,7 +23,7 @@ namespace Trang_Chu
         {
             var nv = quanLy.HoSoes.SingleOrDefault(p => p.MaNV == manv.Text);
           //  MessageBox.Show($"{ nv.HoTen}, {nv.NgaySinh.Value} {nv.BangCap} {nv.DiaChi} {nv.BoPhan} ");
-            if (nv!=null && nv.HoTen == tennv.Text && nv.NgaySinh.Value.ToString("dd/MM/yyyy") == nsnv.Value.ToString("dd/MM/yyyy") && nv.BangCap == bcnv.Text && nv.DiaChi == dcnv.Text && nv.BoPhan == bpnv.Text)
+            if (nv!=null)
             {
                 
                 var tk = quanLy.TaiKhoanNVs.SingleOrDefault(p => p.MaNV == manv.Text);
@@ -37,6 +37,11 @@ namespace Trang_Chu
                 MessageBox.Show("Thất bại. Vui lòng nhập đúng thông tin", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
+        }
+
+        private void LayLaiMatKhau_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
