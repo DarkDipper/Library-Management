@@ -100,3 +100,16 @@ C:\Users\kun\source\repos\DarkDipper\Library-Management\TrangChuChoDocGia\TrangC
 C:\Users\kun\source\repos\DarkDipper\Library-Management\TrangChuChoDocGia\TrangChuChoDocGia\bin\Debug\WindowsFormsApp4.exe
 C:\Users\kun\source\repos\DarkDipper\Library-Management\TrangChuChoDocGia\TrangChuChoDocGia\bin\Debug\WindowsFormsApp4.pdb
 C:\Users\kun\source\repos\DarkDipper\Library-Management\TrangChuChoDocGia\TrangChuChoDocGia\bin\Debug\WindowsFormsApp4.exe.config
+D:\Project\Library-Management\TrangChuChoDocGia\TrangChuChoDocGia\bin\Debug\FormThuTruong.exe
+D:\Project\Library-Management\TrangChuChoDocGia\TrangChuChoDocGia\bin\Debug\WindowsFormsApp4.exe
+D:\Project\Library-Management\TrangChuChoDocGia\TrangChuChoDocGia\bin\Debug\CircularProgressBar.dll
+D:\Project\Library-Management\TrangChuChoDocGia\TrangChuChoDocGia\bin\Debug\From_dang_ky.exe
+D:\Project\Library-Management\TrangChuChoDocGia\TrangChuChoDocGia\bin\Debug\WinFormAnimation.dll
+D:\Project\Library-Management\TrangChuChoDocGia\TrangChuChoDocGia\bin\Debug\FormThuTruong.pdb
+D:\Project\Library-Management\TrangChuChoDocGia\TrangChuChoDocGia\bin\Debug\FormThuTruong.exe.config
+D:\Project\Library-Management\TrangChuChoDocGia\TrangChuChoDocGia\bin\Debug\WindowsFormsApp4.pdb
+D:\Project\Library-Management\TrangChuChoDocGia\TrangChuChoDocGia\bin\Debug\WindowsFormsApp4.exe.config
+D:\Project\Library-Management\TrangChuChoDocGia\TrangChuChoDocGia\bin\Debug\CircularProgressBar.xml
+D:\Project\Library-Management\TrangChuChoDocGia\TrangChuChoDocGia\bin\Debug\From_dang_ky.pdb
+D:\Project\Library-Management\TrangChuChoDocGia\TrangChuChoDocGia\bin\Debug\From_dang_ky.exe.config
+D:\Project\Library-Management\TrangChuChoDocGia\TrangChuChoDocGia\obj\Debug\Trang_Chu.LayLaiMatKhau.resources
