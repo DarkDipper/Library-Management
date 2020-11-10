@@ -96,6 +96,8 @@ namespace QLDG
             dataSachMuon.Columns[0].HeaderText = "Mã sách";
             dataSachMuon.Columns[1].HeaderText = "Tên sách";
             dataSachMuon.Columns[2].HeaderText = "Tình trạng";
+            dataSachMuon.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.None;
+            dataSachMuon.AllowUserToResizeRows = false;
         }
         public void Hienthi()
         {
@@ -111,6 +113,8 @@ namespace QLDG
             dataTheDocGia.Columns[7].HeaderText = "Người lập thẻ";
             dataTheDocGia.Columns[2].DefaultCellStyle.Format = "dd/MM/yyyy";
             dataTheDocGia.Columns[5].DefaultCellStyle.Format = "dd/MM/yyyy";
+            dataTheDocGia.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.None;
+            dataTheDocGia.AllowUserToResizeRows = false;
 
         }
         void GoiY()
@@ -1212,5 +1216,6 @@ namespace QLDG
         {
             LoadTra();
         }
+
     }
 }

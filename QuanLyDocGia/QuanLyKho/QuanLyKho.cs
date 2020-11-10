@@ -34,7 +34,6 @@ namespace QuanLyKho
 
         //========================================================Hàm bổ trợ ===================================================
         //SqlConnection con;
-
         public Image ByteArrayToImage(byte[] byteArrayIn)
         {
             using (var ms = new MemoryStream(byteArrayIn))
@@ -49,7 +48,7 @@ namespace QuanLyKho
         {
             using (var ms = new MemoryStream())
             {
-                imageIn.Save(ms, System.Drawing.Imaging.ImageFormat.Gif);
+                imageIn.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
 
                 return ms.ToArray();
             }
@@ -79,6 +78,8 @@ namespace QuanLyKho
             dataKho.Columns[7].HeaderText = "Trị giá";
             dataKho.Columns[8].HeaderText = "Tình trạng";
             dataKho.Columns[9].HeaderText = "Người nhận";
+            dataKho.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.None;
+            dataKho.AllowUserToResizeRows = false;
 
         }
         public void ThongKe()
@@ -340,7 +341,6 @@ namespace QuanLyKho
                 dataKho.Columns[9].HeaderText = "Người nhận";
             }
         }
-        bool Check = false;
         private void button_Sua_Click_1(object sender, EventArgs e)
         {
             if (ValidateChildren(ValidationConstraints.Enabled))
@@ -354,11 +354,8 @@ namespace QuanLyKho
                 x.NhaXuatBan = Kho_NhaXuatBan.Text;
                 x.TriGia = int.Parse((double.Parse(Kho_Gia.Value.ToString()) * 1000).ToString());
                 x.MoTa = text_MoTA.Text;
-                if (Check)
-                {
-                    x.Anh = ImageToByteArray(pictureBox1.Image);
-                }
-               // if(pictureBox1.Image!=null)
+                x.Anh = ImageToByteArray(pictureBox1.Image);
+                // if(pictureBox1.Image!=null)
                 //x.Anh = ImageToByteArray(pictureBox1.Image);
                 /*string sql_ed = $"update DanhSachSach set TenSach=" +
                     $"N'{Kho_TenSach.Text}',TacGia=N'{Kho_TacGia.Text}'," +
@@ -778,11 +775,6 @@ namespace QuanLyKho
                     pictureBox1.Image = Image.FromFile(fbd.FileName);
                 }
             }
-        }
-
-        private void pictureBox1_Paint(object sender, PaintEventArgs e)
-        {
-            Check = true;
         }
     }
 }
