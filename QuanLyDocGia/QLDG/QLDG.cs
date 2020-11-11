@@ -124,7 +124,7 @@ namespace QLDG
             var sach = from i in qltv.DanhSachSaches where i.DanhGia >= 4.3 && i.TinhTrang == "Còn" select i;
             foreach (var i in sach)
             {
-                sachvip += i.MaSach + "\n" + i.TenSach + "\n --------------------------------------------\n";
+                sachvip += i.MaSach + "\n" + i.TenSach + "\n" + i.TheLoai + "\n --------------------------------------------\n";
             }
             //MessageBox.Show(sachvip);
             richTextBox1.Text = sachvip;
@@ -215,89 +215,7 @@ namespace QLDG
         //=========================================== Xử lý =================
         private void f2Name_Leave(object sender, EventArgs e)
         {
-            /* if (f2Name.Text.Length != 0)
-             {
-                 string fullname = f2Name.Text;
-                 string space = " ";
-                 // Xử lý cắt dấu cách đầu tên
-                 bool dau = false; //dung de check dau cach dung dau
-                 for (int i = 0; i < fullname.Length && dau == false; i++)
-                 {
-                     if (fullname[i] == ' ' && dau == false)
-                     {
-                         fullname = fullname.Remove(i, 1);
-                         i = -1;
-                     }
-                     else dau = true;
-                 }
-                 if (f2Name.Text.Length == 0)
-                 {
-                     er.SetError(this.f2Name, "Vui lòng nhập lại!");
-                     pname = false;
-                 }
-                 //Xử lý cắt dấu cách cuối tên 
-                 bool cuoi = false;
-                 for (int i = fullname.Length - 1; i >= 0 && cuoi == false; i--)
-                 {
-                     if (fullname[i] == ' ' && cuoi == false)
-                     {
-                         fullname = fullname.Remove(fullname.Length - 1, 1);
-                         i = fullname.Length;
-                     }
-                     else cuoi = true;
-                 }
-                 if (f2Name.Text.Length == 0)
-                 {
-                     er.SetError(this.f2Name, "Vui lòng nhập lại!");
-                     pname = false;
-                 }
-                 f2Name.Text = fullname; // gán lại chuỗi sau khi sửa
-                 //Tiếp tục check phần ký tự
-                 for (int i = 0; i < f2Name.Text.Length; i++)
-                 {
-                     if (f2Name.Text[i] >= 33 && f2Name.Text[i] <= 57 || f2Name.Text[i] >= 58 && f2Name.Text[i] <= 64 || f2Name.Text[i] >= 91 && f2Name.Text[i] <= 96 || f2Name.Text[i] >= 123 && f2Name.Text[i] <= 126)
-                     {
-                         f2Name.Text = f2Name.Text.Remove(i, 1);
-                         i = -1;
-                     }
-                 }
-                 if (f2Name.Text.Length == 0)
-                 {
-                     Tick.Clear();
-                     er.SetError(this.f2Name, "Vui lòng nhập lại!");
-                     pname = false;
-                 }
-                 if (f2Name.Text.Length != 0)
-                 {
-                     er.Clear();
-                     int slc = 1;
-                     for (int i = 0; i < f2Name.Text.Length; i++)
-                         if (f2Name.Text[i] == ' ') slc++;
-                     string[] parts = f2Name.Text.Split(new string[] { space }, StringSplitOptions.RemoveEmptyEntries);
-                     f2Name.Text = "";
-                     bool hetchu = false;
-                     for (int i = 0; i < slc; i++)
-                     {
-                         parts[i] = parts[i].Substring(0, 1).ToUpper() + parts[i].Substring(1, parts[i].Length - 1).ToLower();
-                         f2Name.Text = f2Name.Text + parts[i];
-                         if (i >= 0 && i < slc) hetchu = true;
-                         if (hetchu == true) f2Name.Text += " ";
-                     }
-                 }
-             }
-             if (f2Name.Text.Length == 0)
-             {
-                 Tick.Clear();
-                 er.SetError(this.f2Name, "Bạn chưa nhập tên! ");
-                 pname = false;
-             }
-             else
-             {
-                 er.Clear();
-                 Tick.SetError(f2Name, "xong");
-                 pname = true;
-
-             }*/
+            
             if (f2Name.Text.Length != 0)
             {
                 char[] trimChars = { '\\', '|', '\'', ' ', '@', ' ', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '-', '=', '_', '+', '[', '{', ']', '}', ';', ':', '"', ',', '<', '.', '>', '/', '?' };
@@ -594,7 +512,7 @@ namespace QLDG
                 x.MS = textMS.Text;
                 x.Ten = f2Name.Text;
                 x.DiaChi = f2Address.Text;
-                x.NgayLapThe = dataTheDocGia.SelectedCells[5].Value.ToString();
+                x.NgayLapThe =DateTime.Parse(dataTheDocGia.SelectedCells[5].Value.ToString()).ToString("dd/MM/yyyy");
                 x.NgaySinh = f2NgaySinh.Value.ToString("dd/MM/yyyy");
                 x.Email = f2Email.Text;
                 x.NgLap= dataTheDocGia.SelectedCells[7].Value.ToString();
@@ -640,9 +558,9 @@ namespace QLDG
                             kt = false;
                             break;
                         }
-                        else if(dg.TongNo > 1000000)
+                        else if(dg.TongNo > 200000)
                         {
-                            MessageBox.Show("Nợ quá cho phép (hơn 1 triệu)", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show("Nợ quá cho phép (hơn 200.000 đồng)", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             kt = false;
                             break;
                         } 
@@ -1216,6 +1134,30 @@ namespace QLDG
         {
             LoadTra();
         }
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            if (keyData == Keys.Escape)
+            {
+                //CausesValidation = false;
+                AutoValidate = AutoValidate.Disable;
+                this.Close();
+                return true;
+            }
+            return base.ProcessCmdKey(ref msg, keyData);
+        }
+
+        private void groupBox15_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

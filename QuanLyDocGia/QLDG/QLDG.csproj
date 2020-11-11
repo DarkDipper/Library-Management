@@ -223,5 +223,8 @@
   <ItemGroup>
     <None Include="Resources\log_out_icon_153555.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\121616142_697353817797998_5539481938901508229_n.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

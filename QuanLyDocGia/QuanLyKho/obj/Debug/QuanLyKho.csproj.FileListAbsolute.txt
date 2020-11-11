@@ -72,7 +72,6 @@ C:\Users\kun\source\repos\DarkDipper\Library-Management\QuanLyDocGia\QuanLyKho\b
 C:\Users\kun\source\repos\DarkDipper\Library-Management\QuanLyDocGia\QuanLyKho\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\kun\source\repos\DarkDipper\Library-Management\QuanLyDocGia\QuanLyKho\bin\Debug\itextsharp.xml
 C:\Users\kun\source\repos\DarkDipper\Library-Management\QuanLyDocGia\QuanLyKho\obj\Debug\QuanLyKho.csprojAssemblyReference.cache
-C:\Users\kun\source\repos\DarkDipper\Library-Management\QuanLyDocGia\QuanLyKho\obj\Debug\QuanLyKho.DanhSachSach_PDF.resources
 C:\Users\kun\source\repos\DarkDipper\Library-Management\QuanLyDocGia\QuanLyKho\obj\Debug\QuanLyKho.QuanLyKho.resources
 C:\Users\kun\source\repos\DarkDipper\Library-Management\QuanLyDocGia\QuanLyKho\obj\Debug\QuanLyKho.Properties.Resources.resources
 C:\Users\kun\source\repos\DarkDipper\Library-Management\QuanLyDocGia\QuanLyKho\obj\Debug\QuanLyKho.XuatKhoSach.resources

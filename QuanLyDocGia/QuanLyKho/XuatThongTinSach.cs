@@ -57,11 +57,14 @@ namespace QuanLyKho
                     Document The = new Document(iTextSharp.text.PageSize.HALFLETTER);
                     PdfWriter TheWriter = PdfWriter.GetInstance(The, new FileStream($@"{xuatThongTinSach_duongdan.Text + xuatThongTinSach_ten.Text}.pdf", FileMode.Create));
                     System.Drawing.Image img1 = global::QuanLyKho.Properties.Resources.rsz_npl;
-                    System.Drawing.Image img2 = anh;
+                    System.Drawing.Image img2 = global::QuanLyKho.Properties.Resources.Untitled;
                     iTextSharp.text.Image text_img1 = iTextSharp.text.Image.GetInstance(img1, System.Drawing.Imaging.ImageFormat.Png);
-                    iTextSharp.text.Image Info_img2 = iTextSharp.text.Image.GetInstance(img2, System.Drawing.Imaging.ImageFormat.Gif);
+                    iTextSharp.text.Image Info_img2 = iTextSharp.text.Image.GetInstance(img2, System.Drawing.Imaging.ImageFormat.Png);
+                    //Info_img2.size
                     //Info_img2.SetAbsolutePosition(The.PageSize.Width - 280f - 60f,The.PageSize.Height - 40f - 190f );
                     text_img1.SetAbsolutePosition(The.PageSize.Width - 280f - 60f, The.PageSize.Height - 30f - 75f);
+                    Info_img2.SetAbsolutePosition(The.PageSize.Width - 120f - 60f, The.PageSize.Height - 190f - 75f);
+
                     // The.Add(text_img);
                     iTextSharp.text.Font f1 = FontFactory.GetFont(iTextSharp.text.Font.FontFamily.TIMES_ROMAN.ToString(), 25, iTextSharp.text.Font.BOLD, iTextSharp.text.BaseColor.BLUE);
                     string exeFile = (new System.Uri(Assembly.GetEntryAssembly().CodeBase)).AbsolutePath;
@@ -73,6 +76,7 @@ namespace QuanLyKho
                     iTextSharp.text.Font f2 = new iTextSharp.text.Font(bf0, 15, iTextSharp.text.Font.ITALIC, iTextSharp.text.BaseColor.RED);
                     iTextSharp.text.Font f3 = new iTextSharp.text.Font(bf1, 10, iTextSharp.text.Font.NORMAL, iTextSharp.text.BaseColor.BLACK);
                     iTextSharp.text.Font f4 = new iTextSharp.text.Font(bf1, 8, iTextSharp.text.Font.ITALIC, iTextSharp.text.BaseColor.BLUE);
+                    iTextSharp.text.Font f5 = new iTextSharp.text.Font(bf1, 10, iTextSharp.text.Font.ITALIC, iTextSharp.text.BaseColor.ORANGE);
                     PdfPTable table = new PdfPTable(3);
                     table.DefaultCell.Padding = 3;
                     table.DefaultCell.MinimumHeight = 20;
@@ -101,6 +105,9 @@ namespace QuanLyKho
                     table.AddCell(new Phrase($"   ", f3));
                     Paragraph Enter = new Paragraph("             ");
                     Paragraph p7 = new Paragraph($"     THÔNG TIN SÁCH - {MaSach}", f2);
+                    Paragraph p5 = new Paragraph($"Ghi chú: ", f5);
+                    Paragraph p6 = new Paragraph($"...................................................\n" +
+                                                 $"...................................................", f3);
                     p7.Alignment = Element.ALIGN_CENTER;
                     The.Open();
                     The.Add(p1);
@@ -108,11 +115,13 @@ namespace QuanLyKho
                     The.Add(p7);
                     The.Add(Enter);
                     The.Add(table);
-                   // The.Add(Info_img2);
+                    The.Add(Enter);
+                    The.Add(p5);
+                    The.Add(p6);
+                    The.Add(Info_img2);
+                    //The.Add(Info_img2);
                     The.Close();
                     TheWriter.Close();
-                    var x = new QuanLyKho();
-                    x.ThongKe();
                     MessageBox.Show("Thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch

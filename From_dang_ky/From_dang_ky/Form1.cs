@@ -201,7 +201,6 @@ namespace From_dang_ky
                 Check.SetError(txt_Hoten, null);
             }
         }
-
         public string TaoMA()
         {
             if (k < 10) return $"E.00{k.ToString()}";

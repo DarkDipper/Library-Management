@@ -109,8 +109,8 @@ namespace WindowsFormsApp4
                 Paragraph p1 = new Paragraph("        LM_PROJECT.EC", f1);
                 p1.Alignment = Element.ALIGN_CENTER;
                 Paragraph Enter = new Paragraph("             ");
-                Paragraph p7 = new Paragraph($"   PHIẾU THU TIỀN PHẠT", f2);
-                Paragraph p8 = new Paragraph($"   {MS}",f2);
+                Paragraph p7 = new Paragraph($"   PHIẾU THU TIỀN PHẠT - {MS}", f2);
+                Paragraph p8 = new Paragraph($"   Ngày : {DateTime.Today.ToString("dd/MM/yyyy")}",f2);
                 Paragraph p5 = new Paragraph($"Ghi chú: ", f5);
                 Paragraph p6 = new Paragraph($"...................................................\n" +
                                              $"...................................................", f3);

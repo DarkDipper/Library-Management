@@ -65,7 +65,8 @@ namespace QLDG
                if (x[i] != '0') dem++;
                tong += float.Parse(x[i].ToString());
             }
-            return (float)tong /(dem);
+            if (tong != 0 && dem != 0) return (float)tong / (dem);
+            else return 0;
         }
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -98,13 +99,17 @@ namespace QLDG
         {
             a[comboBox1.SelectedIndex] = CheckRadio();
         }
+        private void radioButton6_CheckedChanged(object sender, EventArgs e)
+        {
+            a[comboBox1.SelectedIndex] = CheckRadio();
+        }
         private void button1_Click(object sender, EventArgs e)
         {
             int j = 0;
             foreach (string i in tra.Items)
             {
                 var sach = qltv.DanhSachSaches.SingleOrDefault(p => p.MaSach == i);
-                sach.LuotDanhGia += a[j].ToString();
+                if(a[j] !=0) sach.LuotDanhGia += a[j].ToString();
                // else sach.LuotDanhGia += "";
                 sach.DanhGia = DanhGia(sach.LuotDanhGia);
                 qltv.DanhSachSaches.AddOrUpdate(sach);
@@ -113,5 +118,6 @@ namespace QLDG
             }
             this.Close();
         }
+
     }
 }

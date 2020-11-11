@@ -66,12 +66,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DanhSachSach-PDF.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DanhSachSach-PDF.Designer.cs">
-      <DependentUpon>DanhSachSach-PDF.cs</DependentUpon>
-    </Compile>
     <Compile Include="DanhSachSach.cs" />
     <Compile Include="HoSo.cs" />
     <Compile Include="LichSuMuon.cs" />
@@ -102,9 +96,6 @@
     <Compile Include="XuatThongTinSach.Designer.cs">
       <DependentUpon>XuatThongTinSach.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="DanhSachSach-PDF.resx">
-      <DependentUpon>DanhSachSach-PDF.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="QuanLyKho.resx">
       <DependentUpon>QuanLyKho.cs</DependentUpon>
     </EmbeddedResource>
@@ -197,6 +188,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\addressbook_addressbook_add_librodedireccion_2815.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

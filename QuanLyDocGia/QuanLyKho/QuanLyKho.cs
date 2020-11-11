@@ -230,16 +230,6 @@ namespace QuanLyKho
                 Reset_ThuocTinh();
             }
         }
-
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-            var x = new DanhSachSach_PDF();
-            x.Dss = dataKho;
-            this.Hide();
-            x.ShowDialog();
-            this.Show();
-        }
-
         private void button_PDF_Click_1(object sender, EventArgs e)
         {
             if (ValidateChildren(ValidationConstraints.Enabled))
@@ -252,7 +242,7 @@ namespace QuanLyKho
                 x.NamXuatBan = Kho_NamXuatBan.Text;
                 x.NhaXuatBan = Kho_NhaXuatBan.Text;
                 x.TriGia = Kho_Gia.Value.ToString() + ".000 đồng";
-                x.NgayNhap = dataKho.SelectedCells[6].Value.ToString();
+                x.NgayNhap =DateTime.Parse(dataKho.SelectedCells[6].Value.ToString()).ToString("dd/MM/yyyy");
                 x.NguoiTiepNhan = dataKho.SelectedCells[8].Value.ToString();
                 x.anh = pictureBox1.Image;
                 this.Hide();
@@ -775,6 +765,27 @@ namespace QuanLyKho
                     pictureBox1.Image = Image.FromFile(fbd.FileName);
                 }
             }
+        }
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            if (keyData == Keys.Escape)
+            {
+                //CausesValidation = false;
+                AutoValidate = AutoValidate.Disable;
+                this.Close();
+                return true;
+            }
+            return base.ProcessCmdKey(ref msg, keyData);
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
         }
     }
 }

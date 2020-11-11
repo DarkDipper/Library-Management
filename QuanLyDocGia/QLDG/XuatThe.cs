@@ -57,13 +57,13 @@ namespace QLDG
                     Document The = new Document(iTextSharp.text.PageSize.HALFLETTER);
                     PdfWriter TheWriter = PdfWriter.GetInstance(The, new FileStream($@"{xuatThe_duongdan.Text + xuatThe_ten.Text}.pdf", FileMode.Create));
                     System.Drawing.Image img1 = global::QLDG.Properties.Resources.rsz_npl;
-                    //System.Drawing.Image img2 = global::BM2.Properties.Resources._2x3;
+                    System.Drawing.Image img2 = global::QLDG.Properties.Resources._121616142_697353817797998_5539481938901508229_n;
                     iTextSharp.text.Image text_img1 = iTextSharp.text.Image.GetInstance(img1, System.Drawing.Imaging.ImageFormat.Png);
-                    //iTextSharp.text.Image Info_img2 = iTextSharp.text.Image.GetInstance(img2, System.Drawing.Imaging.ImageFormat.Png);
-                    //Info_img2.SetAbsolutePosition(The.PageSize.Width - 280f - 60f,The.PageSize.Height - 40f - 190f );
+                    iTextSharp.text.Image Info_img2 = iTextSharp.text.Image.GetInstance(img2, System.Drawing.Imaging.ImageFormat.Png);
+                    Info_img2.SetAbsolutePosition(The.PageSize.Width - 280f - 60f,The.PageSize.Height - 50f - 190f );
                     text_img1.SetAbsolutePosition(The.PageSize.Width - 280f - 60f, The.PageSize.Height - 30f - 75f);
                     // The.Add(text_img);
-                    iTextSharp.text.Font f1 = FontFactory.GetFont(iTextSharp.text.Font.FontFamily.TIMES_ROMAN.ToString(), 25, iTextSharp.text.Font.BOLD, iTextSharp.text.BaseColor.BLUE);
+                    iTextSharp.text.Font f1 = FontFactory.GetFont(iTextSharp.text.Font.FontFamily.TIMES_ROMAN.ToString(), 20, iTextSharp.text.Font.BOLD, iTextSharp.text.BaseColor.BLUE);
                     string exeFile = (new System.Uri(Assembly.GetEntryAssembly().CodeBase)).AbsolutePath;
                     string exeDir = Path.GetDirectoryName(exeFile);
                     string fullPath0 = Path.Combine(exeDir, @"VietFontsWeb1_ttf\vuTimesBold.ttf");
@@ -102,45 +102,44 @@ namespace QLDG
                     */
 
                     // iTextSharp.text.Font f = new iTextSharp.text.Font();
-                    PdfPTable table = new PdfPTable(3);
+                    PdfPTable table = new PdfPTable(1);
                     table.DefaultCell.Padding = 3;
                     table.DefaultCell.MinimumHeight = 20;
                     table.WidthPercentage = 100;
                     table.HorizontalAlignment = Element.ALIGN_CENTER;
                     table.DefaultCell.BorderWidth = 1;
-                    PdfPCell cellHoTen = new PdfPCell(new Phrase($"          ", f3));
-                    PdfPCell cellLoai = new PdfPCell(new Phrase($"          ", f3));
-                    PdfPCell cellNgayinh = new PdfPCell(new Phrase($"         ", f3));
+                    PdfPCell cellHoTen = new PdfPCell(new Phrase($"                                                      ooo000ooo", f3));
                     cellHoTen.BackgroundColor = new BaseColor(195, 195, 195);
-                    cellLoai.BackgroundColor = new BaseColor(195, 195, 195);
-                    cellNgayinh.BackgroundColor = new BaseColor(195, 195, 195);
-                    Paragraph p1 = new Paragraph("        LM_PROJECT.EC", f1);
+                    Paragraph p1 = new Paragraph("             LM-PROJECT.EC\n", f1);
                     p1.Alignment = Element.ALIGN_CENTER;
-                    table.AddCell(cellHoTen);
-                    table.AddCell(cellLoai);
-                    table.AddCell(cellNgayinh);
-                    table.AddCell(new Phrase($"Họ và tên: {Ten}", f3));
-                    table.AddCell(new Phrase($"Loại độc giả: {Loai}", f3));
-                    table.AddCell(new Phrase($"Ngày sinh: {NgaySinh}", f3));
-                    table.AddCell(new Phrase($"Địa chỉ: {DiaChi}", f3));
-                    table.AddCell(new Phrase($"Email: {Email}", f3));
-                    table.AddCell(new Phrase($"Ngày lập thẻ : {NgayLapThe}", f3));
-                    table.AddCell(new Phrase($"Người lập thẻ : {NgLap}", f3));
-                    table.AddCell(new Phrase($"   ", f3));
-                    table.AddCell(new Phrase($"   ", f3));
-
-                    Paragraph Enter = new Paragraph("             ");
-                    Paragraph p7 = new Paragraph($"CHI TIẾT ĐỘC GIẢ - {MS}", f2);
-                    Paragraph p8 = new Paragraph($"(Thẻ có giá trị sử dụng 180 ngày kể từ ngày lập thẻ)", f4);
+                    Paragraph Enter = new Paragraph("             \n");
+                    Paragraph p7 = new Paragraph($"                       THẺ ĐỘC GIẢ - {MS}\n", f2);
+                    Paragraph p8 = new Paragraph($"                                         (Thẻ có giá trị sử dụng 180 ngày kể từ ngày lập thẻ)\n", f4);
                     p7.Alignment = Element.ALIGN_CENTER;
                     p8.Alignment = Element.ALIGN_CENTER;
+                    table.AddCell(cellHoTen);
+                    p1.Add(p7);
+                    p1.Add(p8);
+                    Paragraph p2 = new Paragraph($"\n\n                                                   Họ và tên: {Ten}\n\n"
+                    + $"                                                   Loại độc giả: {Loai}\n\n"
+                    + $"                                                   Ngày sinh: {NgaySinh}\n\n"
+                    + $"                                                   Địa chỉ: {DiaChi}\n\n"
+                    + $"                                                   Email: {Email}\n\n"
+                    + $"                                                   Ngày lập thẻ : {NgayLapThe}\n\n"
+                    + $"                                                   Người lập thẻ : {NgLap}\n\n", f3);
+                    p1.Add(p2);
+                    p1.PaddingTop = 10;
+                    table.AddCell(p1);
+
+                   
                     The.Open();
-                    The.Add(p1);
+                    //The.Add(p1);
                     The.Add(text_img1);
-                    The.Add(p7);
-                    The.Add(p8);
-                    The.Add(Enter);
+                    //The.Add(p7);
+                    //The.Add(p8);
+                    //The.Add(Enter);
                     The.Add(table);
+                    The.Add(Info_img2);
                     The.Close();
                     TheWriter.Close();
                    MessageBox.Show("Thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);

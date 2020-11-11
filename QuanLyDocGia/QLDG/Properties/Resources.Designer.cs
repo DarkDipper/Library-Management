@@ -63,6 +63,16 @@ namespace QLDG.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _121616142_697353817797998_5539481938901508229_n {
+            get {
+                object obj = ResourceManager.GetObject("121616142_697353817797998_5539481938901508229_n", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _122433784_340374563893007_4932301094657328512_n {
             get {
                 object obj = ResourceManager.GetObject("122433784_340374563893007_4932301094657328512_n", resourceCulture);

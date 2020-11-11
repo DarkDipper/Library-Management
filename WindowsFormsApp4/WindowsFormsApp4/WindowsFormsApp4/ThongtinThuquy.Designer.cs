@@ -28,9 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ThongtinThuquy));
             this.groupBox9 = new System.Windows.Forms.GroupBox();
             this.DangXuat = new System.Windows.Forms.Button();
+            this.LuuThayDoi = new System.Windows.Forms.Button();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.tt_tenDN = new System.Windows.Forms.Label();
             this.tt_Matkhau = new System.Windows.Forms.TextBox();
@@ -51,23 +53,27 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider();
-            this.Tick = new System.Windows.Forms.ErrorProvider();
-            this.LuuThayDoi = new System.Windows.Forms.Button();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.Tick = new System.Windows.Forms.ErrorProvider(this.components);
+            this.groupBox15 = new System.Windows.Forms.GroupBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             this.groupBox9.SuspendLayout();
             this.groupBox8.SuspendLayout();
             this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Tick)).BeginInit();
+            this.groupBox15.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox9
             // 
+            this.groupBox9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.groupBox9.Controls.Add(this.DangXuat);
             this.groupBox9.Controls.Add(this.LuuThayDoi);
             this.groupBox9.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox9.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.groupBox9.Location = new System.Drawing.Point(439, 205);
+            this.groupBox9.Location = new System.Drawing.Point(439, 236);
             this.groupBox9.Name = "groupBox9";
             this.groupBox9.Size = new System.Drawing.Size(419, 100);
             this.groupBox9.TabIndex = 8;
@@ -88,8 +94,24 @@
             this.DangXuat.UseVisualStyleBackColor = true;
             this.DangXuat.Click += new System.EventHandler(this.DangXuat_Click);
             // 
+            // LuuThayDoi
+            // 
+            this.LuuThayDoi.Enabled = false;
+            this.LuuThayDoi.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LuuThayDoi.ForeColor = System.Drawing.Color.Gray;
+            this.LuuThayDoi.Image = global::WindowsFormsApp4.Properties.Resources.diskette_save_saveas_1514;
+            this.LuuThayDoi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.LuuThayDoi.Location = new System.Drawing.Point(28, 33);
+            this.LuuThayDoi.Name = "LuuThayDoi";
+            this.LuuThayDoi.Size = new System.Drawing.Size(170, 46);
+            this.LuuThayDoi.TabIndex = 0;
+            this.LuuThayDoi.Text = "   Lưu thay đổi";
+            this.LuuThayDoi.UseVisualStyleBackColor = true;
+            this.LuuThayDoi.Click += new System.EventHandler(this.LuuThayDoi_Click);
+            // 
             // groupBox8
             // 
+            this.groupBox8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.groupBox8.Controls.Add(this.tt_tenDN);
             this.groupBox8.Controls.Add(this.tt_Matkhau);
             this.groupBox8.Controls.Add(this.tt_mnv);
@@ -98,7 +120,7 @@
             this.groupBox8.Controls.Add(this.tt_mk);
             this.groupBox8.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox8.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.groupBox8.Location = new System.Drawing.Point(438, 13);
+            this.groupBox8.Location = new System.Drawing.Point(438, 44);
             this.groupBox8.Name = "groupBox8";
             this.groupBox8.Size = new System.Drawing.Size(420, 188);
             this.groupBox8.TabIndex = 7;
@@ -172,6 +194,7 @@
             // 
             // groupBox5
             // 
+            this.groupBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.groupBox5.Controls.Add(this.tt_dienthoai);
             this.groupBox5.Controls.Add(this.tt_nlv);
             this.groupBox5.Controls.Add(this.tt3);
@@ -186,7 +209,7 @@
             this.groupBox5.Controls.Add(this.label14);
             this.groupBox5.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox5.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.groupBox5.Location = new System.Drawing.Point(12, 12);
+            this.groupBox5.Location = new System.Drawing.Point(12, 43);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(421, 293);
             this.groupBox5.TabIndex = 6;
@@ -336,33 +359,66 @@
             this.Tick.ContainerControl = this;
             this.Tick.Icon = ((System.Drawing.Icon)(resources.GetObject("Tick.Icon")));
             // 
-            // LuuThayDoi
+            // groupBox15
             // 
-            this.LuuThayDoi.Enabled = false;
-            this.LuuThayDoi.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LuuThayDoi.ForeColor = System.Drawing.Color.Gray;
-            this.LuuThayDoi.Image = global::WindowsFormsApp4.Properties.Resources.diskette_save_saveas_1514;
-            this.LuuThayDoi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.LuuThayDoi.Location = new System.Drawing.Point(28, 33);
-            this.LuuThayDoi.Name = "LuuThayDoi";
-            this.LuuThayDoi.Size = new System.Drawing.Size(170, 46);
-            this.LuuThayDoi.TabIndex = 0;
-            this.LuuThayDoi.Text = "   Lưu thay đổi";
-            this.LuuThayDoi.UseVisualStyleBackColor = true;
-            this.LuuThayDoi.Click += new System.EventHandler(this.LuuThayDoi_Click);
+            this.groupBox15.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.groupBox15.Controls.Add(this.button3);
+            this.groupBox15.Controls.Add(this.button4);
+            this.groupBox15.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupBox15.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.groupBox15.Location = new System.Drawing.Point(0, 0);
+            this.groupBox15.Name = "groupBox15";
+            this.groupBox15.Size = new System.Drawing.Size(868, 24);
+            this.groupBox15.TabIndex = 38;
+            this.groupBox15.TabStop = false;
+            this.groupBox15.Text = resources.GetString("groupBox15.Text");
+            this.groupBox15.Enter += new System.EventHandler(this.groupBox15_Enter);
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.Silver;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button3.Font = new System.Drawing.Font("Showcard Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.button3.Location = new System.Drawing.Point(777, 0);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(39, 23);
+            this.button3.TabIndex = 1;
+            this.button3.Text = "-";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.Red;
+            this.button4.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button4.Location = new System.Drawing.Point(817, 0);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(39, 23);
+            this.button4.TabIndex = 0;
+            this.button4.Text = "  X";
+            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // ThongtinThuquy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(868, 322);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(162)))));
+            this.ClientSize = new System.Drawing.Size(868, 356);
+            this.Controls.Add(this.groupBox15);
             this.Controls.Add(this.groupBox9);
             this.Controls.Add(this.groupBox8);
             this.Controls.Add(this.groupBox5);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "ThongtinThuquy";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thông tin thủ quỹ";
             this.Load += new System.EventHandler(this.ThongtinThuquy_Load);
             this.groupBox9.ResumeLayout(false);
@@ -372,6 +428,7 @@
             this.groupBox5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Tick)).EndInit();
+            this.groupBox15.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -403,5 +460,8 @@
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.ErrorProvider Tick;
         private System.Windows.Forms.Label tt_tenDN;
+        private System.Windows.Forms.GroupBox groupBox15;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
     }
 }
