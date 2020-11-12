@@ -114,15 +114,14 @@ namespace WindowsFormsApp4
             }
             return base.ProcessCmdKey(ref msg, keyData);
         }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            WindowState = FormWindowState.Minimized;
-        }
-
-        private void button4_Click(object sender, EventArgs e)
+        private void Button_X_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void Button_Minisize_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
         }
     }
 }

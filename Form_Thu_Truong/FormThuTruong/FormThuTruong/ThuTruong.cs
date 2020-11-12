@@ -97,16 +97,6 @@ namespace FormThuTruong
             x.ShowDialog();
             this.Show();
         }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            WindowState = FormWindowState.Minimized;
-        }
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
         {
             if (keyData == Keys.Escape)
@@ -117,6 +107,16 @@ namespace FormThuTruong
                 return true;
             }
             return base.ProcessCmdKey(ref msg, keyData);
+        }
+
+        private void Button_X_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void Button_Minisize_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
         }
     }
 }

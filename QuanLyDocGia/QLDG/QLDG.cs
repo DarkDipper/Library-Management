@@ -1134,15 +1134,6 @@ namespace QLDG
         {
             LoadTra();
         }
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            WindowState = FormWindowState.Minimized;
-        }
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
         {
             if (keyData == Keys.Escape)
@@ -1158,6 +1149,16 @@ namespace QLDG
         private void groupBox15_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void Button_X_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void Button_Minisize_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
         }
     }
 }

@@ -56,9 +56,8 @@
             this.columnHeader19 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader20 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader21 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.groupBox15 = new System.Windows.Forms.GroupBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.Button_X = new System.Windows.Forms.Label();
+            this.Button_Minisize = new System.Windows.Forms.Label();
             columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -68,7 +67,6 @@
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            this.groupBox15.SuspendLayout();
             this.SuspendLayout();
             // 
             // columnHeader3
@@ -110,9 +108,11 @@
             this.groupBox1.Controls.Add(this.listView1);
             this.groupBox1.Font = new System.Drawing.Font("Sitka Banner", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.SeaGreen;
-            this.groupBox1.Location = new System.Drawing.Point(13, 31);
+            this.groupBox1.Location = new System.Drawing.Point(17, 38);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(877, 205);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(1169, 252);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thủ thư";
@@ -131,9 +131,10 @@
             this.listView1.FullRowSelect = true;
             this.listView1.GridLines = true;
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(11, 53);
+            this.listView1.Location = new System.Drawing.Point(15, 65);
+            this.listView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(854, 140);
+            this.listView1.Size = new System.Drawing.Size(1137, 171);
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -174,9 +175,11 @@
             this.groupBox2.Controls.Add(this.listView2);
             this.groupBox2.Font = new System.Drawing.Font("Sitka Banner", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.ForeColor = System.Drawing.Color.DarkCyan;
-            this.groupBox2.Location = new System.Drawing.Point(13, 242);
+            this.groupBox2.Location = new System.Drawing.Point(17, 298);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(877, 205);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Size = new System.Drawing.Size(1169, 252);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thủ kho";
@@ -195,9 +198,10 @@
             this.listView2.FullRowSelect = true;
             this.listView2.GridLines = true;
             this.listView2.HideSelection = false;
-            this.listView2.Location = new System.Drawing.Point(11, 43);
+            this.listView2.Location = new System.Drawing.Point(15, 53);
+            this.listView2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(854, 140);
+            this.listView2.Size = new System.Drawing.Size(1137, 171);
             this.listView2.TabIndex = 1;
             this.listView2.UseCompatibleStateImageBehavior = false;
             this.listView2.View = System.Windows.Forms.View.Details;
@@ -238,9 +242,11 @@
             this.groupBox3.Controls.Add(this.listView3);
             this.groupBox3.Font = new System.Drawing.Font("Sitka Banner", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.ForeColor = System.Drawing.Color.Goldenrod;
-            this.groupBox3.Location = new System.Drawing.Point(13, 453);
+            this.groupBox3.Location = new System.Drawing.Point(17, 558);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(877, 205);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Size = new System.Drawing.Size(1169, 252);
             this.groupBox3.TabIndex = 1;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Thủ quỹ";
@@ -259,9 +265,10 @@
             this.listView3.FullRowSelect = true;
             this.listView3.GridLines = true;
             this.listView3.HideSelection = false;
-            this.listView3.Location = new System.Drawing.Point(17, 43);
+            this.listView3.Location = new System.Drawing.Point(23, 53);
+            this.listView3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.listView3.Name = "listView3";
-            this.listView3.Size = new System.Drawing.Size(854, 140);
+            this.listView3.Size = new System.Drawing.Size(1137, 171);
             this.listView3.TabIndex = 2;
             this.listView3.UseCompatibleStateImageBehavior = false;
             this.listView3.View = System.Windows.Forms.View.Details;
@@ -296,63 +303,45 @@
             this.columnHeader21.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.columnHeader21.Width = 100;
             // 
-            // groupBox15
+            // Button_X
             // 
-            this.groupBox15.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.groupBox15.Controls.Add(this.button3);
-            this.groupBox15.Controls.Add(this.button2);
-            this.groupBox15.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupBox15.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.groupBox15.Location = new System.Drawing.Point(0, 0);
-            this.groupBox15.Name = "groupBox15";
-            this.groupBox15.Size = new System.Drawing.Size(897, 24);
-            this.groupBox15.TabIndex = 27;
-            this.groupBox15.TabStop = false;
-            this.groupBox15.Text = resources.GetString("groupBox15.Text");
+            this.Button_X.AutoSize = true;
+            this.Button_X.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Button_X.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Button_X.Location = new System.Drawing.Point(1171, -1);
+            this.Button_X.Name = "Button_X";
+            this.Button_X.Size = new System.Drawing.Size(25, 29);
+            this.Button_X.TabIndex = 2;
+            this.Button_X.Text = "X";
+            this.Button_X.Click += new System.EventHandler(this.Button_X_Click);
             // 
-            // button3
+            // Button_Minisize
             // 
-            this.button3.BackColor = System.Drawing.Color.Silver;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button3.Font = new System.Drawing.Font("Showcard Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button3.Location = new System.Drawing.Point(799, 1);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(39, 23);
-            this.button3.TabIndex = 1;
-            this.button3.Text = "-";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.Red;
-            this.button2.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button2.Location = new System.Drawing.Point(844, 1);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(39, 23);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "  X";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.Button_Minisize.AutoSize = true;
+            this.Button_Minisize.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Button_Minisize.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Button_Minisize.Location = new System.Drawing.Point(1132, -5);
+            this.Button_Minisize.Name = "Button_Minisize";
+            this.Button_Minisize.Size = new System.Drawing.Size(25, 29);
+            this.Button_Minisize.TabIndex = 2;
+            this.Button_Minisize.Text = "_";
+            this.Button_Minisize.Click += new System.EventHandler(this.Button_Minisize_Click);
             // 
             // NhanVien
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DarkGray;
-            this.ClientSize = new System.Drawing.Size(897, 669);
-            this.Controls.Add(this.groupBox15);
+            this.BackColor = System.Drawing.Color.Bisque;
+            this.ClientSize = new System.Drawing.Size(1196, 823);
+            this.Controls.Add(this.Button_Minisize);
+            this.Controls.Add(this.Button_X);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.Name = "NhanVien";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -361,8 +350,8 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
-            this.groupBox15.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -389,8 +378,7 @@
         private System.Windows.Forms.ColumnHeader columnHeader19;
         private System.Windows.Forms.ColumnHeader columnHeader20;
         private System.Windows.Forms.ColumnHeader columnHeader21;
-        private System.Windows.Forms.GroupBox groupBox15;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label Button_X;
+        private System.Windows.Forms.Label Button_Minisize;
     }
 }

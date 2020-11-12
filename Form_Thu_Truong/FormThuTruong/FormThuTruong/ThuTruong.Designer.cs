@@ -39,10 +39,8 @@
             this.button_TaiChinh = new System.Windows.Forms.Button();
             this.button_DangKy = new System.Windows.Forms.Button();
             this.button_NhanVien = new System.Windows.Forms.Button();
-            this.groupBox15 = new System.Windows.Forms.GroupBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.groupBox15.SuspendLayout();
+            this.Button_X = new System.Windows.Forms.Label();
+            this.Button_Minisize = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // circularProgressBar_DG
@@ -238,58 +236,39 @@
             this.button_NhanVien.UseVisualStyleBackColor = false;
             this.button_NhanVien.Click += new System.EventHandler(this.button_NhanVien_Click);
             // 
-            // groupBox15
+            // Button_X
             // 
-            this.groupBox15.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.groupBox15.Controls.Add(this.button3);
-            this.groupBox15.Controls.Add(this.button2);
-            this.groupBox15.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupBox15.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.groupBox15.Location = new System.Drawing.Point(0, 0);
-            this.groupBox15.Name = "groupBox15";
-            this.groupBox15.Size = new System.Drawing.Size(917, 24);
-            this.groupBox15.TabIndex = 25;
-            this.groupBox15.TabStop = false;
-            this.groupBox15.Text = resources.GetString("groupBox15.Text");
+            this.Button_X.AutoSize = true;
+            this.Button_X.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Button_X.ForeColor = System.Drawing.Color.Bisque;
+            this.Button_X.Location = new System.Drawing.Point(891, 2);
+            this.Button_X.Name = "Button_X";
+            this.Button_X.Size = new System.Drawing.Size(25, 29);
+            this.Button_X.TabIndex = 2;
+            this.Button_X.Text = "X";
+            this.Button_X.Click += new System.EventHandler(this.Button_X_Click);
             // 
-            // button3
+            // Button_Minisize
             // 
-            this.button3.BackColor = System.Drawing.Color.Silver;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button3.Font = new System.Drawing.Font("Showcard Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button3.Location = new System.Drawing.Point(821, 1);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(39, 23);
-            this.button3.TabIndex = 1;
-            this.button3.Text = "-";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.Red;
-            this.button2.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button2.Location = new System.Drawing.Point(866, 1);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(39, 23);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "  X";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.Button_Minisize.AutoSize = true;
+            this.Button_Minisize.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Button_Minisize.ForeColor = System.Drawing.Color.Bisque;
+            this.Button_Minisize.Location = new System.Drawing.Point(855, -4);
+            this.Button_Minisize.Name = "Button_Minisize";
+            this.Button_Minisize.Size = new System.Drawing.Size(25, 29);
+            this.Button_Minisize.TabIndex = 2;
+            this.Button_Minisize.Text = "_";
+            this.Button_Minisize.Click += new System.EventHandler(this.Button_Minisize_Click);
             // 
             // ThuTruong
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSlateGray;
             this.CancelButton = this.button_DangXuat;
             this.ClientSize = new System.Drawing.Size(917, 640);
-            this.Controls.Add(this.groupBox15);
+            this.Controls.Add(this.Button_Minisize);
+            this.Controls.Add(this.Button_X);
             this.Controls.Add(this.button_Sach);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button_DangXuat);
@@ -310,7 +289,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thủ Trưởng";
             this.Load += new System.EventHandler(this.Form1_Load);
-            this.groupBox15.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -328,9 +306,8 @@
         private System.Windows.Forms.Button button_DangXuat;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button_Sach;
-        private System.Windows.Forms.GroupBox groupBox15;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label Button_X;
+        private System.Windows.Forms.Label Button_Minisize;
     }
 }
 

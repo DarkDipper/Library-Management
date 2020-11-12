@@ -13,7 +13,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "From_dang_ky", "..\From_dan
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormThuTruong", "..\Form_Thu_Truong\FormThuTruong\FormThuTruong\FormThuTruong.csproj", "{AEE40AD1-965F-4D79-895E-4FD15392F797}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsApp4", "..\WindowsFormsApp4\WindowsFormsApp4\WindowsFormsApp4\WindowsFormsApp4.csproj", "{B04299B3-8A70-49AF-8625-07DF303E4F81}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuanLyTaiChinh", "..\WindowsFormsApp4\WindowsFormsApp4\WindowsFormsApp4\QuanLyTaiChinh.csproj", "{B04299B3-8A70-49AF-8625-07DF303E4F81}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
