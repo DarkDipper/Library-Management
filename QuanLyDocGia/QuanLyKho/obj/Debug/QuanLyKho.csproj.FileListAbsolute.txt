@@ -51,7 +51,6 @@ D:\Project\Library-Management\QuanLyDocGia\QuanLyKho\bin\Debug\EntityFramework.x
 D:\Project\Library-Management\QuanLyDocGia\QuanLyKho\bin\Debug\EntityFramework.SqlServer.xml
 D:\Project\Library-Management\QuanLyDocGia\QuanLyKho\bin\Debug\itextsharp.xml
 D:\Project\Library-Management\QuanLyDocGia\QuanLyKho\obj\Debug\QuanLyKho.csprojAssemblyReference.cache
-D:\Project\Library-Management\QuanLyDocGia\QuanLyKho\obj\Debug\QuanLyKho.DanhSachSach_PDF.resources
 D:\Project\Library-Management\QuanLyDocGia\QuanLyKho\obj\Debug\QuanLyKho.QuanLyKho.resources
 D:\Project\Library-Management\QuanLyDocGia\QuanLyKho\obj\Debug\QuanLyKho.Properties.Resources.resources
 D:\Project\Library-Management\QuanLyDocGia\QuanLyKho\obj\Debug\QuanLyKho.XuatKhoSach.resources

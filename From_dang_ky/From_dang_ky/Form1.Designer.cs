@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_DangKy));
             this.label_Hoten = new System.Windows.Forms.Label();
             this.txt_Hoten = new System.Windows.Forms.TextBox();
             this.label_NgaySinh = new System.Windows.Forms.Label();
@@ -56,7 +57,7 @@
             this.label_Hoten.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.label_Hoten.Location = new System.Drawing.Point(81, 49);
             this.label_Hoten.Name = "label_Hoten";
-            this.label_Hoten.Size = new System.Drawing.Size(74, 19);
+            this.label_Hoten.Size = new System.Drawing.Size(91, 23);
             this.label_Hoten.TabIndex = 0;
             this.label_Hoten.Text = "Họ và tên";
             // 
@@ -64,7 +65,7 @@
             // 
             this.txt_Hoten.Location = new System.Drawing.Point(57, 71);
             this.txt_Hoten.Name = "txt_Hoten";
-            this.txt_Hoten.Size = new System.Drawing.Size(245, 26);
+            this.txt_Hoten.Size = new System.Drawing.Size(245, 30);
             this.txt_Hoten.TabIndex = 1;
             this.txt_Hoten.Validating += new System.ComponentModel.CancelEventHandler(this.txt_Hoten_Validating);
             // 
@@ -76,7 +77,7 @@
             this.label_NgaySinh.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.label_NgaySinh.Location = new System.Drawing.Point(81, 124);
             this.label_NgaySinh.Name = "label_NgaySinh";
-            this.label_NgaySinh.Size = new System.Drawing.Size(76, 19);
+            this.label_NgaySinh.Size = new System.Drawing.Size(92, 23);
             this.label_NgaySinh.TabIndex = 0;
             this.label_NgaySinh.Text = "Ngày sinh";
             // 
@@ -88,7 +89,7 @@
             this.label_DiaChi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.label_DiaChi.Location = new System.Drawing.Point(81, 191);
             this.label_DiaChi.Name = "label_DiaChi";
-            this.label_DiaChi.Size = new System.Drawing.Size(56, 19);
+            this.label_DiaChi.Size = new System.Drawing.Size(68, 23);
             this.label_DiaChi.TabIndex = 0;
             this.label_DiaChi.Text = "Địa chỉ";
             // 
@@ -96,7 +97,7 @@
             // 
             this.txt_DiaChi.Location = new System.Drawing.Point(57, 213);
             this.txt_DiaChi.Name = "txt_DiaChi";
-            this.txt_DiaChi.Size = new System.Drawing.Size(245, 26);
+            this.txt_DiaChi.Size = new System.Drawing.Size(245, 30);
             this.txt_DiaChi.TabIndex = 3;
             this.txt_DiaChi.Validating += new System.ComponentModel.CancelEventHandler(this.txt_DiaChi_Validating);
             // 
@@ -108,7 +109,7 @@
             this.DatePick_NgaySinh.Location = new System.Drawing.Point(57, 147);
             this.DatePick_NgaySinh.Margin = new System.Windows.Forms.Padding(4);
             this.DatePick_NgaySinh.Name = "DatePick_NgaySinh";
-            this.DatePick_NgaySinh.Size = new System.Drawing.Size(245, 26);
+            this.DatePick_NgaySinh.Size = new System.Drawing.Size(245, 30);
             this.DatePick_NgaySinh.TabIndex = 2;
             this.DatePick_NgaySinh.Validating += new System.ComponentModel.CancelEventHandler(this.DatePick_NgaySinh_Validating);
             // 
@@ -120,7 +121,7 @@
             this.label_BoPhan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.label_BoPhan.Location = new System.Drawing.Point(377, 124);
             this.label_BoPhan.Name = "label_BoPhan";
-            this.label_BoPhan.Size = new System.Drawing.Size(64, 19);
+            this.label_BoPhan.Size = new System.Drawing.Size(78, 23);
             this.label_BoPhan.TabIndex = 3;
             this.label_BoPhan.Text = "Bộ phận";
             // 
@@ -134,7 +135,7 @@
             "Thủ quỹ"});
             this.combo_Bophan.Location = new System.Drawing.Point(353, 146);
             this.combo_Bophan.Name = "combo_Bophan";
-            this.combo_Bophan.Size = new System.Drawing.Size(223, 27);
+            this.combo_Bophan.Size = new System.Drawing.Size(223, 30);
             this.combo_Bophan.TabIndex = 5;
             this.combo_Bophan.SelectedIndexChanged += new System.EventHandler(this.combo_Bophan_SelectedIndexChanged);
             this.combo_Bophan.Validating += new System.ComponentModel.CancelEventHandler(this.combo_Bophan_Validating);
@@ -147,7 +148,7 @@
             this.label_SDT.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.label_SDT.Location = new System.Drawing.Point(377, 191);
             this.label_SDT.Name = "label_SDT";
-            this.label_SDT.Size = new System.Drawing.Size(95, 19);
+            this.label_SDT.Size = new System.Drawing.Size(118, 23);
             this.label_SDT.TabIndex = 0;
             this.label_SDT.Text = "Số điện thoại";
             // 
@@ -155,7 +156,7 @@
             // 
             this.txtSDT.Location = new System.Drawing.Point(353, 213);
             this.txtSDT.Name = "txtSDT";
-            this.txtSDT.Size = new System.Drawing.Size(223, 26);
+            this.txtSDT.Size = new System.Drawing.Size(223, 30);
             this.txtSDT.TabIndex = 6;
             this.txtSDT.Validating += new System.ComponentModel.CancelEventHandler(this.txtSDT_Validating);
             // 
@@ -167,7 +168,7 @@
             this.label_Email.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.label_Email.Location = new System.Drawing.Point(377, 49);
             this.label_Email.Name = "label_Email";
-            this.label_Email.Size = new System.Drawing.Size(71, 19);
+            this.label_Email.Size = new System.Drawing.Size(87, 23);
             this.label_Email.TabIndex = 0;
             this.label_Email.Text = "Bằng cấp";
             // 
@@ -184,7 +185,7 @@
             "Tiến sĩ"});
             this.combo_BangCap.Location = new System.Drawing.Point(353, 71);
             this.combo_BangCap.Name = "combo_BangCap";
-            this.combo_BangCap.Size = new System.Drawing.Size(223, 27);
+            this.combo_BangCap.Size = new System.Drawing.Size(223, 30);
             this.combo_BangCap.TabIndex = 4;
             this.combo_BangCap.Validating += new System.ComponentModel.CancelEventHandler(this.combo_BangCap_Validating);
             // 
@@ -217,7 +218,7 @@
             this.Button_X.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Button_X.Location = new System.Drawing.Point(573, -1);
             this.Button_X.Name = "Button_X";
-            this.Button_X.Size = new System.Drawing.Size(23, 27);
+            this.Button_X.Size = new System.Drawing.Size(30, 35);
             this.Button_X.TabIndex = 8;
             this.Button_X.Text = "X";
             this.Button_X.Click += new System.EventHandler(this.Button_X_Click);
@@ -229,14 +230,14 @@
             this.Button_Minisize.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Button_Minisize.Location = new System.Drawing.Point(538, -10);
             this.Button_Minisize.Name = "Button_Minisize";
-            this.Button_Minisize.Size = new System.Drawing.Size(23, 27);
+            this.Button_Minisize.Size = new System.Drawing.Size(29, 35);
             this.Button_Minisize.TabIndex = 9;
             this.Button_Minisize.Text = "_";
             this.Button_Minisize.Click += new System.EventHandler(this.Button_Minisize_Click);
             // 
             // Form_DangKy
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.BackgroundImage = global::From_dang_ky.Properties.Resources.vector_wallpaper_29;
@@ -259,6 +260,7 @@
             this.Controls.Add(this.label_Hoten);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Location = new System.Drawing.Point(50, 50);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;

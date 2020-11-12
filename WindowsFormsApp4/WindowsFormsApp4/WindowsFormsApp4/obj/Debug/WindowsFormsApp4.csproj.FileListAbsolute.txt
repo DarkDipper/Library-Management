@@ -47,3 +47,7 @@ C:\Users\kun\source\repos\DarkDipper\Library-Management\WindowsFormsApp4\Windows
 C:\Users\kun\source\repos\DarkDipper\Library-Management\WindowsFormsApp4\WindowsFormsApp4\WindowsFormsApp4\bin\Debug\itextsharp.xml
 C:\Users\kun\source\repos\DarkDipper\Library-Management\WindowsFormsApp4\WindowsFormsApp4\WindowsFormsApp4\obj\Debug\WindowsFormsApp4.PhieuTraNo.resources
 >>>>>>> main
+D:\Project\Library-Management\WindowsFormsApp4\WindowsFormsApp4\WindowsFormsApp4\bin\Debug\BouncyCastle.Crypto.dll
+D:\Project\Library-Management\WindowsFormsApp4\WindowsFormsApp4\WindowsFormsApp4\bin\Debug\itextsharp.dll
+D:\Project\Library-Management\WindowsFormsApp4\WindowsFormsApp4\WindowsFormsApp4\bin\Debug\itextsharp.xml
+D:\Project\Library-Management\WindowsFormsApp4\WindowsFormsApp4\WindowsFormsApp4\obj\Debug\WindowsFormsApp4.PhieuTraNo.resources
