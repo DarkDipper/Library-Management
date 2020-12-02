@@ -69,7 +69,7 @@
             // User_name
             // 
             this.User_name.Location = new System.Drawing.Point(9, 164);
-            this.User_name.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.User_name.Margin = new System.Windows.Forms.Padding(2);
             this.User_name.Name = "User_name";
             this.User_name.Size = new System.Drawing.Size(187, 20);
             this.User_name.TabIndex = 1;
@@ -77,7 +77,7 @@
             // Pass_word
             // 
             this.Pass_word.Location = new System.Drawing.Point(9, 228);
-            this.Pass_word.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Pass_word.Margin = new System.Windows.Forms.Padding(2);
             this.Pass_word.Name = "Pass_word";
             this.Pass_word.Size = new System.Drawing.Size(187, 20);
             this.Pass_word.TabIndex = 3;
@@ -91,7 +91,7 @@
             this.Dang_nhap_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Dang_nhap_button.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Dang_nhap_button.Location = new System.Drawing.Point(14, 285);
-            this.Dang_nhap_button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Dang_nhap_button.Margin = new System.Windows.Forms.Padding(2);
             this.Dang_nhap_button.Name = "Dang_nhap_button";
             this.Dang_nhap_button.Size = new System.Drawing.Size(84, 29);
             this.Dang_nhap_button.TabIndex = 4;
@@ -104,7 +104,7 @@
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::Trang_Chu.Properties.Resources.b50d19ef_edc8_4703_8fdd_274e9a06f4a3_200x200;
             this.pictureBox1.Location = new System.Drawing.Point(14, 10);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(121, 123);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -143,11 +143,12 @@
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Log_in";
             this.Text = "Đăng nhập";
+            this.Load += new System.EventHandler(this.Log_in_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -347,9 +347,8 @@ namespace QuanLyKho
                 x.NhaXuatBan = Kho_NhaXuatBan.Text;
                 x.TriGia = int.Parse((double.Parse(Kho_Gia.Value.ToString()) * 1000).ToString());
                 x.MoTa = text_MoTA.Text;
-                x.Anh = ImageToByteArray(pictureBox1.Image);
-                // if(pictureBox1.Image!=null)
-                //x.Anh = ImageToByteArray(pictureBox1.Image);
+               /// x.Anh = ImageToByteArray(pictureBox1.Image);
+                 if(pictureBox1.Image!=null) x.Anh = ImageToByteArray(pictureBox1.Image);
                 /*string sql_ed = $"update DanhSachSach set TenSach=" +
                     $"N'{Kho_TenSach.Text}',TacGia=N'{Kho_TacGia.Text}'," +
                     $"TheLoai=N'{Kho_TheLoai.Text}',NamXuatBan={Kho_NamXuatBan.Value}," +

@@ -202,7 +202,7 @@ namespace QLDG
         void LoadForm()
         {
             i = 0;
-            for (int k = 0; k < dataTheDocGia.Rows.Count - 1; k++)
+            for (int k = 0; k < dataTheDocGia.Rows.Count; k++)
             {
                 string chuoi = dataTheDocGia.Rows[k].Cells[0].Value.ToString();
                 string chuoi_so = chuoi.Substring(2);
@@ -376,6 +376,7 @@ namespace QLDG
             LoadMat();
             LoadForm();
             ThongKe();
+            //MessageBox.Show(i.ToString());
         }
         private void buttonSign_up_Click(object sender, EventArgs e)
         {

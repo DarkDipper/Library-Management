@@ -24,7 +24,7 @@ namespace QLDG
         private void FormDanhGia_Load(object sender, EventArgs e)
         {
             for (int i = 0; i < 6; i++) a[i] = 0;
-            groupBox1.Visible = false;
+            //groupBox1.Visible = false;
             foreach (string i in tra.Items)
             {
                 var sach = qltv.DanhSachSaches.SingleOrDefault(p => p.MaSach == i);
@@ -72,7 +72,7 @@ namespace QLDG
         {
             //Checkfalse();
            hienthi(a[comboBox1.SelectedIndex]);
-            groupBox1.Visible = true;
+           // groupBox1.Visible = true;
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)

@@ -226,5 +226,20 @@
   <ItemGroup>
     <None Include="Resources\121616142_697353817797998_5539481938901508229_n.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DanhGia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DanhGia1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DanhGia2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DanhGia3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DanhGia4.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

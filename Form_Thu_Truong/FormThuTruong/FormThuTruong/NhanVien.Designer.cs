@@ -108,11 +108,9 @@
             this.groupBox1.Controls.Add(this.listView1);
             this.groupBox1.Font = new System.Drawing.Font("Sitka Banner", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.SeaGreen;
-            this.groupBox1.Location = new System.Drawing.Point(17, 38);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Location = new System.Drawing.Point(13, 31);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox1.Size = new System.Drawing.Size(1169, 252);
+            this.groupBox1.Size = new System.Drawing.Size(877, 205);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thủ thư";
@@ -131,10 +129,9 @@
             this.listView1.FullRowSelect = true;
             this.listView1.GridLines = true;
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(15, 65);
-            this.listView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listView1.Location = new System.Drawing.Point(11, 53);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(1137, 171);
+            this.listView1.Size = new System.Drawing.Size(854, 140);
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -175,11 +172,9 @@
             this.groupBox2.Controls.Add(this.listView2);
             this.groupBox2.Font = new System.Drawing.Font("Sitka Banner", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.ForeColor = System.Drawing.Color.DarkCyan;
-            this.groupBox2.Location = new System.Drawing.Point(17, 298);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Location = new System.Drawing.Point(13, 242);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox2.Size = new System.Drawing.Size(1169, 252);
+            this.groupBox2.Size = new System.Drawing.Size(877, 205);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thủ kho";
@@ -198,10 +193,9 @@
             this.listView2.FullRowSelect = true;
             this.listView2.GridLines = true;
             this.listView2.HideSelection = false;
-            this.listView2.Location = new System.Drawing.Point(15, 53);
-            this.listView2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listView2.Location = new System.Drawing.Point(11, 43);
             this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(1137, 171);
+            this.listView2.Size = new System.Drawing.Size(854, 140);
             this.listView2.TabIndex = 1;
             this.listView2.UseCompatibleStateImageBehavior = false;
             this.listView2.View = System.Windows.Forms.View.Details;
@@ -242,11 +236,9 @@
             this.groupBox3.Controls.Add(this.listView3);
             this.groupBox3.Font = new System.Drawing.Font("Sitka Banner", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.ForeColor = System.Drawing.Color.Goldenrod;
-            this.groupBox3.Location = new System.Drawing.Point(17, 558);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Location = new System.Drawing.Point(13, 453);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox3.Size = new System.Drawing.Size(1169, 252);
+            this.groupBox3.Size = new System.Drawing.Size(877, 205);
             this.groupBox3.TabIndex = 1;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Thủ quỹ";
@@ -265,10 +257,9 @@
             this.listView3.FullRowSelect = true;
             this.listView3.GridLines = true;
             this.listView3.HideSelection = false;
-            this.listView3.Location = new System.Drawing.Point(23, 53);
-            this.listView3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listView3.Location = new System.Drawing.Point(17, 43);
             this.listView3.Name = "listView3";
-            this.listView3.Size = new System.Drawing.Size(1137, 171);
+            this.listView3.Size = new System.Drawing.Size(854, 140);
             this.listView3.TabIndex = 2;
             this.listView3.UseCompatibleStateImageBehavior = false;
             this.listView3.View = System.Windows.Forms.View.Details;
@@ -308,9 +299,10 @@
             this.Button_X.AutoSize = true;
             this.Button_X.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Button_X.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Button_X.Location = new System.Drawing.Point(1171, -1);
+            this.Button_X.Location = new System.Drawing.Point(878, -1);
+            this.Button_X.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Button_X.Name = "Button_X";
-            this.Button_X.Size = new System.Drawing.Size(25, 29);
+            this.Button_X.Size = new System.Drawing.Size(20, 23);
             this.Button_X.TabIndex = 2;
             this.Button_X.Text = "X";
             this.Button_X.Click += new System.EventHandler(this.Button_X_Click);
@@ -320,19 +312,20 @@
             this.Button_Minisize.AutoSize = true;
             this.Button_Minisize.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Button_Minisize.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Button_Minisize.Location = new System.Drawing.Point(1132, -5);
+            this.Button_Minisize.Location = new System.Drawing.Point(849, -4);
+            this.Button_Minisize.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Button_Minisize.Name = "Button_Minisize";
-            this.Button_Minisize.Size = new System.Drawing.Size(25, 29);
+            this.Button_Minisize.Size = new System.Drawing.Size(19, 23);
             this.Button_Minisize.TabIndex = 2;
             this.Button_Minisize.Text = "_";
             this.Button_Minisize.Click += new System.EventHandler(this.Button_Minisize_Click);
             // 
             // NhanVien
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Bisque;
-            this.ClientSize = new System.Drawing.Size(1196, 823);
+            this.ClientSize = new System.Drawing.Size(897, 671);
             this.Controls.Add(this.Button_Minisize);
             this.Controls.Add(this.Button_X);
             this.Controls.Add(this.groupBox3);
@@ -341,7 +334,6 @@
             this.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.Name = "NhanVien";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
