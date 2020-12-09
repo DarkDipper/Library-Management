@@ -77,7 +77,7 @@ namespace QLDG
             var dss = from z in qltv.MuonSaches where z.MaDocGia == txt_muonDG select z;
             foreach (var item in dss)
             {
-                if (item.NgayMuon >= Last && item.NgayMuon <= Now&&item.TrangThai!="Duyệt")
+                if (item.NgayMuon >= Last && item.NgayMuon <= Now)
                 {
                     dem++;
                 }
