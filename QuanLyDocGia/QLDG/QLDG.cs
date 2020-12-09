@@ -61,9 +61,11 @@ namespace QLDG
             var dss = from z in qltv.MuonSaches where z.MaDocGia == txt_muonDG select z;
             foreach (var item in dss)
             {
-                DateTime data1 = DateTime.Today;
-                DateTime date2 = item.NgayMuon.Value;
-                if (((TimeSpan)(data1 - date2)).Days > 7) return false;
+                if (item.TrangThai!= "Duyệt") {
+                    DateTime data1 = DateTime.Today;
+                    DateTime date2 = item.NgayMuon.Value;
+                    if (((TimeSpan)(data1 - date2)).Days > 7) return false;
+                }
             }
             return true;
         }

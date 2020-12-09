@@ -30,7 +30,7 @@ namespace Trang_Chu
                 tk.MatKhau = "123";
                 quanLy.TaiKhoanNVs.AddOrUpdate(tk);
                 quanLy.SaveChanges();
-                MessageBox.Show("Thành công. Mật khẩu mới của bạn là: 123", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show($"Thành công. Tài khoản {tk.TenDN} có mật khẩu mới của bạn là: 123", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
