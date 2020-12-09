@@ -23,6 +23,9 @@ namespace QLDG
         int[] a = new int[6];
         private void FormDanhGia_Load(object sender, EventArgs e)
         {
+           
+            groupBox1.Visible = false;
+            
             for (int i = 0; i < 6; i++) a[i] = 0;
             //groupBox1.Visible = false;
             foreach (string i in tra.Items)
@@ -71,7 +74,9 @@ namespace QLDG
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             //Checkfalse();
-           hienthi(a[comboBox1.SelectedIndex]);
+            groupBox1.Visible = true;
+            radioButton6.Checked = true;
+            hienthi(a[comboBox1.SelectedIndex]);
            // groupBox1.Visible = true;
         }
 
