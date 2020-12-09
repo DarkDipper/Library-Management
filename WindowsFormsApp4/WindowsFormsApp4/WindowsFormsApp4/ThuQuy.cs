@@ -52,7 +52,13 @@ namespace WindowsFormsApp4
             {
                 var x = quanLy.TheDocGias.SingleOrDefault(p => p.MS == comboBox1.Text);
                 var y = quanLy.HoSoes.SingleOrDefault(p => p.MaNV == NV);
-                x.TongNo = int.Parse(txtConno.Text) * 1000;
+                if(txtConno.Text == "")
+                {
+                    txtConno.Text = "0";
+                    txtOut.Text = txtTien.Text;
+                    x.TongNo = x.TongNo;
+                }
+                else x.TongNo = int.Parse((double.Parse(txtConno.Text) * 1000).ToString());
                 quanLy.TheDocGias.AddOrUpdate(x);
                 quanLy.SaveChanges();
                 MessageBox.Show("Đã trả nợ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -84,10 +90,10 @@ namespace WindowsFormsApp4
 
         private void txtIn_Leave(object sender, EventArgs e)
         {
-            if (int.Parse(txtTien.Text) > 0)
+            if (double.Parse(txtTien.Text) >= 0)
             {
-                int a = int.Parse((txtIn.Value).ToString()) - int.Parse(txtTien.Text);
-                int b = int.Parse(txtTien.Text) - int.Parse((txtIn.Value).ToString());
+                double a = double.Parse((txtIn.Value).ToString()) - double.Parse(txtTien.Text);
+                double b = double.Parse(txtTien.Text) - double.Parse((txtIn.Value).ToString());
                 if (a > 0) txtOut.Text = (a).ToString();
                 else txtOut.Text = "0";
                 if (b > 0) txtConno.Text = (b).ToString();
