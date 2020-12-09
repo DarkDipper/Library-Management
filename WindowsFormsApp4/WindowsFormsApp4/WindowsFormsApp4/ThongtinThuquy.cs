@@ -106,6 +106,8 @@ namespace WindowsFormsApp4
 
         private void DangXuat_Click(object sender, EventArgs e)
         {
+            ThuQuy X = (ThuQuy)Application.OpenForms["ThuQuy"];
+            X.Close();
             this.Close();
         }
 
@@ -137,19 +139,14 @@ namespace WindowsFormsApp4
             return base.ProcessCmdKey(ref msg, keyData);
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            WindowState = FormWindowState.Minimized;
-        }
-
-        private void groupBox15_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button4_Click(object sender, EventArgs e)
+        private void Close_Button_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void Minisize_Button_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
         }
     }
 }
