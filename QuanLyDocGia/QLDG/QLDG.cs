@@ -126,7 +126,7 @@ namespace QLDG
             var sach = from i in qltv.DanhSachSaches where i.DanhGia >= 4.3 && i.TinhTrang == "Còn" select i;
             foreach (var i in sach)
             {
-                sachvip += i.MaSach + "\n" + i.TenSach + "\n" + i.TheLoai + "\n --------------------------------------------\n";
+                sachvip += i.MaSach + "\n" + i.TenSach + "\n" + i.TheLoai + "\n"+i.DanhGia+" Sao\n --------------------------------------------\n";
             }
             //MessageBox.Show(sachvip);
             richTextBox1.Text = sachvip;
@@ -1162,6 +1162,21 @@ namespace QLDG
         private void Button_Minisize_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var dsss = from s in qltv.DanhSachSaches select s;
+            List<DanhSachSach> tim = new List<DanhSachSach>();
+            foreach (DanhSachSach item in dsss)
+            {
+                if (item.NamXuatBan == DateTime.Today.Year) tim.Add(item);
+            }
+            var dsk = from item in tim select new { ms = item.MaSach, tens = item.TenSach, tt = item.TinhTrang };
+            dataSachMuon.DataSource = dsk.ToList();
+            dataSachMuon.Columns[0].HeaderText = "Mã sách";
+            dataSachMuon.Columns[1].HeaderText = "Tên sách";
+            dataSachMuon.Columns[2].HeaderText = "Tình trạng";
         }
     }
 }

@@ -148,6 +148,7 @@
             this.Tick = new System.Windows.Forms.ErrorProvider(this.components);
             this.Button_X = new System.Windows.Forms.Label();
             this.Button_Minisize = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.Thongtin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataTheDocGia)).BeginInit();
@@ -202,7 +203,7 @@
             this.Thongtin.Controls.Add(this.groupBox1);
             this.Thongtin.Location = new System.Drawing.Point(4, 22);
             this.Thongtin.Name = "Thongtin";
-            this.Thongtin.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.Thongtin.Padding = new System.Windows.Forms.Padding(3);
             this.Thongtin.Size = new System.Drawing.Size(1094, 322);
             this.Thongtin.TabIndex = 0;
             this.Thongtin.Text = "Thẻ độc giả";
@@ -533,7 +534,7 @@
             this.muon.Controls.Add(this.groupBox4);
             this.muon.Location = new System.Drawing.Point(4, 22);
             this.muon.Name = "muon";
-            this.muon.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.muon.Padding = new System.Windows.Forms.Padding(3);
             this.muon.Size = new System.Drawing.Size(1094, 322);
             this.muon.TabIndex = 1;
             this.muon.Text = "Mượn sách";
@@ -652,6 +653,7 @@
             // 
             // groupBox6
             // 
+            this.groupBox6.Controls.Add(this.button1);
             this.groupBox6.Controls.Add(this.dataSachMuon);
             this.groupBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox6.Location = new System.Drawing.Point(191, 109);
@@ -1539,6 +1541,18 @@
             this.Button_Minisize.Text = "_";
             this.Button_Minisize.Click += new System.EventHandler(this.Button_Minisize_Click);
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.Red;
+            this.button1.Location = new System.Drawing.Point(269, -1);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(95, 23);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "Sách mới";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // QLDG
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1717,6 +1731,7 @@
         private System.Windows.Forms.Label tt_tenDN;
         private System.Windows.Forms.Label Button_X;
         private System.Windows.Forms.Label Button_Minisize;
+        private System.Windows.Forms.Button button1;
     }
 }
 
